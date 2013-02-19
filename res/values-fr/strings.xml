@@ -27,6 +27,7 @@
 <string name="Colour">Couleur</string>
 <string name="Default_timezone">Fuseau horaire par défaut</string>
 <string name="DefaultAlarmTone">Sonnerie par défaut</string>
+<string name="SystemDefaultAlarmTone">Sonnerie par défaut du téléphone</string>
 <string name="Server_Path">Chemin sur le serveur</string>
 <string name="Server_Port">Port du serveur</string>
 <string name="Summary">Résumé</string>

@@ -109,16 +109,18 @@ public class AcalPreferences extends PreferenceActivity implements OnSharedPrefe
 				return;
 			}
 		}
-		String names[] = new String[count+1];
-		String uris[] = new String[count+1];
+		String names[] = new String[count+2];
+		String uris[] = new String[count+2];
 		names[0] = getString(R.string.DefaultAlarmTone);
 		uris[0] = "null";
+		names[1] = getString(R.string.SystemDefaultAlarmTone);
+		uris[1] = "";
 		cursor.moveToFirst();
-	    for (int i = 0; i < count; i++) {
-	    	names[i+1] = cursor.getString(titleColumn);
-	    	uris[i+1] = rm.getRingtoneUri(i).toString();
-	    	cursor.moveToNext();
-	    }
+		for (int i = 0; i < count; i++) {
+			names[i+2] = cursor.getString(titleColumn);
+			uris[i+2] = rm.getRingtoneUri(i).toString();
+			cursor.moveToNext();
+		}
     	defaultAlarm.setEntries(names);
     	defaultAlarm.setEntryValues(uris);
    		defaultAlarm.setDefaultValue(uris[0]);

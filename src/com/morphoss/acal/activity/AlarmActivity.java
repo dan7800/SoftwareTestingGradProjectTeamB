@@ -26,6 +26,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -316,7 +317,7 @@ public class AlarmActivity extends AcalActivity implements OnClickListener  {
 		//Otherwise set up media player
 		else {
 			//Get audio stream type and sound file
-			String uri = prefs.getString(getString(R.string.DefaultAlarmTone_PrefKey), "null" );
+			String stringUri = prefs.getString(getString(R.string.DefaultAlarmTone_PrefKey), "null" );
 			mediaPlayer = new MediaPlayer();
 			String volumeType = prefs.getString(getString(R.string.AlarmVolumeType_PrefKey), "null" );
 			if (volumeType.equals("null") || volumeType.equals("ALARM"))
@@ -324,15 +325,23 @@ public class AlarmActivity extends AcalActivity implements OnClickListener  {
 			else
 				mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
-			if (uri.equals("null")) {
+			if (stringUri.equals("null")) {
 				//Use Default Audio
 				//1.3 Fixed this line to be more flexible and accurate.
-				uri = ContentResolver.SCHEME_ANDROID_RESOURCE+"://"+this.getBaseContext().getPackageName()+"/" + R.raw.assembly;
+				stringUri = ContentResolver.SCHEME_ANDROID_RESOURCE+"://"+this.getBaseContext().getPackageName()+"/" + R.raw.assembly;
+			}
+
+			Uri uri = null;
+			if (stringUri.equals("")) {
+				uri = RingtoneManager
+						.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+			} else {
+				uri = Uri.parse(stringUri);
 			}
 
 			//Prepare Mediaplayer
 			try {
-				mediaPlayer.setDataSource(this, Uri.parse(uri));
+				mediaPlayer.setDataSource(this, uri);
 				mediaPlayer.prepare();
 			} catch (java.io.IOException ex) {
 				// something went wrong, abort.
