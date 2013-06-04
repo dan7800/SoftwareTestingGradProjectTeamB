@@ -59,7 +59,7 @@ public class RRGetCacheEventsInRange extends ReadOnlyResourceRequestWithResponse
 		if ( CacheManager.DEBUG ) Log.println(Constants.LOGD,TAG,"Getting Resource rows where:\n"+whereClause);
 
 		//step 2 query db for resources in range
-		ArrayList<ContentValues> rValues = processor.query(null,whereClause,null,null,null,null);
+		ArrayList<ContentValues> rValues = processor.query(null,whereClause,null,null);
 		
 		//also need pendings
 		ArrayList<ContentValues> pValues = processor.getPendingResources();

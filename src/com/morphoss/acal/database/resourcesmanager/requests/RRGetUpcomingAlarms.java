@@ -68,7 +68,7 @@ public class RRGetUpcomingAlarms extends ReadOnlyBlockingRequestWithResponse<Arr
 			whereClause.append(ResourceTableManager.RESOURCE_DATA);
 			whereClause.append(" LIKE '%BEGIN:VALARM%' )");
 
-			ArrayList<ContentValues> cvs = processor.query(null, whereClause.toString(), null, null,null,null);
+			ArrayList<ContentValues> cvs = processor.query(null, whereClause.toString(), null, null);
 
 			for (ContentValues cv : cvs) {
 				Resource r = Resource.fromContentValues(cv);

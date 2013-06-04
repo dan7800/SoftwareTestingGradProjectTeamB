@@ -39,7 +39,7 @@ import android.util.Log;
 import com.morphoss.acal.Constants;
 import com.morphoss.acal.database.DMAction;
 import com.morphoss.acal.database.DMQueryBuilder;
-import com.morphoss.acal.database.DatabaseTableManager.QUERY_ACTION;
+import com.morphoss.acal.database.TableManager.QUERY_ACTION;
 import com.morphoss.acal.database.resourcesmanager.ResourceManager;
 import com.morphoss.acal.database.resourcesmanager.ResourceManager.ResourceTableManager;
 import com.morphoss.acal.database.resourcesmanager.ResourceManager.WriteableResourceTableManager;

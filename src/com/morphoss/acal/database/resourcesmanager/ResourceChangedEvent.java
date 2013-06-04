@@ -6,7 +6,7 @@ import java.util.HashMap;
 import android.util.Log;
 
 import com.morphoss.acal.database.DataChangeEvent;
-import com.morphoss.acal.database.DatabaseTableManager.QUERY_ACTION;
+import com.morphoss.acal.database.TableManager.QUERY_ACTION;
 import com.morphoss.acal.dataservice.Resource;
 
 public class ResourceChangedEvent {

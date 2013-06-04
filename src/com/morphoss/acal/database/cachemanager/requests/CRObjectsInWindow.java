@@ -65,7 +65,7 @@ public class CRObjectsInWindow  extends CacheRequestWithResponse<ArrayList<Cache
 					"( "+CacheTableManager.FIELD_DTSTART+" ISNULL )"+
 				")",
 				new String[] {dtStart , offset, dtStart, dtEnd, offset, dtEnd},
-				null,null,CacheTableManager.FIELD_DTSTART+" ASC");
+				CacheTableManager.FIELD_DTSTART+" ASC");
 		
 		for (ContentValues cv : data) 
 				result.add(CacheObject.fromContentValues(cv));

@@ -19,7 +19,7 @@ import com.morphoss.acal.Constants;
 import com.morphoss.acal.acaltime.AcalDateTime;
 import com.morphoss.acal.database.DMQueryBuilder;
 import com.morphoss.acal.database.DMQueryList;
-import com.morphoss.acal.database.DatabaseTableManager.QUERY_ACTION;
+import com.morphoss.acal.database.TableManager.QUERY_ACTION;
 import com.morphoss.acal.database.resourcesmanager.ResourceManager.ResourceTableManager;
 import com.morphoss.acal.database.resourcesmanager.ResourceManager.WriteableResourceTableManager;
 import com.morphoss.acal.database.resourcesmanager.ResourceProcessingException;
@@ -356,7 +356,7 @@ public class RRInitialCollectionSync implements ResourceRequest {
 			ContentValues cv = null;
 			ArrayList<ContentValues> cvList = processor.query(null,
 										ResourceTableManager.COLLECTION_ID+"=? AND "+ResourceTableManager.RESOURCE_NAME+"=?",
-										new String[] {Long.toString(collectionId), name}, null, null, null);
+										new String[] {Long.toString(collectionId), name}, null);
 			if (!cvList.isEmpty()) cv = cvList.get(0);
 
 			//WriteActions action = WriteActions.UPDATE;

@@ -1,5 +1,7 @@
 package com.morphoss.acal.database.cachemanager;
 
+import com.morphoss.acal.acaltime.AcalDateRange;
+
 
 /**
  * Parent class of all CacheRequests that return data. Extend this class if your cache request returns data. If your CacheRequest
@@ -38,4 +40,11 @@ public abstract class CacheRequestWithResponse<E> implements CacheRequest {
 			}
 		}).start();
 	}
+
+    public String whereClauseForRange(AcalDateRange range) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+
 }

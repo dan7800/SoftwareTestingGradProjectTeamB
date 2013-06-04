@@ -10,7 +10,7 @@ public class DMDeleteQuery implements DMAction {
 	}
 
 	@Override
-	public void process(DatabaseTableManager dm) {
+	public void process(TableManager dm) {
 		dm.delete(whereClause, whereArgs);			
 	}
 }

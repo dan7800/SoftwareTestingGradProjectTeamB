@@ -23,7 +23,7 @@ public class RRRequestInstanceBlocking extends ReadOnlyBlockingRequestWithRespon
 	
 	@Override
 	public void process(ReadOnlyResourceTableManager processor) throws ResourceProcessingException {
-		ArrayList<ContentValues> cv = processor.query(null, ResourceTableManager.RESOURCE_ID+" = ?", new String[]{resourceId+""}, null,null,null);
+		ArrayList<ContentValues> cv = processor.query(null, ResourceTableManager.RESOURCE_ID+" = ?", new String[]{resourceId+""}, null);
 		ArrayList<ContentValues> pcv = processor.getPendingResources();
 		try {
 			//check pending first

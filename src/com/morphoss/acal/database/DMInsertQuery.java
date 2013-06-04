@@ -11,7 +11,7 @@ public class DMInsertQuery implements DMAction {
 		this.values = values;
 	}
 
-	public void process(DatabaseTableManager dm) {
-		dm.insert(nullColumnHack, values);
+	public void process(TableManager dm) {
+		dm.insert(values);
 	}
 }

@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 import android.content.ContentValues;
 
-import com.morphoss.acal.database.resourcesmanager.ResourceProcessingException;
-import com.morphoss.acal.database.resourcesmanager.ResourceResponse;
 import com.morphoss.acal.database.resourcesmanager.ResourceManager.ReadOnlyResourceTableManager;
 import com.morphoss.acal.database.resourcesmanager.ResourceManager.ResourceTableManager;
+import com.morphoss.acal.database.resourcesmanager.ResourceProcessingException;
+import com.morphoss.acal.database.resourcesmanager.ResourceResponse;
 import com.morphoss.acal.database.resourcesmanager.requesttypes.ReadOnlyBlockingRequestWithResponse;
 import com.morphoss.acal.dataservice.Resource;
 
@@ -24,7 +24,7 @@ public class RRGetResourcesInCollection extends ReadOnlyBlockingRequestWithRespo
 		
 		//DO PROCESSING HERE
 		ArrayList<ContentValues> cvs = processor.query(null, ResourceTableManager.COLLECTION_ID+" = ?", new String[]{collectionId+""},
-														null,null,null);
+														null);
 		
 		for (ContentValues cv : cvs) response.add(Resource.fromContentValues(cv));
 		

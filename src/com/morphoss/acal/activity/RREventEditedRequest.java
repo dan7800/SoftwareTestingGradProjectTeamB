@@ -41,7 +41,7 @@ public class RREventEditedRequest extends ResourceRequestWithResponse<Long> {
 			if (action == EventEdit.ACTION_EDIT || action == EventEdit.ACTION_DELETE) {
 				Resource res = Resource.fromContentValues(
 						processor.query(null, ResourceTableManager.RESOURCE_ID+" = ?",
-								new String[]{event.getResourceId()+""},null,null,null)
+								new String[]{event.getResourceId()+""},null)
 								.get(0));
 				oldBlob = res.getBlob();
 				VCalendar vc = ((VCalendar)VComponent.createComponentFromResource(res));

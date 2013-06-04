@@ -49,7 +49,7 @@ import com.morphoss.acal.database.DMDeleteQuery;
 import com.morphoss.acal.database.DMQueryBuilder;
 import com.morphoss.acal.database.DMQueryList;
 import com.morphoss.acal.database.DMUpdateQuery;
-import com.morphoss.acal.database.DatabaseTableManager.QUERY_ACTION;
+import com.morphoss.acal.database.TableManager.QUERY_ACTION;
 import com.morphoss.acal.database.resourcesmanager.ResourceManager;
 import com.morphoss.acal.database.resourcesmanager.ResourceManager.ResourceTableManager;
 import com.morphoss.acal.database.resourcesmanager.requests.RRBlockAndProcessQueryList;

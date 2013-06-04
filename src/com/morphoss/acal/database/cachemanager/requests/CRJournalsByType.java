@@ -58,7 +58,7 @@ public class CRJournalsByType extends CacheRequestWithResponse<ArrayList<CacheOb
 
 		if ( Constants.LOG_DEBUG ) Log.println(Constants.LOGD, TAG, "Fetching journals WHERE "+whereClause);
 		
-		ArrayList<ContentValues> data = processor.query(null, whereClause, whereArgs, null,null,
+		ArrayList<ContentValues> data = processor.query(null, whereClause, whereArgs,
 				CacheTableManager.FIELD_DTEND+" ASC, "+CacheTableManager.FIELD_DTSTART+" ASC ");
 		
 		for (ContentValues cv : data) 

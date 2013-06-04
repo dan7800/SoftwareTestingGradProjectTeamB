@@ -2,7 +2,7 @@ package com.morphoss.acal.database;
 
 import android.content.ContentValues;
 
-import com.morphoss.acal.database.DatabaseTableManager.QUERY_ACTION;
+import com.morphoss.acal.database.TableManager.QUERY_ACTION;
 
 public class DMQueryBuilder {
 	private QUERY_ACTION action = null;

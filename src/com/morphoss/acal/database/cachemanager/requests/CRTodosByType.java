@@ -76,7 +76,7 @@ public class CRTodosByType extends CacheRequestWithResponse<ArrayList<CacheObjec
 
 		if ( Constants.LOG_DEBUG ) Log.println(Constants.LOGD, TAG, "Fetching todos WHERE "+whereClause);
 		
-		ArrayList<ContentValues> data = processor.query(null, whereClause, whereArgs, null,null,
+		ArrayList<ContentValues> data = processor.query(null, whereClause, whereArgs,
 				CacheTableManager.FIELD_DTEND+" ASC, "+CacheTableManager.FIELD_DTSTART+" ASC ");
 		
 		for (ContentValues cv : data) 

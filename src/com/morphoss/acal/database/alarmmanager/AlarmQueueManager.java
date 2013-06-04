@@ -389,6 +389,7 @@ public class AlarmQueueManager implements Runnable, ResourceChangedListener  {
 							alarm.toContentValues()
 						));
 				count++;
+				Log.i(TAG,"Alarm set for "+(alarm.getTimeToFire() - System.currentTimeMillis())/1000+"s from now for "+alarm.getResourceId() );
 			}
 			
 			//step 2 - begin db transaction, delete all existing and insert new list
@@ -412,8 +413,6 @@ public class AlarmQueueManager implements Runnable, ResourceChangedListener  {
 			ArrayList<ContentValues> res = super.query(null, 
 					FIELD_STATE +" = ? OR "+FIELD_STATE +" = ?", 
 					new String[] {ALARM_STATE.PENDING.ordinal()+"", ALARM_STATE.SNOOZED.ordinal()+""} , 
-					null, 
-					null, 
 					FIELD_TIME_TO_FIRE+" ASC");
 			if (res.isEmpty()) return null;
 			return AlarmRow.fromContentValues(res.get(0));
@@ -427,8 +426,6 @@ public class AlarmQueueManager implements Runnable, ResourceChangedListener  {
 			ArrayList<ContentValues> res = super.query(null, 
 					"("+FIELD_STATE +" = ? OR "+FIELD_STATE +" = ? ) AND "+FIELD_TIME_TO_FIRE+" < ?", 
 					new String[] {ALARM_STATE.PENDING.ordinal()+"", ALARM_STATE.SNOOZED.ordinal()+"", System.currentTimeMillis()+""} , 
-					null, 
-					null, 
 					FIELD_TIME_TO_FIRE+" ASC");
 			if (res.isEmpty()) {
 				this.scheduleAlarmIntent();
@@ -524,7 +521,7 @@ public class AlarmQueueManager implements Runnable, ResourceChangedListener  {
 
 			ArrayList<AlarmRow> alarmList = new ArrayList<AlarmRow>();
 			//use last dismissed to calculate start
-			ArrayList<ContentValues> cvs = super.query(null, FIELD_STATE+" = ?", new String[]{ALARM_STATE.DISMISSED.ordinal()+""}, null, null, FIELD_TIME_TO_FIRE+" DESC");
+			ArrayList<ContentValues> cvs = super.query(null, FIELD_STATE+" = ?", new String[]{ALARM_STATE.DISMISSED.ordinal()+""}, FIELD_TIME_TO_FIRE+" DESC");
 			if (!cvs.isEmpty()) after = AcalDateTime.fromMillis(cvs.get(0).getAsLong(FIELD_TIME_TO_FIRE));
 			
 			Resource r = Resource.fromContentValues(data);

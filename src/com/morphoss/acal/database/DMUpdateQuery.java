@@ -16,7 +16,7 @@ public class DMUpdateQuery implements DMAction {
 	}
 
 	@Override
-	public void process(DatabaseTableManager dm) {
+	public void process(TableManager dm) {
 		dm.update(values, whereClause, whereArgs);
 	}
 

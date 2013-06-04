@@ -59,7 +59,7 @@ public class RRResourceEditedRequest extends ResourceRequestWithResponse<Long> {
 			}
 			else {
 				res = Resource.fromContentValues(
-					processor.query(null, ResourceTableManager.RESOURCE_ID+" = "+resourceId, null, null,null,null).get(0));
+					processor.query(null, ResourceTableManager.RESOURCE_ID+" = "+resourceId, null, null).get(0));
 				oldBlob = res.getBlob();
 			}
 

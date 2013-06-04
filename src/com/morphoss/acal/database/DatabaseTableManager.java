@@ -23,7 +23,7 @@ import com.morphoss.acal.Constants;
  * @author Chris Noldus
  *
  */
-public abstract class DatabaseTableManager {
+public abstract class DatabaseTableManager implements TableManager {
 
 	protected boolean inTx = false;
 
@@ -45,8 +45,6 @@ public abstract class DatabaseTableManager {
 	
 	private long dbOpened;
 	private long dbYielded;
-	
-	public enum QUERY_ACTION { INSERT, UPDATE, DELETE, PENDING_RESOURCE };
 	
 	private static final String TAG = "aCal DatabaseManager";
 
@@ -238,7 +236,7 @@ public abstract class DatabaseTableManager {
 	
 	//Some useful generic methods
 
-	public ArrayList<ContentValues> query(String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy) {
+	public ArrayList<ContentValues> query(String[] columns, String selection, String[] selectionArgs, String orderBy) {
 		ArrayList<ContentValues> result = new ArrayList<ContentValues>();
 		int count = 0;
 		if (Constants.debugDatabaseManager && Constants.LOG_DEBUG) Log.println(Constants.LOGD,TAG,"DB: "+this.getTableName()+" query:");
@@ -246,7 +244,7 @@ public abstract class DatabaseTableManager {
 	
 		boolean openedInternally = doWeNeedADatabase(OPEN_READ);
 
-		Cursor c = db.query(getTableName(), columns, selection, selectionArgs, groupBy, having, orderBy);
+		Cursor c = db.query(getTableName(), columns, selection, selectionArgs, null, null, orderBy);
 		try {
 			if (c.getCount() > 0) {
 				for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) {
@@ -282,7 +280,7 @@ public abstract class DatabaseTableManager {
 		int count = 0;
 		try {
 			//First select or the row id's
-			ArrayList<ContentValues> rows = this.query(null, whereClause, whereArgs, null,null,null);
+			ArrayList<ContentValues> rows = this.query(null, whereClause, whereArgs, null);
 			count = db.delete(getTableName(), whereClause, whereArgs);
 	
 			if (count != rows.size()) {
@@ -326,7 +324,7 @@ public abstract class DatabaseTableManager {
 		return count;
 	}
 
-	public long insert(String nullColumnHack, ContentValues values) {
+	public long insert(ContentValues values) {
 		boolean openedInternally = doWeNeedADatabase(OPEN_WRITE);
 		if ( readOnlyDb ) throw new IllegalStateException("Cannot insert when DB is read-only!");
 		if (Constants.debugDatabaseManager && Constants.LOG_VERBOSE) Log.println(Constants.LOGV, TAG, 
@@ -334,7 +332,7 @@ public abstract class DatabaseTableManager {
 
 		Long newId = null;
 		try {
-			newId = db.insert(getTableName(), nullColumnHack, values);
+			newId = db.insert(getTableName(), null, values);
 			values.put("_id", newId);
 			changes.add(new DataChangeEvent(QUERY_ACTION.INSERT, new ContentValues(values)));
 		}

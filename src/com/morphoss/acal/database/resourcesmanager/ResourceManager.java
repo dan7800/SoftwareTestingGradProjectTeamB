@@ -166,12 +166,15 @@ public class ResourceManager implements Runnable {
 
 				}
 				else {
-					//process writes
+                    if ( ResourceManager.DEBUG && !writeQueue.isEmpty() ) 
+                        Log.println(Constants.LOGD, TAG, writeQueue.size()+" items in write queue.");
+
+                    //process writes
 					CacheManager.setResourceInTx(context, true);
-					while (!writeQueue.isEmpty()) {
-						if ( ResourceManager.DEBUG ) Log.println(Constants.LOGD,TAG,writeQueue.size()+" items in write queue.");
+					while ( !writeQueue.isEmpty() ) {
 						final ResourceRequest request = writeQueue.poll();
-						if ( ResourceManager.DEBUG ) Log.println(Constants.LOGD,TAG,"Processing Write Request: "+request.getClass());
+						if ( ResourceManager.DEBUG ) 
+						    Log.println(Constants.LOGD,TAG,"Processing Write Request: "+request.getClass());
 						try {
 							getRPInstance().process(request);
 						} catch (Exception e) {
@@ -262,7 +265,7 @@ public class ResourceManager implements Runnable {
 
 
 	public interface WriteableResourceTableManager extends ReadOnlyResourceTableManager {
-		public long insert(String nullColumnHack, ContentValues values);
+		public long insert(ContentValues values);
 		public int update(ContentValues values, String whereClause,	String[] whereArgs);
 		
 		public void deleteByCollectionId(long id);
@@ -287,8 +290,7 @@ public class ResourceManager implements Runnable {
 	public interface ReadOnlyResourceTableManager {
 		public void process(ResourceRequest r);
 		
-		public ArrayList<ContentValues> query(String[] columns, String selection, String[] selectionArgs,
-				String groupBy, String having, String orderBy);
+		public ArrayList<ContentValues> query(String[] columns, String selection, String[] selectionArgs, String orderBy);
 
 		public Map<String, ContentValues> contentQueryMap(String selection, String[] selectionArgs);
 		
@@ -396,7 +398,7 @@ public class ResourceManager implements Runnable {
 		 */
 		public ContentValues getResource(long rid) {
 			
-			ArrayList<ContentValues> res = this.query( null, RESOURCE_ID + " = ?",	new String[] { rid + "" }, null, null, null);
+			ArrayList<ContentValues> res = this.query( null, RESOURCE_ID + " = ?",	new String[] { rid + "" }, null);
 			if (res == null || res.isEmpty()) return null;
 			return res.get(0);
 		}
@@ -446,9 +448,9 @@ public class ResourceManager implements Runnable {
 		 * This override is important to ensure earliest start and latest end are always set
 		 */
 		@Override
-		public long insert(String nullColumnHack, ContentValues values) {
+		public long insert(ContentValues values) {
 			if ( ResourceManager.DEBUG ) Log.println(Constants.LOGD,TAG, "Resource Insert Begin");
-			return super.insert(nullColumnHack, preProcessValues(values));
+			return super.insert(preProcessValues(values));
 		}
 
 		/**
@@ -470,7 +472,7 @@ public class ResourceManager implements Runnable {
 		 */
 		public ContentValues getResourceInCollection(long collectionId,	String name) {
 			ArrayList<ContentValues> res = this.query(  null, RESOURCE_NAME + "=? AND "+COLLECTION_ID+"=?",
-					new String[] { name, Long.toString(collectionId) }, null, null, null);
+					new String[] { name, Long.toString(collectionId) }, null);
 			if (res == null || res.isEmpty()) return null;
 			return res.get(0);
 		}
@@ -677,7 +679,7 @@ public class ResourceManager implements Runnable {
 					//Create New
 					newResource.put(COLLECTION_ID, cid);
 					newResource.put(RESOURCE_DATA, newBlob); // So that effective_type, earliest_start & latest_end get set correctly
-					rid = this.insert(null, newResource);
+					rid = this.insert(newResource);
 
 					newResource = new ContentValues();
 					newResource.put(PEND_COLLECTION_ID, cid);
