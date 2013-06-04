@@ -81,27 +81,30 @@ public class CheckServerDialog {
 		public void handleMessage(Message msg) {
 			Bundle b = msg.getData();
 			int type = b.getInt(TYPE);
-			switch (type) {
-				case REFRESH_PROGRESS: 	
-					if (dialog != null)
-						dialog.setMessage(b.getString(REFRESH));
-					break;
-
-				case SHOW_FAIL_DIALOG: 	
-					if (dialog != null) {
-						dialog.dismiss();
-						dialog=null;
-					}
-					showFailDialog(b.getString(MESSAGE));
-					break;
-				case CHECK_COMPLETE:
-					if (dialog != null) {
-						dialog.dismiss();
-						dialog = null;
-					}
-					showSuccessDialog(b.getString(MESSAGE));
-					break;
+			try {
+    			switch (type) {
+    				case REFRESH_PROGRESS: 	
+    					if (dialog != null)
+    						dialog.setMessage(b.getString(REFRESH));
+    					break;
+    
+    				case SHOW_FAIL_DIALOG: 	
+    					if (dialog != null) {
+    						dialog.dismiss();
+    						dialog=null;
+    					}
+    					showFailDialog(b.getString(MESSAGE));
+    					break;
+    				case CHECK_COMPLETE:
+    					if (dialog != null) {
+    						dialog.dismiss();
+    						dialog = null;
+    					}
+    					showSuccessDialog(b.getString(MESSAGE));
+    					break;
+    			}
 			}
+			catch( Exception e ) {}
 		}
 	};
 	private RunAllTests	testRunner;
