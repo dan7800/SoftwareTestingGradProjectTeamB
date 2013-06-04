@@ -131,6 +131,9 @@ public class AcalDateRange implements Parcelable, Cloneable {
 		return answer;
 	}
 
+	/**
+	 * Returns a string representation of this date range.
+	 */
 	public String toString() {
 		return "range("+(start==null?"<forever<":start.fmtIcal())+","+(end==null?">forever>":end.fmtIcal())+")";
 	}
