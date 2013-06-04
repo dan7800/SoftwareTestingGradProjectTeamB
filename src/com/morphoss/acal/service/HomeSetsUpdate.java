@@ -51,9 +51,11 @@ public class HomeSetsUpdate extends ServiceJob {
 	private ContentResolver cr;
 	private AcalRequestor requestor;
 	private ContentValues	serverData;
+	private Map<String,ContentValues> collectionsToDelete;
 
 	private final static Header[] pCalendarHeaders = new Header[] {
 		new BasicHeader("Depth","1"),
+        new BasicHeader("Prefer","return=minimal, depth-noroot"),  // draft-murchison-webdav-prefer-03
 		new BasicHeader("Content-Type","text/xml; charset=utf-8")
 	};
 
@@ -63,7 +65,7 @@ public class HomeSetsUpdate extends ServiceJob {
 "    xmlns:C=\""+Constants.NS_CALDAV+"\""+
 "    xmlns:ACAL=\""+Constants.NS_ACAL+"\""+
 "    xmlns:ICAL=\""+Constants.NS_ICAL+"\""+
-"    xmlns:CS=\""+Constants.NS_CALENDARSERVER+"\">\n"+
+">\n"+
 " <prop>\n"+
 "  <displayname/>\n"+
 "  <resourcetype/>\n"+
@@ -71,7 +73,6 @@ public class HomeSetsUpdate extends ServiceJob {
 "  <supported-method-set/>\n"+
 "  <current-user-privilege-set/>\n"+
 "  <sync-token/>\n"+
-"  <CS:getctag/>\n"+
 "  <C:supported-calendar-component-set/>\n"+
 "  <C:calendar-timezone/>\n"+
 "  <ACAL:collection-colour/>\n"+
@@ -104,9 +105,14 @@ public class HomeSetsUpdate extends ServiceJob {
 		//No paths to process
 		if (homeSetPaths == null || homeSetPaths.length < 1) return;
 
+		collectionsToDelete = currentCollectionList();
+
 		for (String homePath : homeSetPaths) {
 			updateCollectionsWithin(homePath);
 		}
+
+		deleteOldCollections(collectionsToDelete);
+
 		if (Constants.LOG_DEBUG) Log.d(TAG,"DavCollections refresh on server "+this.serverId+" complete.");
 	}
 
@@ -151,21 +157,8 @@ public class HomeSetsUpdate extends ServiceJob {
 
 		if (Constants.LOG_DEBUG) Log.d(TAG,"Updating collections within "+homeSet);
 
-		Map<String,ContentValues> deleteList = new HashMap<String,ContentValues>();
-		String collectionPath = null;
-		Cursor cursor = cr.query(DavCollections.CONTENT_URI, null,
-					DavCollections.SERVER_ID+"="+serverId +" AND "+ DavCollections.COLLECTION_PATH+" LIKE ?",
-					new String[] { homeSet + "%"}, null);
-		for( cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext() ) {
-			ContentValues cv = new ContentValues();
-			DatabaseUtils.cursorRowToContentValues(cursor, cv);
-			collectionPath = cv.getAsString(DavCollections.COLLECTION_PATH);
-			deleteList.put(collectionPath, cv);
-		}
-		cursor.close();
-
 		try {
-			requestor.applyFromServer(serverData,false);
+			requestor.applyFromServer(serverData);
 			DavNode root = requestor.doXmlRequest("PROPFIND", homeSet, pCalendarHeaders, pCalendarRequest);
 			if (requestor.getStatusCode() == 404) {
 				Log.i(TAG, "PROPFIND got 404 on " + homeSet + " so a HomeSetDiscovery is being scheduled.");
@@ -174,6 +167,13 @@ public class HomeSetsUpdate extends ServiceJob {
 				return;
 			}
 
+            // Update NEEDS_SYNC on the home-set URL
+            ContentValues cv = new ContentValues();
+            cv.put(PathSets.NEEDS_SYNC,false);
+            cv.put(PathSets.LAST_CHECKED,new AcalDateTime().fmtIcal());
+            cr.update(PathSets.CONTENT_URI, cv, PathSets.SERVER_ID+"="+serverId+" AND "+PathSets.PATH+"=?", new String[] {homeSet});
+
+            String collectionPath = null;
 			List<DavNode> responseList = root.getNodesFromPath("multistatus/response");
 			for (DavNode response : responseList) {
 				List<DavNode> propstats = response.getNodesFromPath("propstat");
@@ -185,24 +185,11 @@ public class HomeSetsUpdate extends ServiceJob {
 					if ( collectionPath != null ) {
 						requestor.interpretUriString(collectionPath);
 						collectionPath = requestor.fullUrl();
-						if ( collectionPath.equals(homeSet) ) {
-							// Update CTAG and NEEDS_SYNC if this is the home-set URL
-							String ctag = propstat.getFirstNodeText("prop/getctag");
-							if ( ctag != null ) {
-								ContentValues cv = new ContentValues();
-								cv.put(PathSets.COLLECTION_TAG,ctag);
-								cv.put(PathSets.NEEDS_SYNC,false);
-								cv.put(PathSets.LAST_CHECKED,new AcalDateTime().fmtIcal());
-								cr.update(PathSets.CONTENT_URI, cv,
-											PathSets.SERVER_ID+"="+serverId+" AND "+PathSets.PATH+"=?",
-											new String[] {homeSet});
-							}
-						}
-						else {
-							if ( updateCollectionFromPropstat( collectionPath, propstat ) ) {
-								deleteList.remove(collectionPath);
-							}
-						}
+						if ( collectionPath.equals(homeSet) ) continue;
+
+						if ( updateCollectionFromPropstat( collectionPath, propstat ) )
+							collectionsToDelete.remove(collectionPath);
+
 					}
 				}
 
@@ -210,36 +197,59 @@ public class HomeSetsUpdate extends ServiceJob {
 				root.removeSubTree(response);
 			}
 			
-			if ( !deleteList.isEmpty() ) {
-				StringBuilder deleteIn = null;
-				for( Entry<String,ContentValues> d : deleteList.entrySet() ) {
-					if ( deleteIn == null ) {
-						deleteIn = new StringBuilder(DavCollections.SERVER_ID);
-						deleteIn.append("=");
-						deleteIn.append(serverId);
-						deleteIn.append(" AND ");
-						deleteIn.append(DavCollections._ID);
-						deleteIn.append(" IN (");
-					}
-					else {
-						deleteIn.append(",");
-					}
-					deleteIn.append(d.getValue().getAsInteger(DavCollections._ID));
-
-				}
-				deleteIn.append(")");
-				if ( Constants.LOG_DEBUG ) { Log.d(TAG,"Deleting collections from DB where:");
-					Log.d(TAG,deleteIn.toString());
-				}
-				cr.delete(DavCollections.CONTENT_URI, deleteIn.toString(), null);
-			}
-	
 		} catch (Exception ex2) {
 			Log.e(TAG,"Unknown error when updating collections within home sets: "+ex2.getMessage());
 			Log.e(TAG,Log.getStackTraceString(ex2));
 		}
 	}
 
+	/**
+	 * Get the current set of collections for this server
+	 */
+	private Map<String,ContentValues> currentCollectionList() {
+	    Map<String,ContentValues> currentPathList = new HashMap<String,ContentValues>();
+	    String collectionPath = null;
+        Cursor cursor = cr.query(DavCollections.CONTENT_URI, null, DavCollections.SERVER_ID+"="+serverId, null, null);
+        for( cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext() ) {
+            ContentValues cv = new ContentValues();
+            DatabaseUtils.cursorRowToContentValues(cursor, cv);
+            collectionPath = cv.getAsString(DavCollections.COLLECTION_PATH);
+            currentPathList.put(collectionPath, cv);
+        }
+        cursor.close();
+        return currentPathList;
+	}
+	
+	/**
+	 * Delete the old collections that are no longer present.
+	 */
+	private void deleteOldCollections( Map<String,ContentValues> deleteList) {
+        if ( deleteList.isEmpty() ) return;
+
+        StringBuilder deleteIn = null;
+        for( Entry<String,ContentValues> d : deleteList.entrySet() ) {
+            if ( deleteIn == null ) {
+                deleteIn = new StringBuilder(DavCollections.SERVER_ID);
+                deleteIn.append("=");
+                deleteIn.append(serverId);
+                deleteIn.append(" AND ");
+                deleteIn.append(DavCollections._ID);
+                deleteIn.append(" IN (");
+            }
+            else {
+                deleteIn.append(",");
+            }
+            deleteIn.append(d.getValue().getAsInteger(DavCollections._ID));
+
+        }
+        deleteIn.append(")");
+        if ( Constants.LOG_DEBUG ) { Log.d(TAG,"Deleting collections from DB where:");
+            Log.d(TAG,deleteIn.toString());
+        }
+        cr.delete( DavCollections.CONTENT_URI, deleteIn.toString(), null);
+	}
+	
+	
 	
 	/**
 	 * Does a database update (or insert) on the basis of this response
