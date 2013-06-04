@@ -403,7 +403,7 @@ public class SyncCollectionContents extends ServiceJob {
 				}
 				responses = root.getNodesFromPath("multistatus/sync-token");
 				if ( responses.isEmpty() ) {
-					Log.i("aCal","No sync-token in sync-report response. Falling back to PROPFIND.");
+					Log.i("aCal","No sync-token in sync-collection response. Falling back to PROPFIND.");
 					updateCollectionToken(null);
 					return doRegularSyncPropfind();
 				}
@@ -453,6 +453,7 @@ public class SyncCollectionContents extends ServiceJob {
 						// the status message was not 200/201 so it's a DELETE that we're
 						// seeing reflected back at us.
 						Log.i(TAG,"Ignoring delete sync on node '"+responseHref+"' which is already deleted from our DB." );
+						continue;
 					}
 					else {
 						// This really *is* a DELETE, since the status could only
@@ -468,7 +469,6 @@ public class SyncCollectionContents extends ServiceJob {
 					//changeList.add( new ResourceModification(action, cv, null) );
 					builder.setValues(cv);
 					queryList.addAction(builder.build());
-					
 					
 				}
 			}
