@@ -157,8 +157,8 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 	/* Fields Relating to Gesture Detection */
 	private GestureDetector gestureDetector;
 	private long consumedTime;
-	private static final int maxAngleDev = 30;
-	private static final int minDistanceSquared = 3600;
+	private static final int MAX_ANGLE_DEVIATION = 40;
+	private static final int MIN_DISTANCE_SQUARED = 1600;
 
 	/* Fields relating to Intent Results */
 	public static final int PICK_MONTH_FROM_YEAR_VIEW = 0;
@@ -872,8 +872,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 	 * </p>
 	 */
 	@Override
-	public boolean onScroll(MotionEvent start, MotionEvent current, float dx,
-			float dy) {
+	public boolean onScroll(MotionEvent start, MotionEvent current, float dx, float dy) {
 		try {
 			// We can't work with null objects
 			if (start == null || current == null)
@@ -889,11 +888,11 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 			Object scrolledOn = getTouchedObject(startX, startY);
 			boolean isHorizontal = false;
 			boolean isVertical = false;
-			if ((angle > 360 - maxAngleDev || angle < 0 + maxAngleDev)
-					|| (angle > 180 - maxAngleDev && angle < 180 + maxAngleDev)) {
+			if ((angle > 360 - MAX_ANGLE_DEVIATION || angle < 0 + MAX_ANGLE_DEVIATION)
+					|| (angle > 180 - MAX_ANGLE_DEVIATION && angle < 180 + MAX_ANGLE_DEVIATION)) {
 				isHorizontal = true;
-			} else if ((angle > 90 - maxAngleDev && angle < 90 + maxAngleDev)
-					|| (angle > 270 - maxAngleDev && angle < 270 + maxAngleDev)) {
+			} else if ((angle > 90 - MAX_ANGLE_DEVIATION && angle < 90 + MAX_ANGLE_DEVIATION)
+					|| (angle > 270 - MAX_ANGLE_DEVIATION && angle < 270 + MAX_ANGLE_DEVIATION)) {
 				isVertical = true;
 			}
 
@@ -904,7 +903,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 
 			// Some conditions that work out if we are interested in this event.
 			if (    (consumedTime == start.getDownTime()) || // We've already consumed the event
-					(totalDistSq < minDistanceSquared) || // Not a long enough swipe
+					(totalDistSq < MIN_DISTANCE_SQUARED) || // Not a long enough swipe
 					(scrolledOn == null) || // Nothing underneath touch of interest
 					(!isHorizontal && !isVertical) // Direction is not of intrest
 			) {
