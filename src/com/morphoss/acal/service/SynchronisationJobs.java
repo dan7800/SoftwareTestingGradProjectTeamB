@@ -161,7 +161,7 @@ public class SynchronisationJobs extends ServiceJob {
 	public static Header[] getReportHeaders( int depth ) {
 		return new Header[] {
 					new BasicHeader("Content-Type", "text/xml; charset=utf-8"),
-					new BasicHeader("Brief","T"),
+					new BasicHeader("Prefer","return=minimal, depth-noroot"),  // draft-murchison-webdav-prefer-03
 					new BasicHeader("Depth", Integer.toString(depth))
 				};
 	}
