@@ -2,8 +2,8 @@ package com.morphoss.acal.database.alarmmanager.requests;
 
 import com.morphoss.acal.database.alarmmanager.ALARM_STATE;
 import com.morphoss.acal.database.alarmmanager.AlarmProcessingException;
-import com.morphoss.acal.database.alarmmanager.AlarmRow;
 import com.morphoss.acal.database.alarmmanager.AlarmQueueManager.AlarmTableManager;
+import com.morphoss.acal.database.alarmmanager.AlarmRow;
 import com.morphoss.acal.database.alarmmanager.requesttypes.BlockingAlarmRequest;
 
 /**

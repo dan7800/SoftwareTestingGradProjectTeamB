@@ -40,7 +40,7 @@ public class RRRequestInstanceBlocking extends ReadOnlyBlockingRequestWithRespon
 					break;
 				}
 			}
-			if (!isProcessed()) {
+			if ( !isProcessed() && !cv.isEmpty() ) {
 				this.postResponse(new RRRequestInstanceBlockingResult(cv.get(0)));
 			}
 		}

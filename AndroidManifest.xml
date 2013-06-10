@@ -46,7 +46,6 @@
 		android:description="@string/appDescription"
 		android:icon="@drawable/ic_launcher_events"
 		android:label="@string/appName"
-		android:largeHeap="true"
 		android:theme="@android:style/Theme.NoTitleBar" >
 		<activity
 			android:name="aCal"
@@ -323,6 +322,10 @@
 		<provider
 			android:name="com.morphoss.acal.providers.CacheDataProvider"
 			android:authorities="cache"
+			android:exported="false" />
+		<provider
+			android:name="com.morphoss.acal.providers.AlarmDataProvider"
+			android:authorities="alarms"
 			android:exported="false" />
 		<service
 			android:name="com.morphoss.acal.service.aCalService"

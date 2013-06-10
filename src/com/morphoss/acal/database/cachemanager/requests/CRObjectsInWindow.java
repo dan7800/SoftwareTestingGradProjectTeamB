@@ -15,8 +15,8 @@ import com.morphoss.acal.weekview.WeekViewCache;
 
 public class CRObjectsInWindow  extends CacheRequestWithResponse<ArrayList<CacheObject>> {
 
-	private WeekViewCache caller;
-	
+	private final WeekViewCache caller;
+
 	/**
 	 * Request all CacheObjects in the range provided. Pass the result to the callback provided
 	 * @param range
@@ -26,18 +26,18 @@ public class CRObjectsInWindow  extends CacheRequestWithResponse<ArrayList<Cache
 		super(caller);
 		this.caller = caller;
 	}
-	
+
 	@Override
 	public void process(CacheTableManager processor)  throws CacheProcessingException{
 		final ArrayList<CacheObject> result = new ArrayList<CacheObject>();
 		AcalDateRange range = caller.getWindow().getRequestedWindow();
-		
+
 		//No longer need data?
 		if (range == null) {
 			this.postResponse(new CRObjectsInWindowResponse<ArrayList<CacheObject>>(result, null));
 			return;
 		}
-		
+
 		//is data available?
 		if (!processor.checkWindow(range)) {
 			//Wait give up - caller can decide to rerequest or waitf for cachechanged notification
@@ -48,26 +48,11 @@ public class CRObjectsInWindow  extends CacheRequestWithResponse<ArrayList<Cache
 		String dtStart = range.start.getMillis()+"";
 		String dtEnd = range.end.getMillis()+"";
 		String offset = TimeZone.getDefault().getOffset(range.start.getMillis())+"";
-		
-		
-		ArrayList<ContentValues> data = processor.query(null, 
-				"( " + 
-					"( "+CacheTableManager.FIELD_DTEND+" > ? AND NOT "+CacheTableManager.FIELD_DTEND_FLOAT+" )"+
-						" OR "+
-						"( "+CacheTableManager.FIELD_DTEND+" + ? > ? AND "+CacheTableManager.FIELD_DTEND_FLOAT+" )"+
-						" OR "+
-					"( "+CacheTableManager.FIELD_DTEND+" ISNULL )"+
-				" ) AND ( "+
-					"( "+CacheTableManager.FIELD_DTSTART+" < ? AND NOT "+CacheTableManager.FIELD_DTSTART_FLOAT+" )"+
-						" OR "+
-					"( "+CacheTableManager.FIELD_DTSTART+" + ? < ? AND "+CacheTableManager.FIELD_DTSTART_FLOAT+" )"+
-						" OR "+
-					"( "+CacheTableManager.FIELD_DTSTART+" ISNULL )"+
-				")",
-				new String[] {dtStart , offset, dtStart, dtEnd, offset, dtEnd},
-				CacheTableManager.FIELD_DTSTART+" ASC");
-		
-		for (ContentValues cv : data) 
+
+
+		ArrayList<ContentValues> data = processor.queryInRange(range, null);
+
+		for (ContentValues cv : data)
 				result.add(CacheObject.fromContentValues(cv));
 		caller.getWindow().expandWindow(range);
 		this.postResponse(new CRObjectsInWindowResponse<ArrayList<CacheObject>>(result,range));
@@ -80,19 +65,19 @@ public class CRObjectsInWindow  extends CacheRequestWithResponse<ArrayList<Cache
 	 * @param <E>
 	 */
 	public class CRObjectsInWindowResponse<E extends ArrayList<CacheObject>> implements CacheResponse<ArrayList<CacheObject>> {
-		
-		private ArrayList<CacheObject> result;
-		private AcalDateRange range;
-		
+
+		private final ArrayList<CacheObject> result;
+		private final AcalDateRange range;
+
 		private CRObjectsInWindowResponse(ArrayList<CacheObject> result, AcalDateRange range) {
 			this.result = result;
 			this.range = range;
 		}
-		
+
 		public AcalDateRange rangeRetreived() {
 			return this.range;
 		}
-		
+
 		/**
 		 * Returns the result of the original Request.
 		 */

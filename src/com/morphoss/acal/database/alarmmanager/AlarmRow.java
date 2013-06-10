@@ -1,76 +1,93 @@
 package com.morphoss.acal.database.alarmmanager;
 
-import android.content.ContentValues;
+import java.util.Locale;
 
-import com.morphoss.acal.database.alarmmanager.AlarmQueueManager.AlarmTableManager;
+import android.content.ContentValues;
+import android.util.Log;
+
+import com.morphoss.acal.AcalApplication;
+import com.morphoss.acal.acaltime.AcalDateTime;
+import com.morphoss.acal.davacal.VAlarm;
+import com.morphoss.acal.davacal.VCalendar;
+import com.morphoss.acal.providers.AlarmDataProvider;
 
 public class AlarmRow implements Comparable<AlarmRow> {
 
-	private long id;
-	private long ttf;
-	private long rid;
-	private String rrid;
+	private final long id;
+	private long time_to_fire;
+	private final long resource_id;
+	private final String recurrence_id;
 	private ALARM_STATE state;
-	private String blob;
-	
+	private final String blob;
+	private static final long SNOOZE_MILLIS = 9*60*1000;
+
 	public AlarmRow(long id, long ttf, long rid, String rrid, ALARM_STATE state, String blob) {
 		this.id = id;
-		this.ttf = ttf;
-		this.rid = rid;
-		this.rrid = rrid;
+		this.time_to_fire = ttf;
+		this.resource_id = rid;
+		this.recurrence_id = rrid;
 		this.state = state;
 		this.blob = blob;
 	}
-	
+
 	public AlarmRow(long ttf, long rid, String rrid, ALARM_STATE state, String blob) {
 		this(-1,ttf, rid,rrid,state, blob);
 	}
-	
+
 	public AlarmRow(long ttf, long rid, String rrid, String blob) {
 		this(-1,ttf, rid,rrid,ALARM_STATE.PENDING,blob);
 	}
-	
+
 	public ContentValues toContentValues() {
 		ContentValues cv = new ContentValues();
-		if (id > 0) cv.put(AlarmTableManager.FIELD_ID, id);
-		cv.put(AlarmTableManager.FIELD_TIME_TO_FIRE, ttf);
-		cv.put(AlarmTableManager.FIELD_RID, rid);
-		cv.put(AlarmTableManager.FIELD_RRID, rrid);
-		cv.put(AlarmTableManager.FIELD_STATE, state.ordinal());
-		cv.put(AlarmTableManager.FIELD_BLOB, blob);
+		if (id > 0) cv.put(AlarmDataProvider._ID, id);
+		cv.put(AlarmDataProvider.TIME_TO_FIRE, time_to_fire);
+		cv.put(AlarmDataProvider.RESOURCE_ID, resource_id);
+		cv.put(AlarmDataProvider.RRID, recurrence_id);
+		cv.put(AlarmDataProvider.STATE, state.ordinal());
+		cv.put(AlarmDataProvider.BLOB, blob);
 		return cv;
 	}
-	
+
 	public static AlarmRow fromContentValues(ContentValues cv) {
-		
-		if (!cv.containsKey(AlarmTableManager.FIELD_ID)) {
+
+		if (!cv.containsKey(AlarmDataProvider._ID)) {
 			cv = new ContentValues(cv);
-			cv.put(AlarmTableManager.FIELD_ID, -1);
+			cv.put(AlarmDataProvider._ID, -1);
 		}
-		
+
 		return new AlarmRow(
-				cv.getAsLong(AlarmTableManager.FIELD_ID),
-				cv.getAsLong(AlarmTableManager.FIELD_TIME_TO_FIRE),
-				cv.getAsLong(AlarmTableManager.FIELD_RID),
-				cv.getAsString(AlarmTableManager.FIELD_RRID),
-				ALARM_STATE.values()[cv.getAsInteger(AlarmTableManager.FIELD_STATE)],
-				cv.getAsString(AlarmTableManager.FIELD_BLOB)
+				cv.getAsLong(AlarmDataProvider._ID),
+				cv.getAsLong(AlarmDataProvider.TIME_TO_FIRE),
+				cv.getAsLong(AlarmDataProvider.RESOURCE_ID),
+				cv.getAsString(AlarmDataProvider.RRID),
+				ALARM_STATE.values()[cv.getAsInteger(AlarmDataProvider.STATE)],
+				cv.getAsString(AlarmDataProvider.BLOB)
 		);
-		
+
+	}
+
+	@Override
+	public boolean equals(Object other) {
+	    if ( other == this ) return true;
+	    if ( ((AlarmRow)other).id == this.id ) return true;
+        if ( ((AlarmRow)other).resource_id == this.resource_id
+                && ((AlarmRow)other).recurrence_id.equals(this.recurrence_id)  ) return true;
+	    return false;
 	}
 
 	@Override
 	public int compareTo(AlarmRow another) {
-		return (int)(this.ttf - another.ttf);
+		return (int)(this.time_to_fire - another.time_to_fire);
 	}
 
 	public long getTimeToFire() {
-		return this.ttf;
+		return this.time_to_fire;
 	}
 
 	public void setState(ALARM_STATE state) {
 		this.state = state;
-		
+
 	}
 
 	public long getId() {
@@ -78,19 +95,38 @@ public class AlarmRow implements Comparable<AlarmRow> {
 	}
 
 	public long getResourceId() {
-		return this.rid;
+		return this.resource_id;
 	}
 
 	public String getReccurenceId() {
-		return this.rrid;
+		return this.recurrence_id;
 	}
 
 	public String getBlob() {
 		return this.blob;
 	}
 
-	public long getTTF() {
-		return this.ttf;
-	}
-	
+    public void addSnooze() {
+        this.time_to_fire += SNOOZE_MILLIS;
+    }
+
+    @Override
+    public String toString() {
+        VAlarm va = (VAlarm) VAlarm.createComponentFromBlob(getBlob());
+        AcalDateTime fireAt = AcalDateTime.localTimeFromMillis(time_to_fire, false);
+        String summary = "Some kind of error occurred :-(";
+        try {
+            summary = ((VCalendar) VCalendar
+                    .createComponentFromResource(
+                            AcalApplication.getResourceFromDatabase(this.resource_id)
+                        )
+                    )
+                    .getMasterChild()
+                    .getSummary();
+        }
+        catch( Exception e) {
+            Log.e("aCal", "Error", e);
+        }
+        return String.format(Locale.ENGLISH, "%s %-8.8s %s", fireAt.fmtIcal(), state.toString(), summary);
+    }
 }

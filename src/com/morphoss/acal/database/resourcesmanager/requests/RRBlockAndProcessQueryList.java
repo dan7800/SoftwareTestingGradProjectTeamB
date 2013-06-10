@@ -1,8 +1,8 @@
 package com.morphoss.acal.database.resourcesmanager.requests;
 
 import com.morphoss.acal.database.DMQueryList;
-import com.morphoss.acal.database.resourcesmanager.ResourceProcessingException;
 import com.morphoss.acal.database.resourcesmanager.ResourceManager.WriteableResourceTableManager;
+import com.morphoss.acal.database.resourcesmanager.ResourceProcessingException;
 import com.morphoss.acal.database.resourcesmanager.requesttypes.BlockingResourceRequest;
 
 public class RRBlockAndProcessQueryList implements BlockingResourceRequest {

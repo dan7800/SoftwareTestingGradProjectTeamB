@@ -4,11 +4,11 @@ import java.util.Map;
 
 import android.content.ContentValues;
 
-import com.morphoss.acal.database.resourcesmanager.ResourceProcessingException;
 import com.morphoss.acal.database.resourcesmanager.ResourceManager.ResourceTableManager;
 import com.morphoss.acal.database.resourcesmanager.ResourceManager.WriteableResourceTableManager;
-import com.morphoss.acal.database.resourcesmanager.requesttypes.BlockingResourceRequestWithResponse;
+import com.morphoss.acal.database.resourcesmanager.ResourceProcessingException;
 import com.morphoss.acal.database.resourcesmanager.ResourceResponse;
+import com.morphoss.acal.database.resourcesmanager.requesttypes.BlockingResourceRequestWithResponse;
 
 public class RRSyncQueryMap extends BlockingResourceRequestWithResponse<Map<String,ContentValues>> {
 

@@ -7,6 +7,7 @@ import java.util.Map;
 import android.content.ContentValues;
 import android.util.Log;
 
+import com.morphoss.acal.Constants;
 import com.morphoss.acal.acaltime.AcalDateRange;
 import com.morphoss.acal.acaltime.AcalDateTime;
 import com.morphoss.acal.database.alarmmanager.AlarmRow;
@@ -34,12 +35,12 @@ public class RRGetUpcomingAlarms extends ReadOnlyBlockingRequestWithResponse<Arr
 	@Override
 	public void process(ReadOnlyResourceTableManager processor)	throws ResourceProcessingException {
 		alarmCollections = Collection.getAllCollections(processor.getContext());
-		ArrayList<AlarmRow> alarmList = new ArrayList<AlarmRow>(); 
+		ArrayList<AlarmRow> alarmList = new ArrayList<AlarmRow>();
 
 		long start = alarmsAfter.getMillis();
 		long end = start;
 		start -= AcalDateTime.SECONDS_IN_HOUR * 36 * 1000L;
-		end   += AcalDateTime.SECONDS_IN_DAY * 70 * 1000L;
+		end   += AcalDateTime.SECONDS_IN_DAY * 14 * 1000L;
 
 		StringBuilder whereClause = new StringBuilder(ResourceTableManager.COLLECTION_ID);
 		whereClause.append(" IN (");
@@ -69,6 +70,8 @@ public class RRGetUpcomingAlarms extends ReadOnlyBlockingRequestWithResponse<Arr
 			whereClause.append(" LIKE '%BEGIN:VALARM%' )");
 
 			ArrayList<ContentValues> cvs = processor.query(null, whereClause.toString(), null, null);
+			if ( Constants.debugAlarms )
+			    Log.i(ResourceManager.TAG,"Found "+cvs.size()+" resources with alarms between "+start+" and "+end);
 
 			for (ContentValues cv : cvs) {
 				Resource r = Resource.fromContentValues(cv);
@@ -90,22 +93,22 @@ public class RRGetUpcomingAlarms extends ReadOnlyBlockingRequestWithResponse<Arr
 		}
 		Collections.sort(alarmList);
 		RRGetUpcomingAlarmsResult response = new RRGetUpcomingAlarmsResult(alarmList);
-		
+
 		this.postResponse(response);
 	}
 
 	public class RRGetUpcomingAlarmsResult extends ResourceResponse<ArrayList<AlarmRow>> {
 
-		private ArrayList<AlarmRow> result;
-		
-		public RRGetUpcomingAlarmsResult(ArrayList<AlarmRow> result) { 
+		private final ArrayList<AlarmRow> result;
+
+		public RRGetUpcomingAlarmsResult(ArrayList<AlarmRow> result) {
 			this.result = result;
 			setProcessed();
 		}
-		
+
 		@Override
 		public ArrayList<AlarmRow> result() {return this.result;	}
-		
+
 	}
 
 }

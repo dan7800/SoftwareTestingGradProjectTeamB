@@ -14,18 +14,18 @@ import com.morphoss.acal.database.cachemanager.CacheResponseListener;
 
 /**
  * A CacheRequest that returns a List of CacheObjects that occur in the specified range.
- * 
+ *
  * To get the result you should pass in a CacheResponseListenr of the type ArrayList&lt;CacheObject&gt;
  * If you don't care about the result (e.g. your forcing a window size change) you may pass a null callback.
- * 
+ *
  * @author Chris Noldus
  *
  */
 public class CRObjectsInRange extends CacheRequestWithResponse<ArrayList<CacheObject>> {
 
-	private AcalDateRange range;
+	private final AcalDateRange range;
 	private String objectType = null;
-	
+
 	/**
 	 * Request all CacheObjects in the range provided. Pass the result to the callback provided
 	 * @param range
@@ -35,7 +35,7 @@ public class CRObjectsInRange extends CacheRequestWithResponse<ArrayList<CacheOb
 		super(callBack);
 		this.range = range;
 	}
-	
+
 	/**
 	 * Request all VEVENT CacheObjects in the range provided. Pass the result to the callback provided
 	 * @param range
@@ -46,8 +46,8 @@ public class CRObjectsInRange extends CacheRequestWithResponse<ArrayList<CacheOb
 		result.objectType = CacheTableManager.RESOURCE_TYPE_VEVENT;
 		return result;
 	}
-	
-	@Override
+
+    @Override
 	public void process(CacheTableManager processor)  throws CacheProcessingException{
 		final ArrayList<CacheObject> result = new ArrayList<CacheObject>();
 		if (!processor.checkWindow(range)) {
@@ -57,9 +57,10 @@ public class CRObjectsInRange extends CacheRequestWithResponse<ArrayList<CacheOb
 		}
 
 		ArrayList<ContentValues> data = processor.queryInRange(range,objectType);
-		for (ContentValues cv : data) 
-				result.add(CacheObject.fromContentValues(cv));
-		
+		for (ContentValues cv : data) {
+            result.add(CacheObject.fromContentValues(cv));
+		}
+
 		this.postResponse(new CRObjectsInRangeResponse<ArrayList<CacheObject>>(result));
 	}
 
@@ -70,13 +71,13 @@ public class CRObjectsInRange extends CacheRequestWithResponse<ArrayList<CacheOb
 	 * @param <E>
 	 */
 	public class CRObjectsInRangeResponse<E extends ArrayList<CacheObject>> implements CacheResponse<ArrayList<CacheObject>> {
-		
-		private ArrayList<CacheObject> result;
-		
+
+		private final ArrayList<CacheObject> result;
+
 		private CRObjectsInRangeResponse(ArrayList<CacheObject> result) {
 			this.result = result;
 		}
-		
+
 		/**
 		 * Returns the result of the original Request.
 		 */

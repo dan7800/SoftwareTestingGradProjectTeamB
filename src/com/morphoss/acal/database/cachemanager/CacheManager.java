@@ -48,13 +48,13 @@ import com.morphoss.acal.desktop.ShowUpcomingWidgetProvider;
 import com.morphoss.acal.providers.CacheDataProvider;
 
 /**
- * 	
+ *
  * This class provides an interface for things that want access to the cache.
- * 
+ *
  * Call the static getInstance method to get an instance of this Manager.
- * 
+ *
  * To use, call sendRequest
- * 
+ *
  * WARNING: Only the worker thread should access the DB directly. Everything else MUST create a request and put it on the queue
  * adding methods that directly access the db in this enclosing class could lead to race conditions and cause the db or the cache
  * to enter an inconsistent state.
@@ -72,7 +72,7 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 	private static final int DEF_MONTHS_BEFORE = -1;	//these 2 represent the default window size
 	private static final int DEF_MONTHS_AFTER = 3;		//relative to todays date
 	public static final boolean	DEBUG	= true && Constants.DEBUG_MODE;
-		
+
 	//Cache Window settings
 	private final long lookForward = 86400000L*7L*10L;	//10 weeks
 	private final long lookBack = 86400000L*7L*5L;	//5 week
@@ -80,15 +80,14 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 	private final long minPaddingForward = 86400000L*7L*5L;	//5 weeks
 	private final long minPaddingBack = 86400000L*7L*5L;	//5 weeks
 	private final long increment = 86400000L*7L*5L;	//5 weeks
-	
-	
-	private Context context;
+
+
+	private final Context context;
 
 	private CacheWindow window;
-	private long metaRow = 0;
 
 	//ThreadManagement
-	private ConditionVariable threadHolder = new ConditionVariable();
+	private final ConditionVariable threadHolder = new ConditionVariable();
 	private Thread workerThread;
 	private boolean running = true;
 	private final ConcurrentLinkedQueue<CacheRequest> queue = new ConcurrentLinkedQueue<CacheRequest>();
@@ -107,15 +106,14 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 	//Comms
 	private final CopyOnWriteArraySet<CacheChangedListener> listeners = new CopyOnWriteArraySet<CacheChangedListener>();
 	private ResourceManager rm;
-	
+
 	//Request Processor Instance
 	private CacheTableManager CTMinstance;
-	
+
 	private static Semaphore lockSem = new Semaphore(1, true);
-	
 	private static volatile boolean lockdb = false;
 
-	
+
 	//Get an instance
 	public synchronized static CacheManager getInstance(Context context) {
 		if (instance == null) instance = new CacheManager(context);
@@ -137,7 +135,7 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 		if (CTMinstance == null) CTMinstance = new CacheTableManager();
 		return CTMinstance;
 	}
-	
+
 	/**
 	 * CacheManager needs a context to manage the DB. Should run under AcalService.
 	 * Loadstate ensures that our DB is consistent and should be run before any resource
@@ -154,7 +152,7 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 		workerThread.start();
 
 	}
-	
+
 	private void checkDefaultWindow() {
 		//ensure window contains the minimum range
 		AcalDateTime st  = new AcalDateTime();
@@ -175,7 +173,7 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 			this.listeners.add(ccl);
 		}
 	}
-	
+
 	/**
 	 * Remove an existing listener. Listeners should always be removed when they no longer require changes.
 	 * @param ccl
@@ -193,20 +191,19 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
         while (lockdb && count++ < 500) try { Thread.sleep(10); } catch (Exception e) { }
         if ( count > 499 ) {
             lockSem.release();
-            throw new RuntimeException("Unable to acquire metalock.");
+            Log.e(TAG,"Unable to acquire metalock.", new Exception("Stack Trace"));
         }
 		if (lockdb) throw new IllegalStateException("Cant acquire a lock that hasnt been released!");
 		lockdb = true;
 		lockSem.release();
-//		Log.d(TAG,"Acquired MetaLock", new Exception());
 	}
-	
+
 	private synchronized static void releaseMetaLock() {
-		if (!lockdb) throw new IllegalStateException("Cant release a lock that hasnt been obtained!");
+        if (!lockdb) Log.e(TAG,"Lock released already!", new Exception("Stack Trace"));
+//		if (!lockdb) throw new IllegalStateException("Cant release a lock that hasnt been obtained!");
 		lockdb = false;
-//        Log.d(TAG,"Released MetaLock.");
 	}
-	
+
     public synchronized static void setResourceInTx(Context c, boolean inTxn) {
 		ContentValues data = new ContentValues();
 		ContentResolver cr = c.getContentResolver();
@@ -214,9 +211,9 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 		AcalDateRange currentRange = null;
 		try { currentRange = instance.window.getCurrentWindow(); } catch( Exception e ) { };
 		if (currentRange == null) currentRange = new AcalDateRange(new AcalDateTime(), new AcalDateTime());
-		
+
 		acquireMetaLock();
-		
+
 		//get current values
 		Cursor cursor = null;
 		try {
@@ -248,7 +245,7 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 				}
 				cr.insert(CacheDataProvider.META_URI, data);
 			}
-			
+
 		}
 		catch( Exception e ) {
 			Log.i(TAG,Log.getStackTraceString(e));
@@ -259,14 +256,14 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 
 		}
 	}
-	
-	
+
+
 	/**
 	 * Ensures that this classes closes properly. MUST be called before it is terminated
 	 */
 	public void close() {
 		this.running = false;
-		//Keep waking worker thread until it dies 
+		//Keep waking worker thread until it dies
 		while (workerThread.isAlive()) {
 			threadHolder.open();
 			Thread.yield();
@@ -288,7 +285,7 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 
         //save start/end range to meta table
 		acquireMetaLock();
-		AcalDateRange windowRange = window.getCurrentWindow(); 
+		AcalDateRange windowRange = window.getCurrentWindow();
 		if (windowRange != null) {
 			data.put(FIELD_START, windowRange.start.getMillis());
 			data.put(FIELD_END, windowRange.end.getMillis());
@@ -298,8 +295,8 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 		}
 
 		// set CLOSED to true
-		cr.update(CacheDataProvider.META_URI, data, FIELD_ID+" = ?", new String[] {metaRow+""});
-		
+		cr.update(CacheDataProvider.META_URI, data, null, null);
+
 		//dereference ourself so GC can clean up
 		instance = null;
 		this.CTMinstance = null;
@@ -314,6 +311,9 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 	private void loadState() {
         ContentResolver cr = context.getContentResolver();
         ContentValues data = new ContentValues();
+        long start;
+        long end;
+        AcalDateRange range = null;
 
         acquireMetaLock();
 
@@ -341,9 +341,19 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 				DatabaseUtils.cursorRowToContentValues(mCursor, data);
 			}
 			closedState = data.getAsInteger(FIELD_CLOSED);
+            start = data.getAsLong(FIELD_START);
+            end = data.getAsLong(FIELD_END);
+            if (start >= 0 && end >= 0 ) range = new AcalDateRange(AcalDateTime.fromMillis(start), AcalDateTime.fromMillis(end));
 		}
 		catch( Exception e ) {
 			Log.i(TAG,Log.getStackTraceString(e));
+            data.put(FIELD_CLOSED, CLOSED_STATE_DIRTY);
+            data.put(FIELD_COUNT, 0);
+            start = defaultWindow.getMillis();
+            end = defaultWindow.getMillis();
+            data.put(FIELD_START,  start );
+            data.put(FIELD_END, end );
+            range = new AcalDateRange(AcalDateTime.fromMillis(start), AcalDateTime.fromMillis(end));
 		}
 		finally {
 			if ( mCursor != null ) mCursor.close();
@@ -351,29 +361,25 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 
 		if ( closedState == CLOSED_STATE_DIRTY ) {
 			Log.println(Constants.LOGI,TAG, "Application not closed correctly last time. Resetting cache.");
-			Toast.makeText(context, "aCal was not correctly shutdown last time.\nRebuilding cache - It may take some time before events are visible.",Toast.LENGTH_LONG).show();
+			Toast.makeText(context, "Rebuilding cache - It may take some time before events are visible.",Toast.LENGTH_LONG).show();
 			this.CTMinstance.clearCache();
 			data.put(FIELD_COUNT, 0);
-			data.put(FIELD_START,  defaultWindow.getMillis());
-			data.put(FIELD_END,  defaultWindow.getMillis());
+            start = defaultWindow.getMillis();
+            end = defaultWindow.getMillis();
+			data.put(FIELD_START,  start );
+			data.put(FIELD_END, end );
+            range = new AcalDateRange(AcalDateTime.fromMillis(start), AcalDateTime.fromMillis(end));
 		}
 		data.put(FIELD_CLOSED, CLOSED_STATE_CLEAN);
 		cr.delete(CacheDataProvider.META_URI, null, null);
+
 		data.remove(FIELD_ID);
 		cr.insert(CacheDataProvider.META_URI, data);
 
-
-		long start = data.getAsLong(FIELD_START);
-		long end = data.getAsLong(FIELD_END);
-		AcalDateRange range = null;
-		if (start >= 0 && end >= 0 ) range = new AcalDateRange(AcalDateTime.fromMillis(start), AcalDateTime.fromMillis(end));
-		
-		
-		
 		window = new CacheWindow(lookForward, lookBack, maxSize, minPaddingBack,
 								minPaddingForward, increment, this, new AcalDateTime());
 		if (range != null) window.setWindowSize(range);
-				
+
 		rm.addListener(this);
 		releaseMetaLock();
 
@@ -410,32 +416,32 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 	}
 
 	/**
-	 * Send a request to the CacheManager. Requests are queued and processed asynchronously. No guarantee is given as to 
+	 * Send a request to the CacheManager. Requests are queued and processed asynchronously. No guarantee is given as to
 	 * the order of processing, so if sending multiple requests, consider potential race conditions.
 	 * @param request
 	 * @throws IllegalStateException thrown if close() has been called.
 	 */
 	public void sendRequest(CacheRequest request) throws IllegalStateException {
-		if (instance == null || this.workerThread == null || this.CTMinstance == null) 
+		if (instance == null || this.workerThread == null || this.CTMinstance == null)
 			throw new IllegalStateException("CM in illegal state - probably because sendRequest was called after close() has been called.");
 		queue.offer(request);
 		threadHolder.open();
 	}
-	
+
 	/**
-	 * Send a request to the CacheManager. thread is blocked until response is generated. No guarantee is given as to 
+	 * Send a request to the CacheManager. thread is blocked until response is generated. No guarantee is given as to
 	 * the order of processing, so if sending multiple requests, consider potential race conditions.
 	 * @param request
 	 * @throws IllegalStateException thrown if close() has been called.
 	 */
 	public <E> CacheResponse<E> sendRequest(BlockingCacheRequestWithResponse<E> request) throws IllegalStateException {
-		if (instance == null || this.workerThread == null || this.CTMinstance == null) 
+		if (instance == null || this.workerThread == null || this.CTMinstance == null)
 			throw new IllegalStateException("CM in illegal state - probably because sendRequest was called after close() has been called.");
 		queue.offer(request);
 		threadHolder.open();
 		int priority = Thread.currentThread().getPriority();
 		Thread.currentThread().setPriority(Thread.MIN_PRIORITY);
-		long stopWaiting = System.currentTimeMillis() + MAX_BLOCKING_REQUEST_WAIT; 
+		long stopWaiting = System.currentTimeMillis() + MAX_BLOCKING_REQUEST_WAIT;
 		while ( !request.isProcessed() ) {
 			try { Thread.sleep(10); } catch (Exception e) {	}
 			if ( System.currentTimeMillis() > stopWaiting )
@@ -444,14 +450,14 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 		Thread.currentThread().setPriority(priority);
 		return request.getResponse();
 	}
-	
+
 	//Request events (FROM RESOURCES) that
 	private void retrieveRange() {
 		if (window.getRequestedWindow() == null) return;
 		if ( DEBUG && Constants.LOG_DEBUG ) Log.println(Constants.LOGD,TAG,"Sending RRGetCacheEventsInRange Request");
 		ResourceManager.getInstance(context).sendRequest(new RRGetCacheEventsInRange(window, this));
 	}
-	
+
 	@Override
 	public void resourceResponse(ResourceResponse<ArrayList<Resource>> response) {
 		if (response instanceof RREventsInRangeResponse<?>) {
@@ -463,8 +469,8 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 				Log.w(TAG, "Have response from range request but window says no range requested? Aborting!", new Exception(""));
 				return;
 			}
-			
-			
+
+
 			ArrayList<CacheObject> events = new ArrayList<CacheObject>();
 			//step 3 - foreach resource, Vcomps
 			//This is very CPU intensive, so lower our priority to prevent interfering with other parts of the app.
@@ -478,7 +484,7 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 					((VCalendar)comp).appendCacheEventInstancesBetween(events, range);
 				} catch (VComponentCreationException e) {
 					//not a vcal
-					
+
 				}
 
 			}
@@ -486,11 +492,11 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 			if ( DEBUG && Constants.LOG_DEBUG )
 				Log.println(Constants.LOGD,TAG,events.size()+"Event Instances obtained. Posting Response.");
 
-			
+
 			//put new data on the process queue
-			
+
 			DMQueryList inserts = new DMQueryList();
-			
+
 			if ( DEBUG && Constants.LOG_DEBUG )
 				Log.println(Constants.LOGD,TAG, "Have response from Resource manager for range request.");
 			//We should have exclusive DB access at this point
@@ -501,12 +507,12 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 							.setWhereClause(FIELD_START+" >= ? AND "+FIELD_START+" <= ?")
 							.setwhereArgs(new String[]{range.start.getMillis()+"", range.end.getMillis()+""})
 							.build());
-							
+
 			if ( DEBUG && Constants.LOG_DEBUG )
 				Log.println(Constants.LOGD,TAG, "Queueing insert of "+events.size()+" new events in "+range);
 			for (CacheObject event : events) {
 				if ( event.getStart() == Long.MAX_VALUE || event.getEnd() == Long.MAX_VALUE ) {
-					// Single instance tasks with a null start date can get included multiple times 
+					// Single instance tasks with a null start date can get included multiple times
 					inserts.addAction(new DMDeleteQuery(
 							CacheTableManager.FIELD_RESOURCE_ID+"="+event.getResourceId() +
 							" AND "+CacheTableManager.FIELD_DTSTART+"="+event.getStart() +
@@ -523,7 +529,7 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 
 
 	/**
-	 * Constructs the WHERE clause for a date range of cache rows 
+	 * Constructs the WHERE clause for a date range of cache rows
 	 * @param range
 	 * @param cacheObjectType
 	 * @return The WHERE clause
@@ -533,9 +539,9 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
         long dtEnd = range.end.getMillis();
         int offsetS = TimeZone.getDefault().getOffset(range.start.getMillis());
         int offsetE = TimeZone.getDefault().getOffset(range.start.getMillis());
-        
-        return                 
-        "( " + 
+
+        return
+        "( " +
             "( "+CacheTableManager.FIELD_DTEND+" > "+dtStart+" AND NOT "+CacheTableManager.FIELD_DTEND_FLOAT+" )"+
                 " OR "+
             "( "+CacheTableManager.FIELD_DTEND+" - "+offsetS+" > "+dtStart+" AND "+CacheTableManager.FIELD_DTEND_FLOAT+" )"+
@@ -548,20 +554,23 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
                 " OR "+
             "( "+CacheTableManager.FIELD_DTSTART+" ISNULL )"+
         ")" +
-        ( cacheObjectType == null ? "" : " AND "+CacheTableManager.FIELD_RESOURCE_TYPE+"='"+cacheObjectType+"'");
+        ( cacheObjectType == null ? "" : " AND "+CacheTableManager.FIELD_RESOURCE_TYPE+"='"+cacheObjectType+"'") +
+        " AND dav_server.active = 1 " +
+        " AND (dav_collection.active_events = 1 OR dav_collection.active_tasks = 1 OR dav_collection.active_journal = 1)"+
+        " AND "+CacheTableManager.FIELD_RESOURCE_ID + " IS NOT NULL";
     }
 
 
 
 	/**
-	 * Static class to encapsulate all database operations 
+	 * Static class to encapsulate all database operations
 	 * @author Chris Noldus
 	 *
 	 */
 	public final class CacheTableManager extends ProviderTableManager {
-		
+
 		public static final String TAG = "acal EventCacheProcessor";
-		
+
 		public static final String TABLE = "event_cache";
 		public static final String	FIELD_ID				= "_id";
 		public static final String	FIELD_RESOURCE_ID		= "resource_id";
@@ -581,9 +590,9 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 		public static final String	RESOURCE_TYPE_VEVENT	= "VEVENT";
 		public static final String	RESOURCE_TYPE_VTODO		= "VTODO";
 		public static final String	RESOURCE_TYPE_VJOURNAL	= "VJOURNAL";
-		
+
 		private boolean windowOnly = false;
-		
+
 		/**
 		 * The current request being processed. Presently not used but may become useful.
 		 */
@@ -591,13 +600,13 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 
 		/**
 		 * Generate a new instance of this processor.
-		 * WARNING: Only 1 instance of this class should ever exist. If multiple instances are created bizarre 
+		 * WARNING: Only 1 instance of this class should ever exist. If multiple instances are created bizarre
 		 * side affects may occur, including Database corruption and program instability
 		 */
 		private CacheTableManager() {
 			super(CacheManager.this.context);
 		}
-		
+
 		@Override
 		protected Uri getCallUri() {
 			return CacheDataProvider.CONTENT_URI;
@@ -614,7 +623,7 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 		 * consistant.
 		 * @param r
 		 */
-		public synchronized void process(CacheRequest r) { 
+		public synchronized void process(CacheRequest r) {
 			//currentRequest = r;
 			this.windowOnly = false;
 			try {
@@ -634,7 +643,7 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 		public void setWindowOnlyTrue() {
 			this.windowOnly = true;
 		}
-		
+
 		/**
 		 * Called when table is deemed to have been corrupted.
 		 */
@@ -647,16 +656,16 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 					minPaddingForward, increment, CacheManager.this, new AcalDateTime());
 			Log.println(Constants.LOGW,TAG,"Cache cleared of possibly corrupt data.");
 		}
-		
+
 		public void rebuildCache() {
 			clearCache();
 			checkDefaultWindow();
 		}
-		
-		
+
+
 		/**
 		 * One specific common query for the cache is to fetch rows for a particular range of dates.
-		 * 
+		 *
 		 * @param range Must not be null, or have either end null
 		 * @return
 		 */
@@ -665,11 +674,11 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 			if ( CacheManager.DEBUG && Constants.LOG_DEBUG )
 				Log.println(Constants.LOGD, CacheManager.TAG,
 					"Selecting cache objects in "+range+": \nSELECT * FROM event_cache WHERE "+whereClauseForRange(range,cacheObjectType)  );
-			
+
 			return this.query(null, whereClauseForRange(range,cacheObjectType), null, CacheTableManager.FIELD_DTSTART+" ASC");
 		}
 
-		
+
 		/**
 		 * Checks that the window has been populated with the requested range
 		 * range can be NULL in which case the default range is used.
@@ -697,7 +706,7 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 
 			//expand as needed
 			retrieveRange();
-			
+
 			return ret;
 		}
 
@@ -713,7 +722,7 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 			}
 			//update widgets
 			StaticHelpers.updateWidgets(context, ShowUpcomingWidgetProvider.class);
-			
+
 		}
 
 		public void resourceDeleted(long rid) {
@@ -722,39 +731,39 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 
 		public void updateWindowToInclude(AcalDateRange range) {
 			window.expandWindow(range);
-			
+
 		}
 
 		public void removeRangeFromWindow(AcalDateRange range) {
 			window.reduceWindow(range);
-		}	
-		
+		}
+
 		/**
 		 * Begin std DB Operations
-		 * 
+		 *
 		 * ALL db operations need to start with a beginQuery call and end with an endQuery call.
 		 * DO NOT Open/Close DB directly as db my be in a Transaction. The parent class is responsible for maintaining state.
 		 *
 		 *	If writing to DB without using parent methods, don't forget to kick of db change events!
 		 */
-		
-		
+
+
 	}
-	
-	
+
+
 
 	/**
 	 * This method should only ever be called from within the dataChanged method of ResourceTableManager.
 	 * Because of this, we can take into account some simple possibilities:
-	 * 
+	 *
 	 * FACT: This method was caused by the workerThread of ResourceManager executing a ResourceRequest
 	 * FACT: If it was not one of our requests that caused the change, then any requests of ours that have
 	 * 		not yet been processed will include this updated information and overwriting is O.K.
 	 * FACT: If it was one of our requests that caused the change, then we will get a response only after
 	 * 		this method has finished processing, and the response will also have only current information.
-	 * FACT: Any of our requests that were processed BEFORE these changes have taken affect have either been 
+	 * FACT: Any of our requests that were processed BEFORE these changes have taken affect have either been
 	 * 		dealt with or are in our QUEUE
-	 * 
+	 *
 	 *  Conclusion: As long as any work that needs to be done is added to our queue, our state should remain consistent.
 	 *
 	 */
@@ -768,7 +777,7 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 		if (changes == null || changes.isEmpty()) return;	//dont care
 
 		AcalDateRange windowRange = window.getCurrentWindow();
-		if (windowRange == null) return; // dont care 
+		if (windowRange == null) return; // dont care
 		DMQueryList queries = new DMQueryList();
 		Resource r;
 		VComponent comp;
@@ -831,7 +840,7 @@ public class CacheManager implements Runnable, ResourceChangedListener,  Resourc
 				Log.e(TAG,Log.getStackTraceString(e));
 			}
 		}
-	
+
 		Thread.currentThread().setPriority(priority);
 
 	}

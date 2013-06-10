@@ -80,11 +80,11 @@ public class ResourceManager implements Runnable {
 		return RPinstance;
 	}
 
-	private Context context;
+	private final Context context;
 
 	// ThreadManagement
-	private ConditionVariable threadHolder = new ConditionVariable();
-	private Thread workerThread;
+	private final ConditionVariable threadHolder = new ConditionVariable();
+	private final Thread workerThread;
 	private boolean running = true;
 	private final ConcurrentLinkedQueue<ResourceRequest> writeQueue = new ConcurrentLinkedQueue<ResourceRequest>();
 	private final PriorityBlockingQueue<ReadOnlyResourceRequest> readQueue = new PriorityBlockingQueue<ReadOnlyResourceRequest>();
@@ -92,7 +92,7 @@ public class ResourceManager implements Runnable {
 	/**
 	 * IMPORTANT INVARIANT:
 	 * listeners should only ever be told about changes by the worker thread calling dataChanged in the enclosed class.
-	 * 
+	 *
 	 * Notifying listeners in any other way can lead to Race Conditions.
 	 */
 	private final CopyOnWriteArraySet<ResourceChangedListener> listeners = new CopyOnWriteArraySet<ResourceChangedListener>();
@@ -130,9 +130,9 @@ public class ResourceManager implements Runnable {
 
 				if (!readQueue.isEmpty()) {
 					//Tell the processor that we are about to send a bunch of reads.
-					Log.i(TAG, "Begin a set of read queries.");
+				    if ( ResourceManager.DEBUG ) Log.i(TAG, "Begin a set of read queries.");
 					getRPInstance().openReadQuerySet();
-					
+
 					//Start all read processes
 					while (!readQueue.isEmpty()) {
 						if ( ResourceManager.DEBUG ) Log.println(Constants.LOGD,TAG,readQueue.size()+" items in read queue.");
@@ -160,20 +160,20 @@ public class ResourceManager implements Runnable {
 					}
 
 					//tell processor that we are done
-					Log.i(TAG, "End the set of read queries.");
+					if ( ResourceManager.DEBUG ) Log.i(TAG, "End the set of read queries.");
 					getRPInstance().closeReadQuerySet();
-					
+
 
 				}
 				else {
-                    if ( ResourceManager.DEBUG && !writeQueue.isEmpty() ) 
+                    if ( ResourceManager.DEBUG && !writeQueue.isEmpty() )
                         Log.println(Constants.LOGD, TAG, writeQueue.size()+" items in write queue.");
 
                     //process writes
 					CacheManager.setResourceInTx(context, true);
 					while ( !writeQueue.isEmpty() ) {
 						final ResourceRequest request = writeQueue.poll();
-						if ( ResourceManager.DEBUG ) 
+						if ( ResourceManager.DEBUG )
 						    Log.println(Constants.LOGD,TAG,"Processing Write Request: "+request.getClass());
 						try {
 							getRPInstance().process(request);
@@ -229,7 +229,7 @@ public class ResourceManager implements Runnable {
 		}
 		Process.setThreadPriority(priority);
 	}
-	
+
 	public void sendBlockingRequest(BlockingResourceRequest request) {
 		if ( ResourceManager.DEBUG ) Log.println(Constants.LOGD,TAG, "Received Write Request: "+request.getClass());
 		writeQueue.offer(request);
@@ -267,42 +267,42 @@ public class ResourceManager implements Runnable {
 	public interface WriteableResourceTableManager extends ReadOnlyResourceTableManager {
 		public long insert(ContentValues values);
 		public int update(ContentValues values, String whereClause,	String[] whereArgs);
-		
+
 		public void deleteByCollectionId(long id);
 		public void deleteInvalidCollectionRecord(long collectionId);
 		public void deletePendingChange(long pendingId);
 		public long addPending(long l, long m, String oldBlob, String newBlob, String uid);
 		public void updateCollection(long collectionId, ContentValues collectionData);
-		
+
 		public DMQueryList getNewQueryList();
 		public DMDeleteQuery getNewDeleteQuery(String whereClause, String[] whereArgs);
 		public DMInsertQuery getNewInsertQuery(String nullColumnHack, ContentValues values);
 		public DMUpdateQuery getNewUpdateQuery(ContentValues values, String whereClause, String[] whereArgs);
 		public DMQueryBuilder getNewQueryBuilder();
 		public boolean processActions(DMQueryList queryList);
-		
+
 		public boolean doSyncListAndToken(DMQueryList newChangeList, long collectionId, String syncToken);
 		public boolean syncToServer(DMAction action, long resourceId, long pendingId);
-		
-		
+
+
 	}
 
 	public interface ReadOnlyResourceTableManager {
 		public void process(ResourceRequest r);
-		
+
 		public ArrayList<ContentValues> query(String[] columns, String selection, String[] selectionArgs, String orderBy);
 
 		public Map<String, ContentValues> contentQueryMap(String selection, String[] selectionArgs);
-		
+
 		public ContentValues getResource(long rid);
 		public ContentValues getResourceInCollection(long collectionId,	String name);
 		public ArrayList<ContentValues> getPendingResources();
 		public Context getContext();
-		
+
 		//These should provide a similar interface to this class at some point.
 		public ContentValues getServerRow(int serverId);
 		public ContentValues getCollectionRow(long collectionId);
-		
+
 	}
 
 	// This special class provides encapsulation of database operations as its
@@ -397,7 +397,7 @@ public class ResourceManager implements Runnable {
 		 * Method to retrieve a particular database row for a given resource ID.
 		 */
 		public ContentValues getResource(long rid) {
-			
+
 			ArrayList<ContentValues> res = this.query( null, RESOURCE_ID + " = ?",	new String[] { rid + "" }, null);
 			if (res == null || res.isEmpty()) return null;
 			return res.get(0);
@@ -412,7 +412,7 @@ public class ResourceManager implements Runnable {
 			if (toWrite.containsKey(IS_PENDING)) toWrite.remove(IS_PENDING);
 			values = toWrite;
 			String effectiveType = null;
-			String resourceData = values.getAsString(RESOURCE_DATA); 
+			String resourceData = values.getAsString(RESOURCE_DATA);
 			if ( resourceData != null ) {
 				try {
 
@@ -464,7 +464,7 @@ public class ResourceManager implements Runnable {
 		/**
 		 * Static method to retrieve a particular database row for a given
 		 * collectionId & resource name.
-		 * 
+		 *
 		 * @param collectionId
 		 * @param name
 		 * @param contentResolver
@@ -479,7 +479,7 @@ public class ResourceManager implements Runnable {
 
 		/**
 		 * Provides a content query map for legacy classes.
-		 * 
+		 *
 		 * @Deprecated
 		 */
 		@Deprecated
@@ -506,9 +506,9 @@ public class ResourceManager implements Runnable {
 			}
 			return result;
 		}
-	
+
 		public void deleteByCollectionId(long id) {
-			if ( ResourceManager.DEBUG && Constants.LOG_DEBUG ) Log.println(Constants.LOGD, ResourceManager.TAG, 
+			if ( ResourceManager.DEBUG && Constants.LOG_DEBUG ) Log.println(Constants.LOGD, ResourceManager.TAG,
 					"Deleting resources for collection "+id);
 
 			boolean openedInternally = false;
@@ -541,7 +541,7 @@ public class ResourceManager implements Runnable {
 			boolean transactionInternally = doWeNeedATransaction();
 			try {
 				success = this.processActions(newChangeList);
-	
+
 				if ( success && syncToken != null ) {
 					//Update sync token
 					ContentValues cv = new ContentValues();
@@ -571,8 +571,8 @@ public class ResourceManager implements Runnable {
 
 				// We can retire this change now
 				int removed = db.delete(PENDING_DATABASE_TABLE, PENDING_ID+"="+pendingId, null);
-	
-				if ( ResourceManager.DEBUG ) Log.println(Constants.LOGD,TAG, 
+
+				if ( ResourceManager.DEBUG ) Log.println(Constants.LOGD,TAG,
 						"Deleted "+removed+" pending_change record ID="+pendingId+" for resourceId="+resourceId);
 
 			}
@@ -613,7 +613,7 @@ public class ResourceManager implements Runnable {
 		public ContentValues getCollectionRow(long collectionId) {
 			return DavCollections.getRow(collectionId, context.getContentResolver());
 		}
-		
+
 		public void deletePendingChange(long pendingId) {
 			boolean openedInternally = doWeNeedADatabase(OPEN_WRITE);
 			try {
@@ -626,7 +626,7 @@ public class ResourceManager implements Runnable {
 			}
 		}
 
-		
+
 		public void updateCollection(long collectionId, ContentValues collectionData) {
 			boolean openedInternally = doWeNeedADatabase(OPEN_WRITE);
 			try {
@@ -689,13 +689,13 @@ public class ResourceManager implements Runnable {
 					newResource.put(UID, uid);
 					if ( ResourceManager.DEBUG ) Log.println(Constants.LOGD,TAG, "Inserting Pending Table row for new resource ID: "+rid);
 					db.insert(PENDING_DATABASE_TABLE, null, newResource);
-					
+
 				}
 				else {
 					//Check if this resource already exists
-					mCursor = db.query(PENDING_DATABASE_TABLE, null,  PEND_RESOURCE_ID+" = ? AND "+PEND_COLLECTION_ID+" = ?", 
+					mCursor = db.query(PENDING_DATABASE_TABLE, null,  PEND_RESOURCE_ID+" = ? AND "+PEND_COLLECTION_ID+" = ?",
 							new String[]{rid+"",cid+""}, null,null,null);
-					
+
 					if (mCursor.getCount() >= 1) {
 						//Update existing pending entry
 						mCursor.moveToFirst();
@@ -704,9 +704,9 @@ public class ResourceManager implements Runnable {
 						newResource.put(UID, uid);
 						if ( ResourceManager.DEBUG ) Log.println(Constants.LOGD,TAG, "Updating Pending Table row for existing resource ID: "+rid);
 						db.update(PENDING_DATABASE_TABLE, newResource,
-									PEND_RESOURCE_ID+" = ? AND "+PEND_COLLECTION_ID+" = ?", 
+									PEND_RESOURCE_ID+" = ? AND "+PEND_COLLECTION_ID+" = ?",
 									new String[] {rid+"",cid+""});
-						
+
 					} else {
 						//create new pending entry from existing resource
 						newResource.put(PEND_COLLECTION_ID, cid);
@@ -718,8 +718,8 @@ public class ResourceManager implements Runnable {
 						db.insert(PENDING_DATABASE_TABLE, null, newResource);
 					}
 					mCursor.close();
-					
-					
+
+
 				}
 				//trigger resource change event
 				ContentValues toReport = Resource.fromContentValues(newResource).toContentValues();
@@ -727,7 +727,7 @@ public class ResourceManager implements Runnable {
 					this.addChange(new DataChangeEvent(QUERY_ACTION.DELETE, toReport));
 				else
 					this.addChange(new DataChangeEvent(action, toReport));
-				
+
 				//done
 				success = true;
 			}
@@ -743,14 +743,14 @@ public class ResourceManager implements Runnable {
 				}
 				if ( openedInternally ) closeDB();
 			}
-			
+
 			ServiceJob syncChanges = new SyncChangesToServer();
 			syncChanges.TIME_TO_EXECUTE = 2000;	// Wait two seconds before trying to sync to server.
 			WorkerClass.getExistingInstance().addJobAndWake(syncChanges);
-			
+
 			return rid;
 		}
-		
+
 
 
 		@Override
@@ -781,11 +781,11 @@ public class ResourceManager implements Runnable {
 						RESOURCE_DATABASE_TABLE+"."+EARLIEST_START,
 						RESOURCE_DATABASE_TABLE+"."+LATEST_END,
 						RESOURCE_DATABASE_TABLE+"."+EFFECTIVE_TYPE
-								
+
 					}, null, null, null, null, null);
 				this.yield();
 				if (mCursor.getCount() > 0) {
-					if ( ResourceManager.DEBUG && Constants.LOG_DEBUG ) Log.println(Constants.LOGD, TAG, 
+					if ( ResourceManager.DEBUG && Constants.LOG_DEBUG ) Log.println(Constants.LOGD, TAG,
 							"Found "+mCursor.getCount()+" pending changes");
 					for (mCursor.moveToFirst(); !mCursor.isAfterLast(); mCursor.moveToNext()) {
 						ContentValues vals = new ContentValues();
@@ -793,7 +793,7 @@ public class ResourceManager implements Runnable {
 						res.add(vals);
 						this.yield();
 					}
-						
+
 				}
 			}
 			finally {

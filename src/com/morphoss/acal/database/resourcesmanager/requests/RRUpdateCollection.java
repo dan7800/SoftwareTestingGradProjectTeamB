@@ -2,8 +2,8 @@ package com.morphoss.acal.database.resourcesmanager.requests;
 
 import android.content.ContentValues;
 
-import com.morphoss.acal.database.resourcesmanager.ResourceProcessingException;
 import com.morphoss.acal.database.resourcesmanager.ResourceManager.WriteableResourceTableManager;
+import com.morphoss.acal.database.resourcesmanager.ResourceProcessingException;
 import com.morphoss.acal.database.resourcesmanager.requesttypes.BlockingResourceRequest;
 
 public class RRUpdateCollection implements BlockingResourceRequest {
