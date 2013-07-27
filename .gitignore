@@ -27,3 +27,5 @@ design/*.gnumeric
 design/*.ods
 traces.txt
 Constants.debug
+.idea
+*.ics
