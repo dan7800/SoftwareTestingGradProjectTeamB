@@ -35,7 +35,7 @@ import com.morphoss.acal.acaltime.AcalRepeatRule.RRuleFreqType;
  * <h2>
  * Class for parsing iCalendar repeat rules.  See RFC5545 :-)
  * </h2>
- * 
+ *
  * <p>
  * We attempt to be both efficient and comprehensive in what we parse in, but we strongly assume we have
  * valid data coming in, and we are *very* forgiving of errors in the data.
@@ -45,7 +45,7 @@ import com.morphoss.acal.acaltime.AcalRepeatRule.RRuleFreqType;
  * needs other information (Start, End/Duration, RRULE, EXRULE, RDATE & EXDATE) which is handled in the
  * AcalRepeatRule class.
  * </p>
- * 
+ *
  * @author Morphoss Ltd
  *
  */
@@ -57,7 +57,23 @@ public abstract class AcalRepeatRuleParser {
 	protected final static int MAX_REPEAT_COUNT = 1000;
 	protected final static int INFINITE_REPEAT_COUNT = -1;
 
+	public enum RScale {
+	    GREGORIAN, CHINESE, HEBREW, DANGI, ISLAMIC;
+
+        public static RScale fromString(String string) {
+            switch( string.charAt(0)) {
+                case 'G': return GREGORIAN;
+                case 'C': return CHINESE;
+                case 'H': return HEBREW;
+                case 'D': return DANGI;
+                case 'I': return ISLAMIC;
+            }
+            return null;
+        }
+	}
+
 	protected final RRuleFreqType		frequency;
+	protected final RScale              rscale;
 	protected int						count;
 	public final int					interval;
 	public final int[]					bysecond;
@@ -72,13 +88,13 @@ public abstract class AcalRepeatRuleParser {
 	public final AcalRepeatRuleDay		wkst;
 
 	protected AcalDateTime				until = null;  // Can't make this final because we set the timezone later
-	
+
 	protected AcalDateTime			originalBase= null;
 	protected AcalDateTime			currentBase	= null;
 	protected List<AcalDateTime>	currentSet	= null;
-	
+
 	protected String[] debugDates = null;
-	
+
 	public AcalRepeatRuleParser( String rRuleValue, RRuleFreqType f ) {
 		frequency = f;
 		if ( rRuleValue.substring(0, 6).equalsIgnoreCase("RRULE:") ) {
@@ -100,6 +116,7 @@ public abstract class AcalRepeatRuleParser {
 		AcalRepeatRuleDay[] preByday = null;
 		int[] preBymonth = null;
 		int[] preBysetpos = null;
+		RScale preRscale = RScale.GREGORIAN;
 
 		String[] ruleParts = rRuleValue.toUpperCase().split(";");
 		for( String part : ruleParts ) {
@@ -108,7 +125,7 @@ public abstract class AcalRepeatRuleParser {
 				Log.e(TAG,"RRULE part '"+part+"' is not of the form A=B,C,D in '"+rRuleValue+"'");
 //				throw new IllegalArgumentException("RRULE part '"+part+"' is not of the form A=B,C,D");
 			}
-			PartType p = PartType.fromString(values[0]); 
+			PartType p = PartType.fromString(values[0]);
 			if ( p == null ) {
 				Log.e(TAG,"Part '"+values[0]+"' is invalid");
 				continue;
@@ -122,14 +139,18 @@ public abstract class AcalRepeatRuleParser {
 					until = AcalDateTime.fromIcalendar(values[1], "", "");
 					break;
 				case COUNT:
-					preCount = values[1]; 
+					preCount = values[1];
 					break;
 				case INTERVAL:
-					preInterval = Integer.parseInt(values[1]); 
+					preInterval = Integer.parseInt(values[1]);
 					break;
 				case WKST:
-					preWkst = new AcalRepeatRuleDay(values[1]); 
+					preWkst = new AcalRepeatRuleDay(values[1]);
 					break;
+
+				case RSCALE:
+				    preRscale = RScale.fromString(values[1]);
+				    break;
 
 				case BYMONTH:		preBymonth = parseIntArray(values);	break;
 				case BYSETPOS:		preBysetpos = parseIntArrayMinusOne(values);	break;
@@ -149,7 +170,7 @@ public abstract class AcalRepeatRuleParser {
 		}
 		if ( preCount == null ) count = INFINITE_REPEAT_COUNT;
 		else count = Integer.parseInt(preCount) - 1;
-		
+
 		interval = preInterval;
 		wkst = preWkst;
 		bymonth = preBymonth;
@@ -161,6 +182,10 @@ public abstract class AcalRepeatRuleParser {
 		byminute = preByminute;
 		bysecond = preBysecond;
 		byday = preByday;
+		rscale = preRscale;
+
+		if ( rscale != RScale.GREGORIAN )
+		    throw new UnsupportedRepetitionException("Only the GREGORIAN calendar is currently supported.");
 	}
 
 	public static AcalRepeatRuleParser parseRepeatRule( String rRule ) {
@@ -204,7 +229,7 @@ public abstract class AcalRepeatRuleParser {
 			s.append(";BYDAY=");
 			for( int i=0; i<byday.length; i++ ) {
 				if ( i>0 ) s.append(",");
-				s.append(byday[i]); 
+				s.append(byday[i]);
 			}
 		}
 		return s.toString();
@@ -214,7 +239,7 @@ public abstract class AcalRepeatRuleParser {
 		if ( count == 0 ) return cx.getString(R.string.OnlyOnce);
 
 		StringBuilder s = new StringBuilder(getPrettyFrequencyName(cx));
-		
+
 		boolean firstOne = true;
 		if ( bymonth != null ) {
 			s.append(" in ");
@@ -248,7 +273,7 @@ public abstract class AcalRepeatRuleParser {
 				else
 					weekends++;
 			}
-			if ( weekdays == 5 && weekends == 0 ) 
+			if ( weekdays == 5 && weekends == 0 )
 				s.append(cx.getString(R.string.weekdays));
 			else if ( weekends == 2 && weekdays == 0 )
 				s.append(cx.getString(R.string.weekends));
@@ -298,7 +323,7 @@ public abstract class AcalRepeatRuleParser {
 
 	private String prettyListInts( String prefix, int[] intList, String postfix ) {
 		StringBuilder s = null;
-		
+
 		for( int thisInt : intList ) {
 			if ( s == null ) {
 				s = new StringBuilder(prefix + Integer.toString(thisInt));
@@ -355,15 +380,15 @@ public abstract class AcalRepeatRuleParser {
 		currentSet = new ArrayList<AcalDateTime>();
 		currentSet.add(currentBase.clone());
 	}
-	
-	
+
+
 	protected void expandByMonth() {
 		if ( bymonth == null ) return;
 		List<AcalDateTime> finalSet = new ArrayList<AcalDateTime>();
 		Set<String> daySet = new HashSet<String>();
 		for( AcalDateTime c : currentSet ) {
 			for( int month :  bymonth ) {
-				AcalDateTime n = (AcalDateTime) c.clone();
+				AcalDateTime n = c.clone();
 				if ( n.setMonth(month) ) {
 					// We don't want to multiply add days, so we use a Set to catch that
 					if ( daySet.add(n.fmtIcal()) ) finalSet.add(n);
@@ -372,8 +397,8 @@ public abstract class AcalRepeatRuleParser {
 		}
 		currentSet = finalSet;
 	}
-	
-	
+
+
 	protected void expandByWeekNo() {
 		if ( byweekno == null ) return;
 		List<AcalDateTime> finalSet = new ArrayList<AcalDateTime>();
@@ -381,7 +406,7 @@ public abstract class AcalRepeatRuleParser {
 		for( AcalDateTime c : currentSet ) {
 			c.setWeekStart(wkst.wDay);
 			for( int weekno :  byweekno ) {
-				AcalDateTime n = (AcalDateTime) c.clone();
+				AcalDateTime n = c.clone();
 				if ( n.setYearWeek((short) weekno) ) {
 					// We don't want to multiply add days, so we use a Set to catch that
 					if ( daySet.add(n.fmtIcal()) ) finalSet.add(n);
@@ -390,8 +415,8 @@ public abstract class AcalRepeatRuleParser {
 		}
 		currentSet = finalSet;
 	}
-	
-	
+
+
 	protected void expandByYearDay() {
 		// TODO this should handle negative year days, but I think it probably doesn't at present...
 		if ( byyearday == null ) return;
@@ -399,7 +424,7 @@ public abstract class AcalRepeatRuleParser {
 		Set<String> daySet = new HashSet<String>();
 		for( AcalDateTime c : currentSet ) {
 			for( int yearday :  byyearday ) {
-				AcalDateTime n = (AcalDateTime) c.clone();
+				AcalDateTime n = c.clone();
 				if ( n.setYearDay(yearday) ) {
 					// We don't want to multiply add days, so we use a Set to catch that
 					if ( daySet.add(n.fmtIcal()) ) finalSet.add(n);
@@ -408,15 +433,15 @@ public abstract class AcalRepeatRuleParser {
 		}
 		currentSet = finalSet;
 	}
-	
-	
+
+
 	protected void expandByMonthDay( int[] monthdayset) {
 		if ( monthdayset == null ) return;
 		List<AcalDateTime> finalSet = new ArrayList<AcalDateTime>();
 		Set<String> daySet = new HashSet<String>();
 		for( AcalDateTime c : currentSet ) {
 			for( int monthday :  monthdayset ) {
-				AcalDateTime n = (AcalDateTime) c.clone();
+				AcalDateTime n = c.clone();
 				if ( n.setMonthDay(monthday) ) {
 					// We don't want to multiply add days, so we use a Set to catch that
 					if ( daySet.add(n.fmtIcal()) ) finalSet.add(n);
@@ -425,12 +450,12 @@ public abstract class AcalRepeatRuleParser {
 		}
 		currentSet = finalSet;
 	}
-	
+
 
 	protected void expandByMonthDay() {
 		expandByMonthDay(bymonthday);
 	}
-	
+
 
 	protected void expandByDay() {
 		if ( byday == null ) return;
@@ -439,7 +464,7 @@ public abstract class AcalRepeatRuleParser {
 		for( AcalDateTime c : currentSet ) {
 			c.setWeekStart(wkst.wDay);
 			for( AcalRepeatRuleDay day :  byday ) {
-				AcalDateTime n = (AcalDateTime) c.clone();
+				AcalDateTime n = c.clone();
 				if ( n.setWeekDay(day.wDay) ) {
 					// We don't want to multiply add days, so we use a Set to catch that
 					if ( daySet.add(n.fmtIcal()) ) finalSet.add(n);
@@ -448,8 +473,8 @@ public abstract class AcalRepeatRuleParser {
 		}
 		currentSet = finalSet;
 	}
-	
-	
+
+
 	protected void expandByDayMonthly() {
 		if ( byday == null ) return;
 		List<AcalDateTime> finalSet = new ArrayList<AcalDateTime>();
@@ -476,7 +501,7 @@ public abstract class AcalRepeatRuleParser {
 					int d = day.wDay - dowOfFirst;
 					if ( d < 0 ) d+= 7;
 					d += (7 * (day.setPos - 1));
-					if ( d < inMonth.length ) inMonth[d] = true;  
+					if ( d < inMonth.length ) inMonth[d] = true;
 				}
 				else {
 					// Like 2nd to last Monday
@@ -492,62 +517,62 @@ public abstract class AcalRepeatRuleParser {
 					d--; // Hack to deal with 0-based array offset
 					if ( d >= inMonth.length ) d -= 7;
 					d += (7 * (day.setPos + 1));  // Note that day.setPos *IS* negative	at this point
-					if ( d >= 0 ) inMonth[d] = true;  
+					if ( d >= 0 ) inMonth[d] = true;
 				}
 			}
 			for( int i=0; i<inMonth.length; i++ ) {
 				if ( inMonth[i] ) {
 					c.setMonthDay(i+1);
-					finalSet.add((AcalDateTime) c.clone());
+					finalSet.add(c.clone());
 				}
 			}
 		}
 		currentSet = finalSet;
 	}
-	
-	
+
+
 	protected void expandByHour() {
 		if ( byday == null ) return;
 		List<AcalDateTime> finalSet = new ArrayList<AcalDateTime>();
 		for( AcalDateTime c : currentSet ) {
 			for( int h :  byhour ) {
-				AcalDateTime n = (AcalDateTime) c.clone();
+				AcalDateTime n = c.clone();
 				n.set(AcalDateTime.HOUR, h);
 				finalSet.add(n);
 			}
 		}
 		currentSet = finalSet;
 	}
-	
-	
+
+
 	protected void expandByMinute() {
 		if ( byday == null ) return;
 		List<AcalDateTime> finalSet = new ArrayList<AcalDateTime>();
 		for( AcalDateTime c : currentSet ) {
 			for( int m :  byminute ) {
-				AcalDateTime n = (AcalDateTime) c.clone();
+				AcalDateTime n = c.clone();
 				n.set(AcalDateTime.MINUTE, m);
 				finalSet.add(n);
 			}
 		}
 		currentSet = finalSet;
 	}
-	
-	
+
+
 	protected void expandBySecond() {
 		if ( byday == null ) return;
 		List<AcalDateTime> finalSet = new ArrayList<AcalDateTime>();
 		for( AcalDateTime c : currentSet ) {
 			for( int s :  bysecond ) {
-				AcalDateTime n = (AcalDateTime) c.clone();
+				AcalDateTime n = c.clone();
 				n.set(AcalDateTime.SECOND, s);
 				finalSet.add(n);
 			}
 		}
 		currentSet = finalSet;
 	}
-	
-	
+
+
 	protected void limitBySetPos() {
 		if ( bysetpos == null ) return;
 		Collections.sort(currentSet, new AcalDateTime.AcalDateTimeSorter());
@@ -555,13 +580,13 @@ public abstract class AcalRepeatRuleParser {
 		for( int pos : bysetpos ) {
 			if ( pos < 0 )
 				finalSet.add(currentSet.get(currentSet.size() + pos ));
-			else	
+			else
 				finalSet.add(currentSet.get(pos));
 		}
 		currentSet = finalSet;
 	}
 
-	
+
 	protected void limitByMonth() {
 		if ( bymonth == null ) return;
 		List<AcalDateTime> finalSet = new ArrayList<AcalDateTime>();
@@ -573,7 +598,7 @@ public abstract class AcalRepeatRuleParser {
 		currentSet = finalSet;
 	}
 
-	
+
 	protected void limitByMonthDay() {
 		if ( bymonthday == null ) return;
 		List<AcalDateTime> finalSet = new ArrayList<AcalDateTime>();
@@ -585,7 +610,7 @@ public abstract class AcalRepeatRuleParser {
 		currentSet = finalSet;
 	}
 
-	
+
 	protected void limitByDay() {
 		if ( byday == null ) return;
 		List<AcalDateTime> finalSet = new ArrayList<AcalDateTime>();
@@ -597,7 +622,7 @@ public abstract class AcalRepeatRuleParser {
 		currentSet = finalSet;
 	}
 
-	
+
 	private static int[] parseIntArray( String[] strValues ) {
 		// Skips the first element in the input array, in case you want to re-use this code...
 		int[] ret = new int[strValues.length-1];
@@ -621,16 +646,16 @@ public abstract class AcalRepeatRuleParser {
 	 * @return
 	 */
 	private static int[] parseIntArrayMinusOne( String[] strValues ) {
-		int[] ret = parseIntArray( strValues ); 
+		int[] ret = parseIntArray( strValues );
 		for( int i=0; i<ret.length; i++ ) {
 			if ( ret[i] > 0 ) ret[i]--;
 		}
 		return ret;
 	}
-	
+
 
 	protected void debugCurrentSet( String whereAmI ) {
-		if ( !Constants.LOG_VERBOSE ) return; 
+		if ( !Constants.LOG_VERBOSE ) return;
 		if ( currentSet.isEmpty() ) {
 			Log.v(TAG, "Current set "+whereAmI+" is empty" );
 			return;
@@ -640,12 +665,12 @@ public abstract class AcalRepeatRuleParser {
 		for( int i=0; i<debugDates.length; i++ ) {
 			debugDates[i] = currentSet.get(i).fmtIcal();
 			if ( i > 0 ) dateList += ", ";
-			dateList += debugDates[i]; 
+			dateList += debugDates[i];
 		}
 		Log.v(TAG, whereAmI+" is: "+dateList + " -- " + this.toString() );
 	}
 
-	
+
 	/**
 	 * <p>
 	 * Internal enum just used to make the parser more readable really.
@@ -654,7 +679,7 @@ public abstract class AcalRepeatRuleParser {
 	 */
 	private static enum PartType	{
 		BYMONTH, BYWEEKNO, BYYEARDAY, BYMONTHDAY, BYDAY, BYHOUR, BYMINUTE, BYSECOND, BYSETPOS,
-		FREQ, UNTIL, COUNT, INTERVAL, WKST;
+		FREQ, UNTIL, COUNT, INTERVAL, WKST, RSCALE;
 
 
 		/**
@@ -662,7 +687,7 @@ public abstract class AcalRepeatRuleParser {
 		 * Convert a string into our enum type, with a minimum of tests.  While this approach will misrecognise some
 		 * peculiar strings as valid that won't do us any harm, so long as we recognise valid strings correctly.
 		 * </p>
-		 * 
+		 *
 		 * @param stFreq
 		 * @return
 		 */
@@ -674,6 +699,7 @@ public abstract class AcalRepeatRuleParser {
 				case 'U':	return UNTIL;
 				case 'C':	return COUNT;
 				case 'W':	return WKST;
+                case 'R':   return RSCALE;
 				case 'B':
 					if ( stFreq.length() < 5 ) return null;
 					switch( stFreq.charAt(2) ) {

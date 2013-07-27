@@ -74,9 +74,9 @@ public class AcalRepeatRule {
 	private long	resourceId = VComponent.VALUE_NOT_ASSIGNED;
 
 	final public static AcalRepeatRuleParser SINGLE_INSTANCE = AcalRepeatRuleParser.parseRepeatRule("FREQ=DAILY;COUNT=1");
-	
+
 	final private static int			MAX_REPEAT_INSTANCES	= 100;
-	
+
 	public AcalRepeatRule(AcalDateTime dtStart, String rRule) {
 		baseDate = dtStart.clone();
 		if ( rRule == null || rRule.equals("")) {
@@ -96,11 +96,11 @@ public class AcalRepeatRule {
 
 	public void setUntil(AcalDateTime newUntil) {
 		repeatRule.setUntil(newUntil);
-	}	
+	}
 
 
 	/**
-	 * 
+	 *
 	 * @param vCal
 	 * @param collectionId The collectionId to include in any returned CalendarInstance object.
 	 * @param resourceId The resourceId to include in any returned CalendarInstance object.
@@ -155,23 +155,23 @@ public class AcalRepeatRule {
 		ret.sourceVCalendar = vCal;
 		ret.collectionId = collectionId;
 		ret.resourceId = resourceId;
-		
+
 		ret.baseDuration = masterComponent.getDuration();
 
 		PropertyName dateLists[] = {PropertyName.RDATE,PropertyName.EXDATE};
 		for( PropertyName dListPName : dateLists ) {
 			AcalProperty dateListProperty = masterComponent.getProperty(dListPName);
 			if ( dateListProperty == null )	continue;
-		
+
 			String value = dateListProperty.getValue();
 			if ( value == null )	continue;
-		
+
 			String isDateParam = dateListProperty.getParam(AcalProperty.PARAM_VALUE);
 			String tzIdParam = dateListProperty.getParam(AcalProperty.PARAM_TZID);
-			
+
 			final String[] dateList = Constants.splitOnCommas.split(value);
 			AcalDateTime[] timeList = new AcalDateTime[dateList.length];
-			
+
 			for( int i=0; i < dateList.length; i++ ) {
 				timeList[i] = AcalDateTime.fromIcalendar( dateList[i], isDateParam, tzIdParam );
 			}
@@ -185,12 +185,12 @@ public class AcalRepeatRule {
 				ret.exDatePos = 0;
 			}
 		}
-		
+
 
 		return ret;
 	}
-	
-	
+
+
 	public void reset() {
 		currentPos = -1;
 	}
@@ -221,7 +221,7 @@ public class AcalRepeatRule {
 	 * At present we only support Yearly, Monthly, Weekly Daily.  Hourly, Minutely and Secondly are
 	 * omitted, although the code is fairly trivial, and we should probably write it for completeness.
 	 * </p>
-	 * 
+	 *
 	 * @author Morphoss Ltd
 	 */
 	public enum RRuleFreqType {
@@ -230,14 +230,14 @@ public class AcalRepeatRule {
 		private final static Pattern	freqPattern	= Pattern.compile(
 						".*FREQ=((?:WEEK|DAI|YEAR|MONTH|HOUR|MINUTE|SECOND)LY).*",
 						Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
-		
+
 		/**
 		 * <p>
 		 * Assumes we have essentially correct strings and efficiently turns them into enums efficiently.
 		 * Maybe we could be marginally more efficient if we purely treated the two-byte strings as a short
 		 * int, but hey.
 		 * </p>
-		 * 
+		 *
 		 * @param stFreq
 		 * @return
 		 */
@@ -257,12 +257,12 @@ public class AcalRepeatRule {
 //				case 'S':
 //					return SECONDLY;
 				case 'M':
-					switch (m.group(1).charAt(1)) {
-						case 'O':
+//					switch (m.group(1).charAt(1)) {
+//						case 'O':
 							return MONTHLY;
 //						case 'I':
 //							return MINUTELY;
-					}
+//					}
 			}
 			throw new IllegalArgumentException("Invalid frequency 'FREQ="+m.group(1)+"' in RRULE definition: "+stFreq);
 		}
@@ -273,7 +273,7 @@ public class AcalRepeatRule {
 	private boolean getMoreInstances() {
 	    if ( finished ) return false;
 	    if ( currentPos < lastCalc ) return true;
-	    
+
 	    if ( recurrences != null && recurrences.size() > 3000 ) {
 			Log.e(TAG,"Too many instances (3000):");
 			Log.e(TAG,"Too many " +baseDate.toPropertyString(PropertyName.DTSTART));
@@ -300,7 +300,7 @@ public class AcalRepeatRule {
 	    	AcalDateTime thisInstance = null;
     		int i=0;
 	    	while( !finished && i < newSet.size()
-	    				&& ( repeatRule.count == AcalRepeatRuleParser.INFINITE_REPEAT_COUNT 
+	    				&& ( repeatRule.count == AcalRepeatRuleParser.INFINITE_REPEAT_COUNT
 	    							||  lastCalc < repeatRule.count ) ) {
 	    		thisInstance = newSet.get(i++);
 	    		if ( !started ) {
@@ -322,7 +322,7 @@ public class AcalRepeatRule {
 	    				continue;
 	    			}
 	    		}
-	    		while ( rDate != null && rDatePos < rDate.length && 
+	    		while ( rDate != null && rDatePos < rDate.length &&
 	    					(rDate[rDatePos] == null || rDate[rDatePos].before(thisInstance)) ) {
 		    		recurrences.add(rDate[rDatePos++].clone());
 		    		lastCalc++;
@@ -381,12 +381,12 @@ public class AcalRepeatRule {
 	/**
 	 * Returns a range which is from the earliest start date to the latest end date
 	 * for the recurrence of a VCALENDAR-based rule.
-	 * 
+	 *
 	 * Instances without an UNTIL or with a COUNT > 3000 will be considered 'infinite'
 	 * and the range end will be null.
-	 * 
+	 *
 	 * @return
-	 * @throws Exception 
+	 * @throws Exception
 	 */
 	public AcalDateRange getInstancesRange() {
 		AcalDateTime endDate = null;
@@ -424,7 +424,7 @@ public class AcalRepeatRule {
 
 	//TODO dirty hack to get alarms in range.
 	public void appendAlarmInstancesBetween(ArrayList<AlarmRow> alarmList, AcalDateRange range) {
-		
+
 		List<EventInstance> events = new ArrayList<EventInstance>();
 		if ( this.sourceVCalendar.hasAlarm() ) {
 			if ( Constants.debugAlarms ) Log.println(Constants.LOGV,TAG,"Event has alarms");
@@ -454,15 +454,15 @@ public class AcalRepeatRule {
 	public void appendCacheEventInstancesBetween(List<CacheObject> cacheList, AcalDateRange range) {
 		this.appendEventsInstancesBetween(cacheList, range, true);
 	}
-	
-	@SuppressWarnings("unchecked") 
+
+	@SuppressWarnings("unchecked")
 	private void appendEventsInstancesBetween( @SuppressWarnings("rawtypes") List eventList, AcalDateRange range, boolean cacheObjects) {
-	
+
 		if ( range.start == null || range.end == null || eventList == null ) return;
 
 		Masterable thisEvent = sourceVCalendar.getMasterChild();
 		if ( thisEvent == null ) return;
-		
+
 		if ( Constants.debugDateTime && range.start.after(futureish) ) {
 			throw new IllegalArgumentException("The date: " + range.start.fmtIcal() + " is way too far in the future! (after " + futureish.fmtIcal() );
 		}
@@ -523,12 +523,12 @@ public class AcalRepeatRule {
 				} else {
 					eventList.add(instance.getEventInstance());
 				}
-				
+
 				if ( Constants.debugRepeatRule && Constants.LOG_DEBUG ) {
 					Log.println(Constants.LOGD,TAG, "Adding Instance: "+thisDate.fmtIcal()+" of " +repeatRule.toString() );
 					Log.println(Constants.LOGD,TAG, "Adding Instance range: "+instance.dtstart.fmtIcal()+" - "+instance.dtend.fmtIcal() );
 				}
-				
+
 				thisDate = next();
 
 				found++;
@@ -551,13 +551,13 @@ public class AcalRepeatRule {
 				for( int i=0; i<found; i++ ) {
 					if (cacheObjects) {
 						CacheObject thisOne = (CacheObject)eventList.get(i);
-						Log.println(Constants.LOGV,TAG, "["+i+"] Start: " + AcalDateTime.fromMillis(thisOne.getStart()).fmtIcal() + 
+						Log.println(Constants.LOGV,TAG, "["+i+"] Start: " + AcalDateTime.fromMillis(thisOne.getStart()).fmtIcal() +
 								", End: " + AcalDateTime.fromMillis(thisOne.getEnd()).fmtIcal() );
 					} else {
 						EventInstance thisOne = (EventInstance)eventList.get(i);
-						Log.println(Constants.LOGV,TAG, "["+i+"] Start: " + thisOne.getStart().fmtIcal() + ", End: " + thisOne.getEnd().fmtIcal() );	
+						Log.println(Constants.LOGV,TAG, "["+i+"] Start: " + thisOne.getStart().fmtIcal() + ", End: " + thisOne.getEnd().fmtIcal() );
 					}
-					
+
 				}
 			}
 		}
@@ -577,8 +577,8 @@ public class AcalRepeatRule {
 		}
 
 		lastDuration = ourDuration;
-		
-		LocalEventInstance ret = new LocalEventInstance(ourVEvent, instanceStart, ourDuration); 
+
+		LocalEventInstance ret = new LocalEventInstance(ourVEvent, instanceStart, ourDuration);
 
 		return ret;
 	}
@@ -588,7 +588,7 @@ public class AcalRepeatRule {
 		final AcalDateTime dtstart;
 		final AcalDateTime dtend;
 		private RecurrenceId rrid = null;
-		
+
 		LocalEventInstance( Masterable masterIn, AcalDateTime dtstart, AcalDuration duration ) {
 			if ( duration.seconds < 0 || duration.days < 0 )
 				throw new IllegalArgumentException("Resource duration must be positive. UID: "+masterIn.getUID() );
@@ -603,12 +603,12 @@ public class AcalRepeatRule {
 			if ( collectionId == VComponent.VALUE_NOT_ASSIGNED || resourceId == VComponent.VALUE_NOT_ASSIGNED ) {
 				throw new IllegalArgumentException("To retrieve CalendarInstances the RepeatRule must have valid collectionId and resourceId");
 			}
-			if ( dtstart != null ) 
+			if ( dtstart != null )
 				this.rrid = RecurrenceId.fromString(dtstart.toPropertyString(PropertyName.RECURRENCE_ID));
 
 			return new EventInstance( (VEvent) masterInstance, collectionId, resourceId, rrid);
 		}
-		
+
 		CacheObject getCacheObject() {
 			if ( collectionId == VComponent.VALUE_NOT_ASSIGNED || resourceId == VComponent.VALUE_NOT_ASSIGNED ) {
 				throw new IllegalArgumentException("To retrieve CacheObjects the RepeatRule must have valid collectionId and resourceId");
@@ -633,7 +633,7 @@ public class AcalRepeatRule {
 			debugDates[i] = recurrences.get(i).fmtIcal();
 			if ( i >= startFrom ) {
 				if ( i > startFrom && i> 0 ) dateList += ", ";
-				dateList += debugDates[i]; 
+				dateList += debugDates[i];
 			}
 			if ( i == 3 && debugDates[0].equals(debugDates[1]) && debugDates[1].equals(debugDates[2]) ) {
 				if ( Constants.debugRepeatRule && Constants.LOG_VERBOSE ) {
