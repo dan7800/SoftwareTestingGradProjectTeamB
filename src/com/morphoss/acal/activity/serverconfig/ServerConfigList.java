@@ -31,16 +31,16 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ContextMenu.ContextMenuInfo;
 import android.view.View.OnClickListener;
 import android.view.View.OnCreateContextMenuListener;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
 
 import com.morphoss.acal.AcalTheme;
 import com.morphoss.acal.Constants;
@@ -51,28 +51,28 @@ import com.morphoss.acal.service.ServiceRequest;
 
 /**
  * <h3>Server Configuration List - A list of servers that can be configured</h3>
- * 
+ *
  * <p>
  * This class generates and displays the list of servers available in the
  * dav_server table. Selecting a server will start the ServerConfig activity.
  * Selecting 'Add Server' will create a new entry in the server table and start
  * the Server Configuration Activity
  * </p>
- * 
+ *
  * @author Morphoss Ltd
- * 
+ *
  */
 public class ServerConfigList extends ListActivity implements OnClickListener {
 
 	public static final String TAG = "acal ServerConfigList";
-	
+
 	// Data from the Server Table
 	private String[] serverNames;
 	private Map<String, ContentValues> serverData;
 
 	// Add Server list item
 	private Button addServer;
-	
+
 	// Context Menu Options
 	public static final int CONTEXT_DELETE = 1;
 	public static final int CONTEXT_CANCEL = 2;
@@ -82,17 +82,17 @@ public class ServerConfigList extends ListActivity implements OnClickListener {
 	private Cursor mCursor;
 
 	private ServiceManager serviceManager;
-	
+
 	/**
 	 * Get the server list and create the list view.
-	 * 
+	 *
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
 	 * @author Morphoss Ltd
 	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+
 		setContentView(R.layout.servers_list);
 		updateListView();
 		getListView().setOnItemClickListener(new ServerListClickListener());
@@ -123,11 +123,11 @@ public class ServerConfigList extends ListActivity implements OnClickListener {
 		this.serverData = cqm.getRows();
 		mCursor.close();
 		cqm.close();
-		
+
 		// Store data in useful structures
 		this.serverNames = new String[this.serverData.size()];
 		this.serverData.keySet().toArray(this.serverNames);
-		
+
 		// Create ListAdapter for storing the list of server names to be
 		// displayed
 		ArrayAdapter<String> mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, serverNames);
@@ -143,14 +143,14 @@ public class ServerConfigList extends ListActivity implements OnClickListener {
 	}
 
 	/**
-	 * 
-	 * 
+	 *
+	 *
 	 /**
 	 * <p>
 	 * Called when a user selects 'Delete' from the context menu. Deletes the
 	 * selected server from the database.
 	 * </p>
-	 * 
+	 *
 	 * @param position
 	 *            The position in ServerNames of the name of the server we are
 	 *            to delete
@@ -160,15 +160,15 @@ public class ServerConfigList extends ListActivity implements OnClickListener {
 		//also need to remove: All pending resources, collections, resources, path sets
 		ContentValues toDelete = serverData.get(serverNames[position]);
 		int serverId = toDelete.getAsInteger(Servers._ID);
-		
+
 		Servers.deleteServer(this, serverId);
 	}
 
 	public void exportServer(int id) {
 		ContentValues server = serverData.get(serverNames[id]);
 		server.put(Servers.FRIENDLY_NAME, serverNames[id]);
-		
-		File newxmlfile = new File(Constants.PUBLIC_DATA_DIR+"/"+serverNames[id].replace(' ', '_')+".acal");
+
+		File newxmlfile = new File(Constants.PUBLIC_DATA_DIR+"/"+serverNames[id].replace(' ', '_').replace('/', '-')+".acal");
 		if (newxmlfile.exists()) {
 			/** @todo we may wish to handle overwrites here */
 		}
@@ -177,9 +177,9 @@ public class ServerConfigList extends ListActivity implements OnClickListener {
 			if ( !publicDataDirectory.exists() ) publicDataDirectory.mkdirs();
 
 			newxmlfile.createNewFile();
-			
+
 		} catch (IOException e) {
-			Log.e(TAG, "Error creating XML File: "+e);
+			Log.e(TAG, "Error creating XML File: "+Log.getStackTraceString(e));
 			Toast.makeText(this, getString(R.string.errorSavingFile), Toast.LENGTH_LONG).show();
 			return;
 		}
@@ -191,13 +191,13 @@ public class ServerConfigList extends ListActivity implements OnClickListener {
 			Toast.makeText(this, getString(R.string.errorSavingFile), Toast.LENGTH_LONG).show();
 		}
 	}
-	
+
 
 	/**
 	 * <P>
 	 * Handles context menu clicks
 	 * </P>
-	 * 
+	 *
 	 * @see android.app.Activity#onContextItemSelected(android.view.MenuItem)
 	 */
 	@Override
@@ -220,7 +220,7 @@ public class ServerConfigList extends ListActivity implements OnClickListener {
 				if ( Constants.LOG_VERBOSE ) Log.v(TAG, "Scheduling HomeSetDiscovery on successful server config.");
 				try {
 					ContentValues server = serverData.get(serverNames[(int)id]);
-					ServiceRequest sr = serviceManager.getServiceRequest(); 
+					ServiceRequest sr = serviceManager.getServiceRequest();
 					sr.homeSetDiscovery(server.getAsInteger(Servers._ID));
 				} catch (Exception e) {
 					if (Constants.LOG_VERBOSE)
@@ -237,7 +237,7 @@ public class ServerConfigList extends ListActivity implements OnClickListener {
 
 	/**
 	 * <h3>Click listener for Server Configuration List.</h3>
-	 * 
+	 *
 	 * <P>
 	 * Called when a server is selected from the list.
 	 * </P>
@@ -252,19 +252,19 @@ public class ServerConfigList extends ListActivity implements OnClickListener {
 		 * Server Configuration is sent a blank data set with
 		 * MODEKEY=MODE_CREATE
 		 * </p>
-		 * 
+		 *
 		 * @see android.widget.AdapterView.OnItemClickListener#onItemClick(android.widget.AdapterView,
 		 *      android.view.View, int, long)
 		 */
 		public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-			
+
 			// Create Intent to start new Activity
 			Intent serverConfigIntent = new Intent();
 
 			// Get the server data for the selected server, and add mode key so
 			// configuration activity knows what to do.
 			ContentValues toPass = ServerConfigList.this.serverData.get(ServerConfigList.this.serverNames[position]);
-			
+
 			if (!toPass.containsKey(ServerConfiguration.KEY_MODE))
 				toPass.put(ServerConfiguration.KEY_MODE, ServerConfiguration.MODE_EDIT);
 
@@ -294,7 +294,7 @@ public class ServerConfigList extends ListActivity implements OnClickListener {
 			menu.add(0, ServerConfigList.CONTEXT_DELETE, 0, "Delete");
 			menu.add(0, ServerConfigList.CONTEXT_DISCOVER, 0, "Discover Collections");
 			menu.add(0, ServerConfigList.CONTEXT_CANCEL, 0, "Cancel");
-			
+
 		}
 	}
 
@@ -303,7 +303,7 @@ public class ServerConfigList extends ListActivity implements OnClickListener {
 		super.onPause();
 		if (this.serviceManager != null) this.serviceManager.close();
 	}
-	
+
 	/**
 	 * Whenever this activity is resumed, update the server list as it may have
 	 * changed.
@@ -314,7 +314,7 @@ public class ServerConfigList extends ListActivity implements OnClickListener {
 		this.serviceManager = new ServiceManager(this);
 		updateListView();
 	}
-	
+
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
@@ -329,6 +329,6 @@ public class ServerConfigList extends ListActivity implements OnClickListener {
 							"com.morphoss.acal.activity.serverconfig.AddServerList");
 		startActivity(serverConfigIntent);
 	}
-	
+
 
 }
