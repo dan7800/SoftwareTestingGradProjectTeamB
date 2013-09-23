@@ -20,11 +20,14 @@ package com.morphoss.acal.weekview;
 
 import java.util.List;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.os.Parcelable;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -41,6 +44,7 @@ import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.morphoss.acal.AcalTheme;
 import com.morphoss.acal.Constants;
@@ -50,8 +54,16 @@ import com.morphoss.acal.activity.AcalActivity;
 import com.morphoss.acal.activity.EventEdit;
 import com.morphoss.acal.activity.EventView;
 import com.morphoss.acal.activity.MonthView;
+import com.morphoss.acal.activity.RREventEditedRequest;
 import com.morphoss.acal.activity.YearView;
 import com.morphoss.acal.database.cachemanager.CacheObject;
+import com.morphoss.acal.database.resourcesmanager.ResourceManager;
+import com.morphoss.acal.database.resourcesmanager.ResourceResponse;
+import com.morphoss.acal.database.resourcesmanager.ResourceResponseListener;
+import com.morphoss.acal.dataservice.CalendarInstance;
+import com.morphoss.acal.dataservice.EventInstance;
+import com.morphoss.acal.dataservice.Resource;
+import com.morphoss.acal.davacal.PropertyName;
 import com.morphoss.acal.widget.NumberPickerDialog;
 import com.morphoss.acal.widget.NumberSelectedListener;
 
@@ -59,12 +71,13 @@ import com.morphoss.acal.widget.NumberSelectedListener;
  * This is the activity behind WeekView. It catches all UI Events and user interaction.
  *
  * Valid user input is passed on to the WeekViewLayout, responsible for drawing all the components in this activity.
- *  
- * 
+ *
+ *
  * @author Morphoss Ltd
  * @license GPL v3 or later
  */
-public class WeekViewActivity extends AcalActivity implements OnGestureListener, OnTouchListener, OnClickListener, NumberSelectedListener {
+public class WeekViewActivity extends AcalActivity implements OnGestureListener, OnTouchListener, OnClickListener,
+                                                            NumberSelectedListener, ResourceResponseListener<Long> {
 	/* Fields relating to buttons */
 	public static final int TODAY = 0;
 	public static final int YEAR = 1;
@@ -72,23 +85,23 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 	public static final int ADD = 3;
 
 	public static final String TAG = "aCal WeekViewActivity";
-	
+
 	private WeekViewHeader 	header;
 	private WeekViewSideBar sidebar;
 	private WeekViewDays	days;
 
-	private SharedPreferences prefs = null; 
+	private SharedPreferences prefs = null;
 	private boolean invokedFromView = false;
 
 	//Text Size - some sizes differ, but are relative to this
 	public static final float TEXT_SIZE = 11f;	//SP
-	
-	//Magic Numbers / Configurable values 
+
+	//Magic Numbers / Configurable values
 	public static int MINIMUM_DAY_EVENT_HEIGHT;
 	public static final float[] DASHED_LINE_PARAMS = new float[] {5,5};
-	
+
 	public static final int EVENT_BORDER = 2;		//hard coded
-	
+
 	//Preference controlled values
 	public static int DAY_WIDTH = 100;
 	public static int SECONDS_PER_PIXEL = 1;
@@ -104,23 +117,29 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 	/* Text sizes */
 	public static final float TEXT_SIZE_SIDE = TEXT_SIZE * 0.9f;
 	public static final float TEXT_SIZE_EVENT = TEXT_SIZE;
-	
+
 	/* Fields relating to Intent Results */
 	public static final int PICK_MONTH_FROM_YEAR_VIEW = 0;
 	public static final int PICK_TODAY_FROM_EVENT_VIEW = 1;
 	public static final int PICK_DAY_FROM_MONTH_VIEW = 5;
-	
+
+    private static final int  SHOW_DELETING   = 0x100;
+    private static final int  DELETE_SUCCEEDED    = 0x101;
+    private static final int  DELETE_FAILED   = 0x102;
+
+    private static final int  DELETING_DIALOG = 0x200;
+
 	//Image/data caches
 	private WeekViewImageCache imageCache;
-	
+
 	//Dialogs
 	private static final int DATE_PICKER = 0;
-	
+
 	/* Fields Relating to Gesture Detection */
 	private GestureDetector gestureDetector;
 	private AcalDateTime selectedDate = new AcalDateTime();
-	
-	
+
+
 	//Fields relating to scrolling
 	private int scrollx = 0;
 	private int scrolly = 0;
@@ -129,8 +148,22 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 
 	private int	StatusBarHeight;
 	private float	SPscaler;
-	
-	
+
+    private static final int HANDLER_NEW_LIST = 0;
+
+    private final Handler mHandler = new Handler() {
+
+        @SuppressWarnings("unchecked")
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case HANDLER_NEW_LIST:
+                    refresh();
+                    break;
+            }
+        }
+    };
+
 	/**
 	 * Set up buttons, UI listeners and views.
 	 * @param savedInstanceState Contains the day of the week that we start with
@@ -141,21 +174,21 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 		Bundle b = this.getIntent().getExtras();
 		if ( b != null && b.containsKey("InvokedFromView") )
 			invokedFromView = true;
-		
+
 		this.setContentView(R.layout.week_view);
 		header 	= (WeekViewHeader) 	this.findViewById(R.id.week_view_header);
 		sidebar = (WeekViewSideBar) this.findViewById(R.id.week_view_sidebar);
 		days 	= (WeekViewDays) 	this.findViewById(R.id.week_view_days);
-		
+
 		gestureDetector = new GestureDetector(this);
 		selectedDate = this.getIntent().getExtras().getParcelable("StartDay");
-		
+
 		if ( selectedDate == null ) {
 			selectedDate = new AcalDateTime();
 		}
 		selectedDate.applyLocalTimeZone().setDaySecond(0);
 
-		// Hack to calculate the status bar height 
+		// Hack to calculate the status bar height
 		Rect rectgle= new Rect();
 		Window window= getWindow();
 		window.getDecorView().getWindowVisibleDisplayFrame(rectgle);
@@ -166,21 +199,21 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 		this.setupButton(R.id.week_today_button, TODAY);
 		this.setupButton(R.id.week_month_button, MONTH);
 		this.setupButton(R.id.week_add_button, ADD);
-		
+
 		try {
 			//TODO - vertical layout does not have a year view button, so we'll just ignore the exception.
 			this.setupButton(R.id.week_year_button, YEAR);
 		}
 		catch( Exception e ) {}
-	
+
 		loadPrefs();
 		days.setOnTouchListener(days);
 
 		this.registerForContextMenu(days);
 	}
-	
+
 	private void loadPrefs() {
-		
+
 		prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
 		selectedDate = new AcalDateTime().applyLocalTimeZone();
@@ -194,9 +227,9 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 			if ( FIRST_DAY_OF_WEEK < AcalDateTime.MONDAY || FIRST_DAY_OF_WEEK > AcalDateTime.SUNDAY ) throw new Exception();
 		}
 		catch( Exception e ) {
-			FIRST_DAY_OF_WEEK = AcalDateTime.MONDAY; 
+			FIRST_DAY_OF_WEEK = AcalDateTime.MONDAY;
 		}
-		
+
 		SPscaler = this.getResources().getDisplayMetrics().scaledDensity;	//used for scaling our values to SP
 		float DPscaler = this.getResources().getDisplayMetrics().density;		//used for scaling our values to SP
 
@@ -208,10 +241,10 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 		catch ( NumberFormatException e ) { }
 		if (lph <= 0) lph = 1;
 		if (lph >= 10) lph = 10;
-		SECONDS_PER_PIXEL = (int)(((float) AcalDateTime.SECONDS_IN_HOUR)/(lph*PIXELS_PER_TEXT_ROW));
-		MINIMUM_DAY_EVENT_HEIGHT = (int) ((TEXT_SIZE_EVENT*SPscaler)*1.1f);  
-		FULLDAY_ITEM_HEIGHT = (int)((float)(MINIMUM_DAY_EVENT_HEIGHT + 3) * 1.2f);
-		
+		SECONDS_PER_PIXEL = (int)((AcalDateTime.SECONDS_IN_HOUR)/(lph*PIXELS_PER_TEXT_ROW));
+		MINIMUM_DAY_EVENT_HEIGHT = (int) ((TEXT_SIZE_EVENT*SPscaler)*1.1f);
+		FULLDAY_ITEM_HEIGHT = (int)((MINIMUM_DAY_EVENT_HEIGHT + 3) * 1.2f);
+
 		int cpw = 70;
 		try {
 			cpw = (int) Float.parseFloat(prefs.getString(getString(R.string.prefWeekViewDayWidth), "70"));
@@ -219,78 +252,78 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 		catch ( NumberFormatException e ) { }
 		if (cpw <= 0) lph = 10;
 		if (cpw >= 1000) lph = 1000;
-		
+
 		DAY_WIDTH = (int)(cpw*DPscaler);
 
 		WORK_START_SECONDS  = getTimePref(R.string.prefWorkdayStart, 9*3600);
 		WORK_FINISH_SECONDS = getTimePref(R.string.prefWorkdayFinish, 17*3600);
-		
+
 		scrolly = days.checkScrollY( WORK_START_SECONDS / SECONDS_PER_PIXEL + days.getHeaderHeight() );
-		
+
 		//image cache may now be invalid
 		imageCache = new WeekViewImageCache(this);
-		
+
 	}
-	
+
 	//force all displays to update
 	public void refresh() {
 		header.invalidate();
-		days.invalidate();	
+		days.invalidate();
 		sidebar.invalidate();
 	}
-	
+
 	public int getScrollY() {
 		return days.checkScrollY(this.scrolly);
 	}
 	public int getScrollX() {
 		return this.scrollx;
 	}
-	
+
 	public float getSideVerticalOffset() {
 		return days.getHeaderHeight();
 	}
-	
-	public void move(float dx, float dy) {		
+
+	public void move(float dx, float dy) {
 		this.scrolly = days.checkScrollY(this.scrolly + (int) dy);
 		this.scrollx-=dx;
 		while (this.scrollx >= DAY_WIDTH) {
 			decrementCurrentDate();
 			this.scrollx-=DAY_WIDTH;
-		} 
+		}
 		while (this.scrollx <= 0-DAY_WIDTH) {
 			incrementCurrentDate();
 			this.scrollx+=DAY_WIDTH;
 		}
-		
+
 		refresh();
 	}
-	
-	
+
+
 	public WeekViewImageCache getImageCache() {
 		return this.imageCache;
 	}
-	
+
 	public AcalDateTime getCurrentDate() {
 		return selectedDate;
 	}
-	
+
 	public void incrementCurrentDate() {
 		selectedDate.addDays(1);
 	}
-	
+
 	public void decrementCurrentDate() {
 		selectedDate.addDays(-1);
 	}
-	
-	
-	@Override 
+
+
+	@Override
 	public void onPause() {
 		super.onPause();
 		days.close();		//important - otherwise days will never be dereferenced causing memory hole.
 		prefs.edit().putLong(getString(R.string.prefSelectedDate), selectedDate.getMillis()).commit();
 		prefs.edit().putLong(getString(R.string.prefSavedSelectedDate), System.currentTimeMillis()).commit();
 	}
-	
+
 	@Override
 	public void onResume() {
 		super.onResume();
@@ -300,9 +333,9 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 		days.dimensionsChanged();  // User may have been in the preferences screen, maybe indirectly.
 	}
 
-	
+
 	public boolean daysInitialized(){ return days.isDimensionsCaclulated(); }
-	
+
 	/**
 	 * <p>
 	 * Called when user has selected 'Settings' from menu. Starts Settings
@@ -337,13 +370,13 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 		}
 	}
 
-	
+
 
 	/**
 	 * <p>
 	 * Responsible for handling the menu button push.
 	 * </p>
-	 * 
+	 *
 	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
 	 */
 	@Override
@@ -352,12 +385,13 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 		inflater.inflate(R.menu.events_options_menu, menu);
 		return true;
 	}
+
 	/**
 	 * <p>
 	 * Called when the user selects an option from the options menu. Determines
 	 * what (if any) Activity should start.
 	 * </p>
-	 * 
+	 *
 	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
 	 */
 	@Override
@@ -396,7 +430,7 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 			AcalTheme.setContainerFromTheme(myButton, AcalTheme.BUTTON);
 		}
 	}
-	
+
 	@Override
 	public boolean onTouch(View view, MotionEvent touch) {
 		return this.gestureDetector.onTouchEvent(touch);
@@ -439,7 +473,7 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 		lastDown = me;
 		return false;
 	}
-	
+
 	/**
 	 * TODO - context menu items need to be brought in line to work with refactored activities.
 	 */
@@ -473,17 +507,17 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
         }
 
         for( int i=2; i< underList.size(); i++) {
-        	menu.add(Menu.NONE, i | CONTEXT_ACTION_VIEW, Menu.NONE, ((WVCacheObject) underList.get(i)).getSummary() );  
+        	menu.add(Menu.NONE, i | CONTEXT_ACTION_VIEW, Menu.NONE, ((WVCacheObject) underList.get(i)).getSummary() );
         	menu.add(Menu.NONE, i | CONTEXT_ACTION_EDIT, Menu.NONE,
-        				getString(R.string.editSomeEvent, ((WVCacheObject) underList.get(i)).getSummary() ));  
+        				getString(R.string.editSomeEvent, ((WVCacheObject) underList.get(i)).getSummary() ));
         	menu.add(Menu.NONE, i | CONTEXT_ACTION_COPY, Menu.NONE,
-        				getString(R.string.copySomeEvent, ((WVCacheObject) underList.get(i)).getSummary() ));  
+        				getString(R.string.copySomeEvent, ((WVCacheObject) underList.get(i)).getSummary() ));
         	menu.add(Menu.NONE, i | CONTEXT_ACTION_DELETE, Menu.NONE,
-       				getString(R.string.deleteSomeEvent, ((WVCacheObject) underList.get(i)).getSummary() ));  
+       				getString(R.string.deleteSomeEvent, ((WVCacheObject) underList.get(i)).getSummary() ));
         }
-		
+
 	}
-	
+
 	@Override
 	public boolean onContextItemSelected(MenuItem item) {
 
@@ -516,9 +550,8 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 	    			this.startActivity(eventViewIntent);
         		}
         		else if ( action == CONTEXT_ACTION_DELETE ) {
-        			/**
-        			 * TODO
-        			 */
+        		    this.deleteEvent(co.getResourceId(), co.getRecurrenceId(),
+                            EventEdit.ACTION_DELETE, EventEdit.INSTANCES_SINGLE);
         		}
         		else if ( action == CONTEXT_ACTION_COPY || action == CONTEXT_ACTION_EDIT ) {
 
@@ -542,7 +575,39 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 
         return true;
 	}
-	
+
+
+    public void deleteEvent(long resourceId, String recurrenceId, int action, int instances ) {
+
+        try {
+            Resource r = Resource.fromDatabase(this, resourceId);
+            EventInstance event = (EventInstance) CalendarInstance.fromResourceAndRRId(r, recurrenceId);
+
+            if ( Constants.LOG_DEBUG ) Log.println(Constants.LOGD, TAG,
+                    "saveChanges: "+event.getSummary()+
+                    ", starts "+event.getStart().toPropertyString(PropertyName.DTSTART)+
+                    ", with "+event.getAlarms().size()+" alarms.");
+            //display savingdialog
+
+            ResourceManager.getInstance(this).sendRequest(new RREventEditedRequest(this, event, action, instances));
+
+            //set message for 10 seconds to fail.
+            mHandler.sendEmptyMessageDelayed(DELETE_FAILED, 100000);
+
+            //showDialog(SAVING_DIALOG);
+            mHandler.sendEmptyMessageDelayed(SHOW_DELETING,50);
+
+
+        }
+        catch (Exception e) {
+            if ( e.getMessage() != null ) Log.d(TAG,e.getMessage());
+            if (Constants.LOG_DEBUG)Log.d(TAG,Log.getStackTraceString(e));
+            Toast.makeText(this, getString(R.string.ErrorSavingEvent), Toast.LENGTH_LONG).show();
+        }
+
+    }
+
+
 	@Override
 	public void onLongPress(MotionEvent me) {
 	}
@@ -556,8 +621,8 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 		underList = null;
 	}
 
-	
-	
+
+
 	@Override
 	public boolean onScroll(MotionEvent start, MotionEvent current, float dx, float dy) {
 		if (Math.abs(dx)>Math.abs(dy)) move(dx,0);
@@ -577,14 +642,14 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 			lastClickMe = me;
 			return false;
 		}
-		if ( Math.abs(lastClickMe.getX() - me.getX()) < (10 * SPscaler) 
+		if ( Math.abs(lastClickMe.getX() - me.getX()) < (10 * SPscaler)
 					&& Math.abs(lastClickMe.getX() - me.getX()) < (10 * SPscaler)
 					&& (me.getEventTime() - lastClickMe.getEventTime()) < 1000
 				) {
 			days.cancelLongPress();
 			List<Object> under = days.whatWasUnderneath(me.getRawX() - sidebar.getWidth(),
 											me.getRawY() - (header.getHeight()+StatusBarHeight) );
-			
+
 			if ( under.size() > 2 ) {
 				// There's at least one event under the double-click
 				if ( under.size() == 3 ) {
@@ -607,9 +672,9 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 		lastClickMe = me;
 		return false;
 	}
-	
-	
-	@Override 
+
+
+	@Override
 	public void onNumberSelected(int number) {
 		selectedDate = new AcalDateTime(number,1,1,0,0,0,null).applyLocalTimeZone().setDaySecond(0);
 	}
@@ -620,9 +685,14 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 				NumberPickerDialog dialog = new NumberPickerDialog(this,this,selectedDate.getYear(),1582,3999);
 				return dialog;
 			}
+	        case DELETING_DIALOG:
+	            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+	            builder.setTitle(this.getString(R.string.Deleting));
+	            builder.setCancelable(false);
+	            return builder.create();
 		}
 		return null;
-		
+
 	}
 	/**
 	 * <p>
@@ -631,7 +701,7 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 	 */
 	@Override
 	public void onClick(View clickedView) {
-		int button = (int) ((Integer) clickedView.getTag());
+		int button = ((Integer) clickedView.getTag());
 		Bundle bundle = new Bundle();
 		switch (button) {
 		case TODAY:
@@ -714,15 +784,22 @@ public class WeekViewActivity extends AcalActivity implements OnGestureListener,
 	public String getStringPref(int resId, String defaultValue) {
 		return prefs.getString(getString(resId), defaultValue);
 	}
-	
+
 	public int getIntegerPref(int resId, int defaultValue) {
 		return Integer.parseInt(prefs.getString(getString(resId), Integer.toString(defaultValue)));
 	}
-	
+
 	public int getTimePref(int resId, int defaultValue) {
 		String time = getStringPref(resId,(defaultValue/AcalDateTime.SECONDS_IN_HOUR)+":"+(defaultValue%AcalDateTime.SECONDS_IN_HOUR)/60);
 		String[] hm = time.split(":");
 		if ( hm.length < 2 ) return defaultValue;
 		return Integer.parseInt(hm[0])*3600 + Integer.parseInt(hm[1])*60 ;
 	}
+
+    @Override
+    public void resourceResponse(ResourceResponse<Long> response) {
+        mHandler.sendMessage(
+                mHandler.obtainMessage(HANDLER_NEW_LIST, response.result())
+        );
+    }
 }
