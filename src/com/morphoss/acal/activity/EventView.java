@@ -53,6 +53,7 @@ import com.morphoss.acal.database.resourcesmanager.requests.RRRequestInstance;
 import com.morphoss.acal.dataservice.CalendarInstance;
 import com.morphoss.acal.dataservice.Collection;
 import com.morphoss.acal.dataservice.EventInstance;
+import com.morphoss.acal.dataservice.Resource;
 import com.morphoss.acal.davacal.AcalAlarm;
 import com.morphoss.acal.service.aCalService;
 
@@ -63,52 +64,55 @@ public class EventView extends AcalActivity implements  OnClickListener, Resourc
 	public static final int EDIT = 1;
 	public static final int ADD = 2;
 	public static final int SHOW_ON_MAP = 3;
-	
+
 	public static final int EDIT_EVENT = 0;
 	public static final int EDIT_ADD = 0;
-	
+
 	public static final String CACHE_INSTANCE_KEY = "CacheInstance";
 	public static final String RESOURCE_ID_KEY = "resourceid";
 	public static final String RECURRENCE_ID_KEY = "recurrenceid";
-	private static final int DEFAULT_SIDE_COLOUR = 0xff000000;
-	
+    public static final String DELETE_EVENT = "delete this event";
+
+    private static final int DEFAULT_SIDE_COLOUR = 0xff000000;
+
 	private long rid;		//The resource ID for this event
 	private String rrid;
 	private EventInstance event = null;		//fully populated event instance with all the data we want
 	private CacheObject cacheObject = null; //Small lightweight object that we start with.
-	
+
 	private ResourceManager resourceManager = null;	//needed for getting reesource data
-	
+
 	//Display Elements needed by populate layout
 	private LinearLayout masterLayout;
-	
+
 	private Button mapButton;
-	private LinearLayout sidebar;
-	private LinearLayout sidebarBottom;
-	private TextView textName; 
+	private View sidebar;
+	private View sidebarBottom;
+	private TextView textName;
 	private TextView textTime;
-	
+
 	private RelativeLayout locationLayout;
 	private TextView textLocation;
-	
+
 	private RelativeLayout notesLayout;
 	private TextView textNotes;
-	
+
 	private RelativeLayout alarmsLayout;
 	private TextView textAlarms;
 	private TextView textAlarmsWarning;
-	
+
 	private RelativeLayout collectionLayout;
 	private TextView textCollection;
-	
+
 	private TextView textRepeats;
-	
+    private TextView rawEventData;
+
 	private boolean show24Hour = false;
-	
+
 	private static final int REFRESH = 0;
 	private static final int FAIL = 1;
-	
-	private Handler mHandler = new Handler() {
+
+	private final Handler mHandler = new Handler() {
 		public void handleMessage(Message msg) {
 			if (msg.what == REFRESH) {
 				populateLayout();
@@ -116,15 +120,15 @@ public class EventView extends AcalActivity implements  OnClickListener, Resourc
 				Toast.makeText(EventView.this, "The resource you are looking at has changed or been deleted.", Toast.LENGTH_LONG).show();
 				finish();
 			}
-			
+
 		}
 	};
-	
+
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.event_view);
 		this.masterLayout = (LinearLayout) this.findViewById(R.id.EventViewLayout);
-		
+
 		//Ensure service is actually running
 		this.startService(new Intent(this, aCalService.class));
 		//gestureDetector = new GestureDetector(this);
@@ -133,21 +137,21 @@ public class EventView extends AcalActivity implements  OnClickListener, Resourc
 		this.setupButton(R.id.event_today_button, TODAY);
 		this.setupButton(R.id.event_edit_button, EDIT);
 		this.setupButton(R.id.event_add_button, ADD);
-		
-		
+
+
 		this.resourceManager = ResourceManager.getInstance(this);
 		this.resourceManager.addListener(this);
-		
+
 		Bundle b = this.getIntent().getExtras();
 		try {
 			if (b.containsKey(CACHE_INSTANCE_KEY)) {
 				this.cacheObject = b.getParcelable(CACHE_INSTANCE_KEY);
 				this.rid = cacheObject.getResourceId();
 				this.rrid = cacheObject.getRecurrenceId();
-				
+
 				//request the fully implemented instance;
 				resourceManager.sendRequest(new RRRequestInstance(this, this.rid, this.rrid));
-				
+
 			} else if (b.containsKey(RESOURCE_ID_KEY) && b.containsKey(RECURRENCE_ID_KEY)) {
 				this.rid = b.getLong(RESOURCE_ID_KEY);
 				this.rrid = b.getString(RECURRENCE_ID_KEY);
@@ -167,14 +171,14 @@ public class EventView extends AcalActivity implements  OnClickListener, Resourc
 			if (Constants.LOG_DEBUG)Log.d(TAG, "Error getting data from caller: "+e.getMessage());
 		}
 	}
-	
+
 	@Override
 	public void onPause() {
 		this.resourceManager.removeListener(this);
 		this.resourceManager = null;
 		super.onPause();
 	}
-	
+
 	@Override
 	public void onResume() {
 		this.resourceManager = ResourceManager.getInstance(this);
@@ -182,7 +186,7 @@ public class EventView extends AcalActivity implements  OnClickListener, Resourc
 		resourceManager.sendRequest(new RRRequestInstance(this,rid, this.rrid));
 		super.onResume();
 	}
-	
+
 	private void setupButton(int id, int val) {
 		Button myButton = (Button) this.findViewById(id);
 		myButton.setOnClickListener(this);
@@ -190,13 +194,13 @@ public class EventView extends AcalActivity implements  OnClickListener, Resourc
 		AcalTheme.setContainerFromTheme(myButton, AcalTheme.BUTTON);
 	}
 
-	
 
-	
+
+
 	private void loadLayouts() {
 		mapButton = (Button) this.findViewById(R.id.EventFindOnMapButton);
-		sidebar = (LinearLayout)this.findViewById(R.id.EventViewColourBar);
-		sidebarBottom = (LinearLayout)this.findViewById(R.id.EventViewColourBarBottom);;
+		sidebar = this.findViewById(R.id.EventViewColourBar);
+		sidebarBottom = this.findViewById(R.id.EventViewColourBarBottom);;
 		textName = (TextView) this.findViewById(R.id.EventName);
 		textTime = (TextView) this.findViewById(R.id.EventTimeContent);
 		textLocation  = (TextView) this.findViewById(R.id.EventLocationContent);
@@ -209,11 +213,11 @@ public class EventView extends AcalActivity implements  OnClickListener, Resourc
 		collectionLayout = (RelativeLayout) this.findViewById(R.id.EventCollectionLayout);
 		textRepeats = (TextView) this.findViewById(R.id.EventRepeatsContent);
 		textCollection = (TextView) this.findViewById(R.id.EventCollectionContent);
-		
+		rawEventData = (TextView) this.findViewById(R.id.RawEventData);
 	}
-	
+
 	private void populateLayout() {
-		
+
 		//vars needed
 		AcalDateTime start = null;
 		String title = null;
@@ -223,9 +227,10 @@ public class EventView extends AcalActivity implements  OnClickListener, Resourc
 		long collectionId = -1;
 		String repetition = null;
 		String timeText = null;
-		
+		String rawText = null;
+
 		AcalDateTime viewDate = new AcalDateTime().applyLocalTimeZone().setDaySecond(0);
-		
+
 		if (event != null) {
 			//load from event
 			start = event.getStart();
@@ -238,7 +243,11 @@ public class EventView extends AcalActivity implements  OnClickListener, Resourc
 			boolean isAllDay = start.isDate();
 			timeText = AcalDateTimeFormatter.getDisplayTimeText(this,viewDate, AcalDateTime.addDays(viewDate,1),
 													event.getStart(), event.getEnd(), show24Hour, isAllDay );
-			
+
+			if ( Constants.debugEvents ) {
+    			Resource r = Resource.fromDatabase(this, event.getResourceId());
+    			rawText = r.getBlob();
+			}
 		} else if (cacheObject != null) {
 			//load from cacheObject
 			start = cacheObject.getStartDateTime();
@@ -248,11 +257,14 @@ public class EventView extends AcalActivity implements  OnClickListener, Resourc
 			collectionId = cacheObject.getCollectionId();
 			timeText = AcalDateTimeFormatter.getDisplayTimeText(this,viewDate, AcalDateTime.addDays(viewDate,1),
 					cacheObject.getStartDateTime(), cacheObject.getEndDateTime(), show24Hour, cacheObject.isAllDay());
-			
+            if ( Constants.debugEvents ) {
+                Resource r = Resource.fromDatabase(this, cacheObject.getResourceId());
+                rawText = r.getBlob();
+            }
 		} else {
 			title = "Loading data...";
 		}
-		
+
 		final String loc = location;
 		if (loc!= null && !loc.equals("")) {
 			mapButton.setClickable(true);
@@ -261,7 +273,7 @@ public class EventView extends AcalActivity implements  OnClickListener, Resourc
 					//replace whitespaces with '+'
 					loc.replace("\\s", "+");
 					Uri target = Uri.parse("geo:0,0?q="+loc);
-					startActivity(new Intent(android.content.Intent.ACTION_VIEW, target)); 
+					startActivity(new Intent(android.content.Intent.ACTION_VIEW, target));
 					//start map view
 					return;
 				}
@@ -269,16 +281,15 @@ public class EventView extends AcalActivity implements  OnClickListener, Resourc
 		} else {
 			mapButton.setClickable(false);
 		}
-		
-		
-		int colour = DEFAULT_SIDE_COLOUR; 
-		
+
+		int colour = DEFAULT_SIDE_COLOUR;
+
 		Collection collection = null;
 		if (collectionId >= 0) {
 			collection = Collection.getInstance(collectionId,this);
 			colour = collection.getColour();
 		}
-		
+
 
 		//title and colour are ALWAYS set to something
 		sidebar.setBackgroundColor(colour);
@@ -286,28 +297,28 @@ public class EventView extends AcalActivity implements  OnClickListener, Resourc
 
 		textName.setText(title);
 		textName.setTextColor(colour);
-		
-		
+
+
 		if (timeText != null) {
 			textTime.setText(timeText);
 			textTime.setTextColor(colour);
 		}
-		
+
 		if ( location != null && ! location.equals("") ) {
 				textLocation.setText(location);
 				locationLayout.setVisibility(View.VISIBLE);
 		} else {
 			locationLayout.setVisibility(View.GONE);
 		}
-		
+
 		if ( description != null && ! description.equals("") ) {
 			textNotes.setText(description);
 			notesLayout.setVisibility(View.VISIBLE);
 		} else {
 			notesLayout.setVisibility(View.GONE);
 		}
-		
-		
+
+
 		StringBuilder alarms = new StringBuilder("");
 		if (alarmList != null) {
 			for (AcalAlarm alarm : alarmList) {
@@ -315,18 +326,18 @@ public class EventView extends AcalActivity implements  OnClickListener, Resourc
 				alarms.append(alarm.toPrettyString());
 			}
 		}
-		
+
 		if ( alarms != null  && ! alarms.equals("") ) {
 			textAlarms.setText(alarms);
 			alarmsLayout.setVisibility(View.VISIBLE);
 		} else {
 			alarmsLayout.setVisibility(View.GONE);
 		}
-		
+
 		if (collection != null) {
 				textCollection.setText(collection.getDisplayName());
 				collectionLayout.setVisibility(View.VISIBLE);
-			
+
 			if (collection.alarmsEnabled()) {
 				textAlarmsWarning.setVisibility(View.GONE);
 			} else {
@@ -335,23 +346,27 @@ public class EventView extends AcalActivity implements  OnClickListener, Resourc
 		} else {
 			collectionLayout.setVisibility(View.GONE);
 		}
-		
+
 		if (start != null && repetition != null) {
-			AcalRepeatRule RRule = new AcalRepeatRule(start, repetition); 
+			AcalRepeatRule RRule = new AcalRepeatRule(start, repetition);
 			String rr = RRule.repeatRule.toPrettyString(this);
 			if (rr == null || rr.equals("")) rr = getString(R.string.OnlyOnce);
 			textRepeats.setText(rr);
 		} else {
 			textRepeats.setText("");
 		}
-		
+
+		if ( rawText != null ) {
+		    rawEventData.setText(rawText);
+		    rawEventData.setVisibility(View.VISIBLE);
+		}
 		masterLayout.refreshDrawableState();
 	}
 
-	
+
 	@Override
 	public void onClick(View arg0) {
-		int button = (int)((Integer)arg0.getTag());
+		int button = ((Integer)arg0.getTag());
 		Bundle bundle = new Bundle();
 		bundle.putLong(EventEdit.RESOURCE_ID_KEY, rid);
 		bundle.putString(EventEdit.RECCURENCE_ID_KEY, rrid);
@@ -395,7 +410,7 @@ public class EventView extends AcalActivity implements  OnClickListener, Resourc
 			if (b.containsKey(RESOURCE_ID_KEY))
 				this.rid = b.getLong(RESOURCE_ID_KEY);
 			if (this.rrid == null)
-			finish(); 
+			finish();
     	}
     }
 
@@ -426,5 +441,5 @@ public class EventView extends AcalActivity implements  OnClickListener, Resourc
 			mHandler.sendMessage(mHandler.obtainMessage(REFRESH));
 		}
 	}
-	
+
 }

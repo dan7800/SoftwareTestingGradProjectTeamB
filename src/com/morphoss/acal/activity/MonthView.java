@@ -18,11 +18,6 @@
 
 package com.morphoss.acal.activity;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -66,10 +61,10 @@ import com.morphoss.acal.widget.AcalViewFlipper;
 
 /**
  * <h1>Month View</h1>
- * 
+ *
  * <h3>This is the activity that is started when aCal is run and will likely be
  * the most used interface in the program.</h3>
- * 
+ *
  * <p>
  * This view is split into 3 sections:
  * </p>
@@ -83,14 +78,14 @@ import com.morphoss.acal.widget.AcalViewFlipper;
  * <p>
  * As well as this, there is a menu accessible through the menu button.
  * </p>
- * 
+ *
  * <p>
  * Each of the view flippers listens to gestures, Side swipes on either will
  * result in the content of the flipper moving forward or back. Content for the
  * flippers is provided by Adapter classes that contain the data the view is
  * representing.
  * </p>
- * 
+ *
  * <p>
  * At any time there are 2 important pieces of information that make up this
  * views state: The currently selected day, which is highlighted when visible in
@@ -99,11 +94,11 @@ import com.morphoss.acal.widget.AcalViewFlipper;
  * looking at in the month view. This state information is written to and read
  * from file when the view loses and gains focus.
  * </p>
- * 
- * 
+ *
+ *
  * @author Morphoss Ltd
  * @license GPL v3 or later
- * 
+ *
  */
 public class MonthView extends AcalActivity implements OnGestureListener,
 		OnTouchListener, OnClickListener, ResourceResponseListener<Long> {
@@ -114,7 +109,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 	public static final String STATE_FILE = "/data/data/com.morphoss.acal/monthview.dat";
 
 	private boolean invokedFromView = false;
-	
+
 	/* Fields relating to the Month View: */
 
 	/** The flipper for the month view */
@@ -189,12 +184,12 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 	 * Called when Activity is first created. Initialises all appropriate fields
 	 * and Constructs the Views for display.
 	 * </p>
-	 * 
+	 *
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
 	 */
-	@Override
+    @Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.month_view);
@@ -206,7 +201,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 		// make sure aCalService is running
 		this.startService(new Intent(this, aCalService.class));
 
-		gestureDetector = new GestureDetector(this);
+		gestureDetector = new GestureDetector(this,this);
 
 		AcalDateTime currentDate = new AcalDateTime().applyLocalTimeZone();
 		selectedDate = currentDate.clone();
@@ -222,9 +217,9 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 	 * <p>
 	 * Called when Activity regains focus. Try's to load the saved State.
 	 * </p>
-	 * 
+	 *
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see android.app.Activity#onResume()
 	 */
 	@Override
@@ -237,7 +232,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 		this.setupButton(R.id.month_week_button, WEEK, getString(R.string.Week));
 		this.setupButton(R.id.month_year_button, YEAR, getString(R.string.Year));
 		this.setupButton(R.id.month_add_button, ADD, "+");
-		
+
 		selectedDate = new AcalDateTime().applyLocalTimeZone();
 		displayedMonth = new AcalDateTime().applyLocalTimeZone();
 		if ( prefs.getLong(getString(R.string.prefSavedSelectedDate), 0) > (System.currentTimeMillis() - (3600000L * 6))) {
@@ -249,7 +244,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 		if ( this.monthGrid == null ) createGridView(true);
 		changeDisplayedMonth(displayedMonth);
 		changeSelectedDate(selectedDate);
-		
+
 	}
 
 	/**
@@ -257,9 +252,9 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 	 * Called when activity loses focus or is closed. Try's to save the current
 	 * State
 	 * </p>
-	 * 
+	 *
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see android.app.Activity#onPause()
 	 */
 	@Override
@@ -267,13 +262,15 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 		super.onPause();
 
 		rememberCurrentPosition();
-		eventList = null;		
+		eventList = null;
+		saveState();
+	}
 
+	private void saveState() {
 		// Save state
 		prefs.edit().putLong(getString(R.string.prefSavedSelectedDate), System.currentTimeMillis()).commit();
 		prefs.edit().putLong(getString(R.string.prefSelectedDate), selectedDate.getMillis()).commit();
 		prefs.edit().putLong(getString(R.string.prefDisplayedMonth), displayedMonth.getMillis()).commit();
-
 	}
 
 	private void rememberCurrentPosition() {
@@ -287,7 +284,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
     	}
 	}
 
-    
+
     private void restoreCurrentPosition() {
     	if ( eventList != null ) {
         	eventList.setSelectionFromTop(eventListIndex, eventListTop);
@@ -304,7 +301,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 	 * <p>
 	 * Helper method for setting up buttons
 	 * </p>
-	 * @param buttonLabel 
+	 * @param buttonLabel
 	 */
 	private void setupButton(int id, int val, String buttonLabel) {
 		Button myButton = (Button) this.findViewById(id);
@@ -324,7 +321,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 	 * Creates a new GridView object based on this Activities current state. The
 	 * GridView created Will display this Activities MonthView
 	 * </p>
-	 * 
+	 *
 	 * @param addParent
 	 *            <p>
 	 *            Whether or not to set the ViewFlipper as the new GridView's
@@ -364,7 +361,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 	 * Creates a new GridView object based on this Activities current state. The
 	 * GridView created will display this Activities ListView
 	 * </p>
-	 * 
+	 *
 	 * @param addParent
 	 *            <p>
 	 *            Whether or not to set the ViewFlipper as the new GridView's
@@ -405,7 +402,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 	 * Flips the current month view either forward or back depending on flip
 	 * amount parameter.
 	 * </p>
-	 * 
+	 *
 	 * @param flipAmount
 	 *            <p>
 	 *            The number of months to move forward(Positive) or
@@ -416,7 +413,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 		try {
 			int cur = monthGridFlipper.getDisplayedChild();
 			createGridView(false); // We will attach the parent ourselves.
-			AcalDateTime newDate = (AcalDateTime) displayedMonth.clone();
+			AcalDateTime newDate = displayedMonth.clone();
 
 			// Handle year change
 			newDate.set(AcalDateTime.DAY_OF_MONTH, 1);
@@ -450,13 +447,13 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 		}
 	}
 
-	
+
 	/**
 	 * <p>
 	 * Flips the current Event view either forward or back depending on flip
 	 * amount parameter.
 	 * </p>
-	 * 
+	 *
 	 * @param flipAmount
 	 *            <p>
 	 *            The number of days to move forward(Positive) or
@@ -504,13 +501,13 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 		}
 	}
 
-	
+
 	/**
 	 * <p>
 	 * Responsible for nice animation when ViewFlipper changes from one View to
 	 * the Next.
 	 * </p>
-	 * 
+	 *
 	 * @param objectTouched
 	 *            <p>
 	 *            The Object that was 'swiped'
@@ -520,7 +517,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 	 *            Indicates swipe direction. If true, swipe left, else swipe
 	 *            right.
 	 *            </p>
-	 * 
+	 *
 	 * @return <p>
 	 *         Swipe success. False if object passed is not 'swipable'
 	 *         </p>
@@ -541,7 +538,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 				flipMonth(-1);
 			}
 			int cur = monthGridFlipper.getDisplayedChild();
-			
+
 			//TODO We need to prevent cache updates from upsetting this animation
 			monthGridFlipper.showNext();
 			monthGridFlipper.removeViewAt(cur);
@@ -588,7 +585,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 	 * Determines what object was under the 'finger' of the user when they
 	 * started a gesture.
 	 * </p>
-	 * 
+	 *
 	 * @param x
 	 *            <p>
 	 *            The X co-ordinate of the press.
@@ -648,7 +645,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 			gridView.setPadding(spare/2, 0, spare/2, 0);
 		}
 		*/
-		
+
 		if (AcalDateTime.isWithinMonth(selectedDate, displayedMonth)) {
 			if (monthAdapter != null) monthAdapter.close();
 			monthAdapter = new MonthAdapter(this, selectedDate, selectedDate,new Animation[]{leftIn,leftOut,rightIn,rightOut});
@@ -663,7 +660,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 		monthGrid.refreshDrawableState();
 	}
 
-	
+
 	/**
 	 * <p>
 	 * Changes the selected date to the date represented by the provided
@@ -686,7 +683,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 		eventList.setAdapter(eventListAdapter);
 		eventList.refreshDrawableState();
 		restoreCurrentPosition();
-		
+
 		eventListTitle.setText(AcalDateTime.fmtDayMonthYear(c));
 
 		if (AcalDateTime.isWithinMonth(selectedDate, displayedMonth)) {
@@ -708,14 +705,14 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 	}
 
 	private Dialog	deletingDialog;
-	private Handler mHandler = new Handler() {
+	private final Handler mHandler = new Handler() {
 		private boolean	deleteSucceeded = false;
-		
+
 		public void handleMessage(Message msg) {
 
 			switch (msg.what) {
 
-			case SHOW_DELETING: 
+			case SHOW_DELETING:
 				showDialog(DELETING_DIALOG);
 				break;
 
@@ -770,7 +767,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 			if (Constants.LOG_DEBUG)Log.d(TAG,Log.getStackTraceString(e));
 			Toast.makeText(this, getString(R.string.ErrorSavingEvent), Toast.LENGTH_LONG).show();
 		}
-		
+
 	}
 
 	//Dialogs
@@ -788,7 +785,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 		return null;
 	}
 
-	
+
 	/********************************************************************
 	 * Implemented Interface Overrides *
 	 ********************************************************************/
@@ -797,7 +794,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 	 * <p>
 	 * Responsible for handling the menu button push.
 	 * </p>
-	 * 
+	 *
 	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
 	 */
 	@Override
@@ -811,9 +808,9 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 	 * <p>
 	 * Called when user has touched the screen. Handled by our Gesture Detector.
 	 * </p>
-	 * 
+	 *
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see android.app.Activity#onTouchEvent(android.view.MotionEvent)
 	 */
 	@Override
@@ -827,9 +824,9 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 	 * <p>
 	 * Called when user has touched the screen. Handled by our Gesture Detector.
 	 * </p>
-	 * 
+	 *
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see android.view.View.OnTouchListener#onTouch(android.view.View,
 	 *      android.view.MotionEvent)
 	 */
@@ -845,7 +842,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 	 * Called when the user selects an option from the options menu. Determines
 	 * what (if any) Activity should start.
 	 * </p>
-	 * 
+	 *
 	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
 	 */
 	@Override
@@ -988,7 +985,7 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 	 */
 	@Override
 	public void onClick(View clickedView) {
-		int button = (int) ((Integer) clickedView.getTag());
+		int button = ((Integer) clickedView.getTag());
 		switch (button) {
 			case TODAY:
 				AcalDateTime cal = new AcalDateTime();
@@ -1041,67 +1038,47 @@ public class MonthView extends AcalActivity implements OnGestureListener,
 
 
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		if ( resultCode == RESULT_OK ) {
-			switch ( requestCode ) {
-			case PICK_DAY_FROM_WEEK_VIEW:
-				if (data.hasExtra("selectedDate")) {
-					try {
-						AcalDateTime day = (AcalDateTime) data.getParcelableExtra("selectedDate");
-						this.changeSelectedDate(day);
-						this.changeDisplayedMonth(day);
-					} catch (Exception e) {
-						Log.w(TAG, "Error getting month back from year view: "+e);
-					}
-				}
-				break;
-				case PICK_MONTH_FROM_YEAR_VIEW:
-					if (data.hasExtra("selectedDate")) {
-						try {
-							AcalDateTime month = (AcalDateTime) data.getParcelableExtra("selectedDate");
-							this.changeDisplayedMonth(month);
-						} catch (Exception e) {
-							Log.w(TAG, "Error getting month back from year view: "+e);
-						}
-					}
-					break;
-				case PICK_TODAY_FROM_EVENT_VIEW:
-					try {
-						AcalDateTime chosenDate = (AcalDateTime) data.getParcelableExtra("selectedDate");
-						this.changeDisplayedMonth(chosenDate);
-						this.changeSelectedDate(chosenDate);
-					} catch (Exception e) {
-						Log.w(TAG, "Error getting month back from year view: "+e);
-					}
-			}
-			// Save state
-			if (Constants.LOG_DEBUG) Log.d(TAG, "Writing month view state to file.");
-			ObjectOutputStream outputStream = null;
-			try {
-				outputStream = new ObjectOutputStream(new FileOutputStream(
-						STATE_FILE));
-				outputStream.writeObject(this.selectedDate);
-				outputStream.writeObject(this.displayedMonth);
-			} catch (FileNotFoundException ex) {
-				Log.w(TAG,
-						"Error saving MonthView State - File Not Found: "
-								+ ex.getMessage());
-			} catch (IOException ex) {
-				Log.w(TAG,
-						"Error saving MonthView State - IO Error: "
-								+ ex.getMessage());
-			} finally {
-				// Close the ObjectOutputStream
-				try {
-					if (outputStream != null) {
-						outputStream.flush();
-						outputStream.close();
-					}
-				} catch (IOException ex) {
-					Log.w(TAG, "Error closing MonthView file - IO Error: "
-							+ ex.getMessage());
-				}
-			}
+		if ( resultCode != RESULT_OK ) {
+		    Log.i(TAG,"Not RESULT_OK - ignoring activityResult");
+		    return;
 		}
+        switch ( requestCode ) {
+            case PICK_DAY_FROM_WEEK_VIEW:
+                if ( data.hasExtra("selectedDate") ) {
+                    try {
+                        AcalDateTime day = (AcalDateTime) data.getParcelableExtra("selectedDate");
+                        this.changeSelectedDate(day);
+                        this.changeDisplayedMonth(day);
+                    }
+                    catch ( Exception e ) {
+                        Log.w(TAG, "Error getting month back from year view: " + e);
+                    }
+                }
+                break;
+            case PICK_MONTH_FROM_YEAR_VIEW:
+                if ( data.hasExtra("selectedDate") ) {
+                    try {
+                        AcalDateTime month = (AcalDateTime) data.getParcelableExtra("selectedDate");
+                        // this.changeSelectedDate(month);
+                        this.changeDisplayedMonth(month);
+                    }
+                    catch ( Exception e ) {
+                        Log.w(TAG, "Error getting month back from year view: " + e);
+                    }
+                }
+                break;
+            case PICK_TODAY_FROM_EVENT_VIEW:
+                try {
+                    AcalDateTime chosenDate = (AcalDateTime) data.getParcelableExtra("selectedDate");
+                    this.changeDisplayedMonth(chosenDate);
+                    this.changeSelectedDate(chosenDate);
+                }
+                catch ( Exception e ) {
+                    Log.w(TAG, "Error getting month back from year view: " + e);
+                }
+        }
+
+        saveState();
 	}
 
 	/************************************************************************
