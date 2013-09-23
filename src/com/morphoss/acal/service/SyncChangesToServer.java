@@ -110,8 +110,7 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 			if (DEBUG) Log.println(Constants.LOGD,TAG, "No connectivity available to sync local changes.");
 		}
 		else {
-			if (DEBUG)
-				Log.println(Constants.LOGD,TAG, "Starting sync of "+pendingChangesList.size()+" local changes");
+			Log.println(Constants.LOGI,TAG, "Starting sync of "+pendingChangesList.size()+" local changes");
 
 			collectionsToSync = new HashSet<Long>();
 
@@ -210,7 +209,6 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 		BasicHeader contentHeader = new BasicHeader("Content-type", getContentType(newData) );
 
 		if ( oldData == null ) {
-			Log.i(TAG,"Writing new resource to "+resourcePath+", isNull: "+(resourcePath == null) );
 			eTagHeader = new BasicHeader("If-None-Match", "*" );
 
 			if ( resourcePath == null || resourcePath.equals("null") ) {
@@ -232,9 +230,11 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 						Log.println(Constants.LOGV,TAG,Log.getStackTraceString(e));
 				};
 				if ( resourcePath == null ) {
-						resourcePath = UUID.randomUUID().toString() + contentExtension;
+					resourcePath = UUID.randomUUID().toString() + contentExtension;
 				}
 			}
+            if ( DEBUG && Constants.LOG_DEBUG )
+                Log.println(Constants.LOGD, TAG, "Writing new resource to "+resourcePath );
 		}
 		else {
 			String eTag = pending.getAsString(ResourceTableManager.ETAG);
@@ -282,11 +282,9 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
                                     new BasicHeader("Prefer","return=representation")
                              };
 
-		if (DEBUG)
-			Log.println(Constants.LOGD,TAG,	"Making "+builder.getAction().toString()+" request to "+path);
-
 		InputStream in = null;
 		String method = (builder.getAction() == QUERY_ACTION.DELETE ? "DELETE" : "PUT");
+
 		try {
 			in = requestor.doRequest( method, path, headers, newData);
 		}
@@ -298,6 +296,8 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 			Log.w(TAG,"HTTP Request failed: "+e.getMessage());
 			return;
 		}
+
+        Log.println(Constants.LOGI,TAG, method+" got "+requestor.getStatusCode()+" response from "+requestor.fullUrl());
 
         // If we made it this far we should do a sync on this collection ASAP after we're done
         collectionsToSync.add(collectionId);
@@ -364,8 +364,9 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 			default: // Unknown code
 				Log.w(TAG, builder.getAction().toString()+": Status " + status + " for " +method+" "+ path);
 				Log.i(TAG,"Full server response was:\n"+responseData);
-				if ( status < 500 )
-	                processor.deletePendingChange(pendingId);
+				if ( status < 500 ) {
+				    processor.deletePendingChange(pendingId);
+				}
 		}
 	}
 
