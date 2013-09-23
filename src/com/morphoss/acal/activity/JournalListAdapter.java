@@ -53,10 +53,10 @@ import com.morphoss.acal.database.cachemanager.CacheChangedEvent;
 import com.morphoss.acal.database.cachemanager.CacheChangedListener;
 import com.morphoss.acal.database.cachemanager.CacheManager;
 import com.morphoss.acal.database.cachemanager.CacheManager.CacheTableManager;
-import com.morphoss.acal.database.cachemanager.requests.CRJournalsByType;
 import com.morphoss.acal.database.cachemanager.CacheObject;
 import com.morphoss.acal.database.cachemanager.CacheResponse;
 import com.morphoss.acal.database.cachemanager.CacheResponseListener;
+import com.morphoss.acal.database.cachemanager.requests.CRJournalsByType;
 import com.morphoss.acal.dataservice.Collection;
 
 /**

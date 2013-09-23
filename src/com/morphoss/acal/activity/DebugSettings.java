@@ -30,6 +30,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.morphoss.acal.ServiceManager;
+import com.morphoss.acal.database.alarmmanager.AlarmQueueManager;
 import com.morphoss.acal.database.cachemanager.CacheManager;
 import com.morphoss.acal.database.cachemanager.requests.CRClearCacheRequest;
 import com.morphoss.acal.service.SyncChangesToServer;
@@ -37,26 +38,28 @@ import com.morphoss.acal.service.WorkerClass;
 
 public class DebugSettings extends ListActivity {
 public static final String TAG = "aCal Settings";
-	
+
 	/** A list of setting that can be configured in DEBUG mode */
 	private static final String[] TASKS = new String[] {
 		"Save Database",
-		"Revert Database", 
+		"Revert Database",
 		"Full System Sync",
 		"Home Set Discovery",
 		"Update Home DavCollections",
 		"Sync All DavCollections",
 		"Clear Cache",
-		"Sync local changes to server"
+		"Sync local changes to server",
+		"Log current alarm queue",
+		"Rebuild alarm queue"
 	};
-	
+
 	private ServiceManager serviceManager;
-	
-	
-	
+
+
+
 	/**
 	 * <p>Creates a list of debug settings.</p>
-	 * 
+	 *
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
 	 */
 	@Override
@@ -67,29 +70,29 @@ public static final String TAG = "aCal Settings";
 		lv.setTextFilterEnabled(true);
 		lv.setOnItemClickListener(new SettingsListClickListener());
 	}
-	
+
 	@Override
 	public void onPause() {
 		super.onPause();
 		if (this.serviceManager != null) this.serviceManager.close();
 	}
-	
+
 	@Override
 	public void onResume() {
 		super.onResume();
 		this.serviceManager = new ServiceManager(this);
 	}
-	
-	
-	
+
+
+
 	/**
 	 * Click listener for Settings List.
-	 * 
+	 *
 	 * @author Morphoss Ltd
 	 */
-	
+
 	private class SettingsListClickListener implements OnItemClickListener {
-		 
+
 		/**
 		 * @see android.widget.AdapterView.OnItemClickListener#onItemClick(android.widget.AdapterView, android.view.View, int, long)
 		 */
@@ -145,6 +148,14 @@ public static final String TAG = "aCal Settings";
 	    	else if ( task.equals("Sync local changes to server") ) {
 				WorkerClass.getExistingInstance().addJobAndWake(new SyncChangesToServer());
 	    	}
+	    	else if ( task.equals("Log current alarm queue") ) {
+	    	    AlarmQueueManager.logCurrentAlarms(DebugSettings.this);
+	    	}
+            else if ( task.equals("Rebuild alarm queue") ) {
+                AlarmQueueManager.logCurrentAlarms(DebugSettings.this);
+                AlarmQueueManager.rebuildAlarmQueue(DebugSettings.this);
+                AlarmQueueManager.logCurrentAlarms(DebugSettings.this);
+            }
 		}
 	}
 }

@@ -1,11 +1,11 @@
 package com.morphoss.acal.activity;
 
-import com.morphoss.acal.AcalTheme;
-
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+
+import com.morphoss.acal.AcalTheme;
 
 public abstract class AcalActivity extends Activity {
 

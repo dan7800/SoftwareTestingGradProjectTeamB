@@ -75,7 +75,7 @@ public class AlarmActivity extends AcalActivity implements OnClickListener  {
 	private ImageView dismissButton;
 
 	//Constants
-	private static final int PAUSE_BEFORE_AUDIO = 1500;	// pause 1500 milliseconds after display before starting audio alarm
+	private static final int PAUSE_BEFORE_AUDIO = 2500;	// pause X milliseconds after display before starting audio alarm
 	private static final int SHORT_PAUSE_DURATION = 15;	// short pause 15 seconds if phone busy
 
 	//Audio Management

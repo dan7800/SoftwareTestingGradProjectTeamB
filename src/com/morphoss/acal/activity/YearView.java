@@ -24,9 +24,9 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
 import android.view.GestureDetector;
+import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.GestureDetector.OnGestureListener;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.widget.Button;
@@ -39,7 +39,7 @@ import com.morphoss.acal.widget.NumberPickerDialog;
 import com.morphoss.acal.widget.NumberSelectedListener;
 
 public class YearView extends AcalActivity implements OnGestureListener, OnTouchListener, NumberSelectedListener, OnClickListener {
-	
+
 	/* Fields relating to buttons */
 	public static final int TODAY = 0;
 	public static final int MONTH = 2;
@@ -49,15 +49,15 @@ public class YearView extends AcalActivity implements OnGestureListener, OnTouch
 
 	private static String KEY_START_YEAR = "StartYear";
 	private static String KEY_SELECTED_MILLIS = "SelectedMillis";
-	
+
 	private CustomYearDrawable view;
 
 	private static final int DATE_PICKER = 0;
-	
+
 	/* Fields Relating to Gesture Detection */
 	private GestureDetector gestureDetector;
 	private AcalDateTime selectedDate = new AcalDateTime();
-	
+
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		gestureDetector = new GestureDetector(this);
@@ -75,15 +75,15 @@ public class YearView extends AcalActivity implements OnGestureListener, OnTouch
 		}
 		this.setContentView(R.layout.year_view);
 		view = (CustomYearDrawable) this.findViewById(R.id.year_view_custom);
-		
+
 		// Set up buttons
 		this.setupButton(R.id.year_today_button, TODAY);
 		this.setupButton(R.id.year_month_button, MONTH);
 		this.setupButton(R.id.year_add_button, ADD);
 
 	}
-	
-	@Override 
+
+	@Override
 	public void onPause() {
 		super.onPause();
 		try {
@@ -93,7 +93,7 @@ public class YearView extends AcalActivity implements OnGestureListener, OnTouch
 			Log.i(TAG,"Catchable error in YearView",e);
 		}
 	}
-	
+
 	@Override
 	public void onResume() {
 		super.onResume();
@@ -102,8 +102,8 @@ public class YearView extends AcalActivity implements OnGestureListener, OnTouch
 			if (view == null) return;
 		}
 		int width = getWindowManager().getDefaultDisplay().getWidth();
-		int height = getWindowManager().getDefaultDisplay().getHeight(); 
-		
+		int height = getWindowManager().getDefaultDisplay().getHeight();
+
 		if ( width > height ) {
 		    // Landscape
 			view.initialise(selectedDate, CustomYearDrawable.LANDSCAPE);
@@ -112,11 +112,11 @@ public class YearView extends AcalActivity implements OnGestureListener, OnTouch
 		   // portrait
 			view.initialise(selectedDate, CustomYearDrawable.PORTRAIT);
 		}
-		
+
 		view.setOnTouchListener(this);
 
 	}
-	
+
 	/**
 	 * <p>
 	 * Helper method for setting up buttons
@@ -134,11 +134,11 @@ public class YearView extends AcalActivity implements OnGestureListener, OnTouch
 			AcalTheme.setContainerFromTheme(myButton, AcalTheme.BUTTON);
 		}
 	}
-	
+
 	private void dateChanged() {
 		this.view.setSelectedDate(this.selectedDate);
 	}
-	
+
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		return gestureDetector.onTouchEvent(event);
@@ -147,7 +147,7 @@ public class YearView extends AcalActivity implements OnGestureListener, OnTouch
 	public boolean onTouch(View view, MotionEvent touch) {
 		return this.gestureDetector.onTouchEvent(touch);
 	}
-	
+
 	@Override
 	public boolean onDown(MotionEvent arg0) {
 		return false;
@@ -167,19 +167,20 @@ public class YearView extends AcalActivity implements OnGestureListener, OnTouch
 	public boolean onScroll(MotionEvent start, MotionEvent current, float dx, float dy) {
 		this.view.moveY(dy);
 		this.view.invalidate();
-		
+
 		return true;
 	}
 	@Override
 	public void onShowPress(MotionEvent arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
 	@Override
 	public boolean onSingleTapUp(MotionEvent arg0) {
 		AcalDateTime month = this.view.getClickedMonth((int)arg0.getX(),(int)arg0.getY());
 		if (month != null) {
 			this.selectedDate = month;
+			Log.i(TAG,"Returning with selectedDate of "+selectedDate.toString());
 			Intent res = new Intent();
 			res.putExtra("selectedDate", (Parcelable) month);
 			this.setResult(RESULT_OK, res);
@@ -188,14 +189,14 @@ public class YearView extends AcalActivity implements OnGestureListener, OnTouch
 		}
 		return false;
 	}
-	
-	
-	@Override 
+
+
+	@Override
 	public void onNumberSelected(int number) {
 		selectedDate = new AcalDateTime(number,1,1,0,0,0,null);
 		this.dateChanged();
 	}
-	
+
 	protected Dialog onCreateDialog(int id) {
 		switch(id) {
 			case DATE_PICKER:
@@ -203,7 +204,7 @@ public class YearView extends AcalActivity implements OnGestureListener, OnTouch
 			return dialog;
 		}
 		return null;
-		
+
 	}
 	/**
 	 * <p>
@@ -212,7 +213,7 @@ public class YearView extends AcalActivity implements OnGestureListener, OnTouch
 	 */
 	@Override
 	public void onClick(View clickedView) {
-		int button = (int) ((Integer) clickedView.getTag());
+		int button = ((Integer) clickedView.getTag());
 		switch (button) {
 		case TODAY:
 			view.setSelectedDate(new AcalDateTime());

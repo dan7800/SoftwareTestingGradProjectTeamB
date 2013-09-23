@@ -138,6 +138,9 @@ public class CheckServerDialog {
 				checkServer();
 			}
 			catch(  TestsCancelledException t ) { }
+			catch( Exception e ) {
+			    Log.i(TAG,"Oh dear!", e);
+			}
 			return null;
 		}
 		
