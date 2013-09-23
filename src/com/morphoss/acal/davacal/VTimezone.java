@@ -23,6 +23,10 @@ import java.util.List;
 import java.util.SimpleTimeZone;
 import java.util.TimeZone;
 
+import android.util.Log;
+
+import com.morphoss.acal.acaltime.UnrecognisedTimeZone;
+
 
 
 public class VTimezone extends VComponent {
@@ -32,7 +36,7 @@ public class VTimezone extends VComponent {
 
 	protected TimeZone tz = null;
 	protected String tzid = null;
-	
+
 	public VTimezone(ComponentParts splitter, VComponent parent) {
 		super(splitter, parent);
 	}
@@ -57,11 +61,11 @@ public class VTimezone extends VComponent {
 			tz = TimeZone.getTimeZone(tzid);
 			return true;
 		}
-		
+
 		String[] matchingZones = getMatchingZones();
 		if ( matchingZones != null && matchingZones.length == 1 ) {
 			tzid = matchingZones[0];
-			tz = TimeZone.getTimeZone(tzid); 
+			tz = TimeZone.getTimeZone(tzid);
 			return true;
 		}
 		return false;
@@ -69,14 +73,20 @@ public class VTimezone extends VComponent {
 
 	private boolean tryTz(AcalProperty testProperty) {
 		if ( testProperty != null ) {
-			tzid = testProperty.getValue(); 
+			tzid = testProperty.getValue();
 			if ( tzid != null ) {
 				tz = TimeZone.getTimeZone(tzid);
 				if ( tz != null ) {
 					tzid = tz.getID();
 					return true;
 				}
-				tzid = VCalendar.staticGetOlsonName(tzid);
+				try {
+                    tzid = VCalendar.staticGetOlsonName(tzid);
+                }
+                catch ( UnrecognisedTimeZone e ) {
+                    Log.w( TAG, "Unrecognised Timezone '" + tzid + "'" );
+                    tzid = null;
+                }
 				if ( tzid != null ) {
 					tz = TimeZone.getTimeZone(tzid);
 					if ( tz != null ) {
@@ -170,7 +180,7 @@ public class VTimezone extends VComponent {
 				case 74:   return("Asia/Riyadh");
 				case 75:   return("Asia/Taipei");
 				case 76:   return("Australia/Sydney");
-				
+
 				case 57: // null
 				case 52: // null
 				default: // null
@@ -189,11 +199,11 @@ public class VTimezone extends VComponent {
 		int dstMillis = 2000000000;
 		int stdMillis = 2000000000; // An out of range value that will match nothing
 		for( VComponent child : subComponents ) {
-			isDaylight = child.getName().equalsIgnoreCase("daylight"); 
+			isDaylight = child.getName().equalsIgnoreCase("daylight");
 			types.add(isDaylight);
 			onsets.add(child.getProperty("RRULE").getValue());
 			offset = Integer.parseInt(child.getProperty("TZOFFSETTO").getValue());
-			offset = (((int)(offset/100)*3600) + (offset%100)) * 1000;
+			offset = ((offset/100*3600) + (offset%100)) * 1000;
 			offsets.add(offset);
 			if ( isDaylight )
 				dstMillis = offset;
@@ -209,15 +219,15 @@ public class VTimezone extends VComponent {
 			 zone = (SimpleTimeZone) TimeZone.getTimeZone(id);
 			 if ( zone.getDSTSavings() == dstMillis ) zoneList.add(zone.getID());
 		 }
-		
+
 		return (String[]) zoneList.toArray();
 
 	}
 
-	
+
 	/**
 	 * Returns an iCalendar VTIMEZONE definition as a string
-	 * 
+	 *
 	 * @param timeZoneId The TZID we want to find.
 	 * @return The VTIMEZONE component as a string.
 	 * @throws UnrecognizedTimeZoneException

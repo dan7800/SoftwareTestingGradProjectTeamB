@@ -74,6 +74,7 @@ public class Timezones extends ContentProvider {
     private static final int ALLSETS = 1;
     private static final int ROW_ID_SET = 2;
     private static final int TZID_SET = 3;
+    private static final int RESOLVE_ALIAS = 4;
 
     //Creates Paths and assigns Path Definition Id's
     public static final UriMatcher uriMatcher = new UriMatcher(ROOT);
@@ -81,6 +82,7 @@ public class Timezones extends ContentProvider {
          uriMatcher.addURI(AUTHORITY, null, ALLSETS);
          uriMatcher.addURI(AUTHORITY, "#", ROW_ID_SET);
          uriMatcher.addURI(AUTHORITY, "tzid/#", TZID_SET);
+         uriMatcher.addURI(AUTHORITY, "resolve_alias/*", RESOLVE_ALIAS);
     }
 
     // Type definitions
@@ -102,7 +104,7 @@ public class Timezones extends ContentProvider {
 
 	private static final String TZID_ALIAS="alias";
 	public static final String TZID_ALIASES="aliases";
-	
+
 	/*
 	 * (non-Javadoc)
 	 * @see android.content.ContentProvider#onCreate()
@@ -115,7 +117,7 @@ public class Timezones extends ContentProvider {
 		return (AcalDB == null)?false:true;
 	}
 
-	
+
 	/*
 	 * (non-Javadoc)
 	 * @see android.content.ContentProvider#getType(android.net.Uri)
@@ -141,33 +143,40 @@ public class Timezones extends ContentProvider {
 	 * (non-Javadoc)
 	 * @see android.content.ContentProvider#query(android.net.Uri, java.lang.String[], java.lang.String, java.lang.String[], java.lang.String)
 	 */
-	@Override
+    @Override
 	public Cursor query(Uri uri, String[] projection, String selection,
 			String[] selectionArgs, String sortOrder) {
 
 		SQLiteQueryBuilder sqlBuilder = new SQLiteQueryBuilder();
 		sqlBuilder.setTables(TIMEZONE_TABLE);
-		
-		String groupBy = null;
 
-		if (uriMatcher.match(uri) == ROW_ID_SET)
-			//---if getting a particular server---
-			sqlBuilder.appendWhere(_ID + " = " + uri.getPathSegments().get(0));
-		else if (uriMatcher.match(uri) == TZID_SET) {
-			//---if getting a particular server---
-			sqlBuilder.appendWhere( TZID + " = '" + uri.getPathSegments().get(1)+"'"+
+		switch( uriMatcher.match(uri)) {
+		    case ROW_ID_SET:
+    			// ---if getting a particular row---
+    			sqlBuilder.appendWhere(_ID + " = " + uri.getPathSegments().get(0));
+    			break;
+		    case TZID_SET:
+		        sqlBuilder.appendWhere( TZID + " = '" + uri.getPathSegments().get(1)+"'"+
 					" OR EXISTS(SELECT 1 FROM "+TZ_ALIAS_TABLE+" WHERE "+TZID+"='"+uri.getPathSegments().get(1)+"')"
 					);
+		        break;
+		    case RESOLVE_ALIAS:
+		        sqlBuilder.setTables(TZ_ALIAS_TABLE);
+		        sqlBuilder.appendWhere("tzid = ? OR alias = ?");
+		        projection = new String[] { "tzid" };
+		        selection = null;
+		        selectionArgs = new String[] { uri.getLastPathSegment(), uri.getLastPathSegment() };
+		        sortOrder = "tzid LIMIT 1";
 		}
 
-		Cursor c = sqlBuilder.query( AcalDB, projection, selection, selectionArgs, groupBy, null, sortOrder);
+		Cursor c = sqlBuilder.query( AcalDB, projection, selection, selectionArgs, null, null, sortOrder);
 
 		//---register to watch a content URI for changes---
 		c.setNotificationUri(getContext().getContentResolver(), uri);
 		return c;
 	}
 
-	
+
 	/*
 	 * 	(non-Javadoc)
 	 * @see android.content.ContentProvider#delete(android.net.Uri, java.lang.String, java.lang.String[])
@@ -215,7 +224,7 @@ public class Timezones extends ContentProvider {
 
 	private String[] buildAliasList(String aliasesString) {
 		String[] aliases = new String[] {};
-		try { 
+		try {
 			aliases = aliasesString.split("\n");
 		} catch( Exception e ) {}
 		return aliases;
@@ -233,7 +242,7 @@ public class Timezones extends ContentProvider {
 		return names;
 	}
 
-	
+
 	/*
 	 * (non-Javadoc)
 	 * @see android.content.ContentProvider#insert(android.net.Uri, android.content.ContentValues)
@@ -241,10 +250,10 @@ public class Timezones extends ContentProvider {
 	@Override
 	public Uri insert(Uri uri, ContentValues values) {
 		String tzid = values.getAsString(TZID);
-		String[] aliases = buildAliasList( (String) values.getAsString(TZID_ALIASES)); 
+		String[] aliases = buildAliasList( values.getAsString(TZID_ALIASES));
 		values.remove(TZID_ALIASES);
 
-		Map<String,String> names = buildNamesMap( (String) values.get(TZ_NAMES) ); 
+		Map<String,String> names = buildNamesMap( (String) values.get(TZ_NAMES) );
 		values.remove(TZ_NAMES);
 
 		ContentValues aliasValues = new ContentValues();
@@ -316,7 +325,7 @@ public class Timezones extends ContentProvider {
 
 
 	/**
-	 * 
+	 *
 	 * @param tzid
 	 * @return
 	 */
@@ -337,7 +346,7 @@ public class Timezones extends ContentProvider {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param tzid
 	 * @return
 	 */
@@ -369,8 +378,8 @@ public class Timezones extends ContentProvider {
 
 		for( Object alias : aliases ) {
 			if ( alias instanceof String ) {
-				if ( deleteAliases.contains((String) alias) ) {
-					deleteAliases.remove((String) alias);
+				if ( deleteAliases.contains(alias) ) {
+					deleteAliases.remove(alias);
 				}
 				else {
 					aliasValues.put(TZID_ALIAS, (String) alias);
@@ -441,15 +450,15 @@ public class Timezones extends ContentProvider {
 	public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
 		int count = 0;
 
-		String[] aliases = buildAliasList( (String) values.getAsString(TZID_ALIASES)); 
+		String[] aliases = buildAliasList( values.getAsString(TZID_ALIASES));
 		values.remove(TZID_ALIASES);
 
-		Map<String,String> names = buildNamesMap( (String) values.get(TZ_NAMES) ); 
+		Map<String,String> names = buildNamesMap( (String) values.get(TZ_NAMES) );
 		values.remove(TZ_NAMES);
 
 		AcalDB.beginTransaction();
 		try {
-			
+
 			switch ( uriMatcher.match(uri) ) {
 				case ALLSETS:
 					count = AcalDB.update(TIMEZONE_TABLE, values, selection, selectionArgs);
@@ -492,7 +501,7 @@ public class Timezones extends ContentProvider {
 		finally {
 			AcalDB.endTransaction();
 		}
-		
+
 		getContext().getContentResolver().notifyChange(uri, null);
 		return count;
 	}
