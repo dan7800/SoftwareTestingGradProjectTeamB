@@ -50,7 +50,7 @@ import com.morphoss.acal.davacal.VCalendar;
  * it was causing problems with certainty around exactly when midnight occurred with some
  * weird millisecond unreliability.  The Java classes also aren't exactly keen on letting
  * one control exactly when you care about timezones, and they don't seem to want to be
- * helpful in allowing floating times.  Bugger.  And believe me: I tried. 
+ * helpful in allowing floating times.  Bugger.  And believe me: I tried.
  * </p>
  * <p>
  * This class does include support for leap seconds, for setting the week start day and
@@ -65,12 +65,12 @@ import com.morphoss.acal.davacal.VCalendar;
  * This class <em>does not</em> attempt to deal with iCalendar-style timezones.  It assumes
  * that events will have timezone names which will contain a recognisable Olson substring
  * name and uses the Java timezone as a base.  We might have to revisit this at some future
- * point to attempt deeper recognition of timezone information, but it's a good first cut. 
+ * point to attempt deeper recognition of timezone information, but it's a good first cut.
  * </p>
  * <p>
  * Enjoy!
  * </p>
- * 
+ *
  * @author Morphoss Ltd
  *
  */
@@ -102,13 +102,13 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 	public static final int				SECONDS_IN_HOUR		= 3600;
 	public static final int				SECONDS_IN_MINUTE	= 60;
 	public static final int				DAYS_IN_YEAR		= 365;
-	
+
 
 	public static final short			MIN_YEAR_VALUE		= 1582;
 	public static final short			MAX_YEAR_VALUE		= 32766;
-	
-	public static final long			MAX_EPOCH_VALUE		= (long) ((long) (MAX_YEAR_VALUE - 1971L) * SECONDS_IN_DAY * DAYS_IN_YEAR);
-	public static final long			MIN_EPOCH_VALUE		= (long) ((long) (MIN_YEAR_VALUE - 1971L) * SECONDS_IN_DAY * DAYS_IN_YEAR);
+
+	public static final long			MAX_EPOCH_VALUE		= (MAX_YEAR_VALUE - 1971L) * SECONDS_IN_DAY * DAYS_IN_YEAR;
+	public static final long			MIN_EPOCH_VALUE		= (MIN_YEAR_VALUE - 1971L) * SECONDS_IN_DAY * DAYS_IN_YEAR;
 
 	public static final AcalDateTime	MIN					= new AcalDateTime(MIN_YEAR_VALUE, 1, 1, 0, 0, 0, null);
 	public static final AcalDateTime	MAX					= new AcalDateTime(MAX_YEAR_VALUE, 12, 31, 23, 59, 59, null);
@@ -133,7 +133,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 	public static final short			OCTOBER				= 10;
 	public static final short			NOVEMBER			= 11;
 	public static final short			DECEMBER			= 12;
-	
+
 	protected static final short YEAR_NOT_SET = Short.MIN_VALUE;
 	protected short year = YEAR_NOT_SET;
 	protected short month;
@@ -141,13 +141,13 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 	protected short hour = 0;
 	protected short minute = 0;
 	protected short second = 0;
-	
+
 	protected short weekStart = 0;
 	protected boolean isDate = false;
 
 	protected static final long EPOCH_NOT_SET = Long.MIN_VALUE;
 	protected long epoch = EPOCH_NOT_SET;
-	
+
 	protected TimeZone tz = null;
 	protected String tzName = null;
 
@@ -157,7 +157,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 	 * Construct a new AcalDateTime which will be floating, but with the current 'clock' time
 	 * in the current timezone.  This will mean that you should call the setTimeZone() method
 	 * to anchor this to a timezone.
-	 * </p> 
+	 * </p>
 	 */
 	public AcalDateTime() {
 		epoch = (System.currentTimeMillis() + TimeZone.getDefault().getOffset(System.currentTimeMillis())) / 1000;
@@ -169,7 +169,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 	 * <p>
 	 * Return a floating time which will represent the specified milliseconds from Epoch.  This
 	 * will mean that you should call the shiftTimeZone() method to anchor this to a timezone.
-	 * </p> 
+	 * </p>
 	 * @param millisecondsSinceEpoch
 	 * @return
 	 */
@@ -180,11 +180,11 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		return ret;
 	}
 
-	
+
 	/**
 	 * <p>
 	 * Return a localised time which will represent the specified milliseconds from Epoch.
-	 * </p> 
+	 * </p>
 	 * @param millisecondsSinceEpoch
 	 * @return
 	 */
@@ -200,9 +200,9 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		return ret;
 	}
 
-	
+
 	/**
-	 * 
+	 *
 	 * @param yy Between 1582 and 32767
 	 * @param mm Between 1 and 12
 	 * @param dd Between 1 and the number of days in the month
@@ -226,10 +226,10 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		this.minute = (short) minute;
 		if ( second < 0 || second > 59 ) throw new IllegalArgumentException();
 		this.second = (short) second;
-		
+
 		if ( tzName != null ) {
 			tz = TimeZone.getTimeZone(tzName);
-			if ( tz != null ) this.tzName = tzName; 
+			if ( tz != null ) this.tzName = tzName;
 		}
 		epoch = EPOCH_NOT_SET;
 	}
@@ -273,7 +273,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 
 	/**
 	 * <p>
-	 * Returns a count of the number of leap days between epoch and January 1st of this 
+	 * Returns a count of the number of leap days between epoch and January 1st of this
 	 * year. Years in the range 1800 to 59999 should be OK, or beyond that to some extent,
 	 * but we don't, frankly, give a damn outside that range.
 	 * </p>
@@ -309,7 +309,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 	 * <li>2001-12-15 14:23:15 Pacific/Auckland</li>
 	 * <li>20011215</li>
 	 * </ul>
-	 * 
+	 *
 	 * @param datestring
 	 * @return A new AcalDate object.
 	 * @throws IllegalArgumentException
@@ -324,14 +324,14 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		}
 
 		AcalDateTime newDateTime = null;
-		
+
 		int year = Integer.parseInt(m.group(1));
-		int month = Integer.parseInt(m.group(2));  
+		int month = Integer.parseInt(m.group(2));
 		int day = Integer.parseInt(m.group(3));
 		int hour = 0;
 		int minute = 0;
 		int second = 0;
-		
+
 		if ( m.group(4) != null && !m.group(4).equals("") ) {
 			hour = Integer.parseInt(m.group(4));
 			minute = Integer.parseInt(m.group(5));
@@ -363,7 +363,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 
 	/**
 	 * Simply write the named timezone to the current object making no attempt to adjust
-	 * the validity of the current date / time information. 
+	 * the validity of the current date / time information.
 	 * @param tzName
 	 */
 	private void overwriteTimeZone( String newTzName ) {
@@ -372,9 +372,17 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 			tz = null;
 			return;
 		}
-		tzName = VCalendar.staticGetOlsonName(newTzName);
-		tz = TimeZone.getTimeZone(tzName);
-		if ( tz == null ) tzName = null;
+        if ( newTzName.startsWith("\"") && newTzName.endsWith("\"") ) {
+            newTzName = newTzName.substring(1, newTzName.length() - 1);
+        }
+		try {
+            tzName = VCalendar.staticGetOlsonName(newTzName);
+            tz = TimeZone.getTimeZone(tzName);
+        }
+        catch ( UnrecognisedTimeZone e ) {
+            Log.w(TAG,"Unrecognised Timezone '"+newTzName+"'");
+        }
+        if ( tz == null ) tzName = null;
 	}
 
 	/**
@@ -401,7 +409,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 	 * It's fine for either of the second two to be null.  The first one can also be null, but you'll
 	 * just get a null back in that case.
 	 * </p>
-	 * 
+	 *
 	 * @param dateString  - The content of an iCalendar DATE-TIME property
 	 * @param isDateParam - the VALUE parameter from an iCalendar DATE-TIME value
 	 * @param tzIdParam   - the TZID parameter from an iCalendar DATE-TIME value
@@ -414,7 +422,12 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		AcalDateTime result = fromString( dateString );
 
 		if ( isDateParam != null ) result.isDate = isDateParam.equalsIgnoreCase("DATE");
-		if ( tzIdParam != null ) result.overwriteTimeZone(tzIdParam);
+		if ( tzIdParam != null ) {
+		    if ( tzIdParam.startsWith("\"") && tzIdParam.endsWith("\"") ) {
+		        tzIdParam = tzIdParam.substring(1, tzIdParam.length() - 1);
+		    }
+		    result.overwriteTimeZone(tzIdParam);
+		}
 		if ( Constants.debugDateTime ) result.checkEpoch();
 		return result;
 	}
@@ -481,7 +494,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		epoch = EPOCH_NOT_SET;
 		return true;
 	}
-	
+
 
 	/**
 	 * <p>
@@ -555,7 +568,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		return this;
 	}
 
-	
+
 	/**
 	 * <p>
 	 * Returns the day of year.  January the first is 1
@@ -591,7 +604,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 			yearDay++;
 		}
 		if ( yearDay < 1 || yearDay > daysInYear ) return false;
-		
+
 		privateSetYearDay((short) yearDay, (short) daysInYear);
 
 		epoch = EPOCH_NOT_SET;
@@ -610,34 +623,34 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 			}
 			else {
 				month =  FEBRUARY;
-				day = (short) (yearDay - 31); 
+				day = (short) (yearDay - 31);
 			}
-		}  
+		}
 		else {
 			// Others are fixed relative to the end of the year
 			// Approximate binary nesting of if will minimise # of comparisons
-			// The really efficient way to code this would be an array of what month each day of the 
+			// The really efficient way to code this would be an array of what month each day of the
 			yearDay = (short) (daysInYear - yearDay);
-			if ( yearDay < 184 ) { 
-				if ( yearDay <  92 ) { 
-					if 		( yearDay <  31 )	{ month = DECEMBER;   day = (short) ( 31 - yearDay); } 
-					else if ( yearDay <  61 )	{ month = NOVEMBER;   day = (short) ( 61 - yearDay); } 
+			if ( yearDay < 184 ) {
+				if ( yearDay <  92 ) {
+					if 		( yearDay <  31 )	{ month = DECEMBER;   day = (short) ( 31 - yearDay); }
+					else if ( yearDay <  61 )	{ month = NOVEMBER;   day = (short) ( 61 - yearDay); }
 					else						{ month = OCTOBER;    day = (short) ( 92 - yearDay); }
 				}
 				else {
-					if 		( yearDay < 122 )	{ month =  SEPTEMBER; day = (short) (122 - yearDay); } 
-					else if ( yearDay < 153 )	{ month =  AUGUST;    day = (short) (153 - yearDay); } 
+					if 		( yearDay < 122 )	{ month =  SEPTEMBER; day = (short) (122 - yearDay); }
+					else if ( yearDay < 153 )	{ month =  AUGUST;    day = (short) (153 - yearDay); }
 					else 						{ month =  JULY;      day = (short) (184 - yearDay); }
 				}
 			}
 			else {
 				if ( yearDay < 275 ) {
-					if 		( yearDay < 214 )	{ month =  JUNE;      day = (short) (214 - yearDay); } 
-					else if ( yearDay < 245 )	{ month =  MAY;       day = (short) (245 - yearDay); } 
+					if 		( yearDay < 214 )	{ month =  JUNE;      day = (short) (214 - yearDay); }
+					else if ( yearDay < 245 )	{ month =  MAY;       day = (short) (245 - yearDay); }
 					else						{ month =  APRIL;     day = (short) (275 - yearDay); }
 				}
 				else {
-					if ( yearDay < 306 )		{ month =  MARCH;     day = (short) (306 - yearDay); } 
+					if ( yearDay < 306 )		{ month =  MARCH;     day = (short) (306 - yearDay); }
 					else 						{ month =  FEBRUARY;  day = 29; }
 				}
 			}
@@ -646,7 +659,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 //			Log.v(TAG,"Got " + year + "-" + month + "-" + day );
 	}
 
-	
+
 	/**
 	 * Get the day as numbers of days since Jan 1st 1970
 	 * @return
@@ -656,13 +669,11 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 			long offset = (tz != null ? tz.getOffset(epoch*1000) / 1000 : 0);
 			return (long) Math.floor((epoch+offset) / SECONDS_IN_DAY);
 		}
-		
+
 		// Otherwise work it out from the date fields.
-		return (long) (
-							((year - 1970) * DAYS_IN_YEAR)
-							+ epochLeapDays(year)
-							+ ( getYearDay() - 1 )
-						);
+		return ((year - 1970) * DAYS_IN_YEAR)
+        + epochLeapDays(year)
+        + ( getYearDay() - 1 );
 	}
 
 
@@ -706,7 +717,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 //			Log.v(TAG,"New day of week is " + newDay + " for week day: " + weekDay + " and weekStart: " + weekStart );
 		if ( newDay < 1 || newDay > 366 ) return false;
 		if ( Constants.debugDateTime ) checkEpoch();
-		return setYearDay( newDay ); 
+		return setYearDay( newDay );
 	}
 
 
@@ -733,7 +744,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 //		if ( Constants.debugDateTime  && Constants.LOG_VERBOSE )
 //			Log.v(TAG, "Getting week of " + year + "-" + month + "-" + day + " YearDay is " + getYearDay()
 //					+ " first of next week is " + firstOfNextWeek );
-		int weekOfYear = ((firstOfNextWeek / 7) + (((firstOfNextWeek) % 7) > 4 ? 1 : 0)); 
+		int weekOfYear = ((firstOfNextWeek / 7) + (((firstOfNextWeek) % 7) > 4 ? 1 : 0));
 //		if ( Constants.debugDateTime  && Constants.LOG_VERBOSE )
 //			Log.v(TAG, "Got week of " + weekOfYear + " from " + Integer.toString(firstOfNextWeek / 7)
 //						+ " and " + Integer.toString((firstOfNextWeek % 7) > 4 ? 1 : 0) );
@@ -744,7 +755,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 	/**
 	 * <p>
 	 * Set the week number, from 0 to 53, where 0 is a week containing 1st January but not containing
-	 * the 4th.  
+	 * the 4th.
 	 * </p>
 	 * @see getYearWeek
 	 * @param weekNo
@@ -754,10 +765,10 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		if ( weekNo < 0 || weekNo > 53 ) throw new IllegalArgumentException();
 		int newDay = getYearDay() + ((weekNo - getYearWeek()) * 7);
 		if ( newDay < 1 ) return false;
-		return setYearDay( newDay ); 
+		return setYearDay( newDay );
 	}
 
-	
+
 	/**
 	 * <p>
 	 * Rerurn the hour of this date.
@@ -864,7 +875,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		return (hour * SECONDS_IN_HOUR) + (minute * 60) + second;
 	}
 
-	
+
 	/**
 	 * <p>
 	 * Try to set the second for this date.  Will throw an exception if it's outside the
@@ -886,8 +897,8 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 					+ ((newMinute - minute) * SECONDS_IN_MINUTE)
 					+ (newSecond - second);
 		}
-		hour = (short) newHour;
-		minute = (short) newMinute;
+		hour = newHour;
+		minute = newMinute;
 		second = (short) newSecond;
 		if ( Constants.debugDateTime ) checkEpoch();
 		return this;
@@ -898,25 +909,25 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 	 * <p>
 	 * Get the timezone, which may be null.
 	 * </p>
-	 * @return timezone object or null 
+	 * @return timezone object or null
 	 */
 	public TimeZone getTimeZone() {
 		return tz;
 	}
 
-	
+
 	/**
 	 * <p>
 	 * Get the timezone ID, which may be null, but which is hopefully an Olson name
 	 * </p>
-	 * @return timezone name 
+	 * @return timezone name
 	 */
 	public String getTimeZoneId() {
 		if ( tz == null ) return null;
 		return tzName;
 	}
 
-	
+
 	/**
 	 * <p>
 	 * Set the timezone for this date, keeping the date & time constant.
@@ -931,7 +942,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		return this;
 	}
 
-	
+
 	/**
 	 * <p>
 	 * Set the timezone for this date, shifting the clock time to keep the UTC epoch constant.
@@ -947,7 +958,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		return this;
 	}
 
-	
+
 	/**
 	 * <p>
 	 * Apply the local time to this DateTime.  If the time is currently floating we will
@@ -968,7 +979,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 			return shiftTimeZone(newTimeZone);
 	}
 
-	
+
 	/**
 	 * Get the flag that marks this as a date.
 	 * @return whether this is marked as a date.
@@ -976,15 +987,15 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 	public boolean isDate() {
 		return isDate;
 	}
-	
+
 
 	/**
 	 * Set the flag that marks this as a date.  If it is marked as a date
 	 * it will print as a date via fmtIcal() and toPropertyString() methods.
-	 * 
+	 *
 	 * This also will throw away any 'seconds' value. The timezone information
 	 * will be retained, though possibly that should be chucked also.
-	 * 
+	 *
 	 * @return this, for chaining.
 	 */
 	public AcalDateTime setAsDate(boolean newValue) {
@@ -993,7 +1004,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		return this;
 	}
 
-	
+
 	/**
 	 * Returns a number of milliseconds from epoch.  Seconds really, since it will always
 	 * be an exact multiple of 1000.  This function is less accurate than getEpoch, since it
@@ -1005,7 +1016,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		return (getEpoch() * 1000L);
 	}
 
-	
+
 	/**
 	 * <p>
 	 * Set the current time to the given milliSeconds from epoch.  Note that we round to
@@ -1020,7 +1031,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		return this;
 	}
 
-	
+
 	/**
 	 * Returns a number of seconds from epoch, including leap seconds (up to 2008-12-31)
 	 * @return
@@ -1030,7 +1041,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		return epoch;
 	}
 
-	
+
 	/**
 	 * Set the current time to the given seconds from epoch, which we assume includes leap
 	 * seconds.
@@ -1039,15 +1050,15 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 	 */
 	public synchronized AcalDateTime setEpoch(long newEpoch) {
 		epoch = newEpoch;
-		if ( epoch > MAX_EPOCH_VALUE ) epoch = MAX_EPOCH_VALUE; 
-		if ( epoch < MIN_EPOCH_VALUE ) epoch = MIN_EPOCH_VALUE; 
+		if ( epoch > MAX_EPOCH_VALUE ) epoch = MAX_EPOCH_VALUE;
+		if ( epoch < MIN_EPOCH_VALUE ) epoch = MIN_EPOCH_VALUE;
 		year = YEAR_NOT_SET;
 		if ( Constants.debugDateTime ) calculateDateTime();
 		return this;
 	}
 
 
-	
+
 	public static final short YEAR = 1001;
 	public static final short MONTH_OF_YEAR = 1002;
 	public static final short MONTH = 1002;
@@ -1062,7 +1073,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 	public static final short SECOND_OF_DAY = 1023;
 	public static final short WEEK_OF_YEAR = 1030;
 	public static final short DAY_OF_WEEK = 1031;
-	private static final short NEED_EPOCH_SET = 1099; 
+	private static final short NEED_EPOCH_SET = 1099;
 	public static final short EPOCH = 1101;
 
 	/**
@@ -1075,7 +1086,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 	public int get(short whatToGet ) {
 		if ( year == YEAR_NOT_SET  )
 			calculateDateTime();
-			
+
 		switch( whatToGet ) {
 			case YEAR: 			return year;
 			case MONTH_OF_YEAR: return month;
@@ -1091,27 +1102,27 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		}
 		throw new IllegalArgumentException();
 	}
-	
+
 
 	public boolean set(short whatToSet, int setTo ) {
 		if ( year == YEAR_NOT_SET && whatToSet < NEED_EPOCH_SET )
 			calculateDateTime();
-			
+
 		switch( whatToSet ) {
-			case YEAR: 			return setYear((int) setTo);
-			case MONTH_OF_YEAR: return setMonth((int) setTo);
-			case DAY_OF_MONTH: 	return setMonthDay((int) setTo);
-			case DAY_OF_YEAR: 	return setYearDay((int) setTo);
-			case HOUR: 			setHour((int) setTo); return true;
-			case MINUTE: 		setMinute((int) setTo); return true;
-			case SECOND: 		setSecond((int) setTo); return true;
-			case SECOND_OF_DAY:	setDaySecond((int) setTo); return true;
+			case YEAR: 			return setYear(setTo);
+			case MONTH_OF_YEAR: return setMonth(setTo);
+			case DAY_OF_MONTH: 	return setMonthDay(setTo);
+			case DAY_OF_YEAR: 	return setYearDay(setTo);
+			case HOUR: 			setHour(setTo); return true;
+			case MINUTE: 		setMinute(setTo); return true;
+			case SECOND: 		setSecond(setTo); return true;
+			case SECOND_OF_DAY:	setDaySecond(setTo); return true;
 			case WEEK_OF_YEAR: 	setYearWeek((short) setTo); return true;
 			case DAY_OF_WEEK: 	return setWeekDay((short) setTo);
 		}
 		throw new IllegalArgumentException();
 	}
-	
+
 
 	public int getActualMaximum(short whatToGet) {
 		if ( year == YEAR_NOT_SET && whatToGet < NEED_EPOCH_SET )
@@ -1130,7 +1141,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		throw new IllegalArgumentException();
 	}
 
-	
+
 	/**
 	 * Calculates the internal epoch value, because we don't do that unless we need it.
 	 */
@@ -1146,7 +1157,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		epoch += (offset - (tz.getOffset(this.getMillis()) / 1000));
 	}
 
-	
+
 	final private static short TWENTY_YEARS = ((4 * DAYS_IN_YEAR) + 1) * 5;
 	final private static short FORTY_YEARS = ((4 * DAYS_IN_YEAR) + 1) * 10;
 
@@ -1156,11 +1167,11 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 	 */
 	protected synchronized void calculateDateTime() {
 		if ( epoch == EPOCH_NOT_SET ) throw new IllegalStateException("Uninitialised object");
-		if ( epoch > MAX_EPOCH_VALUE ) epoch = MAX_EPOCH_VALUE; 
-		if ( epoch < MIN_EPOCH_VALUE ) epoch = MIN_EPOCH_VALUE; 
+		if ( epoch > MAX_EPOCH_VALUE ) epoch = MAX_EPOCH_VALUE;
+		if ( epoch < MIN_EPOCH_VALUE ) epoch = MIN_EPOCH_VALUE;
 		long nDays = (epoch / SECONDS_IN_DAY);
 		long nSeconds = epoch % SECONDS_IN_DAY;
-		
+
 		if ( nSeconds < 0 ) {
 			nSeconds += SECONDS_IN_DAY;
 			nDays -= 1;
@@ -1173,7 +1184,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		if ( nDays > 0 ) {
 			if ( nDays > FORTY_YEARS )  { nDays -= FORTY_YEARS;  year += 40; }
 			if ( nDays > TWENTY_YEARS ) { nDays -= TWENTY_YEARS; year += 20; }
-			
+
 			while( nDays >= (daysInYear = (short) (DAYS_IN_YEAR + leapDay(year))) ) {
 				nDays -= daysInYear;
 				year++;
@@ -1204,7 +1215,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		if ( Constants.debugDateTime ) checkSanity();
 	}
 
-	
+
 	private void checkEpoch() {
 		if ( year != YEAR_NOT_SET && epoch != EPOCH_NOT_SET ) {
 			long saveEpoch = epoch;
@@ -1225,7 +1236,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 			}
 		}
 	}
-	
+
 	private void checkSanity() {
 		if ( year < 1950 || year > 2050
 					|| month < 1 || month > 12
@@ -1285,7 +1296,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 			}
 		}
 	}
-	
+
 
 	/**
 	 * <p>
@@ -1306,9 +1317,9 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		ret.append(month);
 		if ( day < 10 ) ret.append("0");
 		ret.append(day);
-		
+
 		if ( isDate ) return ret.toString();
-		
+
 		ret.append("T");
 		if ( hour < 10 ) ret.append("0");
 		ret.append(hour);
@@ -1322,7 +1333,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		return ret.toString();
 	}
 
-	
+
 	/**
 	 * <p>
 	 * Returns an iCalendar property string for this DateTime value, given the name
@@ -1373,7 +1384,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 
 	final private static String[] enWeekDayNames = new String[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
 	/**
-	 * Returns the aCalDateTime in a format for HTTP dates, i.e. a string like "Mon, 11 Apr 2011 09:50:30 GMT" 
+	 * Returns the aCalDateTime in a format for HTTP dates, i.e. a string like "Mon, 11 Apr 2011 09:50:30 GMT"
 	 * @return
 	 */
 	public String httpDateString() {
@@ -1381,7 +1392,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		return enWeekDayNames[getWeekDay()] + ", " + toJavaDate().toGMTString();
 	}
 
-	
+
 	/**
 	 * Compare this AcalDateTime to another.  If this is earlier than the other return a negative
 	 * integer and if this is after return a positive integer.  If they are the same return 0.
@@ -1405,7 +1416,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		return (this.compareTo((AcalDateTime)another) == 0);
 	}
 
-	
+
 	/**
 	 * Checks whether this date is before some other date.
 	 * @param another AcalDateTime
@@ -1462,7 +1473,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 				c.second = (second < 0 ? 0 : (second > 59 ? 59 : second));
 			}
 		}
-		
+
 		c.weekStart = weekStart;
 		c.isDate = isDate;
 
@@ -1547,7 +1558,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 		if ( tz != null ) {
 			calculateDateTime();
 			if ( getDaySecond() != tmpInt ) {
-				// There was a DST boundary between the two times, so fix it up. 
+				// There was a DST boundary between the two times, so fix it up.
 				tmpInt -= getDaySecond();
 				if ( tmpInt < (SECONDS_IN_HOUR * -12) ) tmpInt += SECONDS_IN_DAY;
 				else if ( tmpInt > (SECONDS_IN_HOUR * 12) ) tmpInt -= SECONDS_IN_DAY;
@@ -1567,7 +1578,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 	 * @return
 	 */
 	public static AcalDateTime addDays(AcalDateTime c, int days) {
-		AcalDateTime r = (AcalDateTime) c.clone();
+		AcalDateTime r = c.clone();
 		r.addDays(days);
 		return r;
 	}
@@ -1602,7 +1613,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 	public AcalDuration getDurationTo(AcalDateTime end) {
 		AcalDuration ret = new AcalDuration();
 		if ( end == null ) {
-			if ( isDate ) ret.setDuration(1, 0); 
+			if ( isDate ) ret.setDuration(1, 0);
 		}
 		else {
 			if ( epoch == EPOCH_NOT_SET ) calculateEpoch();
@@ -1642,7 +1653,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 	public static String getMonthName(int month) {
 		final SimpleDateFormat monthFormatter = new SimpleDateFormat("MMMM");
 		String monthName = monthFormatter.format(new Date(2011,(month - 1),1));
-		return monthName.substring(0, 1).toUpperCase() + monthName.substring(1); 
+		return monthName.substring(0, 1).toUpperCase() + monthName.substring(1);
 	}
 
 	public String getMonthName() {
@@ -1658,7 +1669,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 	 * <p>
 	 * Works out what suffix a date should have. English only.
 	 * </p>
-	 * 
+	 *
 	 * @param num
 	 * @return
 	 */
@@ -1748,7 +1759,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 
 
 	/**
-	 * Gets an instance of AcalDateTime at the current time in the UTC timezone. 
+	 * Gets an instance of AcalDateTime at the current time in the UTC timezone.
 	 * @return the new instance
 	 */
 	public static AcalDateTime getUTCInstance() {
@@ -1762,7 +1773,7 @@ public class AcalDateTime implements Parcelable, Serializable, Cloneable, Compar
 
 
 	/**
-	 * Gets an instance of AcalDateTime at the current clock time in the current timezone. 
+	 * Gets an instance of AcalDateTime at the current clock time in the current timezone.
 	 * @return the new instance
 	 */
 	public static AcalDateTime getInstance() {
