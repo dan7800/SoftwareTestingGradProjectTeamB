@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Strings that should not be localised belong in unlocalisable_strings.xml -->
 <resources>
-<string name="theDayEachWeekStartsWith">Premier jour de chaque semaine.</string>
+<string name="theDayEachWeekStartsWith">Premier jour de chaque semaine</string>
 <string name="firstDayOfWeek">Premier jour de la semaine</string>
 <string name="cancel">Annuler</string>
 <string name="setButtonLabel">OK</string>
@@ -29,7 +29,7 @@
 <string name="DefaultAlarmTone">Sonnerie par défaut</string>
 <string name="Server_Path">Chemin sur le serveur</string>
 <string name="Server_Port">Port du serveur</string>
-<string name="Summary">Sommaire</string>
+<string name="Summary">Résumé</string>
 <string name="Sync_collection_now">Synchroniser maintenant</string>
 <string name="Disable_collection">Désactiver la collection</string>
 <string name="The_authentication_type_used">Type d\'authentification utilisé par le serveur</string>
@@ -66,8 +66,8 @@
 <string name="The_timezone_new_events_default_to">Fuseau horaire pour les nouveaux éléments de cette collection</string>
 <string name="pMax_age_on_3g">Synchronisation en 3G</string>
 <string name="The_maximum_age_for_data_while_on_3g">Temps maximum (en minutes) avant la mise à jour lors de l\'utilisation en 3G</string>
-<string name="pMax_age_on_wifi">Synchronisation en WIFI</string>
-<string name="The_maximum_age_for_data_while_on_wifi">Temps maximum (en minutes) avant la mise à jour lors de l\'utilisation en WIFI</string>
+<string name="pMax_age_on_wifi">Synchronisation en WiFi</string>
+<string name="The_maximum_age_for_data_while_on_wifi">Temps maximum (en minutes) avant la mise à jour lors de l\'utilisation en WiFi</string>
 <string name="Use_alarms_from_this_calendar">Les alarmes pour ce calendrier doivent-elles êtres affichées ?</string>
 <string name="Monday">Lundi</string>
 <string name="Tuesday">Mardi</string>
@@ -109,7 +109,9 @@
 <string name="thAug">Aou</string>
 <string name="thDec">Déc</string>
 	<!-- If the user is displaying AM/PM we need a single character to display e.g. 9a for 9:00am in the morning -->
+<string name="oneCharMorning">m</string>
 	<!-- If the user is displaying AM/PM we need a single character to display e.g. 1p for 1:00pm in the afternoon -->
+<string name="oneCharAfternoon">a</string>
 <string name="YearViewSize_PrefTitle">Nombre de mois dans la vue annuelle</string>
 <string name="YearViewSize_PrefSummary">Nombre de mois visible dans la vue annuelle</string>
 <string name="Snooze_PrefTitle">Délai de répétition</string>
@@ -172,18 +174,18 @@
 <string name="EveryNWeeks">Toutes les %s semaines</string>
 <string name="EveryNMonths">Tous les %s mois</string>
 <string name="EveryNYears">Tous les %s ans</string>
-<string name="EveryMonday">Tous les Lundi</string>
-<string name="EveryTuesday">Tous les Mardi</string>
-<string name="EveryWednesday">Tous les Mercredi</string>
-<string name="EveryThursday">Tous les Jeudi</string>
-<string name="EveryFriday">Tous les Vendredi</string>
-<string name="EverySaturday">Tous les Samedi</string>
+<string name="EveryMonday">Tous les lundi</string>
+<string name="EveryTuesday">Tous les mardi</string>
+<string name="EveryWednesday">Tous les mercredi</string>
+<string name="EveryThursday">Tous les jeudi</string>
+<string name="EveryFriday">Tous les vendredi</string>
+<string name="EverySaturday">Tous les samedi</string>
 <string name="EverySunday">Tous les dimanches</string>
 <string name="EveryNthOfTheMonth">Tous les %s du mois</string>
 <string name="EveryMonthOnTheNthSomeday">Tous les %s de chaque mois</string>
 <string name="CustomRepeatRule">Répétition personnelle</string>
 <string name="EventSaved">Événement sauvegardé.</string>
-<string name="ModifiedAllInstances">Modifier toutes les occurrences.</string>
+<string name="ModifiedAllInstances">Toutes les événements sauvegardés.</string>
 <string name="ModifiedOneInstance">Modifier uniquement cette occurrence.</string>
 <string name="ModifiedThisAndFuture">Modifier cette occurrence et toutes les suivantes.</string>
 <string name="ErrorSavingEvent">Erreur d\'enregistrement des données d\'événement - Réessayer à nouveau s\'il vous plaît.</string>
@@ -215,22 +217,24 @@
 <string name="changeThisAndFuture">Cette occurrence et toutes les suivantes</string>
 <string name="internetNotAvailable">Pas de connexion internet pour le moment</string>
 <string name="couldNotDiscoverPort">Impossible de découvrir le port HTTP pour le serveur CalDAV</string>
-<string name="couldNotDiscoverPrincipal">Impossible de découvrir le chemin principal - en utilisant les valeurs fournies.</string>
+<string name="couldNotDiscoverPrincipal">Impossible de découvrir le chemin principal - utilisation des valeurs fournies.</string>
 <string name="foundPrincipalPath">Chemin principal du serveur trouvé à &quot;%s&quot;</string>
 <string name="serverSupportsCalDAV">Ce serveur prend en charge CalDAV.</string>
-<string name="serverHasDAVNoCalDAV">Europe/Londres</string>
+<string name="serverHasDAVNoCalDAV">Le serveur supporte DAV et vos identifiants fonctionnent mais le support de CalDAV n\'a pas été trouvé.</string>
 <string name="serverLacksCalDAV">Ce serveur ne supporte pas CalDAV.</string>
 <string name="serverFailedValidation">Il y eu une erreur lors de la validation du serveur:</string>
 <string name="saveSettingsAnyway">Souhaitez-vous quand même enregistrer ces paramètres ?</string>
 <string name="serverValidationSuccess">Validation du Serveur réussi.</string>
 <string name="authenticationFailed">Impossible de s\'authentifier auprès du serveur.</string>
-<string name="WeekViewPreferences">Paramètres de la vue hebdomadaire</string>
+<string name="WeekViewPreferences">Paramêtres de la vue hebdomadaire</string>
+<string name="AlarmPreferences">Paramètres des alarmes</string>
+<string name="GeneralPreferences">Paramètres généraux</string>
 <string name="checkServer">Validation du serveur</string>
 <string name="checkServer_Connecting">Connexion au serveur. Merci de patienter...</string>
 <string name="checkServer_Internet">Vérification de la connexion internet</string>
 <string name="checkServer_SearchingForServer">Recherche du serveur CalDAV sur &quot;%s&quot;</string>
 <string name="checkServer_DiscoveryCancelled">La recherche de serveur a été annulée</string>
-<string name="serverRecordAlreadyExists">Un serveur existe déjà pour ce protocole, port, serveur ou utilisateur</string>
+<string name="serverRecordAlreadyExists">Un serveur existe déjà pour ce protocole, port, serveur et utilisateur</string>
 <string name="newEventFromThis">Copier vers un nouvel événement</string>
 <string name="Delete">Effacer</string>
 <string name="deleteAllInstances">Effacer toutes les occurrences</string>
@@ -281,7 +285,7 @@
 <string name="floatingTime">flottant</string>
 <string name="SetCustomAlarm">Régler une alarme personnalisée</string>
 <string name="showUpdateInformation">Voir les notes de version</string>
-<string name="General_aCal_Information">Europe/Athène</string>
+<string name="General_aCal_Information">Information générale d\'aCal</string>
 <string name="aCal_Website">Le site web de <b>aCal</b> est %s</string>
 <string name="aCal_IRC_Channel">Vous pouvez dialoguer avec les auteurs de aCal sur IRC sur &lt;a \\nhref=&quot;irc://irc.oftc.net/#acal&quot;>&quot;#acal on \\nirc.oftc.net&lt;/a></string>
 <string name="aCal_Mailing_Lists">les listes de diffusion &lt;em>aCal&lt;/em> sont publiques et \\nvous pouvez y souscrire sur &lt;a href=&quot;http://lists.acal.me/&quot;>lists.acal.me&lt;/a>. Vous y trouverez également des archives.</string>
@@ -291,8 +295,8 @@
 <string name="endsAt">Se termine à %s</string>
 <string name="Finished">Terminé</string>
 <string name="days">Jours</string>
-<string name="noScheduledEvents">Nombre d\'événements prévus</string>
-<string name="Event">Évènement</string>
+<string name="noScheduledEvents">Pas d\'événements prévus</string>
+<string name="Event">Événement</string>
 <string name="Task">Tâche</string>
 <string name="weekends">week-end</string>
 <string name="weekdays">jours de la semaine</string>
@@ -315,8 +319,40 @@
 <string name="prefAllowSelfSignedCerts_OffSummary">Refuser</string>
 <string name="SslCertificateError">Un problème est survenu lors de la validation du certificat SSL</string>
 <string name="prefTzServerBaseUrl_Title">URL du serveur de Timezone</string>
+<string name="prefIgnoreValarmDescription_PrefTitle">Ignorer les descriptions des VALARM</string>
+<string name="prefIgnoreValarmDescription_OnSummary">Utiliser le résumé des VEVENT/VTODO dans les alarmes</string>
+<string name="prefIgnoreValarmDescription_OffSummary">Utiliser la description des VALARM dans les alarmes</string>
+<string name="note_title_hint">Donner un titre à votre note</string>
+<string name="note_text_hint">Saisissez le texte de la note ici</string>
+<string name="event_name_hint">Saisissez le titre de vote événement</string>
+<string name="event_location_hint">La position de l\'événement</string>
+<string name="event_notes_hint">Description détaillée de l\'événement</string>
+<string name="todo_name_hint">Saisissez un titre pour votre tâche</string>
+<string name="todo_description_hint">Saisissez une description pour votre tâche</string>
+<string name="todo_location_hint">Saisissez une position pour votre tâche</string>
+<string name="first_name_hint">Prénom</string>
+<string name="surname_hint">Nom</string>
+<string name="phone_prompt">Téléphone</string>
+<string name="phone_hint">Téléphone</string>
+<string name="email_prompt">Courriel</string>
+<string name="email_hint">Courriel</string>
+<string name="postal_address_prompt">Adresse postale</string>
+<string name="street_hint">Rue</string>
+<string name="city_hint">Ville</string>
+<string name="country_hint">Pays</string>
+<string name="postcode_hint">Code postal</string>
+<string name="organisation_prompt">Organisme</string>
+<string name="company_hint">Société</string>
+<string name="job_title_hint">Titre</string>
+<string name="contact_picture_description">Image du contact</string>
 <string name="icon_add_description">Ajouter</string>
 <string name="icon_delete_description">Effacer</string>
+<string name="Home">Domicile</string>
+<string name="Work">Travail</string>
+<string name="Other">Autre</string>
+<string name="WorkFax">Fax professionnel </string>
+<string name="HomeFax">Fax du domicile</string>
+<string name="Pager">bipeur</string>
 	<string-array name="phone_types">
 		<item>@string/Home</item>
 		<item>@string/Mobile</item>
@@ -333,4 +369,8 @@
 		<item>@string/Other</item>
 		<item>@string/Custom</item>
 	</string-array>
+<string name="newJournalFromThis">Copier dans une nouvelle note</string>
+<string name="ErrorDeletingJournal">Erreur durant la suppression de la note - veuillez réessayer</string>
+<string name="ErrorDeletingTask">Erreur durant la suppression de la tâche - veuillez réessayer</string>
+<string name="ErrorCompletingTask">Erreur marquant la tâche complété - veuillez réessayer</string>
 </resources>

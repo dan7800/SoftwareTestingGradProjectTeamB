@@ -7,6 +7,7 @@
 <string name="setButtonLabel">Anwenden</string>
 <string name="appDescription">Ein Kalender für Android, der Ereignisse, Aufgaben, Notizen und Kontakte auf einem CalDAV- bzw. CardDAV-Server -- bspw. DAViCal (siehe www.davical.org) speichert.</string>
 <string name="appDescriptionTasks">Eine Aufgabenliste für Android, die Aufgaben auf einem CalDAV- bzw. CardDAV-Server – bspw. DAViCal (siehe www.davical.org) speichert.</string>
+<string name="appDescriptionNotes">Eine Aufgabenliste für Android, die Aufgaben auf einem CalDAV- bzw. CardDAV-Server – bspw. DAViCal (siehe www.davical.org) speichert.</string>
 <string name="Active">aktiv</string>
 <string name="Add_Server">Server hinzufügen</string>
 <string name="A_name_for_this_server_configuration">Name, der für diese Server-Konfiguration verwendet werden soll</string>
@@ -14,7 +15,7 @@
 <string name="Simple_Path">Einfacher Pfad</string>
 <string name="Simple_User_URL">Benutzer URL</string>
 <string name="Enter_a_brief_summary_of_the_event">Geben Sie eine kurze Zusammenfassung des Ereignisses ein</string>
-<string name="Force_full_resync">Resynchronisation erzwingen</string>
+<string name="Force_full_resync">Erneute synchronisation erzwingen</string>
 <string name="Password">Passwort</string>
 <string name="Save">Speichern</string>
 <string name="Settings">Einstellungen</string>
@@ -103,6 +104,11 @@
 <string name="YearViewSize_PrefSummary">Anzahl der Monate, die in der Jahresansicht sichtbar sind</string>
 <string name="Snooze_PrefTitle">Snooze-Zeitraum</string>
 <string name="Snooze_PrefSummary">Nach wievielen Minuten soll die Benachrichtigung wiederholt werden, wenn der Snooze-Knopf gedrückt wurde.</string>
+<string name="prefDefaultEventsCollection_Title">Standardkalender für Ereignisse</string>
+<string name="prefDefaultEventsCollection_Summary">Die Standardsammlung für neue Elemente</string>
+<string name="prefDefaultTasksCollection_Title">Standardkalender für Aufgaben</string>
+<string name="prefDefaultTasksCollection_Summary">Die Standardsammlung für neue Aufgaben</string>
+<string name="prefDefaultNotesCollection_Title">Standardkalender für Notizen</string>
 <string name="DefaultAlarmTone_PrefTitle">Erinnerungsmelodie</string>
 <string name="DefaultAlarmTone_PrefSummary">Standard-Erinnerungsmelodie für Benachrichtigungen</string>
 <string name="AlarmVolumeType_PrefTitle">Alarmlautstärke</string>
@@ -278,8 +284,12 @@
 <string name="noScheduledEvents">Keine geplanten Ereignisse.</string>
 <string name="Event">Ereignis</string>
 <string name="Task">Aufgabe</string>
+<string name="weekends">Wochenenden</string>
 <string name="weekdays">Wochentage</string>
 <string name="JournalDatePrompt">Datum:</string>
+<string name="AppearancePreferences">Erscheinungsbild</string>
+<string name="prefThemeButtonColour_Summary">Die Farbe der Knöpfe in der App.</string>
+<string name="prefThemeButtonColour_Title">Knopf Farbe</string>
 <string name="Saving">Speichern...</string>
 <string name="Loading">Laden...</string>
 <string name="Deleting">Löschen...</string>
@@ -294,8 +304,31 @@
 <string name="prefAllowSelfSignedCerts_OnSummary">Erlaubt</string>
 <string name="prefAllowSelfSignedCerts_OffSummary">Abgelehnt</string>
 <string name="SslCertificateError">Es gab ein Problem bei der Prüfung des SSL-Zertifikats.</string>
+<string name="note_title_hint">Geben Sie Ihrer Notiz einen Titel</string>
+<string name="note_text_hint">Geben Sie hier die Notiz ein</string>
+<string name="event_name_hint">Geben Sie einen Namen für das Ereignis an</string>
+<string name="event_location_hint">Der Ort des Ereignisses</string>
+<string name="event_notes_hint">Detaillierte Beschreibung des Ereignisses</string>
+<string name="todo_name_hint">Geben Sie einen Namen für die Aufgabe ein</string>
+<string name="todo_description_hint">Geben Sie eine Beschreibung für die Aufgabe ein</string>
+<string name="first_name_hint">Vorname</string>
+<string name="surname_hint">Name</string>
+<string name="phone_prompt">Telefon</string>
+<string name="phone_hint">Telefon</string>
+<string name="postal_address_prompt">Adresse</string>
+<string name="street_hint">Straße</string>
+<string name="city_hint">Stadt</string>
+<string name="country_hint">Land</string>
+<string name="postcode_hint">Postleitzahl</string>
+<string name="company_hint">Firma</string>
+<string name="job_title_hint">Titel</string>
+<string name="contact_picture_description">Kontakt Bil</string>
 <string name="icon_add_description">Hinzufügen</string>
 <string name="icon_delete_description">Löschen</string>
+<string name="Home">Zuhause</string>
+<string name="Work">Arbeit</string>
+<string name="Mobile">Mobil</string>
+<string name="Other">Anderes</string>
 	<string-array name="phone_types">
 		<item>@string/Home</item>
 		<item>@string/Mobile</item>
@@ -312,4 +345,8 @@
 		<item>@string/Other</item>
 		<item>@string/Custom</item>
 	</string-array>
+<string name="newJournalFromThis">Kopiere als neue Notiz</string>
+<string name="ErrorDeletingJournal">Fehler beim Speichern der Notiz - bitte noch einmal probieren.</string>
+<string name="ErrorDeletingTask">Fehler beim Speichern der Aufgabe - bitte noch einmal probieren.</string>
+<string name="ErrorCompletingTask">Fehler beim ändern der Aufgabe auf \\&quot;Fertiggestellt\\&quot; - bitte noch einmal probieren.</string>
 </resources>
