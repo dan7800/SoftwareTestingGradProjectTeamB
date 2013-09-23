@@ -53,7 +53,7 @@ public class UpdateTimezones extends ServiceJob {
 	private ContentResolver cr;
 	private AcalRequestor requestor;
 	private String tzServerBaseUrl;
-	
+
 	private boolean deferMe = false;
 
 	/**
@@ -64,9 +64,9 @@ public class UpdateTimezones extends ServiceJob {
 	public UpdateTimezones( long timeToExecute ) {
 		TIME_TO_EXECUTE = timeToExecute;
 	}
-	
+
 	/**
-	 * Loop through all active collections and 
+	 * Loop through all active collections and
 	 */
 	public void run(aCalService context) {
 		this.context = context;
@@ -100,7 +100,7 @@ public class UpdateTimezones extends ServiceJob {
 			for( allZones.moveToFirst(); !allZones.isAfterLast(); allZones.moveToNext()) {
 				if ( Constants.LOG_VERBOSE ) Log.println(Constants.LOGV, TAG, "Found existing zone of '"+allZones.getString(0)+"' modified: "+AcalDateTime.fromMillis(allZones.getLong(1)*1000L).toString());
 				currentZones.put(allZones.getString(0), allZones.getLong(1));
-				if ( allZones.getLong(1) > maxModified ) maxModified = allZones.getLong(1); 
+				if ( allZones.getLong(1) > maxModified ) maxModified = allZones.getLong(1);
 			}
 			AcalDateTime mostRecentChange = AcalDateTime.getUTCInstance().setEpoch(maxModified);
 			Log.println(Constants.LOGI, TAG, "Found "+allZones.getCount()+" existing timezones, most recent change on "+mostRecentChange.toString());
@@ -114,7 +114,8 @@ public class UpdateTimezones extends ServiceJob {
 			if ( requestor.wasRedirected() ) {
 			    Uri tzUri = Uri.parse(requestor.fullUrl());
 			    String redirectedUrl = tzUri.getScheme() + "://" + tzUri.getAuthority() + tzUri.getPath();
-                Log.println(Constants.LOGI, TAG, "Redirected to Timezone Server at " + redirectedUrl);
+                if ( Constants.debugTimeZone && Constants.LOG_DEBUG ) Log.println(Constants.LOGD, TAG,
+                        "Redirected to Timezone Server at " + redirectedUrl);
                 tzServerBaseUrl = redirectedUrl;
                 AcalApplication.setPreferenceString(PrefNames.tzServerBaseUrl, redirectedUrl);
 			}
@@ -127,14 +128,14 @@ public class UpdateTimezones extends ServiceJob {
 				return;
 			}
 
-			
+
 			String tzid;
-			String tzData;
+			String tzData = "";
 			long lastModified;
 			StringBuilder localNames;
 			StringBuilder aliases;
 			ContentValues zoneValues = new ContentValues();
-			
+
 			String tzDateStamp = root.getString("dtstamp");
 			JSONArray tzArray = root.getJSONArray("timezones");
 			for( int i=0; i< tzArray.length(); i++ ) {
@@ -142,7 +143,8 @@ public class UpdateTimezones extends ServiceJob {
 				tzid = zoneNode.getString("tzid");
 				if ( updatedZones.containsKey(tzid) || insertedZones.containsKey(tzid) ) continue;
 
-				Log.println(Constants.LOGI, TAG, "Working on "+tzid );
+				if ( Constants.debugTimeZone && Constants.LOG_DEBUG ) Log.println(Constants.LOGD, TAG,
+				        "Working on "+tzid );
 
 				lastModified = AcalDateTime.fromString(zoneNode.getString("last-modified")).getEpoch();
 				if ( currentZones.containsKey(tzid) && currentZones.get(tzid) <= lastModified ) {
@@ -202,11 +204,11 @@ public class UpdateTimezones extends ServiceJob {
 				    deferMe = true;
 				    break;
 				}
-				// Let other stuff have a chance 
+				// Let other stuff have a chance
 				Thread.sleep(350);
 			}
 			int removed = 0;
-			
+
 			if ( currentZones.size() > 0 ) {
 				StringBuilder s = new StringBuilder();
 				for( String tz : currentZones.keySet() ) {
@@ -223,7 +225,7 @@ public class UpdateTimezones extends ServiceJob {
 		}
 	}
 
-	
+
 	private String getTimeZone(String tzid) {
 		requestor.interpretUriString(tzUrl("get",tzid));
 		InputStream is = null;
@@ -231,7 +233,7 @@ public class UpdateTimezones extends ServiceJob {
 		try {
 			is = requestor.doRequest("GET", null, null, null);
 			if ( requestor.getStatusCode() != 200 ) {
-				Log.println(Constants.LOGI, TAG, "Bad response from Timezone Server at " + tzUrl("get",tzid));
+				Log.println(Constants.LOGI, TAG, ""+requestor.getStatusCode() + " response from Timezone Server at " + tzUrl("get",tzid));
 				return null;
 			}
 			BufferedReader r = new BufferedReader(new InputStreamReader(is),AcalConnectionPool.DEFAULT_BUFFER_SIZE);
@@ -268,7 +270,7 @@ public class UpdateTimezones extends ServiceJob {
 		context.addWorkerJob(this);
 	}
 
-	
+
 	@Override
 	public String getDescription() {
 		return "Refreshing timezones";
