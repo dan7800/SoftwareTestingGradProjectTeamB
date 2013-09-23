@@ -1,13 +1,24 @@
 package com.morphoss.acal.activity.serverconfig;
 
 import java.net.URLEncoder;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Locale;
 
 import javax.net.ssl.SSLHandshakeException;
 
 import org.apache.http.Header;
+import org.xbill.DNS.Lookup;
+import org.xbill.DNS.Name;
+import org.xbill.DNS.NameTooLongException;
+import org.xbill.DNS.Record;
+import org.xbill.DNS.ResolverConfig;
+import org.xbill.DNS.SRVRecord;
+import org.xbill.DNS.SimpleResolver;
+import org.xbill.DNS.TextParseException;
+import org.xbill.DNS.Type;
 
 import android.content.ContentValues;
 import android.util.Log;
@@ -68,7 +79,7 @@ public class TestPort {
 	public final static int HAS_PRINCIPAL_URL = 20;
 	public final static int HAS_CALDAV = 25;
 	public final static int IS_CALENDAR = 30;
-	
+
 	private int achievement = NO_CONNECTION;
 	private String calendarCollectionHref = null;
 
@@ -98,11 +109,11 @@ public class TestPort {
 		this.useSSL = useSSL;
 	}
 
-	
+
 	/**
 	 * <p>
 	 * Test whether the port is open.
-	 * </p> 
+	 * </p>
 	 * @return
 	 */
 	boolean isOpen() {
@@ -115,7 +126,7 @@ public class TestPort {
 			this.isOpen = false;
 			try {
 				requestor.doRequest("OPTIONS", null, null, null);
-				if ( Constants.debugCheckServerDialog ) Log.println(Constants.LOGD,TAG, "Probe "+requestor.fullUrl()+" success: status " + requestor.getStatusCode());
+	            Log.println(Constants.LOGI,TAG, "OPTIONS request " + requestor.getStatusCode() + " on " + requestor.fullUrl() );
 
 				// No exception, so it worked!
 				this.isOpen = true;
@@ -123,7 +134,7 @@ public class TestPort {
 					this.authOK = false;
 					setAchievement(AUTH_FAILED);
 				}
-				// If we were redirected we should reset that. 
+				// If we were redirected we should reset that.
 				if ( requestor.wasRedirected() ) {
 		            requestor.setPath(path);
 		            requestor.setHostName(hostName);
@@ -176,7 +187,7 @@ public class TestPort {
 	 * includes "calendar-access". Appends to the successMessage we will return to the user, as well as
 	 * setting the hasCalendarAccess for later update to the DB.
 	 * </p>
-	 * 
+	 *
 	 * @param headers
 	 * @return true if the calendar does support CalDAV.
 	 */
@@ -184,8 +195,8 @@ public class TestPort {
 		if ( headers != null ) {
 			for (Header h : headers) {
 				if (h.getName().equalsIgnoreCase("DAV")) {
-					if (h.getValue().toLowerCase().contains("calendar-access")) {
-						if ( Constants.debugCheckServerDialog ) Log.println(Constants.LOGI,TAG,
+					if (h.getValue().toLowerCase(Locale.ENGLISH).contains("calendar-access")) {
+						Log.println(Constants.LOGI,TAG,
 								"Discovered server supports CalDAV on URL "+requestor.fullUrl());
 						hasCalDAV = true;
 						hasDAV = true; // by implication
@@ -210,10 +221,9 @@ public class TestPort {
 		try {
 			requestor.setAuthRequired();
 			DavNode root = requestor.doXmlRequest("PROPFIND", null, SynchronisationJobs.getReportHeaders(0), pPathRequestData);
-			
+
 			int status = requestor.getStatusCode();
-			if ( Constants.debugCheckServerDialog )
-				Log.println(Constants.LOGD,TAG, "PROPFIND request " + status + " on " + requestor.fullUrl() );
+			Log.println(Constants.LOGI,TAG, "PROPFIND request " + status + " on " + requestor.fullUrl() );
 
 			checkCalendarAccess(requestor.getResponseHeaders());
 
@@ -238,13 +248,13 @@ public class TestPort {
 					}
 					return doPropfindPrincipal(requestPath);
 				}
-				
+
 				authOK = true;
 				setAchievement(AUTH_SUCCEEDED);
 
 				calendarCollectionHref  = null;
 				for ( DavNode response : root.getNodesFromPath("multistatus/response") ) {
-					String responseHref = response.getFirstNodeText("href"); 
+					String responseHref = response.getFirstNodeText("href");
 					if ( Constants.debugCheckServerDialog ) Log.println(Constants.LOGD, TAG, "Checking response for "+responseHref);
 					for ( DavNode propStat : response.getNodesFromPath("propstat") ) {
 						if ( Constants.debugCheckServerDialog ) Log.println(Constants.LOGD, TAG, "Checking in propstat for "+responseHref);
@@ -279,7 +289,7 @@ public class TestPort {
 								hasPrincipalURL = true;
 								return true;
 							}
-							
+
 							href = propStat.getFirstNodeText("prop/principal-collection-set/href");
 							if ( href != null && !href.equals("") ) {
 								String principalCollectionHref = href;
@@ -288,7 +298,7 @@ public class TestPort {
 								}
 								String userName = URLEncoder.encode(requestor.getUserName(), "UTF-8");
 								if ( principalCollectionHref.length() > 0 && userName != null ) {
-									principalCollectionHref = principalCollectionHref + 
+									principalCollectionHref = principalCollectionHref +
 											(principalCollectionHref.length() > 0 && principalCollectionHref.charAt(principalCollectionHref.length()-1) == '/' ? "" : "/") +
 											userName + "/";
 									if ( !principalCollectionHref.equals(requestPath) ) {
@@ -314,7 +324,7 @@ public class TestPort {
 		return false;
 	}
 
-	
+
 	/**
 	 * Does a principal-match REPORT on the given path.
 	 * @param requestPath
@@ -323,14 +333,13 @@ public class TestPort {
 	private boolean doPrincipalMatchSelf( String requestPath ) {
 		if ( requestPath != null ) requestor.setPath(requestPath);
 		if ( Constants.debugCheckServerDialog ) Log.println(Constants.LOGD,TAG,
-				"Doing PROPFIND for current-user-principal on " + requestor.fullUrl() );
+				"Doing REPORT for principal-match of self on " + requestor.fullUrl() );
 		try {
 			requestor.setAuthRequired();
 			DavNode root = requestor.doXmlRequest("REPORT", null, SynchronisationJobs.getReportHeaders(0), pPrincipalMatchSelf);
-			
+
 			int status = requestor.getStatusCode();
-			if ( Constants.debugCheckServerDialog )
-				Log.println(Constants.LOGD,TAG, "PROPFIND request " + status + " on " + requestor.fullUrl() );
+			Log.println(Constants.LOGD,TAG, "REPORT (principal-match for self) request " + status + " on " + requestor.fullUrl() );
 
 			checkCalendarAccess(requestor.getResponseHeaders());
 
@@ -340,9 +349,9 @@ public class TestPort {
 			}
 			else if ( status == 207 ) {
 				if ( Constants.debugCheckServerDialog ) Log.println(Constants.LOGD,TAG, "Checking for principal path in response...");
-				
+
 				for ( DavNode response : root.getNodesFromPath("multistatus/response") ) {
-					String responseHref = response.getFirstNodeText("href"); 
+					String responseHref = response.getFirstNodeText("href");
 					if ( Constants.debugCheckServerDialog ) Log.println(Constants.LOGD, TAG, "Checking response for "+responseHref);
 					for ( DavNode propStat : response.getNodesFromPath("propstat") ) {
 						if ( Constants.debugCheckServerDialog ) Log.println(Constants.LOGD, TAG, "Checking in propstat for "+responseHref);
@@ -370,7 +379,7 @@ public class TestPort {
 		return false;
 	}
 
-	
+
 	private void setFieldsFromRequestor() {
 		useSSL = requestor.getProtocol().equals("https");
 		hostName = requestor.getHostName();
@@ -399,7 +408,7 @@ public class TestPort {
 		return hasDAV;
 	}
 
-	
+
 	/**
 	 * Probes for CalDAV support on the server using previous path used for DAV.
 	 */
@@ -421,9 +430,7 @@ public class TestPort {
 				path = requestor.getPath();
 				if ( Constants.debugCheckServerDialog ) Log.println(Constants.LOGI,TAG, "Starting OPTIONS on "+path);
 				requestor.doRequest("OPTIONS", path, null, null);
-				int status = requestor.getStatusCode();
-				if ( Constants.debugCheckServerDialog )
-					Log.println(Constants.LOGD,TAG, "OPTIONS request " + status + " on " + requestor.fullUrl() );
+				Log.println(Constants.LOGD,TAG, "OPTIONS request " + requestor.getStatusCode() + " on " + requestor.fullUrl() );
 				checkCalendarAccess(requestor.getResponseHeaders());  // Updates 'hasCalDAV' if it finds it
 			}
 			catch (SSLHandshakeException e) {
@@ -463,15 +470,15 @@ public class TestPort {
 	public boolean hasPrincipalUrl() {
 		if ( hasPrincipalURL == null ) {
 			doPropfindPrincipal(path);
-			if ( hasPrincipalURL == null ) hasPrincipalURL = true; 
-			
+			if ( hasPrincipalURL == null ) hasPrincipalURL = true;
+
 		}
 		return hasPrincipalURL;
 	}
-	
+
 	/**
 	 * Returns a default ArrayList<TestPort> which can be used for probing a server to try
-	 * and discover where the CalDAV / CardDAV server is hiding.  
+	 * and discover where the CalDAV / CardDAV server is hiding.
 	 * @param requestor The requestor which will be used for probing.
 	 * @return The ArrayList of default ports.
 	 */
@@ -482,7 +489,7 @@ public class TestPort {
 		else
 			testPortSet.clear();
 
-		// In the below we check https if they *didn't* specify http, and vice-versa.  This logic means that 
+		// In the below we check https if they *didn't* specify http, and vice-versa.  This logic means that
 		// if they didn't specify *either* then we check *both*.
 		if ( requestor.getPort() != -1 && requestor.getPort() != 80 && requestor.getPort() != 443 ) {
 			if ( ! requestor.protocolEquals("http") )
@@ -525,14 +532,14 @@ public class TestPort {
 	 * @return
 	 */
 	public static boolean addSrvLookups(AcalRequestor requestor) {
-		
-		return false;
+
+//	return false;
 
 /*
- * The following code is tested, and works, but requires the DNSJava library.		
+ * The following code is tested, and works, but requires the DNSJava library.
  */
-/** /		
-		Name baseDomain = null;
+/**/
+        Name baseDomain = null;
 		Name sslPrefix = null;
 		Name plainPrefix = null;
 		try {
@@ -558,7 +565,7 @@ public class TestPort {
 			Log.w(TAG,"Auto-generated catch block", e);
 			return false;
 		}
-		
+
 		boolean addedSome = false;
 		SimpleResolver resolver;
 		try {
@@ -587,15 +594,15 @@ public class TestPort {
 					tp.useSSL = (n < 2);   // The first two are SSL, the second two are not
 					testPortSet.add( inserted + i, tp );
 					addedSome = true;
-					
-					if ( Constants.debugCheckServerDialog ) 
+
+					if ( Constants.debugCheckServerDialog )
 						Log.println(Constants.LOGI, TAG,
 							String.format("Got SRV response of '%s:%d' for %s query.", tp.hostName, tp.port, searchNames[n].toString()) );
 				}
 				inserted += answers.length;
 			}
 			else {
-				if ( Constants.debugCheckServerDialog ) 
+				if ( Constants.debugCheckServerDialog )
 					Log.println(Constants.LOGI, TAG,
 						String.format("No SRV response for %s query.", searchNames[n].toString()) );
 			}
@@ -604,7 +611,7 @@ public class TestPort {
 /**/
 	}
 
-	
+
 	/**
 	 * Return a URL Prefix like 'https://'
 	 * @return
@@ -630,5 +637,5 @@ public class TestPort {
 		requestor.setPortProtocol( port, (useSSL?1:0) );
 		requestor.applyToServerSettings(serverData);
 	}
-	
+
 }
