@@ -176,11 +176,11 @@ public class EventEdit extends AcalActivity implements  OnClickListener, OnCheck
 	private Dialog loadingDialog = null;
 	private Dialog savingDialog = null;
 
-	private Handler mHandler = new Handler() {
+	private final Handler mHandler = new Handler() {
 		public void handleMessage(Message msg) {
 
 			switch (msg.what) {
-			case REFRESH: 
+			case REFRESH:
 				isLoading = false;
 				if (loadingDialog != null) {
 					loadingDialog.dismiss();
@@ -213,11 +213,11 @@ public class EventEdit extends AcalActivity implements  OnClickListener, OnCheck
 				updateLayout();
 				break;
 
-			case  CONFLICT: 
+			case  CONFLICT:
 				Toast.makeText(EventEdit.this, "The resource you are editing has been changed or deleted on the server.", Toast.LENGTH_LONG).show();
 				break;
 
-			case SHOW_LOADING: 
+			case SHOW_LOADING:
 				isLoading = true;
 				if (event == null) showDialog(LOADING_EVENT_DIALOG);
 				break;
@@ -246,7 +246,7 @@ public class EventEdit extends AcalActivity implements  OnClickListener, OnCheck
 				}
 				break;
 
-			case SHOW_SAVING: 
+			case SHOW_SAVING:
 				isSaving = true;
 				showDialog(SAVING_DIALOG);
 				break;
@@ -262,10 +262,10 @@ public class EventEdit extends AcalActivity implements  OnClickListener, OnCheck
 					Bundle b = new Bundle();
 					b.putLong(EventView.RESOURCE_ID_KEY, (Long)msg.obj);
 					b.putString(EventView.RECURRENCE_ID_KEY, event.getStart().toPropertyString(PropertyName.RECURRENCE_ID));
-					ret.putExtras(b);			
+					ret.putExtras(b);
 					setResult(RESULT_OK, ret);
 					saveSucceeded = true;
-					
+
 					finish();
 
 				} else {
@@ -303,7 +303,7 @@ public class EventEdit extends AcalActivity implements  OnClickListener, OnCheck
 		prefer24hourFormat = prefs.getBoolean(getString(R.string.prefTwelveTwentyfour), DateFormat.is24HourFormat(this));
 
 		alarmRelativeTimeStrings = getResources().getStringArray(R.array.RelativeAlarmTimes);
-		
+
 
 		resourceManager = ResourceManager.getInstance(this,this);
 
@@ -386,7 +386,8 @@ public class EventEdit extends AcalActivity implements  OnClickListener, OnCheck
 					preferredCollectionId = Long.parseLong(prefs.getString(PrefNames.defaultEventsCollection, "-1"));
 				}
 				catch ( Exception e ) {}
-				if ( preferredCollectionId != -1 && Collection.getInstance(preferredCollectionId, this) != null ) collectionId = preferredCollectionId;
+				if ( preferredCollectionId != -1 && Collection.getInstance(preferredCollectionId, this) != null )
+				    collectionId = preferredCollectionId;
 
 				try {
 					// build default event
@@ -459,7 +460,7 @@ public class EventEdit extends AcalActivity implements  OnClickListener, OnCheck
 		alarmsList = (TableLayout) this.findViewById(R.id.alarms_list_table);
 		alarmsView = (Button) this.findViewById(R.id.EventAlarmsButton);
 
-		repeatsView = (Button) this.findViewById(R.id.EventRepeatsContent);	
+		repeatsView = (Button) this.findViewById(R.id.EventRepeatsContent);
 
 		//Button listeners
 		setListen(btnStartDate,START_DATE_DIALOG);
@@ -505,7 +506,7 @@ public class EventEdit extends AcalActivity implements  OnClickListener, OnCheck
 		if ( end.isDate() ) {
 			// People expect an event starting on the 13th and ending on the 14th to be for
 			// two days.  For iCalendar it is one day, so we display the end date to be
-			// one day earlier than the actual setting, if we're viewing 
+			// one day earlier than the actual setting, if we're viewing
 			end = AcalDateTime.addDays(end,-1); // adds to copy.
 		}
 		btnEndDate.setText(AcalDateTimeFormatter.fmtFull(end, prefer24hourFormat));
@@ -546,17 +547,17 @@ public class EventEdit extends AcalActivity implements  OnClickListener, OnCheck
 			break;
 		case 4:
 			dowStr="FR";
-			dowLongString = getString(R.string.Friday); 
+			dowLongString = getString(R.string.Friday);
 			everyDowString = getString(R.string.EveryFriday);
 			break;
 		case 5:
 			dowStr="SA";
-			dowLongString = getString(R.string.Saturday); 
+			dowLongString = getString(R.string.Saturday);
 			everyDowString = getString(R.string.EverySaturday);
 			break;
 		case 6:
 			dowStr="SU";
-			dowLongString = getString(R.string.Sunday); 	
+			dowLongString = getString(R.string.Sunday);
 			everyDowString = getString(R.string.EverySunday);
 			break;
 		}
@@ -590,18 +591,18 @@ public class EventEdit extends AcalActivity implements  OnClickListener, OnCheck
 		if (repeatRuleString == null) repeatRuleString = "";
 		AcalRepeatRule RRule;
 		try {
-			RRule = new AcalRepeatRule(start, repeatRuleString); 
+			RRule = new AcalRepeatRule(start, repeatRuleString);
 		}
 		catch( IllegalArgumentException  e ) {
 			Log.i(TAG,"Illegal repeat rule: '"+repeatRuleString+"'");
-			RRule = new AcalRepeatRule(start, null ); 
+			RRule = new AcalRepeatRule(start, null );
 		}
 		String rr = RRule.repeatRule.toPrettyString(this);
 		if (rr == null || rr.equals("")) rr = getString(R.string.OnlyOnce);
 		repeatsView.setText(rr);
-		if (event != null && (event.isSingleInstance() || event.isFirstInstance())) 
+		if (event != null && (event.isSingleInstance() || event.isFirstInstance()))
 			repeatsView.setEnabled(true);
-		else 
+		else
 			repeatsView.setEnabled(false);
 	}
 
@@ -628,7 +629,7 @@ public class EventEdit extends AcalActivity implements  OnClickListener, OnCheck
 
 	@Override
 	public void onClick(View arg0) {
-		int button = (int)((Integer)arg0.getTag());
+		int button = ((Integer)arg0.getTag());
 		switch ( button ) {
 		case APPLY:
 			applyChanges();
@@ -739,7 +740,7 @@ public class EventEdit extends AcalActivity implements  OnClickListener, OnCheck
 		case WHICH_EVENT_DIALOG:
 			builder = new AlertDialog.Builder(this);
 			builder.setTitle(getString(R.string.ChooseInstancesToChange));
-			
+
 			if (event.isSingleInstance()) {
 				//no options needed
 				instances = INSTANCES_ALL;
@@ -758,7 +759,7 @@ public class EventEdit extends AcalActivity implements  OnClickListener, OnCheck
 						instances = INSTANCES_ALL;
 						break;
 					default:
-						return;	
+						return;
 					}
 					saveChanges();
 				}
@@ -775,7 +776,7 @@ public class EventEdit extends AcalActivity implements  OnClickListener, OnCheck
 							instances = INSTANCES_THIS_FUTURE;
 							break;
 						default:
-							return;	
+							return;
 						}
 						saveChanges();
 					}
@@ -829,7 +830,7 @@ public class EventEdit extends AcalActivity implements  OnClickListener, OnCheck
 			if ( end.isDate() ) {
 				// People expect an event starting on the 13th and ending on the 14th to be for
 				// two days.  For iCalendar it is one day, so we display the end date to be
-				// one day earlier than the actual setting, if we're viewing 
+				// one day earlier than the actual setting, if we're viewing
 				end.addDays(-1);
 			}
 			return new DateTimeDialog( this, end, prefer24hourFormat, false, true,
@@ -959,7 +960,7 @@ public class EventEdit extends AcalActivity implements  OnClickListener, OnCheck
 				this.event = (EventInstance) result;
 				msg = REFRESH;
 			}
-			mHandler.sendMessage(mHandler.obtainMessage(msg));		
+			mHandler.sendMessage(mHandler.obtainMessage(msg));
 		}
 		else if (result instanceof Long) {
 			mHandler.sendMessage(mHandler.obtainMessage(SAVE_RESULT, result));
