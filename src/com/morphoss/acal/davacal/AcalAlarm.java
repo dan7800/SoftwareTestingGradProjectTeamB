@@ -19,6 +19,7 @@
 package com.morphoss.acal.davacal;
 
 import java.io.Serializable;
+import java.util.Locale;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -29,12 +30,13 @@ import com.morphoss.acal.Constants;
 import com.morphoss.acal.PrefNames;
 import com.morphoss.acal.acaltime.AcalDateTime;
 import com.morphoss.acal.acaltime.AcalDuration;
+import com.morphoss.acal.database.alarmmanager.AlarmRow;
 import com.morphoss.acal.dataservice.EventInstance;
 
 public class AcalAlarm implements Serializable, Parcelable, Comparable<AcalAlarm> {
 	private static final long	serialVersionUID	= 1L;
 	private static final String TAG = "AcalAlarm";
-	
+
 	public final RelateWith relativeTo;
 	public final String description;
 	public final AcalDuration relativeTime;
@@ -44,14 +46,14 @@ public class AcalAlarm implements Serializable, Parcelable, Comparable<AcalAlarm
 	public AcalDateTime snoozeTime = null;
 	public boolean hasEventAssociated = false;
 	public EventInstance myEvent = null;
-	public String blob;
+	private final String blob;
 
-	
+
 	public String toString() {
-		return "AcalAlarm: nextTriggerTime: "+this.getNextTimeToFire()+" Snooze: "+(isSnooze ? "Yes" : "No")+
+		return "AcalAlarm: nextTriggerTime: "+prettyTimeToFire()+" ("+nextAlarmTime()+") Snooze: "+(isSnooze ? "Yes" : "No")+
 			  " Action: "+actionType+" Relative: "+relativeTo;
 	}
-	
+
 	@Override
 	public boolean equals (Object o) {
 		if (! (o instanceof AcalAlarm) || o == null ) return false;
@@ -91,6 +93,7 @@ public class AcalAlarm implements Serializable, Parcelable, Comparable<AcalAlarm
 	 * @param end The datetime which the END trigger is related to.
 	 */
 	public AcalAlarm(RelateWith relativeTo, String description, AcalDuration relativeTime, ActionType actionType, AcalDateTime start, AcalDateTime end) {
+	    this.blob = "this blob has not been set!!!";
 		this.relativeTo = relativeTo;
 		this.description = description;
 		this.relativeTime = relativeTime;
@@ -107,7 +110,8 @@ public class AcalAlarm implements Serializable, Parcelable, Comparable<AcalAlarm
 			if ( start == null ) throw new NullPointerException("Absolute alarm must have non-null start time.");
 			timeToFire = (start != null ? start.clone() : null);
 		}
-		
+        setToLocalTime();
+
 		if ( Constants.debugAlarms ) {
 			Log.d(TAG,"Alarm created relative to "+relativeTo+
 					" which is "+(relativeTo == RelateWith.END ? end : start ).fmtIcal()+
@@ -119,7 +123,7 @@ public class AcalAlarm implements Serializable, Parcelable, Comparable<AcalAlarm
 
 	/**
 	 * Build an AcalAlarm from the VALARM component it came in.
-	 * 
+	 *
 	 * @param component The VALARM component we are realising.
 	 * @param parent The parent component, which we use to calculate a default description if we need to.
 	 * @param start The start from the parent.  Passed in separately because we might be in repeat rule expansion.
@@ -130,7 +134,7 @@ public class AcalAlarm implements Serializable, Parcelable, Comparable<AcalAlarm
 		AcalProperty aProperty = component.getProperty("ACTION");
 		if ( aProperty == null ) throw new InvalidCalendarComponentException("A VALARM component must have an ACTION property.");
 		actionType = ( aProperty == null ? ActionType.IGNORED : ActionType.fromString(aProperty.getValue()));
-		
+
 		aProperty = component.getProperty(PropertyName.TRIGGER);
 		if ( aProperty == null ) throw new InvalidCalendarComponentException("A VALARM component must have a TRIGGER property.");
 		String related = aProperty.getParam("RELATED");
@@ -140,13 +144,13 @@ public class AcalAlarm implements Serializable, Parcelable, Comparable<AcalAlarm
 		if ( valueType == null || valueType.equalsIgnoreCase("DURATION") )
 			tmpDuration = AcalDuration.fromProperty(aProperty); 		// returns null on failure
 		if ( valueType == null || valueType.equalsIgnoreCase("DATE-TIME") || valueType.equalsIgnoreCase("DATE") )
-			tmpTriggerTime = AcalDateTime.fromAcalProperty(aProperty); // returns null on failure 
+			tmpTriggerTime = AcalDateTime.fromAcalProperty(aProperty); // returns null on failure
 
 		/**
 		 * Sadly, while it's mandatory to specify both RELATED=START/END and VALUE=DURATION
 		 * for relative triggers in RFC5545, RFC2245 said almost the opposite, appearing to
 		 * have a default where the VALUE=DURATION and RELATED=START.  iCal does this.
-		 * 
+		 *
 		 *  Given the variability we just have to cope with working it out from the content.
 		 */
 		if ( tmpDuration == null && tmpTriggerTime != null ) {
@@ -173,6 +177,7 @@ public class AcalAlarm implements Serializable, Parcelable, Comparable<AcalAlarm
 			else
 				timeToFire = AcalDateTime.addDuration(end, relativeTime);
 		}
+        setToLocalTime();
 
 		aProperty = null;
 		if ( AcalApplication.getPreferenceBoolean(PrefNames.ignoreValarmDescription, false) )
@@ -183,10 +188,10 @@ public class AcalAlarm implements Serializable, Parcelable, Comparable<AcalAlarm
 		description = ( aProperty == null || aProperty.getValue().equals("") ? "Alarm" : aProperty.getValue());
 	}
 
-	
+
 	public VAlarm getVAlarm( Masterable parent ) {
 		VAlarm ret = new VAlarm( parent );
-		
+
 		AcalProperty aProperty;
 		if ( relativeTo == RelateWith.ABSOLUTE ) {
 			timeToFire.shiftTimeZone("UTC");
@@ -209,11 +214,11 @@ public class AcalAlarm implements Serializable, Parcelable, Comparable<AcalAlarm
 		}
 		else if ( this.actionType == ActionType.DISPLAY ) // Description is mandatory in this case
 			ret.addProperty(new AcalProperty(PropertyName.DESCRIPTION, ""));
-		
+
 		return ret;
 	}
 
-	
+
 	@Override
 	public int compareTo(AcalAlarm another) {
 		if ( this.getNextTimeToFire().before(another.getNextTimeToFire())) return -1;
@@ -230,6 +235,7 @@ public class AcalAlarm implements Serializable, Parcelable, Comparable<AcalAlarm
 	public void writeToParcel(Parcel out, int flags) {
 		//TODO needs refactoring!!!
 		out.writeByte((byte)(relativeTo.toString().charAt(0)));
+        out.writeString(blob);
 		out.writeString(description);
 		if ( relativeTime == null ) {
 			throw new NullPointerException("relativeTime may not be null");
@@ -255,15 +261,18 @@ public class AcalAlarm implements Serializable, Parcelable, Comparable<AcalAlarm
 	public AcalAlarm(Parcel in) {
 		byte b = in.readByte();
 		relativeTo = (b == 'A' ? RelateWith.ABSOLUTE : (b == 'S' ? RelateWith.START : RelateWith.END));
+        blob = in.readString();
 		description = in.readString();
 		relativeTime = new AcalDuration(in);
 		timeToFire = new AcalDateTime(in);
-	
+
 		isSnooze = (in.readByte() == 'T');
 		if (isSnooze) {
 			this.snoozeTime = new AcalDateTime(in);
 		}
-		hasEventAssociated = (in.readByte() == 'T');
+        setToLocalTime();
+
+        hasEventAssociated = (in.readByte() == 'T');
 		if (hasEventAssociated) {
 			//TODO needs refactoring!!!
 			//myEvent = new AcalEvent(in);
@@ -281,7 +290,7 @@ public class AcalAlarm implements Serializable, Parcelable, Comparable<AcalAlarm
 			return new AcalAlarm[size];
 		}
 	};
-	
+
 	public long nextAlarmTime() {
 		return timeToFire.getMillis();
 	}
@@ -295,39 +304,53 @@ public class AcalAlarm implements Serializable, Parcelable, Comparable<AcalAlarm
 			return prettyTimeToFire();
 		}
 
-		return relativeTime.toPrettyString(relativeTo.toString().toLowerCase());
+		return relativeTime.toPrettyString(relativeTo.toString().toLowerCase(Locale.ENGLISH));
 	}
-	
+
 	/**
 	 * The following relate specifically to AlarmActivity/CDS
 	 */
 	public void snooze(AcalDuration howLong) {
-		isSnooze = true; 
+		isSnooze = true;
 		this.snoozeTime = AcalDateTime.addDuration(new AcalDateTime(), howLong);
 	}
-	
+
 	public void setEvent(EventInstance e) {
 		this.hasEventAssociated = true;
 		this.myEvent = e;
 	}
-	
+
 	public EventInstance getEvent() {
 		return this.myEvent;
 	}
-	
+
 	public boolean isSnooze() {
 		return this.isSnooze;
 	}
-	
+
 	public AcalDateTime getNextTimeToFire() {
 		if (!isSnooze) return timeToFire;
 		return snoozeTime;
 	}
-	
-	public void setToLocalTime() {
+
+	private void setToLocalTime() {
 		this.timeToFire.applyLocalTimeZone();
 		if (this.snoozeTime != null) this.snoozeTime.applyLocalTimeZone();
 	}
 
+	public AlarmRow toRow( Long resourceId, String recurrenceId) {
+        //the alarm needs to have event data associated
+        return new AlarmRow(
+                timeToFire.getMillis(),
+                resourceId,
+                recurrenceId,
+                blob
+            );
+
+	}
+
+    public String getBlob() {
+        return blob;
+    }
 }
 

@@ -35,13 +35,13 @@ import com.morphoss.acal.Constants;
  * <p>
  * Holds an iCalendar property with parameters and value
  * </p>
- * 
+ *
  * @author Morphoss Ltd
  *
  */
 public class AcalProperty {
 	public static final String TAG = "aCal AcalProperty";
-	private static boolean DEBUG = false; 
+	private static boolean DEBUG = false;
 	private static final Pattern valueReplaceEscaped = Pattern.compile("\\\\([,;'\"\\\\])");
 	private static final Pattern propertiesUnescaped = Pattern.compile(
 				"^(ATTACH|GEO|PERCENT-COMPLETE|PRIORITY|DURATION|FREEBUSY|TZOFFSETFROM|TZOFFSETTO|TZURL" +
@@ -51,15 +51,15 @@ public class AcalProperty {
 	private Map<String, String> params;
 	private boolean paramsPersistent = false;
 	private boolean paramsSet = false;
-	private String name;
-	private String value;
+	public final String name;
+	private final String value;
 	private String paramsBlob[];
 
 	// These parameters are quite common so we'll use string parameters
 	public final static String PARAM_VALUE = "VALUE";
 	public final static String PARAM_TYPE = "TYPE";
 	public final static String PARAM_TZID = "TZID";
-	
+
 	/**
 	 * Construct an AcalProperty object from a string, presumably culled from a VCOMPONENT
 	 * of some kind, such as a VEVENT or VCARD.
@@ -71,7 +71,7 @@ public class AcalProperty {
 		String tmpblob;
 		String value;
 		String[] paramsBlob;
-		
+
 		int splitPos = findNextUnescaped(':',0,blob);
 		if ( splitPos < blob.length() ) {
 			if ( (splitPos+1) == blob.length() ) {
@@ -97,7 +97,7 @@ public class AcalProperty {
 		String pblob = tmpblob;
 		while( pblob != null ) {
 			splitPos = findNextUnescaped(';',++splitPos,pblob);
-			
+
 			if ( splitPos < pblob.length() ) {
 				tmpblob = pblob.substring(0,splitPos);
 				pblob = ((splitPos+1) == pblob.length() ? null : pblob.substring(splitPos + 1));
@@ -112,9 +112,9 @@ public class AcalProperty {
 			else {
 				params.add(tmpblob);
 			}
-			
+
 		}
-		
+
 		paramsBlob = ( params.size() > 0 ? params.toArray(new String[params.size()]) : new String[0]);
 
 		if (name.equals("RECURRENCE-ID")) return new RecurrenceId(value,paramsBlob);
@@ -146,7 +146,7 @@ public class AcalProperty {
 	}
 
 	/**
-	 * Construct an AcalProperty from a name, value and array of parameters.  The parameters 
+	 * Construct an AcalProperty from a name, value and array of parameters.  The parameters
 	 * are unparsed strings.
 	 * @param name
 	 * @param value
@@ -225,7 +225,7 @@ public class AcalProperty {
 				Log.v(TAG,"Blob was'"+builder.toString()+"'");
 		}
 	}
-	
+
 	private synchronized void populateParams() {
 		if (paramsSet) return;
 		if ( params == null ) params = new HashMap<String,String>();
@@ -234,7 +234,7 @@ public class AcalProperty {
 				String[] param = paramsBlob[i].split("=");
 				if (param.length != 2) {
 					if (Constants.LOG_DEBUG) Log.d(TAG, "Error processing property: "+paramsBlob[i]);
-					
+
 				}
 				else {
 					params.put(param[0].toUpperCase(), param[1]);
@@ -243,12 +243,12 @@ public class AcalProperty {
 		}
 		this.paramsSet = true;
 	}
-	
+
 	private synchronized void destroyParams() {
 		if ( paramsPersistent || !paramsSet ) return;
 		this.params = null;
 		this.paramsSet = false;
-		
+
 		if ( DEBUG && Constants.LOG_VERBOSE ) {
 			Log.v(TAG,"Params destroyed for '"+name+"'");
 			Log.d(TAG, Log.getStackTraceString(new Exception()) );
@@ -307,7 +307,7 @@ public class AcalProperty {
 
 
 	/**
-	 * Return the property as an RFC formatted string, including line wrapping. 
+	 * Return the property as an RFC formatted string, including line wrapping.
 	 */
 	public synchronized String toString() {
 		return toRfcString();
@@ -317,7 +317,7 @@ public class AcalProperty {
 	 * <p>
 	 * Return the property as a String, hopefully replicating it's original format, apart from some
 	 * possible differences in the line wrapping algorithm used.  The string will be wrapped to ensure
-	 * all lines are length < 72 characters or less. 
+	 * all lines are length < 72 characters or less.
 	 * </p>
 	 */
 	public synchronized String toRfcString() {

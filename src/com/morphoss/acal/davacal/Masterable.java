@@ -123,14 +123,14 @@ public abstract class Masterable extends VComponent {
 	 * Get (or calculate) the end date for a VEVENT, VTODO or VJOURNAL.  Will use either the DTEND/DUE
 	 * or calculate based on DTSTART + DURATION.  If neither set can be satisfied (as might be the case
 	 * with a VTODO or VJOURNAL) it will return null.
-	 * 
+	 *
 	 * @return
 	 */
 	public AcalDateTime getEnd() {
 		AcalProperty aProp = getProperty( (this instanceof VTodo ? PropertyName.DUE : PropertyName.DTEND));
 		if ( aProp != null ) return AcalDateTime.fromAcalProperty(aProp);
 
-		AcalDateTime result = getStart(); 
+		AcalDateTime result = getStart();
 
 		AcalProperty dProp = getProperty(PropertyName.DURATION);
 		if ( dProp == null ) {
@@ -158,7 +158,7 @@ public abstract class Masterable extends VComponent {
 			if ( aProp == null ) return null;
 		}
 		if ( !(aProp instanceof RecurrenceId) ) {
-			aProp = new RecurrenceId(aProp); 
+			aProp = new RecurrenceId(aProp);
 		}
 		return (RecurrenceId) aProp;
 	}
@@ -169,7 +169,7 @@ public abstract class Masterable extends VComponent {
 	 * @return
 	 */
 	public ArrayList<AcalAlarm> getAlarms() {
-		ArrayList<AcalAlarm> alarms = new ArrayList<AcalAlarm>(); 
+		ArrayList<AcalAlarm> alarms = new ArrayList<AcalAlarm>();
 		try {
 			this.setPersistentOn();
 			populateChildren();
@@ -192,7 +192,37 @@ public abstract class Masterable extends VComponent {
 		return alarms;
 	}
 
-	
+
+    /**
+     * Retrieve a list of AcalAlarm from the VALARM components in this component, using
+     * override values of start / end.
+     * @return
+     */
+    public ArrayList<AcalAlarm> getAlarms(AcalDateTime overrideStart, AcalDateTime overrideEnd) {
+        ArrayList<AcalAlarm> alarms = new ArrayList<AcalAlarm>();
+        try {
+            this.setPersistentOn();
+            populateChildren();
+            List<VComponent> children = getChildren();
+            Iterator<VComponent> it = children.iterator();
+            while( it.hasNext() ) {
+                VComponent child = it.next();
+                if ( child instanceof VAlarm ) {
+                    try {
+                        alarms.add( new AcalAlarm((VAlarm) child, this, overrideStart, overrideEnd) );
+                    }
+                    catch( InvalidCalendarComponentException e ) {
+                        Log.i(TAG,"Ignoring invalid alarm.\n"+child.getCurrentBlob());
+                    }
+                }
+            }
+        }
+        catch (YouMustSurroundThisMethodInTryCatchOrIllEatYouException e) { }
+        this.setPersistentOff();
+        return alarms;
+    }
+
+
 	/**
 	 * Given a List of AcalAlarm's, make this Masterable have those as child components.
 	 * @param alarmList the list of alarms.
@@ -213,7 +243,7 @@ public abstract class Masterable extends VComponent {
 	public void addAlarmTimes( List<AcalAlarm> alarmList ) {
 		if ( alarmList != null && alarmList.size() > 0 ) {
 			for( AcalAlarm alarm : alarmList ) {
-				VAlarm vAlarm = ((AcalAlarm) alarm).getVAlarm(this);
+				VAlarm vAlarm = alarm.getVAlarm(this);
 				if ( Constants.debugVComponent ) Log.println(Constants.LOGD, TAG,
 						"Adding alarm component:\n"+vAlarm.getCurrentBlob());
 				//				addChild(vAlarm);
@@ -291,13 +321,13 @@ public abstract class Masterable extends VComponent {
 			Log.w(TAG,"Target recurrence is "+targetRecurrence+" and this is "+thisRecurrence, new Exception(""));
 		}
 		AcalDuration adjustmentDuration = thisRecurrence.when.getDurationTo(targetRecurrence.when);
-		
+
 		if ( adjustmentDuration.getDurationMillis() == 0L ) {
 			return;
 		}
 		setUniqueProperty(targetRecurrence);
 
-		AcalProperty startProp = getProperty(PropertyName.DTSTART); 
+		AcalProperty startProp = getProperty(PropertyName.DTSTART);
 		AcalDateTime targetRecurrenceTime;
 		if ( startProp != null ) {
 			targetRecurrenceTime = AcalDateTime.fromAcalProperty(startProp).addDuration(adjustmentDuration);

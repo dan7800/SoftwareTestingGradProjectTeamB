@@ -30,10 +30,9 @@ import java.util.regex.Pattern;
 import android.util.Log;
 
 import com.morphoss.acal.Constants;
-import com.morphoss.acal.database.alarmmanager.AlarmRow;
 import com.morphoss.acal.database.cachemanager.CacheObject;
+import com.morphoss.acal.dataservice.CalendarInstance;
 import com.morphoss.acal.dataservice.EventInstance;
-import com.morphoss.acal.davacal.AcalAlarm;
 import com.morphoss.acal.davacal.AcalProperty;
 import com.morphoss.acal.davacal.Masterable;
 import com.morphoss.acal.davacal.PropertyName;
@@ -421,42 +420,16 @@ public class AcalRepeatRule {
 	}
 
 	private final static AcalDateTime futureish = AcalDateTime.fromMillis(System.currentTimeMillis() + (86400000L*365L*10));
-
-	//TODO dirty hack to get alarms in range.
-	public void appendAlarmInstancesBetween(ArrayList<AlarmRow> alarmList, AcalDateRange range) {
-
-		List<EventInstance> events = new ArrayList<EventInstance>();
-		if ( this.sourceVCalendar.hasAlarm() ) {
-			if ( Constants.debugAlarms ) Log.println(Constants.LOGV,TAG,"Event has alarms");
-			this.appendEventsInstancesBetween(events, range, false);
-			for( EventInstance event : events ) {
-				for (AcalAlarm alarm : event.getAlarms()) {
-					alarm.setToLocalTime();
-					if ( Constants.debugAlarms && Constants.LOG_VERBOSE )
-						Log.println(Constants.LOGV,TAG,"Alarm next time to fire is "+alarm.getNextTimeToFire().fmtIcal());
-
-					if ( range.contains(alarm.getNextTimeToFire()) ) {
-						//the alarm needs to have event data associated
-						AlarmRow row = new AlarmRow(
-								alarm.getNextTimeToFire().applyLocalTimeZone().getMillis(),
-								event.getResourceId(),
-								event.getRecurrenceId(),
-								alarm.blob
-								);
-						alarmList.add(row);
-					}
-				}
-			}
-		}
-
-	}
-
 	public void appendCacheEventInstancesBetween(List<CacheObject> cacheList, AcalDateRange range) {
-		this.appendEventsInstancesBetween(cacheList, range, true);
+		this.privateAppendInstancesBetween(cacheList, range, true);
 	}
+
+    public void appendEventInstancesBetween(List<CalendarInstance> eventList, AcalDateRange range) {
+        this.privateAppendInstancesBetween(eventList, range, false);
+    }
 
 	@SuppressWarnings("unchecked")
-	private void appendEventsInstancesBetween( @SuppressWarnings("rawtypes") List eventList, AcalDateRange range, boolean cacheObjects) {
+    private void privateAppendInstancesBetween( @SuppressWarnings("rawtypes") List eventList, AcalDateRange range, boolean cacheObjects) {
 
 		if ( range.start == null || range.end == null || eventList == null ) return;
 
@@ -554,7 +527,7 @@ public class AcalRepeatRule {
 						Log.println(Constants.LOGV,TAG, "["+i+"] Start: " + AcalDateTime.fromMillis(thisOne.getStart()).fmtIcal() +
 								", End: " + AcalDateTime.fromMillis(thisOne.getEnd()).fmtIcal() );
 					} else {
-						EventInstance thisOne = (EventInstance)eventList.get(i);
+						CalendarInstance thisOne = (CalendarInstance)eventList.get(i);
 						Log.println(Constants.LOGV,TAG, "["+i+"] Start: " + thisOne.getStart().fmtIcal() + ", End: " + thisOne.getEnd().fmtIcal() );
 					}
 

@@ -18,33 +18,33 @@ import com.morphoss.acal.davacal.VCalendar;
 
 public class RRAlarmRowToAcalAlarm extends BlockingResourceRequestWithResponse<AcalAlarm> {
 
-	private AlarmRow row;
+	private final AlarmRow row;
 	public RRAlarmRowToAcalAlarm(AlarmRow row) {
 		this.row = row;
 	}
-	
+
 	@Override
 	public void process(WriteableResourceTableManager processor) throws ResourceProcessingException {
 		try {
 			Resource r = null;
-		
+
 			//first check to see if there is a pending version
 			ArrayList<ContentValues> res = processor.getPendingResources();
 			for (ContentValues cv : res) {
-				if (cv.getAsLong(ResourceTableManager.PEND_RESOURCE_ID) == row.getResourceId())  {
+				if (cv.getAsLong(ResourceTableManager.PEND_RESOURCE_ID) == row.resourceId)  {
 					r = Resource.fromContentValues(cv);
 					break;
 				}
 			}
-			if (r == null)  r = Resource.fromContentValues(processor.getResource(row.getResourceId()));
-			 
+			if (r == null)  r = Resource.fromContentValues(processor.getResource(row.resourceId));
+
 			VCalendar vc = (VCalendar) VCalendar.createComponentFromResource(r);
-			
-			Masterable master = vc.getChildFromRecurrenceId(RecurrenceId.fromString(row.getReccurenceId()));
+
+			Masterable master = vc.getChildFromRecurrenceId(RecurrenceId.fromString(row.recurrenceId));
 			ArrayList<AcalAlarm> alarms = master.getAlarms();
-			
+
 			for (AcalAlarm alarm : alarms) {
-				if (alarm.blob.equals(row.getBlob())) {
+				if (alarm.getBlob().equals(row.getBlob())) {
 					this.postResponse(new RRAlarmRowToAcalAlarmResponse(alarm));
 					return;
 				}
@@ -52,20 +52,20 @@ public class RRAlarmRowToAcalAlarm extends BlockingResourceRequestWithResponse<A
 		} catch (Exception e) { }
 		this.postResponse(new RRAlarmRowToAcalAlarmResponse(null));
 	}
-	
+
 	public class RRAlarmRowToAcalAlarmResponse extends ResourceResponse<AcalAlarm> {
 
-		private AcalAlarm result;
-		
+		private final AcalAlarm result;
+
 		public RRAlarmRowToAcalAlarmResponse (AcalAlarm result) {
 			this.result = result;
 		}
-		
+
 		@Override
 		public AcalAlarm result() {
 			return result;
 		}
-		
+
 	}
 
 }

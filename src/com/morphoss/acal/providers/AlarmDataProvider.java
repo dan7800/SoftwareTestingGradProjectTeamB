@@ -93,6 +93,7 @@ public class AlarmDataProvider extends ContentProvider {
 
 	//Table Fields - All other classes should use these constants to access fields.
     public static final String _ID = "_id";
+    public static final String BASE_TIME_TO_FIRE = "base_ttf";
     public static final String TIME_TO_FIRE = "ttf";
     public static final String RESOURCE_ID = "rid";
     public static final String RRID = "rrid";
@@ -226,6 +227,7 @@ public class AlarmDataProvider extends ContentProvider {
         if ( projection == null )
             projection = new String[] { DATABASE_TABLE + ".*" };
 
+        String qryString = sqlBuilder.buildQuery(projection, selection, selectionArgs, groupBy, null, sortOrder, null);
 		Cursor c = sqlBuilder.query(
 				mAcalDB,
 				projection,
@@ -236,8 +238,8 @@ public class AlarmDataProvider extends ContentProvider {
 				sortOrder);
 
 		if ( Constants.debugAlarms && Constants.LOG_DEBUG ) {
-		    Log.d(TAG, "Got "+c.getCount()+"results from\n"+
-		            sqlBuilder.buildQuery(projection, selection, selectionArgs, groupBy, null, sortOrder, null) );
+		    Log.d(TAG, "Got "+c.getCount()+" results from\n"+qryString );
+		    if ( qryString.equals("") ) Log.d(TAG,Log.getStackTraceString(new Exception()));
 		}
 		//---register to watch a content URI for changes---
 		c.setNotificationUri(getContext().getContentResolver(), uri);

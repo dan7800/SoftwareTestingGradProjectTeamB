@@ -380,33 +380,31 @@ public class AlarmQueueManager implements Runnable, ResourceChangedListener  {
 		public void rebuild() {
 			Log.i(TAG, "Clearing Alarm Cache of possibly corrupt data and rebuilding...");
 			//Display up to the last x hours of alarms.
-			AcalDateTime after = new AcalDateTime();
-            long currentMillis = after.getMillis();
-			after.addSeconds(-LOOKBACK_SECONDS);
-			long afterMillis = after.getMillis();
+			long lookForwardLimit = System.currentTimeMillis() + 86400000;
 
 			//Step 1 - request a list of all resources so we can find the next alarm trigger for each
-			RRGetUpcomingAlarms request = new RRGetUpcomingAlarms(after);
+			RRGetUpcomingAlarms request = new RRGetUpcomingAlarms();
 			rm.sendBlockingRequest(request);
 			ArrayList<AlarmRow> alarms = request.getResponse().result();
 			int count = 0;
-			//Create query List
+
+			//For each alarm check whether or not it has not been dismissed
 			DMQueryList list = new DMQueryList();
 			for (AlarmRow alarm : alarms) {
-			    if ( alarm.getTimeToFire() < afterMillis ) {
-                    Log.i(TAG,"Skipping alarm for "+(alarm.getTimeToFire() - System.currentTimeMillis())/1000+"s from now for "+alarm.getResourceId() );
-			        continue;
-			    }
-			    ArrayList<ContentValues> c = super.query(null, AlarmDataProvider.RESOURCE_ID+"="+alarm.getResourceId()+
-			            " AND " + AlarmDataProvider.RRID+"= '"+alarm.getReccurenceId() +"' " +
-			            " AND " + AlarmDataProvider.STATE +"="+ ALARM_STATE.DISMISSED.ordinal(), null, null);
-			    if ( c.isEmpty() && alarm.getTimeToFire() < currentMillis ) {
+			    ArrayList<ContentValues> dismissedAlarms
+			        = super.query(
+			                    new String[] {AlarmDataProvider.BASE_TIME_TO_FIRE },
+			                    AlarmDataProvider.RESOURCE_ID+"="+alarm.resourceId+
+            			            " AND " + AlarmDataProvider.RRID+"= '"+alarm.recurrenceId +"' " +
+            			            " AND " + AlarmDataProvider.BASE_TIME_TO_FIRE+"="+alarm.baseTimeToFire+
+            			            " AND " + AlarmDataProvider.STATE +"="+ ALARM_STATE.DISMISSED.ordinal(), null, null);
+			    if ( dismissedAlarms.isEmpty() /* && alarm.getTimeToFire() < lookForwardLimit */ ) {
     				list.addAction(new DMInsertQuery(null, alarm.toContentValues()));
     				count++;
-    				Log.i(TAG,"Alarm set for "+(alarm.getTimeToFire() - System.currentTimeMillis())/1000+"s from now for "+alarm.getResourceId() );
+    				Log.i(TAG,"Alarm set : "+alarm.toString() );
 			    }
 			    else {
-                    Log.i(TAG,"Skipping alarm for "+(alarm.getTimeToFire() - System.currentTimeMillis())/1000+"s from now for "+alarm.getResourceId() );
+                    Log.i(TAG,"Skipping  : "+alarm.toString() );
 			    }
 			}
 
@@ -426,28 +424,30 @@ public class AlarmQueueManager implements Runnable, ResourceChangedListener  {
 		 * Get the next alarm to go off
 		 * @return
 		 */
-		public AlarmRow getNextAlarm() {
+		public AlarmRow getNextAlarmFuture() {
 			ArrayList<ContentValues> res = super.query(null,
-					AlarmDataProvider.STATE +" = "+ALARM_STATE.PENDING.ordinal()
-			        +" OR "+
-			        AlarmDataProvider.STATE +" = "+ALARM_STATE.SNOOZED.ordinal(),
+                    AlarmDataProvider.STATE +" IN (" + ALARM_STATE.PENDING.ordinal() +
+                    ", " + ALARM_STATE.SNOOZED.ordinal() + " )",
 					null,
 					AlarmDataProvider.TIME_TO_FIRE+" ASC LIMIT 1");
-			if (res.isEmpty()) return null;
-			return AlarmRow.fromContentValues(res.get(0));
+			if (res.isEmpty()) {
+			    return null;
+			}
+			AlarmRow result = AlarmRow.fromContentValues(res.get(0));
+			if ( Constants.debugAlarms && Constants.LOG_DEBUG) Log.d(TAG,
+			        "getNextAlarm found: "+result.toString());
+			return result;
 		}
 
 		/**
 		 * Get the next alarm that is overdue or null. If null, then schedule next alarm intent.
 		 * @return
 		 */
-		public AlarmRow getNextDueAlarm() {
+		public AlarmRow getNextAlarmPast() {
 			ArrayList<ContentValues> res = super.query(null,
-					"("+AlarmDataProvider.STATE +" = " + ALARM_STATE.PENDING.ordinal() +
-						" OR " +
-						AlarmDataProvider.STATE +" = " + ALARM_STATE.SNOOZED.ordinal() +
-					" ) AND "+
-						AlarmDataProvider.TIME_TO_FIRE+" < " + System.currentTimeMillis(),
+					AlarmDataProvider.STATE +" IN (" + ALARM_STATE.PENDING.ordinal() +
+						", " + ALARM_STATE.SNOOZED.ordinal() + ") AND "+
+						AlarmDataProvider.BASE_TIME_TO_FIRE+" <= " + System.currentTimeMillis(),
 					null,
 					AlarmDataProvider.TIME_TO_FIRE+" ASC LIMIT 1");
 			if (res.isEmpty()) {
@@ -484,10 +484,15 @@ public class AlarmQueueManager implements Runnable, ResourceChangedListener  {
 		 * Schedule the next alarm intent - Should be called whenever there is a change to the db.
 		 */
 		public void scheduleAlarmIntent() {
-			AlarmRow next = getNextAlarm();
-			if (next == null) return; //nothing to schedule.
+			AlarmRow next = getNextAlarmFuture();
+			if (next == null) {
+	            if ( Constants.LOG_DEBUG && Constants.debugAlarms )
+	                Log.i(TAG, "No alarms scheduled.");
+			    return; //nothing to schedule.
+			}
 			long ttf = next.getTimeToFire();
-			Log.i(TAG, "Scheduled Alarm for "+ ((ttf-System.currentTimeMillis())/1000)+" Seconds from now.");
+			AcalDateTime ttfHuman = AcalDateTime.getInstance().setMillis(ttf);
+			Log.i(TAG, "Scheduling Alarm wakeup for "+ ((ttf - System.currentTimeMillis())/1000)+" seconds from now at "+ttfHuman.toString());
 			Intent intent = new Intent(context, AlarmActivity.class);
 			PendingIntent alarmIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_ONE_SHOT);
 			alarmManager.set(AlarmManager.RTC_WAKEUP, ttf, alarmIntent);
@@ -526,6 +531,8 @@ public class AlarmQueueManager implements Runnable, ResourceChangedListener  {
 			super.setTxSuccessful();
 			super.endTx();
 
+			if ( Constants.LOG_DEBUG && Constants.debugAlarms ) logAlarmQueue();
+
 			//schedule alarm intent
 			scheduleAlarmIntent();
 		}
@@ -559,7 +566,11 @@ public class AlarmQueueManager implements Runnable, ResourceChangedListener  {
 			        AlarmDataProvider.STATE+" = "+ALARM_STATE.DISMISSED.ordinal(),
 			        null,
 			        AlarmDataProvider.TIME_TO_FIRE+" DESC");
-			if (!cvs.isEmpty()) after = AcalDateTime.fromMillis(cvs.get(0).getAsLong(AlarmDataProvider.TIME_TO_FIRE));
+			if (!cvs.isEmpty()) {
+			    AcalDateTime lastDismissed = AcalDateTime.fromMillis(cvs.get(0).getAsLong(AlarmDataProvider.TIME_TO_FIRE));
+			    if ( lastDismissed.clone().addSeconds(30).after(after) )
+			        after = lastDismissed;
+			}
 
 			Resource r = Resource.fromContentValues(data);
 			VCalendar vc;
@@ -578,7 +589,7 @@ public class AlarmQueueManager implements Runnable, ResourceChangedListener  {
 				Log.w(TAG,"Couldn't create VCalendar from resource "+r.getResourceId()+":\n"+r.getBlob());
 				return;
 			}
-			vc.appendAlarmInstancesBetween(alarmList, new AcalDateRange(after, AcalDateTime.addDays(after, 7)));
+			vc.appendAlarmInstancesBetween(alarmList, alarmDateRange(after));
 
 			Collections.sort(alarmList);
 
@@ -603,8 +614,12 @@ public class AlarmQueueManager implements Runnable, ResourceChangedListener  {
 
 			super.processActions(list);
 		}
+
 	}
 
+    public static AcalDateRange alarmDateRange(AcalDateTime after) {
+        return new AcalDateRange(after, AcalDateTime.addDays(after, 21));
+    }
 
     public static void logCurrentAlarms(Context c) {
         getInstance(c).ATMinstance.logAlarmQueue();

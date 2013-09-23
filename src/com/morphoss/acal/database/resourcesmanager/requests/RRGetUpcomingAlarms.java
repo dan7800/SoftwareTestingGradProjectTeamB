@@ -8,8 +8,8 @@ import android.content.ContentValues;
 import android.util.Log;
 
 import com.morphoss.acal.Constants;
-import com.morphoss.acal.acaltime.AcalDateRange;
 import com.morphoss.acal.acaltime.AcalDateTime;
+import com.morphoss.acal.database.alarmmanager.AlarmQueueManager;
 import com.morphoss.acal.database.alarmmanager.AlarmRow;
 import com.morphoss.acal.database.resourcesmanager.ResourceManager;
 import com.morphoss.acal.database.resourcesmanager.ResourceManager.ReadOnlyResourceTableManager;
@@ -27,7 +27,11 @@ public class RRGetUpcomingAlarms extends ReadOnlyBlockingRequestWithResponse<Arr
 	private Map<Long,Collection> alarmCollections = null;
 	private AcalDateTime alarmsAfter = null;
 
-	public RRGetUpcomingAlarms(AcalDateTime after) {
+	public RRGetUpcomingAlarms() {
+	    this(new AcalDateTime());
+	}
+
+	private RRGetUpcomingAlarms(AcalDateTime after) {
 		super();
 		alarmsAfter = after.clone();
 	}
@@ -77,7 +81,7 @@ public class RRGetUpcomingAlarms extends ReadOnlyBlockingRequestWithResponse<Arr
 				Resource r = Resource.fromContentValues(cv);
 				try {
 					VCalendar vc = (VCalendar) VCalendar.createComponentFromResource(r);
-					vc.appendAlarmInstancesBetween(alarmList, new AcalDateRange(alarmsAfter, AcalDateTime.addDays(alarmsAfter, 7)));
+					vc.appendAlarmInstancesBetween(alarmList, AlarmQueueManager.alarmDateRange(alarmsAfter));
 				}
 				catch ( VComponentCreationException e ) {
 					// @todo Auto-generated catch block

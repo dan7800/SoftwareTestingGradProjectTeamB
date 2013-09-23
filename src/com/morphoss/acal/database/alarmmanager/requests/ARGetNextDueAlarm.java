@@ -16,7 +16,7 @@ public class ARGetNextDueAlarm extends BlockingAlarmRequestWithResponse<AlarmRow
 
 	@Override
 	public void process(AlarmTableManager processor) throws AlarmProcessingException {
-		AlarmRow res = processor.getNextDueAlarm();
+		AlarmRow res = processor.getNextAlarmPast();
 		this.postResponse(new ARGetNextAlarmResult(res));
 	}
 

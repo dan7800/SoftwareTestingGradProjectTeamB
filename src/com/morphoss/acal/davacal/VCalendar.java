@@ -30,11 +30,13 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
 
+import com.morphoss.acal.AcalApplication;
 import com.morphoss.acal.Constants;
 import com.morphoss.acal.acaltime.AcalDateRange;
 import com.morphoss.acal.acaltime.AcalDateTime;
 import com.morphoss.acal.acaltime.AcalRepeatRule;
 import com.morphoss.acal.acaltime.AcalRepeatRuleParser;
+import com.morphoss.acal.acaltime.UnrecognisedTimeZone;
 import com.morphoss.acal.activity.EventEdit;
 import com.morphoss.acal.database.alarmmanager.AlarmRow;
 import com.morphoss.acal.database.cachemanager.CacheManager;
@@ -43,19 +45,19 @@ import com.morphoss.acal.dataservice.CalendarInstance;
 
 public class VCalendar extends VComponent implements Cloneable {
 	public static final String TAG = "aCal VCalendar";
-	
+
 	/**
 	 * This holds the range of time which instances of this overlap, from the start of the
 	 * earliest instance through to the end of the last instance (or null if it continues
 	 * forever).
 	 */
 	private AcalDateRange calendarRange = null;
-	
+
 	/**
 	 * This holds the repeat rule.
 	 */
 	private AcalRepeatRule repeatRule = null;
-	
+
 	/**
 	 * This indicates whether the masterInstance has any overrides.  A single instance calendar
 	 * will never have this set.  A repeating calendar will not have this set unless there are
@@ -69,7 +71,7 @@ public class VCalendar extends VComponent implements Cloneable {
 
 	private Long collectionId = VComponent.VALUE_NOT_ASSIGNED;
 	private Long resourceId = VComponent.VALUE_NOT_ASSIGNED;
-	
+
 	public static final Pattern tzOlsonExtractor = Pattern.compile(".*((?:Antarctica|America|Africa|Atlantic|Asia|Australia|Indian|Europe|Pacific|US)/(?:(?:[^/\"]+)/)?[^/\"]+)\"?");
 	private static final String	TZNAME_UTC	= "UTC";
 
@@ -101,14 +103,16 @@ public class VCalendar extends VComponent implements Cloneable {
 		return new VCalendar(this.content, this.collectionId, this.resourceId, this.earliestStart, this.latestEnd, null);
 	}
 
-	
+
 	public String applyEventAction(CalendarInstance event, int action, int instances) throws InvalidCalendarActionException {
 
 		this.setEditable();
 		VEvent vEvent = (VEvent) this.getMasterChild();
 
+		AcalProperty sequence = vEvent.getProperty(PropertyName.SEQUENCE);
+
 		// first, strip any existing properties which we always modify
-		vEvent.removeProperties( new PropertyName[] {PropertyName.DTSTAMP, PropertyName.LAST_MODIFIED } );
+		vEvent.removeProperties( new PropertyName[] { PropertyName.DTSTAMP, PropertyName.LAST_MODIFIED } );
 
 		// change DTStamp
 		AcalDateTime lastModified = new AcalDateTime();
@@ -128,7 +132,7 @@ public class VCalendar extends VComponent implements Cloneable {
 		}
 	}
 
-	
+
 	private String doEdit(CalendarInstance calendarInstance, int instances) throws InvalidCalendarActionException {
 		Masterable childInstance = null;
 
@@ -137,7 +141,7 @@ public class VCalendar extends VComponent implements Cloneable {
 		}
 		else {
 			RecurrenceId rrid = RecurrenceId.fromString(calendarInstance.getRecurrenceId());
-			childInstance = getChildFromRecurrenceId(rrid); 
+			childInstance = getChildFromRecurrenceId(rrid);
 
 			RecurrenceId baseRecurrenceId = null;
 			try {
@@ -163,7 +167,7 @@ public class VCalendar extends VComponent implements Cloneable {
 		childInstance.addProperty( dtStart.asProperty(PropertyName.DTSTART));
 
 		AcalDateTime dtEnd = calendarInstance.getEnd();
-		if ( (dtEnd.getTimeZoneId() == null && dtStart.getTimeZoneId() == null) || 
+		if ( (dtEnd.getTimeZoneId() == null && dtStart.getTimeZoneId() == null) ||
 				(dtEnd.getTimeZoneId() != null && dtEnd.getTimeZoneId().equals(dtStart.getTimeZoneId())) )
 			childInstance.addProperty(calendarInstance.getDuration().asProperty(PropertyName.DURATION) );
 		else
@@ -191,7 +195,7 @@ public class VCalendar extends VComponent implements Cloneable {
 		return this.getCurrentBlob();
 	}
 
-	
+
 	private String doDelete(CalendarInstance calendarInstance, int instances ) throws InvalidCalendarActionException {
 		Masterable m = getMasterChild();
 		m.setEditable();
@@ -199,7 +203,7 @@ public class VCalendar extends VComponent implements Cloneable {
 		switch (instances) {
 			case EventEdit.INSTANCES_SINGLE:
 				AcalProperty exDate = m.getProperty(PropertyName.EXDATE);
-				if ( exDate == null || exDate.getValue().equals("") ) 
+				if ( exDate == null || exDate.getValue().equals("") )
 					exDate = AcalProperty.fromString(calendarInstance.getStart().toPropertyString(PropertyName.EXDATE));
 				else {
 					m.removeProperties( new PropertyName[] {PropertyName.EXDATE} );
@@ -217,7 +221,7 @@ public class VCalendar extends VComponent implements Cloneable {
 				m.removeProperties( new PropertyName[] {PropertyName.RRULE} );
 				m.addProperty(new AcalProperty(PropertyName.RRULE,rrule));
 				break;
-			
+
 			case EventEdit.INSTANCES_ALL:
 				return null;
 
@@ -229,7 +233,7 @@ public class VCalendar extends VComponent implements Cloneable {
 
 		return this.getCurrentBlob();
 	}
-					
+
 
 	/**
 	 * TODO - needs to be refactored
@@ -255,7 +259,7 @@ public class VCalendar extends VComponent implements Cloneable {
 			mast.addProperty( dtStart.asProperty(PropertyName.DTSTART));
 
 			AcalDateTime dtEnd = action.getEnd();
-			if ( (dtEnd.getTimeZoneId() == null && dtStart.getTimeZoneId() == null) || 
+			if ( (dtEnd.getTimeZoneId() == null && dtStart.getTimeZoneId() == null) ||
 					(dtEnd.getTimeZoneId() != null && dtEnd.getTimeZoneId().equals(dtStart.getTimeZoneId())) )
 				mast.addProperty(action.getDuration().asProperty(PropertyName.DURATION) );
 			else
@@ -297,7 +301,7 @@ public class VCalendar extends VComponent implements Cloneable {
 				}
 			}
 		}
-	
+
 		List<VComponent> removeChildren = new ArrayList<VComponent>();
 		for (VComponent child : getChildren() ) {
 			if ( child.name.equals(VComponent.VTIMEZONE) ) {
@@ -327,7 +331,7 @@ public class VCalendar extends VComponent implements Cloneable {
 		for(VComponent child : removeChildren ) {
 			this.removeChild(child);
 		}
-	
+
 		for ( String tzId : tzIdSet ) {
 			VTimezone vtz;
 			try {
@@ -345,7 +349,7 @@ public class VCalendar extends VComponent implements Cloneable {
 			catch ( UnrecognizedTimeZoneException e ) {
 				Log.i(TAG,"Unable to build a timezone for '"+tzId+"'");
 			}
-			
+
 		}
 	}
 
@@ -362,37 +366,48 @@ public class VCalendar extends VComponent implements Cloneable {
 		hasRepeatRule = ( repeatRule != null && repeatRule.repeatRule != AcalRepeatRule.SINGLE_INSTANCE );
 	}
 
-	public boolean appendAlarmInstancesBetween(ArrayList<AlarmRow> alarmList, AcalDateRange rangeRequested) {
+	public void appendAlarmInstancesBetween(ArrayList<AlarmRow> alarmList, AcalDateRange rangeRequested) {
+	    if ( !hasAlarm() ) return;
 		try {
-			if ( Constants.debugAlarms && Constants.LOG_DEBUG ) Log.println(Constants.LOGD, TAG, 
+			if ( Constants.debugAlarms && Constants.LOG_DEBUG ) Log.println(Constants.LOGD, TAG,
 					"Appending alarm instances for VCALENDAR (resourceId "+this.resourceId+") within "+rangeRequested);
 			if ( hasRepeatRule == null && repeatRule == null ) checkRepeatRule();
-			if ( !hasRepeatRule ) {
-				if ( this.hasAlarm() ) {
-					if ( Constants.debugAlarms ) Log.println(Constants.LOGV,TAG,"Event has alarms");
-					Masterable master = this.getMasterChild();
-					CalendarInstance instance = CalendarInstance.getInstance(master, this.collectionId, this.resourceId, master.getRecurrenceId() );
-	
-					for (AcalAlarm alarm : instance.getAlarms()) {
-						alarm.setToLocalTime();
-						if ( Constants.debugAlarms && Constants.LOG_VERBOSE )
-							Log.println(Constants.LOGV,TAG,"Alarm next time to fire is "+alarm.getNextTimeToFire().fmtIcal());
-	
-						if ( rangeRequested.contains(alarm.getNextTimeToFire()) ) {
-								//the alarm needs to have event data associated
-								AlarmRow row = new AlarmRow(
-										alarm.getNextTimeToFire().applyLocalTimeZone().getMillis(),
-										instance.getResourceId(),
-										instance.getRecurrenceId(),
-										alarm.blob
-										);
-								alarmList.add(row);
-							}
-						}
-					
-				}
-			}
-			else this.repeatRule.appendAlarmInstancesBetween(alarmList, rangeRequested);
+
+			Masterable master = this.getMasterChild();
+            if ( Constants.debugAlarms ) Log.println(Constants.LOGD,TAG,
+                    (hasRepeatRule?"Repeating":"Single")+
+                    "Event '"+master.getSummary()+"' has alarms:\n" +master.getCurrentBlob());
+
+            ArrayList<CalendarInstance> events = new ArrayList<CalendarInstance>();
+            if ( !hasRepeatRule ) {
+			    events.add(CalendarInstance.getInstance(master, this.collectionId, this.resourceId, master.getRecurrenceId() ));
+            }
+            else {
+                /**
+                 * For a repeating event we find any instances across a -1/+2 month period, and
+                 * then we check if alarms related to those instances might fall within the alarm
+                 * check range.
+                 *
+                 * The period seems like it might be overkill, but if someone has an alarm related
+                 * to a task they might want to check it got done sometime after it was supposed to.
+                 */
+                AcalDateTime eventRangeStart = rangeRequested.start.clone().addMonths(-1);
+                AcalDateTime eventRangeEnd   = rangeRequested.end.clone().addMonths(2);
+                repeatRule.appendEventInstancesBetween(events, new AcalDateRange(eventRangeStart, eventRangeEnd));
+            }
+
+            for( CalendarInstance instance : events ) {
+                if ( Constants.debugAlarms && Constants.LOG_DEBUG ) Log.println(Constants.LOGD,TAG,
+                        "Checking alarms on event instance from "+instance.getStart().fmtIcal()+" to "+instance.getEnd().fmtIcal());
+                for (AcalAlarm alarm : instance.getAlarms()) {
+                    if ( Constants.debugAlarms && Constants.LOG_DEBUG )
+                        Log.println(Constants.LOGD,TAG,"Alarm next time to fire is "+alarm.getNextTimeToFire().fmtIcal()
+                                +" is "+(rangeRequested.contains(alarm.getNextTimeToFire())?"":"not ")+"in range." );
+
+                    if ( rangeRequested.contains(alarm.getNextTimeToFire()) )
+                        alarmList.add(alarm.toRow(resourceId, instance.getRecurrenceId()));
+                }
+            }
 		}
 		catch( Exception e ) {
 			Log.i(TAG,"Error adding alarm instances for VCALENDAR (resourceId "+this.resourceId+"): "+e.getMessage());
@@ -400,10 +415,10 @@ public class VCalendar extends VComponent implements Cloneable {
 				Log.println(Constants.LOGD, TAG, Log.getStackTraceString(e)+"\nResource in error is:\n"+getCurrentBlob());
 			}
 		}
-		return true;
+
 	}
 
-	
+
 	public boolean appendCacheEventInstancesBetween(List<CacheObject> eventList, AcalDateRange rangeRequested ) {
 		try {
 			Masterable m = getMasterChild();
@@ -442,7 +457,7 @@ public class VCalendar extends VComponent implements Cloneable {
 			}
 			else
 				Log.println(Constants.LOGD,TAG, "VCalendar master instance was null for "+getEffectiveType());
-					
+
 		}
 		catch(Exception e) {
 			Log.println(Constants.LOGI,TAG,"Exception in RepeatRule handling: "+ Log.getStackTraceString(e)+"\n"+getCurrentBlob());
@@ -511,10 +526,10 @@ public class VCalendar extends VComponent implements Cloneable {
 	 * Will return a Masterable based on the master instance for this VCalendar, or the last overriding master
 	 * with a RANGE=THISANDFUTURE which is prior to the specified recurrence.  An exact override will always
 	 * be preferred.
-	 * 
+	 *
 	 * No check is made to ensure that the repetition rule for the master instance actually specifies whether
 	 * a recurrence should occur on the given time.  You're expected to know that already :-)
-	 *  
+	 *
 	 * @param recurrenceProperty
 	 * @return
 	 */
@@ -554,7 +569,7 @@ public class VCalendar extends VComponent implements Cloneable {
 			} catch (YouMustSurroundThisMethodInTryCatchOrIllEatYouException e) {
 				Log.w(TAG,Log.getStackTraceString(e));
 			} finally {
-				this.setPersistentOff();	
+				this.setPersistentOff();
 			}
 			if ( !recalculateTimes ) return override;
 			masterInstance = override;
@@ -581,19 +596,21 @@ public class VCalendar extends VComponent implements Cloneable {
 		if ( tzId.equals("Chennai") ) return "Asia/Mumbai";
 		return null;
 	}
-	
-	public static String staticGetOlsonName( String tzId ) {
+
+	public static String staticGetOlsonName( String tzId ) throws UnrecognisedTimeZone {
 		Matcher m = VCalendar.tzOlsonExtractor.matcher(tzId);
 		if ( m.matches() ) {
 			return m.group(1);
 		}
 		String aliasResult = checkKnownAliases(tzId);
 		if ( aliasResult != null ) return aliasResult;
-		Log.w(TAG,"Could not get Olson name from "+tzId, new Exception("Unrecognized Time Zone"));
-		return tzId;
+		aliasResult = AcalApplication.getOlsonFromAlias(tzId);
+        if ( aliasResult != null ) return aliasResult;
+		throw new UnrecognisedTimeZone("Unrecognized Time Zone '"+tzId+"'");
+//		return tzId;
 	}
 
-	
+
 	public String getOlsonName( String tzId ) {
 		Matcher m = VCalendar.tzOlsonExtractor.matcher(tzId);
 		if ( m.matches() ) {
@@ -602,6 +619,8 @@ public class VCalendar extends VComponent implements Cloneable {
 
 		String aliasResult = checkKnownAliases(tzId);
 		if ( aliasResult != null ) return aliasResult;
+        aliasResult = AcalApplication.getOlsonFromAlias(tzId);
+        if ( aliasResult != null ) return aliasResult;
 
 		if (childrenSet) {
 			for (VComponent vc : this.getChildren()) {
@@ -685,7 +704,7 @@ public class VCalendar extends VComponent implements Cloneable {
 								case 74:   return("Asia/Riyadh");
 								case 75:   return("Asia/Taipei");
 								case 76:   return("Australia/Sydney");
-								
+
 								case 57: // null
 								case 52: // null
 								default: // null
@@ -699,12 +718,12 @@ public class VCalendar extends VComponent implements Cloneable {
 		Log.w(TAG,"Could not get Olson name from "+tzId, new Exception("Unrecognized Time Zone"));
 
 		/**
-		 * @todo: We should 
+		 * @todo: We should
 		 */
 		return null; // We failed :-(
 	}
 
-	
+
 	public boolean hasAlarm() {
 		if ( this.hasAlarms != null ) return this.hasAlarms;
 		for( PartInfo childInfo : content.partInfo ) {
@@ -735,7 +754,7 @@ public class VCalendar extends VComponent implements Cloneable {
 		return false;
 	}
 
-	
+
 	public VCalendar(Parcel in) {
 		super(in);
 	}
@@ -753,11 +772,11 @@ public class VCalendar extends VComponent implements Cloneable {
 
 	public AcalDateRange getInstancesRange() {
 		if ( calendarRange != null ) return calendarRange;
-		
+
 		if ( hasRepeatRule == null && repeatRule == null ) checkRepeatRule();
 		if ( !hasRepeatRule ) {
 			Masterable m = getMasterChild();
-			AcalDateTime dtStart = m.getStart(); 
+			AcalDateTime dtStart = m.getStart();
 			earliestStart = (dtStart == null ? null : dtStart.applyLocalTimeZone().getMillis());
 			AcalDateTime dtEnd = m.getEnd();
 			latestEnd = (dtEnd == null ? null : dtEnd.applyLocalTimeZone().getMillis());

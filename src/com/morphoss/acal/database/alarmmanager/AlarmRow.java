@@ -14,36 +14,39 @@ import com.morphoss.acal.providers.AlarmDataProvider;
 public class AlarmRow implements Comparable<AlarmRow> {
 
 	private final long id;
-	private long time_to_fire;
-	private final long resource_id;
-	private final String recurrence_id;
+    public final long resourceId;
+    public final String recurrenceId;
+	public final long baseTimeToFire;
+    private long timeToFire;
 	private ALARM_STATE state;
 	private final String blob;
 	private static final long SNOOZE_MILLIS = 9*60*1000;
 
-	public AlarmRow(long id, long ttf, long rid, String rrid, ALARM_STATE state, String blob) {
+	public AlarmRow(long id, long base_ttf, long ttf, long rid, String rrid, ALARM_STATE state, String blob) {
 		this.id = id;
-		this.time_to_fire = ttf;
-		this.resource_id = rid;
-		this.recurrence_id = rrid;
+        this.baseTimeToFire = base_ttf;
+		this.timeToFire = ttf;
+		this.resourceId = rid;
+		this.recurrenceId = rrid;
 		this.state = state;
 		this.blob = blob;
 	}
 
 	public AlarmRow(long ttf, long rid, String rrid, ALARM_STATE state, String blob) {
-		this(-1,ttf, rid,rrid,state, blob);
+		this(-1, ttf, ttf, rid,rrid,state, blob);
 	}
 
 	public AlarmRow(long ttf, long rid, String rrid, String blob) {
-		this(-1,ttf, rid,rrid,ALARM_STATE.PENDING,blob);
+		this(-1, ttf, ttf, rid, rrid, ALARM_STATE.PENDING, blob);
 	}
 
 	public ContentValues toContentValues() {
 		ContentValues cv = new ContentValues();
 		if (id > 0) cv.put(AlarmDataProvider._ID, id);
-		cv.put(AlarmDataProvider.TIME_TO_FIRE, time_to_fire);
-		cv.put(AlarmDataProvider.RESOURCE_ID, resource_id);
-		cv.put(AlarmDataProvider.RRID, recurrence_id);
+		cv.put(AlarmDataProvider.BASE_TIME_TO_FIRE, baseTimeToFire);
+        cv.put(AlarmDataProvider.TIME_TO_FIRE, timeToFire);
+		cv.put(AlarmDataProvider.RESOURCE_ID, resourceId);
+		cv.put(AlarmDataProvider.RRID, recurrenceId);
 		cv.put(AlarmDataProvider.STATE, state.ordinal());
 		cv.put(AlarmDataProvider.BLOB, blob);
 		return cv;
@@ -55,9 +58,11 @@ public class AlarmRow implements Comparable<AlarmRow> {
 			cv = new ContentValues(cv);
 			cv.put(AlarmDataProvider._ID, -1);
 		}
-
+		Long baseTTF = cv.getAsLong(AlarmDataProvider.BASE_TIME_TO_FIRE);
+		if (baseTTF == null ) baseTTF = cv.getAsLong(AlarmDataProvider.TIME_TO_FIRE);
 		return new AlarmRow(
 				cv.getAsLong(AlarmDataProvider._ID),
+                baseTTF,
 				cv.getAsLong(AlarmDataProvider.TIME_TO_FIRE),
 				cv.getAsLong(AlarmDataProvider.RESOURCE_ID),
 				cv.getAsString(AlarmDataProvider.RRID),
@@ -71,18 +76,18 @@ public class AlarmRow implements Comparable<AlarmRow> {
 	public boolean equals(Object other) {
 	    if ( other == this ) return true;
 	    if ( ((AlarmRow)other).id == this.id ) return true;
-        if ( ((AlarmRow)other).resource_id == this.resource_id
-                && ((AlarmRow)other).recurrence_id.equals(this.recurrence_id)  ) return true;
+        if ( ((AlarmRow)other).resourceId == this.resourceId
+                && ((AlarmRow)other).recurrenceId.equals(this.recurrenceId)  ) return true;
 	    return false;
 	}
 
 	@Override
 	public int compareTo(AlarmRow another) {
-		return (int)(this.time_to_fire - another.time_to_fire);
+		return (int)(this.timeToFire - another.timeToFire);
 	}
 
 	public long getTimeToFire() {
-		return this.time_to_fire;
+		return this.timeToFire;
 	}
 
 	public void setState(ALARM_STATE state) {
@@ -94,31 +99,23 @@ public class AlarmRow implements Comparable<AlarmRow> {
 		return this.id;
 	}
 
-	public long getResourceId() {
-		return this.resource_id;
-	}
-
-	public String getReccurenceId() {
-		return this.recurrence_id;
-	}
-
 	public String getBlob() {
 		return this.blob;
 	}
 
     public void addSnooze() {
-        this.time_to_fire += SNOOZE_MILLIS;
+        this.timeToFire += SNOOZE_MILLIS;
     }
 
     @Override
     public String toString() {
         VAlarm va = (VAlarm) VAlarm.createComponentFromBlob(getBlob());
-        AcalDateTime fireAt = AcalDateTime.localTimeFromMillis(time_to_fire, false);
+        AcalDateTime fireAt = AcalDateTime.localTimeFromMillis(timeToFire, false);
         String summary = "Some kind of error occurred :-(";
         try {
             summary = ((VCalendar) VCalendar
                     .createComponentFromResource(
-                            AcalApplication.getResourceFromDatabase(this.resource_id)
+                            AcalApplication.getResourceFromDatabase(this.resourceId)
                         )
                     )
                     .getMasterChild()
@@ -127,6 +124,6 @@ public class AlarmRow implements Comparable<AlarmRow> {
         catch( Exception e) {
             Log.e("aCal", "Error", e);
         }
-        return String.format(Locale.ENGLISH, "%s %-8.8s %s", fireAt.fmtIcal(), state.toString(), summary);
+        return String.format(Locale.ENGLISH, "ID:%d %s %-8.8s %s", resourceId, fireAt.fmtIcal(), state.toString(), summary);
     }
 }

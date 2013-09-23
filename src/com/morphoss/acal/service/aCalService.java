@@ -34,6 +34,7 @@ import android.util.Log;
 
 import com.morphoss.acal.Constants;
 import com.morphoss.acal.R;
+import com.morphoss.acal.acaltime.AcalDateTime;
 import com.morphoss.acal.database.alarmmanager.AlarmQueueManager;
 import com.morphoss.acal.database.cachemanager.CacheManager;
 import com.morphoss.acal.database.resourcesmanager.ResourceManager;
@@ -41,24 +42,24 @@ import com.morphoss.acal.database.resourcesmanager.ResourceManager;
 public class aCalService extends IntentService {
 
 
-	private ServiceRequest.Stub serviceRequest = new ServiceRequestHandler();
+	private final ServiceRequest.Stub serviceRequest = new ServiceRequestHandler();
 	private WorkerClass worker;
 	public static final String TAG = "aCalService";
 	public static String aCalVersion = "aCal/1.0"; // Updated at start of program.
 	//public static final DatabaseEventDispatcher databaseDispatcher = new DatabaseEventDispatcher();
-	
+
 	private final static long serviceStartedAt = System.currentTimeMillis();
 	private ResourceManager rm;
 	private CacheManager cm;
 	private AlarmQueueManager am;
-	
+
 	private static SharedPreferences prefs = null;
 
 	public aCalService() {
 		super(TAG);
 	}
 
-	
+
 	public void onCreate() {
 		super.onCreate();
 
@@ -75,15 +76,15 @@ public class aCalService extends IntentService {
 		startService();
 	}
 
-	
+
 	private synchronized void startService() {
 
 		rm = ResourceManager.getInstance(this);
 		cm = CacheManager.getInstance(this);
 		am = AlarmQueueManager.getInstance(this);
-		
+
 		worker = WorkerClass.getInstance(this);
-				
+
 		// Schedule immediate sync of any changes to the server
 		worker.addJobAndWake(new SyncChangesToServer());
 
@@ -96,7 +97,7 @@ public class aCalService extends IntentService {
 		}
 	}
 
-	
+
 	// This is the old onStart method that will be called on the pre-2.0
 	// platform.  On 2.0 or later we override onStartCommand() so this
 	// method will not be called.
@@ -122,6 +123,9 @@ public class aCalService extends IntentService {
         scheduleServiceRestart(7200);
 
         if ( inRequest == null ) return;
+        if ( inRequest.hasExtra("RESTARTED") ) {
+            Log.i(TAG,AcalDateTime.getInstance().fmtIcal() + " This is a scheduled restart of aCalService");
+        }
 		if ( inRequest.hasExtra("UISTARTED") ) {
 			// The UI is currently starting, so we might schedule some stuff
 			// to happen soon.
@@ -132,6 +136,8 @@ public class aCalService extends IntentService {
 			if ( Constants.LOG_DEBUG )
 				Log.i(TAG,"UI Started, requesting internal cache revalidation.");
 
+			worker.resetWorker();
+
 			ServiceJob job = new SynchronisationJobs(SynchronisationJobs.CACHE_RESYNC);
 			job.TIME_TO_EXECUTE = 5000L;
 			worker.addJobAndWake(job);
@@ -141,7 +147,7 @@ public class aCalService extends IntentService {
 		}
 	}
 
-	
+
 
 	@Override
 	public void onDestroy() {
@@ -151,18 +157,19 @@ public class aCalService extends IntentService {
 		if ( worker != null ) worker.killWorker();
 		worker = null;
 		am.close();
+		am = null;
 		rm.close();
 		cm.close();
 		cm = null;
 		rm = null;
 		if (Constants.LOG_DEBUG) Log.println(Constants.LOGD,TAG, "Worker killed.");
 	}
-	
+
 
 
 	private synchronized void scheduleServiceRestart(long secsInFuture) {
 		long restartTime = System.currentTimeMillis() + (secsInFuture * 1000);
-		 
+
 		Intent serviceIntent = new Intent(this, aCalService.class);
 		serviceIntent.putExtra("RESTARTED", System.currentTimeMillis());
 
@@ -170,15 +177,15 @@ public class aCalService extends IntentService {
 		AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         alarmManager.cancel(ourFutureSelf);
 		alarmManager.set(AlarmManager.RTC_WAKEUP, restartTime, ourFutureSelf);
-		Log.i(TAG, "Scheduling aCalService restart in "+secsInFuture+" seconds.");
+		Log.i(TAG, AcalDateTime.getInstance().fmtIcal() + ": Scheduling aCalService restart in "+secsInFuture+" seconds.");
 	}
 
-	
+
 	//@Override
 	public IBinder onBind(Intent arg0) {
 		return serviceRequest;
 	}
-	
+
 	public void addWorkerJob(ServiceJob s) {
 		Runtime r = Runtime.getRuntime();
 		if ( ((r.totalMemory() * 100) / r.maxMemory()) > 115 ) {
@@ -196,12 +203,12 @@ public class aCalService extends IntentService {
 	}
 
 	public String getPreferenceString(String key, String defValue) {
-    	if ( prefs == null ) 
+    	if ( prefs == null )
     		prefs = PreferenceManager.getDefaultSharedPreferences(this);
     	return prefs.getString(key, defValue);
 	}
 
-	
+
 	private class ServiceRequestHandler extends ServiceRequest.Stub {
 
 		@Override
@@ -231,7 +238,7 @@ public class aCalService extends IntentService {
 		public void revertDatabase() throws RemoteException {
 			worker.addJobAndWake(new DebugDatabase(DebugDatabase.REVERT));
 		}
-		
+
 		public void saveDatabase() throws RemoteException {
 			worker.addJobAndWake(new DebugDatabase(DebugDatabase.SAVE));
 		}
@@ -261,7 +268,7 @@ public class aCalService extends IntentService {
         if (Constants.LOG_DEBUG) Log.println(Constants.LOGD, TAG, "Service starting via onHandleIntent()");
         startService();
 	}
-	
-	
+
+
 }
 

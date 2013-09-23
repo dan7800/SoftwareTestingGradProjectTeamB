@@ -23,6 +23,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -43,16 +44,16 @@ import com.morphoss.acal.dataservice.Resource;
  * This class uses Lazy, non persistent instantiation of its members to reduce memory footprint. If you plan
  * on performing multiple operations with the class it is advised that you setPerstenceOn first. This will
  * force this component and all children to retain their members, and then you can call setPersistenceOff
- * when finished to destroy them all. 
+ * when finished to destroy them all.
  * </p>
- * 
+ *
  * @author Morphoss Ltd
- * 
+ *
  */
 public abstract class VComponent implements Parcelable {
 
 	public static final String TAG = "aCal VComponent";
-	
+
 	public static final String			VCALENDAR			= "VCALENDAR";
 	public static final String			VCARD				= "VCARD";
 	public static final String			VEVENT				= "VEVENT";
@@ -60,37 +61,37 @@ public abstract class VComponent implements Parcelable {
 	public static final String			VJOURNAL			= "VJOURNAL";
 	public static final String			VALARM				= "VALARM";
 	public static final String			VTIMEZONE			= "VTIMEZONE";
-	
+
 	public static long VALUE_NOT_ASSIGNED = -1L;
 
 	public final String					name;
 
-	protected ComponentParts			content;	
-	
+	protected ComponentParts			content;
+
 	protected VComponent 				parent;
 
 	// Patterns used for matching begin:component and end:component lines. Note that we explicitly
 	// match the case choices since that is faster than using a case insensitive match
 	private static final Pattern myBegin = Pattern.compile("[Bb][Ee][Gg][Ii][Nn]:([A-Za-z]+)\\r?",
-				Pattern.MULTILINE  | Pattern.UNIX_LINES); 
+				Pattern.MULTILINE  | Pattern.UNIX_LINES);
 	private static final Pattern myEnd = Pattern.compile("[Ee][Nn][Dd]:([A-Za-z]+)\\r?(\\n|$)");
 
-	
+
 	// These members MUST remain private - if you must access them elsewhere create appropriate
-	// getters. To maintain consistency they should not be changed by external or child classes. 
+	// getters. To maintain consistency they should not be changed by external or child classes.
 	private List<VComponent> children = null;
 	protected boolean childrenSet = false;
-	private Map<String, AcalProperty> properties;
+	private Map<String, AcalPropertySet> properties;
 	protected boolean propertiesSet = false;
 	private int persistenceCount = 0;
-	
+
 	//Constructors and factory methods
 	/**
 	 * Constructor for child classes. Creates the VComponent and all its children from supplied ComponentParts
 	 * and (optional) parent.
-	 * 
+	 *
 	 * A null value for parent is reasonable and indicates that this is the root of this particular tree.
-	 * 
+	 *
 	 * @param splitter
 	 * @param parent
 	 */
@@ -106,13 +107,13 @@ public abstract class VComponent implements Parcelable {
 		if ( this.parent != null ) this.parent.addChild(this);
 		this.content = null;
 		this.children = new ArrayList<VComponent>();
-		this.properties = new HashMap<String,AcalProperty>();
+		this.properties = new HashMap<String,AcalPropertySet>();
 		this.childrenSet = true;
 		this.propertiesSet = true;
 	}
 
 	public synchronized static VComponent createComponentFromBlob(String blob) {
-		
+
 		// Remove all line spacing
 		// Very probably we should do this when we write it into the local database.
 		Matcher m = Constants.rfc5545UnWrapper.matcher(blob);
@@ -137,9 +138,9 @@ public abstract class VComponent implements Parcelable {
 			return new VGenericComponent(splitter,null);
 	}
 
-	
+
 	public synchronized static VComponent createComponentFromResource(Resource r) throws VComponentCreationException {
-		
+
 		// Remove all line spacing
 		// Very probably we should do this when we write it into the local database.
 		String blob = r.getBlob();
@@ -159,11 +160,11 @@ public abstract class VComponent implements Parcelable {
 		else
 			throw new VComponentCreationException("Only VCARD and VCALENDAR components may be created from a Resource.");
 	}
-	
+
 	/************************************
 	 * 			Public Methods			*
 	 ************************************/
-	 
+
 
 	public synchronized int size() {
 		if ( content != null ) return content.partInfo.size();
@@ -173,7 +174,7 @@ public abstract class VComponent implements Parcelable {
 		return answer;
 	}
 
-	
+
 	public synchronized List<VComponent> getChildren() {
 		this.populateChildren();
 		if ( persistenceCount == 0 ) {
@@ -184,22 +185,22 @@ public abstract class VComponent implements Parcelable {
 		return children;
 	}
 
-	
+
 	public synchronized VComponent getTopParent() {
 		VComponent cur = this;
 		while (cur.parent != null) cur=cur.parent;
 		return cur;
 	}
-	
+
 	/**
 	 * Explodes all data in this node and child nodes. Uses lots of memory, so be sure to call
 	 * Implode when done.
 	 */
-	
+
 	public synchronized void setPersistentOn() throws YouMustSurroundThisMethodInTryCatchOrIllEatYouException {
 		this.persistenceCount++;
 	}
-	
+
 	public synchronized void setPersistentOff() {
 		this.persistenceCount--;
 		if (persistenceCount == 0) {
@@ -207,7 +208,7 @@ public abstract class VComponent implements Parcelable {
 			this.destroyProperties();
 		} else if (this.persistenceCount < 0) throw new IllegalStateException("Persistence Count below 0 - NOT ALLOWED!");
 	}
-	
+
 	public synchronized void setEditable() {
 		if ( persistenceCount < 1000 ) {
 			this.persistenceCount = 100000;
@@ -232,7 +233,7 @@ public abstract class VComponent implements Parcelable {
 		return content.componentString;
 	}
 
-	
+
 	/**
 	 * This can be useful if you want the value of a unique property.  Otherwise, not so much.
 	 * @param name
@@ -241,8 +242,8 @@ public abstract class VComponent implements Parcelable {
 	public synchronized AcalProperty getProperty(String name) {
 		if (name == null) return null;
 		this.populateProperties();
-		if ( properties == null ) return null;
-		AcalProperty ret = properties.get(name.toUpperCase());
+		AcalProperty ret = null;
+		try { ret = properties.get(name).get(); } catch( NullPointerException npe ) {}
 		if (this.persistenceCount == 0) destroyProperties();
 		return ret;
 	}
@@ -260,9 +261,9 @@ public abstract class VComponent implements Parcelable {
 	 * This can be useful if you know you don't have two properties of the same name.
 	 * @return
 	 */
-	public synchronized Map<String,AcalProperty> getProperties() {
+	public synchronized Map<String,AcalPropertySet> getProperties() {
 		this.populateProperties();
-		Map<String,AcalProperty>ret = Collections.unmodifiableMap(properties);
+		Map<String,AcalPropertySet>ret = Collections.unmodifiableMap(properties);
 		if (this.persistenceCount == 0) this.destroyProperties();
 		return ret;
 	}
@@ -278,7 +279,7 @@ public abstract class VComponent implements Parcelable {
 		}
 		return ret;
 	}
-	
+
 	public synchronized  boolean containsProperty(AcalProperty property) {
 		this.populateProperties();
 		Set<String> propKeys = properties.keySet();
@@ -292,7 +293,7 @@ public abstract class VComponent implements Parcelable {
 		return false;
 	}
 
-	
+
 	public synchronized boolean containsPropertyKey(String name) {
 		if (name == null) return false;
 		if ( !propertiesSet ) {
@@ -305,15 +306,15 @@ public abstract class VComponent implements Parcelable {
 		}
 		return this.properties.containsKey(name.toUpperCase());
 	}
-	
-	
+
+
 	/****************************************
 	 * 			Protected Methods			*
 	 ****************************************/
 	public synchronized boolean isPersistenceOn() {
 		return this.persistenceCount > 0;
 	}
-	
+
 	private synchronized String buildContent() {
 		StringBuilder contentString = new StringBuilder("BEGIN:");
 		try {
@@ -322,9 +323,13 @@ public abstract class VComponent implements Parcelable {
 			this.populateChildren();
 			contentString.append(name);
 			contentString.append(Constants.CRLF);
-			for (String p : properties.keySet()) {
-				contentString.append(properties.get(p).toRfcString());
-				contentString.append(Constants.CRLF);
+			AcalPropertySet pSet;
+			for (Entry<String,AcalPropertySet> pSetEntry: properties.entrySet() ) {
+			    pSet = pSetEntry.getValue();
+			    for( AcalProperty p : pSet ) {
+    				contentString.append(p.toRfcString());
+    				contentString.append(Constants.CRLF);
+			    }
 			}
 			StringBuilder timezonesString = new StringBuilder();
 			StringBuilder componentsString = new StringBuilder();
@@ -352,10 +357,10 @@ public abstract class VComponent implements Parcelable {
 		return contentString.toString();
 	}
 
-	
+
 	/**
 	 * Will always return a string, in response to a request for the value of a property. That
-	 * will be the empty string if the property does not exist, or the like. 
+	 * will be the empty string if the property does not exist, or the like.
 	 * @param propertyName
 	 * @return A string which is the value of the property, or empty, if the property is not set.
 	 */
@@ -370,10 +375,10 @@ public abstract class VComponent implements Parcelable {
 		return propertyValue;
 	}
 
-	
+
 	/**
 	 * Will always return a string, in response to a request for the value of a property. That
-	 * will be the empty string if the well-known property does not exist, or the like. 
+	 * will be the empty string if the well-known property does not exist, or the like.
 	 * @param pName
 	 * @return A string which is the value of the well-known property, or empty, if the property is not set.
 	 */
@@ -413,14 +418,14 @@ public abstract class VComponent implements Parcelable {
 
 	protected synchronized void populateProperties() {
 		if (propertiesSet) return;
-		properties = new HashMap<String,AcalProperty>(content.propertyLines.length);
+		properties = new HashMap<String,AcalPropertySet>(content.propertyLines.length);
 		if (properties == null) {
 			Log.e(TAG, "Somehow an object that was just instatiated is null????");
 		}
 		for( int i=0; i < content.propertyLines.length; i++ ) {
 			AcalProperty p = AcalProperty.fromString(content.propertyLines[i]);
 			try {
-				properties.put(p.getName(), p);
+				properties.put(p.getName(),new AcalPropertySet(p));
 			}
 			catch ( Exception e ) {
 				Log.i(TAG,Log.getStackTraceString(e));
@@ -429,9 +434,9 @@ public abstract class VComponent implements Parcelable {
 		this.propertiesSet = true;
 		return;
 	}
-	
-	
-	
+
+
+
 	protected synchronized void destroyProperties() {
 		if ( content == null ) content = new ComponentParts(buildContent());
 		this.propertiesSet = false;
@@ -445,7 +450,7 @@ public abstract class VComponent implements Parcelable {
 	 * a mysterious string.  This really isn't going to work without the string, of course, which is
 	 * held in the ComponentParts class.
 	 * </p>
-	 * 
+	 *
 	 * @author Morphoss Ltd
 	 *
 	 */
@@ -453,13 +458,13 @@ public abstract class VComponent implements Parcelable {
 		public final String type;
 		public final int begin;
 		public final int end;
-		
+
 		public PartInfo( final String typeName, final int startPos, final int endPos ) {
 			type = typeName.toUpperCase();
 			begin = startPos;
 			end = endPos;
 		}
-		
+
 		public String getComponent( final String blob ) {
 			if ( begin < 0 || end > blob.length() || end < begin ) {
 				throw new IllegalArgumentException("(0 <= begin <= end <= string length) must be true!");
@@ -473,7 +478,7 @@ public abstract class VComponent implements Parcelable {
 	 * Splits the component up into an array of properties (Strings) and an array of componentinfo, which is the
 	 * name of the sub-component and the string offsets into the original componentString.
 	 * </p>
-	 * 
+	 *
 	 * @author Morphoss Ltd
 	 *
 	 */
@@ -482,7 +487,7 @@ public abstract class VComponent implements Parcelable {
 		public final List<PartInfo> partInfo;
 		public final String componentString;
 		public final String thisComponent;
-		
+
 		ComponentParts( final String blob ) {
 			this.componentString = blob;
 //			Log.w(TAG,"vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv");
@@ -543,7 +548,7 @@ public abstract class VComponent implements Parcelable {
 			}
 			else
 				propertyLines = new String[0];
-			
+
 //			for( String line : propertyLines ) {
 //				Log.w(TAG,thisComponent+">>>"+line.replace("\r", "\\r"));
 //			}
@@ -554,7 +559,7 @@ public abstract class VComponent implements Parcelable {
 //			Log.w(TAG,"^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
 		}
 	}
-	
+
 	public String getCurrentBlob() {
 		// We have to assume the caller already did the necessary setPersistent() & populate things.
 		return buildContent();
@@ -567,7 +572,7 @@ public abstract class VComponent implements Parcelable {
 		}
 		return this.children.add(child);
 	}
-	
+
 	public synchronized boolean removeChild(VComponent child) {
 		if (!childrenSet) {
 			this.persistenceCount++;
@@ -575,21 +580,29 @@ public abstract class VComponent implements Parcelable {
 		}
 		return this.children.remove(child);
 	}
-	
+
 	public AcalProperty addProperty(AcalProperty property) {
 		if (!propertiesSet) {
 			this.persistenceCount++;
 			populateProperties();
 		}
-		return this.properties.put(property.getName(), property);
+
+		if ( properties.containsKey(property.name) )
+		    properties.get(property.name).add(property);
+		else
+		    properties.put(property.name, new AcalPropertySet(property));
+
+		return property;
 	}
-	
-	public AcalProperty removeProperty(String name) {
+
+	public void removeProperty(String name) {
 		if (!propertiesSet) {
 			this.persistenceCount++;
 			populateProperties();
 		}
-		return this.properties.remove(name);
+        if ( properties.containsKey(name) )
+            properties.remove(name);
+
 	}
 
 	public AcalProperty setUniqueProperty(AcalProperty property) {
@@ -598,9 +611,9 @@ public abstract class VComponent implements Parcelable {
 			populateProperties();
 		}
 		this.properties.remove(property.getName());
-		return this.properties.put(property.getName(), property);
+		return this.addProperty(property);
 	}
-	
+
 	public void removeProperties( PropertyName[] propertyNames ) {
 		if (!propertiesSet) {
 			this.persistenceCount++;
