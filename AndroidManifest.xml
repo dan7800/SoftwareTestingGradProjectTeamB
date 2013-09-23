@@ -375,11 +375,16 @@
 			<intent-filter>
 				<action android:name="android.intent.action.VIEW" />
 				<category android:name="android.intent.category.DEFAULT" />
-				<data android:scheme="content" />
-				<data android:scheme="file" />
-				<data android:scheme="http" />
+				<data
+					android:pathPattern=".*\\.ics"
+					android:scheme="content" />
+				<data
+					android:pathPattern=".*\\.ics"
+					android:scheme="file" />
+				<data
+					android:pathPattern=".*\\.ics"
+					android:scheme="http" />
 				<data android:scheme="webcal" />
-				<data android:mimeType="application/ics" />
 				<data android:mimeType="text/calendar" />
 				<!-- the next two lines aren't working atm -->
 				<data
