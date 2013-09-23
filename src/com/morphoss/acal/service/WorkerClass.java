@@ -139,8 +139,8 @@ public class WorkerClass implements Runnable {
 			}
 
 		}
+        jobQueue.add(s);
 		if ( Constants.LOG_DEBUG ) Log.println(Constants.LOGD, TAG, "New job added " + s);
-		jobQueue.add(s);
 	}
 
 	
@@ -212,6 +212,7 @@ public class WorkerClass implements Runnable {
 	}
 
 	private void destroyTimers() {
+	    try {
 		// Destroy all timer activity
 		if ( myTimerTask != null ) {
 			myTimerTask.cancel();
@@ -225,6 +226,9 @@ public class WorkerClass implements Runnable {
 		else {
 			if ( Constants.LOG_VERBOSE ) Log.v(TAG, "Asked to destroy timers, but no timers are set!");
 		}
+	    }
+	    catch( NullPointerException npe ) {
+	    }
 	}
 
 	public void run() {
