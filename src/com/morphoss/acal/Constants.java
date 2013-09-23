@@ -28,7 +28,7 @@ import com.morphoss.acal.xml.DavParserFactory.PARSEMETHOD;
 
 /**
  * Constants class for keeping Global constant values.
- * 
+ *
  * @author Morphoss Ltd
  *
  */
@@ -41,7 +41,7 @@ public class Constants {
 	public static final long SERVICE_WORKER_GRACE_PERIOD = 1000*60*60*1;		//Amount of time we will allow worker to be 'late' before assuming its hung
 
 	/** Generally useful patterns */
-	public static final Pattern lineSplitter = Pattern.compile("\\r?\\n"); 
+	public static final Pattern lineSplitter = Pattern.compile("\\r?\\n");
 	public static final Pattern rfc5545UnWrapper = Pattern.compile("\r?\n ",Pattern.DOTALL);
 	public final static Pattern splitOnCommas = Pattern.compile(",");
 	public static final Pattern	matchSegmentName	= Pattern.compile("([^/]+)$");
@@ -67,44 +67,45 @@ public class Constants {
 	public static final int LOGI = Log.INFO;
 	public static final int LOGW = Log.WARN;
 	public static final int LOGE = Log.ERROR;
-/*/	
+/*/
 	/** And sometimes we want to really deeply debug specific bits */
-	public static final boolean		debugRepeatRule					= false && DEBUG_MODE;
-	public static final boolean		debugCalendar					= false && DEBUG_MODE;
-	public static final boolean		debugSyncChangesToServer		= false && DEBUG_MODE;
-	public static final boolean		debugSyncCollectionContents		= false && DEBUG_MODE;
-	public static final boolean		debugMonthView					= false && DEBUG_MODE;
-	public static final boolean		debugWeekView					= false && DEBUG_MODE;
-	public static final boolean		debugVComponent					= false && DEBUG_MODE;
-	public static final boolean		debugDateTime					= false && DEBUG_MODE;
-	public static boolean		debugDavCommunication			= false && DEBUG_MODE;
-	public static final boolean		debugAlarms						= false && DEBUG_MODE;
-	public static final boolean		debugHeap						= false && DEBUG_MODE;
-	public static final boolean		debugCheckServerDialog			= false && DEBUG_MODE;
-	public static final boolean		debugTheming					= false && DEBUG_MODE;
-	public static final boolean		debugDatabaseManager			= false && DEBUG_MODE;
-	public static final boolean		debugWidget						= false && DEBUG_MODE;
-	public static final boolean		debugSaxParser					= false && DEBUG_MODE;
-	
+	public static final boolean    debugRepeatRule             = false && DEBUG_MODE;
+	public static final boolean    debugCalendar               = false && DEBUG_MODE;
+	public static final boolean    debugSyncChangesToServer    = false && DEBUG_MODE;
+	public static final boolean    debugSyncCollectionContents = false && DEBUG_MODE;
+	public static final boolean    debugMonthView              = false && DEBUG_MODE;
+	public static final boolean    debugWeekView               = false && DEBUG_MODE;
+	public static final boolean    debugEvents                 = false && DEBUG_MODE;
+	public static final boolean    debugVComponent             = false && DEBUG_MODE;
+	public static final boolean    debugDateTime               = false && DEBUG_MODE;
+	public static       boolean    debugDavCommunication       = false && DEBUG_MODE;
+	public static final boolean    debugAlarms                 = false && DEBUG_MODE;
+	public static final boolean    debugHeap                   = false && DEBUG_MODE;
+	public static final boolean    debugCheckServerDialog      = false && DEBUG_MODE;
+	public static final boolean    debugTheming                = false && DEBUG_MODE;
+	public static final boolean    debugDatabaseManager        = false && DEBUG_MODE;
+	public static final boolean    debugWidget                 = false && DEBUG_MODE;
+	public static final boolean    debugSaxParser              = false && DEBUG_MODE;
+	public static final boolean    debugTimeZone               = false && DEBUG_MODE;
+
 	public static boolean DISABLE_FEATURE_WEBDAV_SYNC				= false && DEBUG_MODE;
 	public static boolean DISABLE_FEATURE_CURRENT_PRINCIPAL			= false && DEBUG_MODE;
 	public static boolean DISABLE_FEATURE_TZSERVER_SUPPORT			= true && DEBUG_MODE;
 
 	public static final long DEFAULT_MAX_AGE_WIFI = 1000*60*30;		// The default to use when initialising a new collection
 	public static final long DEFAULT_MAX_AGE_3G = 1000*60*60*2;		// The default to use when initialising a new collection
-	
+
 	public static final String	NS_DAV							= "DAV:";
 	public static final String	NS_CALDAV						= "urn:ietf:params:xml:ns:caldav";
 	public static final String	NS_CARDDAV						= "urn:ietf:params:xml:ns:carddav";
 	public static final String	NS_ACAL							= "urn:com:morphoss:acal";
-	public static final String	NS_CALENDARSERVER				= "http://calendarserver.org/ns/";
 	public static final String	NS_ACALCONFIG					= "urn:com:morphoss:acalconfig";
 	public static final String	NS_ICAL							= "http://apple.com/ns/ical/";
 
 	public static final String	CRLF	= "\r\n";
-	
+
 	public static final String URLEncoding = "utf-8";
-	
+
 	public static final PARSEMETHOD	XMLParseMethod	= DavParserFactory.PARSEMETHOD.SAX;
-	
+
 }
