@@ -44,10 +44,10 @@ import com.morphoss.acal.database.AcalDBHelper;
  * <li>content://cache/approve - Can only be used with update(), approves all changes since transaction started.</li>
  * <li>content://cache/commit - Ends transaction. Changes are only commited if transaction has been approved.</li>
  * <li>content://cache/# - A specific instance of a cached event</li>
- * <li>content://cache/uid/* - All cached events for a specific source event</li>
- * <li>content://cache/between/x/y - All cached events between x and y</li>
+ * <li>content://cache/resource/# - All cached events for a specific source event</li>
+ * <li>content://cache/meta/* - Query/Write the cache metadata</li>
  * </ul>
- * 
+ *
  * @author Morphoss Ltd
  *
  */
@@ -61,13 +61,14 @@ public class CacheDataProvider extends ContentProvider {
     //Database + Table
     private SQLiteDatabase mAcalDB;
     static final String DATABASE_TABLE = "event_cache";
+    static final String QUERY_TABLE = "dav_server LEFT JOIN dav_collection ON (dav_server._id=dav_collection.server_id) " +
+    		"LEFT JOIN event_cache ON (dav_collection._id=event_cache.collection_id)";
     static final String META_TABLE = "event_cache_meta";
 
     //Path definitions
     private static final int ROOT = 0;
     private static final int ALLSETS = 1;
     private static final int ROW_ID_SET = 2;
-    private static final int DATE_RANGE_SET = 3;
     private static final int RESOURCE_ID_SET = 4;
     private static final int BEGIN_TRANSACTION = 5;
     private static final int END_TRANSACTION = 6;
@@ -79,7 +80,6 @@ public class CacheDataProvider extends ContentProvider {
     static{
          uriMatcher.addURI(AUTHORITY, null, ALLSETS);
          uriMatcher.addURI(AUTHORITY, "#", ROW_ID_SET);
-         uriMatcher.addURI(AUTHORITY, "between/*/*", DATE_RANGE_SET);
          uriMatcher.addURI(AUTHORITY, "resource/*", RESOURCE_ID_SET);
          uriMatcher.addURI(AUTHORITY, "meta", META_QUERY);
          uriMatcher.addURI(AUTHORITY, "begin", BEGIN_TRANSACTION);
@@ -203,8 +203,8 @@ public class CacheDataProvider extends ContentProvider {
 			String[] selectionArgs, String sortOrder) {
 
 		SQLiteQueryBuilder sqlBuilder = new SQLiteQueryBuilder();
-		sqlBuilder.setTables(DATABASE_TABLE);
-		
+		sqlBuilder.setTables(QUERY_TABLE);
+
 		String groupBy = null;
         switch ( uriMatcher.match(uri) ) {
             case ROW_ID_SET:
@@ -217,18 +217,13 @@ public class CacheDataProvider extends ContentProvider {
                 sqlBuilder.appendWhere(RESOURCE_ID + " = " + uri.getPathSegments().get(1));
                 break;
 
-            case DATE_RANGE_SET:
-                long start = Long.parseLong(uri.getPathSegments().get(1));
-                long end = Long.parseLong(uri.getPathSegments().get(2));
-
-                //---if getting a particular date range ---
-                sqlBuilder.appendWhere(DTEND + " >= " + start);
-                sqlBuilder.appendWhere(DTSTART + " < " + end);
-                break;
-
             case META_QUERY:
                 sqlBuilder.setTables(META_TABLE);
+                if ( projection == null )
+                    projection = new String[] { META_TABLE + ".*" };
         }
+        if ( projection == null )
+            projection = new String[] { DATABASE_TABLE + ".*" };
 
 		Cursor c = sqlBuilder.query(
 				mAcalDB,
@@ -299,7 +294,7 @@ public class CacheDataProvider extends ContentProvider {
     				if (mAcalDB.inTransaction()) return 0;
     				mAcalDB.beginTransaction();
     				return 1;
-    
+
     		case END_TRANSACTION:	//Return 1 for success or 0 for failure
     			//We are ending an existing transaction only
     			if (!mAcalDB.inTransaction()) return 0;
@@ -315,7 +310,7 @@ public class CacheDataProvider extends ContentProvider {
                 break;
     		default: throw new IllegalArgumentException( "Unknown URI " + uri);
 		}
-		
+
 		getContext().getContentResolver().notifyChange(uri, null);
 		return count;
 	}

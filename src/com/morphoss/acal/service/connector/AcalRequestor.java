@@ -72,7 +72,7 @@ public class AcalRequestor {
 	private static final int	LONG_LINE_WRAP_FOR_DEBUG	= 500;
 
 	private boolean initialised = false;
-	
+
 	// Basic URI components
 	private String hostName = null;
 	private String path = null;
@@ -82,7 +82,7 @@ public class AcalRequestor {
 
 	// Authentication crap.
 	private boolean authRequired = false;
-	private int authType  = Servers.AUTH_NONE; 
+	private int authType  = Servers.AUTH_NONE;
 //	private Header wwwAuthenticate = null;
 	private String authRealm = null;
 	private String nonce = null;
@@ -94,7 +94,7 @@ public class AcalRequestor {
 
 	private String username = null;
 	private String password = null;
-	
+
 	private HttpParams httpParams;
 	private HttpClient httpClient;
 	private ThreadSafeClientConnManager connManager;
@@ -102,7 +102,7 @@ public class AcalRequestor {
 	private int statusCode = -1;
 	private int connectionTimeOut = 30000;
 	private int socketTimeOut = 60000;
-	private int redirectLimit = 5;
+	private final int redirectLimit = 5;
 	private int redirectCount = 0;
 
 	private DavRequest		request  = null;
@@ -113,11 +113,11 @@ public class AcalRequestor {
 
 	public final static String PROTOCOL_HTTP = "http";
 	public final static String PROTOCOL_HTTPS = "https";
-	
+
 	/**
 	 * Construct an uninitialised AcalRequestor.  After calling this you will need to
 	 * initialise things by either calling setFromServer() or interpretUriString() before
-	 * you will be able to make a request. 
+	 * you will be able to make a request.
 	 */
 	public AcalRequestor() {
 		debugThisRequest = Constants.debugDavCommunication;
@@ -126,7 +126,7 @@ public class AcalRequestor {
 	public void enableDebugging() {
 		debugThisRequest = true;
 	}
-	
+
 	/**
 	 * Construct a new contentvalues from these path components.
 	 * @param hostIn
@@ -149,7 +149,7 @@ public class AcalRequestor {
 	/**
 	 * Construct a new AcalRequestor from the values in a ContentValues which has been read
 	 * from a Server row in the database.  In this case the hostname / path will be set from
-	 * the 'simple' configuration values.
+	 * the 'simple' configuration values, and as such should only be used by configuration code.
 	 * @param cvServerData
 	 * @return
 	 */
@@ -173,11 +173,24 @@ public class AcalRequestor {
 		return result;
 	}
 
+    /**
+     * Adjust the current URI values to align with those in a ContentValues which has been read
+     * from a Server row in the database.  The path will be set to the principal-path value
+     * so you may need to specify a different path on the actual request(s).
+     *
+     * @param cvServerData
+     */
+    public void applyFromServer( ContentValues cvServerData ) {
+        applyFromServer(cvServerData,false);
+    }
 
 	/**
 	 * Adjust the current URI values to align with those in a ContentValues which has been read
 	 * from a Server row in the database.  The path will be set to the principal-path value
-	 * so you may need to specify a different path on the actual request(s)
+	 * so you may need to specify a different path on the actual request(s).
+	 *
+     * Unless you're configuring the server you should probably use AcalRequestor.fromServerValues(serverData) or applyFromServer(serverData).
+
 	 * @param cvServerData
 	 * @param simpleSetup true/false whether to use only the 'simple' values to initialise from
 	 */
@@ -193,14 +206,14 @@ public class AcalRequestor {
 		else {
 			setHostName(cvServerData.getAsString(Servers.HOSTNAME));
 			setPath(cvServerData.getAsString(Servers.PRINCIPAL_PATH));
-	
+
 			String portString = cvServerData.getAsString(Servers.PORT);
 			int tmpPort = 0;
 			if ( portString != null && portString.length() > 0 ) tmpPort = Integer.parseInt(portString);
 			setPortProtocol(tmpPort, cvServerData.getAsInteger(Servers.USE_SSL));
-	
+
 			setAuthType(cvServerData.getAsInteger(Servers.AUTH_TYPE));
-	
+
 		}
 		if ( hostName == null ) hostName = "invalid";
 		if ( path == null ) path = "/";
@@ -212,7 +225,7 @@ public class AcalRequestor {
 		if ( !initialised ) initialise();
 	}
 
-	
+
 	private void initialise() {
 		httpParams = AcalConnectionPool.defaultHttpParams(socketTimeOut, connectionTimeOut);
 		connManager = AcalConnectionPool.getHttpConnectionPool();
@@ -234,9 +247,9 @@ public class AcalRequestor {
 		cvServerData.put(Servers.AUTH_TYPE, authType );
 	}
 
-	
+
 	/**
-	 * Retrieve the HTTP headers received with the most recent response. 
+	 * Retrieve the HTTP headers received with the most recent response.
 	 * @return
 	 */
 	public Header[] getResponseHeaders() {
@@ -256,9 +269,9 @@ public class AcalRequestor {
 	 * If the URI only matches a path part then protocol/host/port will be unchanged. This call
 	 * will only allow for path parts that are anchored to the web root.  This is used internally
 	 * for following Location: redirects.
-	 * 
+	 *
 	 * This is also used to interpret the 'path' parameter to the request calls generally.
-	 * 
+	 *
 	 * @param uriString
 	 */
 	public void interpretUriString(String uriString) {
@@ -274,10 +287,10 @@ public class AcalRequestor {
 					")" +
 					"(?:[:]([0-9]{2,5}))?" + // Port number
 					"(/.*)?$" // Path bit.
-					,Pattern.CASE_INSENSITIVE | Pattern.DOTALL );  
+					,Pattern.CASE_INSENSITIVE | Pattern.DOTALL );
 
 		final Pattern pathMatcher = Pattern.compile("^(/.*)$");
-		
+
 		if ( Constants.LOG_VERBOSE ) Log.println(Constants.LOGV,TAG,"Interpreting '"+uriString+"'");
 		Matcher m = uriMatcher.matcher(uriString);
 		if ( m.matches() ) {
@@ -318,7 +331,7 @@ public class AcalRequestor {
 				setPortProtocol( newLocation.getPort(), newLocation.getScheme());
 				setPath( newLocation.getPath() );
 				if ( Constants.LOG_VERBOSE ) Log.println(Constants.LOGV,TAG,"Found new location at '"+fullUrl()+"'");
-				
+
 			}
 		}
 	}
@@ -411,7 +424,7 @@ public class AcalRequestor {
 	    return "";
 	}
 
-	
+
 	private Header basicAuthHeader() {
 		String authValue = String.format("Basic %s", Base64Coder.encodeString(username+":"+password));
 		if ( Constants.LOG_VERBOSE )
@@ -419,7 +432,7 @@ public class AcalRequestor {
 		return new BasicHeader("Authorization", authValue );
 	}
 
-	
+
 	private Header digestAuthHeader() {
 		String authValue;
 		String A1 = md5( username + ":" + authRealm + ":" + password);
@@ -438,7 +451,7 @@ public class AcalRequestor {
 		return new BasicHeader("Authorization", authValue );
 	}
 
-	
+
 	private Header buildAuthHeader() throws AuthenticationFailure {
 		switch( authType ) {
 			case Servers.AUTH_BASIC:	return basicAuthHeader();
@@ -448,7 +461,7 @@ public class AcalRequestor {
 		}
 	}
 
-	
+
 	/**
 	 * Get the current path used for the last request, or recently set.
 	 * @return
@@ -457,7 +470,7 @@ public class AcalRequestor {
 		return path;
 	}
 
-	
+
 	/**
 	 * Get the current authentication type used for the last request, or recently set.
 	 * @return
@@ -466,7 +479,7 @@ public class AcalRequestor {
 		return authType;
 	}
 
-	
+
 	/**
 	 * Set the port and protocol to the supplied values, with sanity checking.
 	 * @param newPort As an integer.  Numbers < 1 or > 65535 are ignored.
@@ -500,7 +513,7 @@ public class AcalRequestor {
 	/**
 	 * Set the timeouts to use for subsequent requests, in milliseconds. The connectionTimeOut
 	 * says how long to wait for the connection to be established, and the socketTimeOut says
-	 * how long to wait for data after the connection is established. 
+	 * how long to wait for data after the connection is established.
 	 * @param newConnectionTimeOut
 	 * @param newSocketTimeOut
 	 */
@@ -513,7 +526,7 @@ public class AcalRequestor {
 		httpClient = new DefaultHttpClient(connManager, httpParams);
 	}
 
-	
+
 	/**
 	 * Set the path for the next request, with some sanity checking to force the path
 	 * to start with a '/'.
@@ -537,14 +550,14 @@ public class AcalRequestor {
 	 * @param newAuthType
 	 */
 	public void setAuthType( Integer newAuthType ) {
-		if ( newAuthType == Servers.AUTH_BASIC || newAuthType == Servers.AUTH_DIGEST ) { 
+		if ( newAuthType == Servers.AUTH_BASIC || newAuthType == Servers.AUTH_DIGEST ) {
 			authType = newAuthType;
 			return;
 		}
 		authType = Servers.AUTH_NONE;
 	}
 
-	
+
 	/**
 	 * Force the next request to use authentication pre-emptively.
 	 */
@@ -552,7 +565,7 @@ public class AcalRequestor {
 		authRequired = true;
 	}
 
-	
+
 	/**
 	 * Return the current protocol://host:port as the start of a URL.
 	 * @return
@@ -564,7 +577,7 @@ public class AcalRequestor {
 				+ ((protocol.equals(PROTOCOL_HTTP) && port == 80) || (protocol.equals(PROTOCOL_HTTPS) && port == 443) ? "" : ":"+Integer.toString(port));
 	}
 
-	
+
 	/**
 	 * Return the current protocol://host.example.com:port/path/to/resource as a URL.
 	 * @return
@@ -573,7 +586,7 @@ public class AcalRequestor {
 		return protocolHostPort() + path;
 	}
 
-	
+
 	/**
 	 * Retrieve the unlocalised name of the authentication scheme currently in effect.
 	 * @return
@@ -587,7 +600,7 @@ public class AcalRequestor {
 		}
 	}
 
-	
+
 	private String getLocationHeader() {
 		for( Header h : responseHeaders ) {
 			if (debugThisRequest)
@@ -598,7 +611,7 @@ public class AcalRequestor {
 		return "";
 	}
 
-	
+
 	private Header getAuthHeader() {
 		Header selectedAuthHeader = null;
 		for( Header h : responseHeaders ) {
@@ -607,11 +620,11 @@ public class AcalRequestor {
 			if ( h.getName().equalsIgnoreCase("WWW-Authenticate") ) {
 				// If this is a digest Auth header we will return with it
 				for( HeaderElement he : h.getElements() ) {
-					
+
 					if ( he.getName().substring(0, 7).equalsIgnoreCase("Digest ") ) {
 						return h;
 					}
-					else if ( he.getName().substring(0, 6).equalsIgnoreCase("Basic ") ) { 
+					else if ( he.getName().substring(0, 6).equalsIgnoreCase("Basic ") ) {
 						if ( selectedAuthHeader == null ) selectedAuthHeader = h;
 					}
 				}
@@ -641,7 +654,7 @@ public class AcalRequestor {
 		return total.toString();
 	}
 
-	
+
 	private void logEntityLines(int logLevel, String prefix, String entityString) {
 		for( String line : entityString.toString().split("\n") ) {
 			if ( line.length() == entityString.toString().length() ) {
@@ -659,7 +672,7 @@ public class AcalRequestor {
 		}
 	}
 
-	
+
 	/**
 	 * Log the full details of the request.
 	 * @param logLevel
@@ -676,7 +689,7 @@ public class AcalRequestor {
 		}
 		if ( request.getEntity() == null ) return;
 
-		String entityString = entityToString(request.getEntity()); 
+		String entityString = entityToString(request.getEntity());
 		if (entityString != null) {
 			Log.println(logLevel,TAG, "----------------------- vvv Request Body vvv -----------------------" );
 			logEntityLines(logLevel, "R>  ", entityString);
@@ -699,7 +712,7 @@ public class AcalRequestor {
 			Log.println(logLevel,TAG,"Attempting to log response entity but response.getEntity() is null :-(");
 			return null;
 		}
-		
+
 		String entityString = entityToString(response.getEntity());
 		if (entityString != null) {
 			Log.println(logLevel,TAG, "----------------------- vvv Response Body vvv -----------------------" );
@@ -741,21 +754,21 @@ public class AcalRequestor {
 				// Assume basicAuth
 				request.addHeader(basicAuthHeader());
 			}
-			
+
 			if (entityString != null) {
 				request.setEntity(new StringEntity(entityString.toString(),"UTF-8"));
 				up = request.getEntity().getContentLength();
 			}
-			
 
-			// This trick greatly reduces the occurrence of host not found errors. 
+
+			// This trick greatly reduces the occurrence of host not found errors.
 			try { InetAddress.getByName(this.hostName); } catch (UnknownHostException e1) {
 				Thread.sleep(100);
 				try { InetAddress.getByName(this.hostName); } catch (UnknownHostException e2) {
 					Thread.sleep(100);
 				}
 			}
-			
+
 			int requestPort = -1;
 			if ( this.protocol == null ) this.protocol = PROTOCOL_HTTP;
 			String requestProtocol = this.protocol;
@@ -772,8 +785,8 @@ public class AcalRequestor {
 			HttpHost host = new HttpHost(this.hostName, requestPort, requestProtocol);
 
 			if ( debugThisRequest ) logRequest(Constants.LOGV);
-			
-			// Send request and get response 
+
+			// Send request and get response
 			response = null;
 
 			if ( Constants.debugHeap ) AcalDebug.heapDebug(TAG, "Making HTTP request");
@@ -792,13 +805,13 @@ public class AcalRequestor {
 
 			HttpEntity entity = response.getEntity();
 			down = (entity == null ? 0 : entity.getContentLength());
-			
+
 			long finish = System.currentTimeMillis();
-			double timeTaken = ((double)(finish-start))/1000.0;
+			double timeTaken = (finish-start)/1000.0;
 
 			if ( Constants.LOG_DEBUG || debugThisRequest )
 				Log.println(Constants.LOGD,TAG, "Response: "+statusCode+", Sent: "+up+", Received: "+down+", Took: "+timeTaken+" seconds");
-			
+
 			if ( debugThisRequest ) {
 				return logResponse(Constants.LOGV);
 			}
@@ -810,7 +823,7 @@ public class AcalRequestor {
 				// directly when entity.getContentLength() is -1 ('unknown', apparently).
 				// Horribly inefficient too.
 				//
-				// @todo: Check whether this problem was caused by failing to close the InputStream 
+				// @todo: Check whether this problem was caused by failing to close the InputStream
 				// and this hack can be removed...  Need to find a server which does not send Content-Length headers.
 				//
 				String tmpEntity = entityToString(entity);
@@ -869,7 +882,7 @@ public class AcalRequestor {
 	 * Do a new HTTP <method> request with these headers and entity (request body) against
 	 * this path (or the current path, if null).  The headers & entity may also be null in
 	 * some simple cases.
-	 * 
+	 *
 	 * If the server requests Digest or Basic authentication a second request will be made
 	 * supplying these (if possible).  Likewise the method will follow up to five redirects
 	 * before giving up on a request.
@@ -880,14 +893,14 @@ public class AcalRequestor {
 	 * @return
 	 * @throws SendRequestFailedException
 	 * @throws SSLException
-	 * @throws ConnectionFailedException 
+	 * @throws ConnectionFailedException
 	 */
 	public InputStream doRequest( String method, String pathOrUrl, Header[] headers, String entity )
 			throws SendRequestFailedException, SSLException, ConnectionFailedException {
 
 		if ( Constants.LOG_DEBUG || debugThisRequest )
 			Log.println(Constants.LOGD,TAG, String.format("%s request on %s", method, fullUrl()) );
-		
+
 		InputStream result = null;
 		interpretUriString(pathOrUrl);
         this.method = method;
@@ -903,7 +916,7 @@ public class AcalRequestor {
     		catch (Exception e) {
     			Log.e(TAG,Log.getStackTraceString(e));
     		}
-    
+
     		if ( statusCode == 401 ) {
     			// In this case we didn't send auth credentials the first time, so
     			// we need to try again after we interpret the auth request.
@@ -918,7 +931,7 @@ public class AcalRequestor {
     				Log.e(TAG,Log.getStackTraceString(e));
     			}
     		}
-    
+
     		if ( (statusCode >= 300 && statusCode <= 303) || statusCode == 307 ) {
                 /**
                  * Other than 301/302 these are all pretty unlikely
@@ -933,7 +946,7 @@ public class AcalRequestor {
         			interpretUriString(getLocationHeader());
         			if (debugThisRequest)
         				Log.println(Constants.LOGD,TAG, method + " " +oldUrl+" redirected to: "+fullUrl());
-        			
+
         			continue;
                 }
     		}
@@ -944,17 +957,17 @@ public class AcalRequestor {
 		return result;
 	}
 
-	
+
 	/**
 	 * <p>
 	 * Does an XML request against the specified path (or the previously set path, if null),
 	 * following redirects and returning the root DavNode of an XML tree.
 	 * </p>
-	 * 
+	 *
 	 * @return <p>
 	 *         A DavNode which is the root of the multistatus response, or null if it couldn't be parsed.
 	 *         </p>
-	 * @throws SSLHandshakeException 
+	 * @throws SSLHandshakeException
 	 */
 	public DavNode doXmlRequest( String method, String requestPath, Header[] headers, String xml) throws SSLHandshakeException {
 		long start = System.currentTimeMillis();
@@ -991,7 +1004,7 @@ public class AcalRequestor {
 			if ( responseStream != null )
 				try { responseStream.close(); } catch ( IOException e ) {}
 		}
-		
+
 		if (debugThisRequest)
 			Log.println(Constants.LOGV,TAG, "Request and parse completed in " + (System.currentTimeMillis() - start) + "ms");
 		return root;
@@ -1007,7 +1020,7 @@ public class AcalRequestor {
 
 	public void setHostName(String hostIn) {
 		if ( hostIn == null ) throw new NullPointerException("May not set hostName to null");
-		// This trick greatly reduces the occurrence of host not found errors. 
+		// This trick greatly reduces the occurrence of host not found errors.
 		try { InetAddress.getByName(hostIn); } catch (UnknownHostException e1) { }
 		this.hostName = hostIn;
 	}
@@ -1050,6 +1063,10 @@ public class AcalRequestor {
                 if ( Constants.LOG_DEBUG ) Log.e(TAG, "IOException in request to '"+fullUrl()+"'",e);
                 return new JSONObject();
             }
+            catch ( NullPointerException e ) {
+                if ( Constants.LOG_DEBUG ) Log.e(TAG, "NullPointerException in request to '"+fullUrl()+"'",e);
+                return new JSONObject();
+            }
         }
         catch (SSLHandshakeException e)         { throw e; }
         catch (Exception e) {
@@ -1063,6 +1080,7 @@ public class AcalRequestor {
     }
 
     public static String convertStreamToString(InputStream in) throws IOException {
+        if ( in == null ) return null;
         Writer writer = new StringWriter();
         char[] buffer = new char[1024];
         Reader reader = new BufferedReader(new InputStreamReader(in, "UTF-8"));
@@ -1077,5 +1095,5 @@ public class AcalRequestor {
     public boolean wasRedirected() {
         return redirectCount > 0;
     }
-	
+
 }

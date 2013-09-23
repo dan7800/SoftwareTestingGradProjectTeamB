@@ -30,8 +30,11 @@ import javax.net.ssl.SSLException;
 import org.apache.http.Header;
 import org.apache.http.message.BasicHeader;
 
+import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
@@ -53,24 +56,26 @@ import com.morphoss.acal.service.connector.SendRequestFailedException;
 public class SyncChangesToServer extends ServiceJob implements BlockingResourceRequest {
 
 	public static final String	TAG					= "aCal SyncChangesToServer";
-	
+
 	private static boolean DEBUG = true && Constants.DEBUG_MODE;
-	
-	private long timeToWait = 90000;
+
+	private final long timeToWait = 90000;
 	private aCalService acalService;
 
 	private AcalRequestor requestor;
-	
+
 	private Set<Long> collectionsToSync = null;
-	
+
 	private boolean updateSyncStatus = false;
-	
+
 	private WriteableResourceTableManager processor;
-	
-	
+
+    private ContentResolver cr;
+
+
 	public SyncChangesToServer() {
 		this.TIME_TO_EXECUTE = System.currentTimeMillis();
-		
+
 	}
 
 	@Override
@@ -79,22 +84,24 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 		ResourceManager rm = ResourceManager.getInstance(context);
 		//send request
 		rm.sendBlockingRequest(this);
-		
+
 		if ( this.updateSyncStatus ) {
 			this.TIME_TO_EXECUTE = System.currentTimeMillis() + timeToWait;
 			context.addWorkerJob(this);
 		}
 
 	}
-	
+
 	@Override
 	public void process(WriteableResourceTableManager processor) throws ResourceProcessingException {
 		this.processor = processor;
 		this.requestor = new AcalRequestor();
-		
+		this.cr = acalService.getContentResolver();
+
 		ArrayList<ContentValues> pendingChangesList = processor.getPendingResources();
-		
-		if ( pendingChangesList.isEmpty() ) {
+		ArrayList<ContentValues> syncCollectionMetadataList = syncCollectionList();
+
+		if ( pendingChangesList.isEmpty() && syncCollectionMetadataList.isEmpty() ) {
 			if (DEBUG) Log.println(Constants.LOGD, TAG, "No local changes to synchronise.");
 			setProcessed();
 			return; // without rescheduling
@@ -105,10 +112,13 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 		else {
 			if (DEBUG)
 				Log.println(Constants.LOGD,TAG, "Starting sync of "+pendingChangesList.size()+" local changes");
-			
+
 			collectionsToSync = new HashSet<Long>();
-	
+
 			try {
+			    for( ContentValues collectionData : syncCollectionMetadataList ) {
+			        updateCollectionProperties(collectionData);
+			    }
 				for( ContentValues pendingChange :  pendingChangesList )
 					syncOneChange(pendingChange);
 
@@ -116,7 +126,7 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 					for( Long collectionId : collectionsToSync ) {
 						acalService.addWorkerJob(new SyncCollectionContents(collectionId, true) );
 					}
-					
+
 //					// Fallback hack to really make sure the updated event actually gets displayed.
 //					// Push this out 30 seconds in the future to nag us to fix it properly!
 //					ServiceJob job = new SynchronisationJobs(SynchronisationJobs.CACHE_RESYNC);
@@ -134,7 +144,7 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 		setProcessed();
 	}
 
-	
+
 	private boolean connectivityAvailable() {
 		try {
 			ConnectivityManager conMan = (ConnectivityManager) processor.getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -147,28 +157,43 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 	}
 
 
-	
-	
+    /**
+     * Get the current set of collections that need metadata synced
+     */
+    private ArrayList<ContentValues> syncCollectionList() {
+        ArrayList<ContentValues> currentPathList = new ArrayList<ContentValues>();
+        Cursor cursor = cr.query(DavCollections.CONTENT_URI, null, DavCollections.SYNC_METADATA+"=1", null, null);
+        for( cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext() ) {
+            ContentValues cv = new ContentValues();
+            DatabaseUtils.cursorRowToContentValues(cursor, cv);
+            currentPathList.add(cv);
+        }
+        cursor.close();
+        return currentPathList;
+    }
+
+
+
 	private void syncOneChange(ContentValues pending) throws SSLException {
 
 		long collectionId = pending.getAsLong(ResourceTableManager.PEND_COLLECTION_ID);
-		ContentValues collectionData = processor.getCollectionRow(collectionId); 
+		ContentValues collectionData = processor.getCollectionRow(collectionId);
 		if (collectionData == null) {
-			invalidPendingChange(pending.getAsInteger(ResourceTableManager.PENDING_ID), 
-						"Error getting collection data from DB - deleting invalid pending change record." );				
+			invalidPendingChange(pending.getAsInteger(ResourceTableManager.PENDING_ID),
+						"Error getting collection data from DB - deleting invalid pending change record." );
 			return;
 		}
 
 		int serverId = collectionData.getAsInteger(DavCollections.SERVER_ID);
 		ContentValues serverData = processor.getServerRow(serverId);
 		if (serverData == null) {
-			invalidPendingChange(pending.getAsInteger(ResourceTableManager.PENDING_ID), 
-						"Error getting server data from DB - deleting invalid pending change record." );				
+			invalidPendingChange(pending.getAsInteger(ResourceTableManager.PENDING_ID),
+						"Error getting server data from DB - deleting invalid pending change record." );
 			Log.e(TAG, "Deleting invalid collection Record.");
 			processor.deleteInvalidCollectionRecord(collectionId);
 			return;
 		}
-		requestor.applyFromServer(serverData,false);
+		requestor.applyFromServer(serverData);
 
 		String collectionPath = collectionData.getAsString(DavCollections.COLLECTION_PATH);
 
@@ -178,7 +203,7 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 		Long resourceId = pending.getAsLong(ResourceTableManager.PEND_RESOURCE_ID);
 		Long pendingId = pending.getAsLong(ResourceTableManager.PENDING_ID);
 		String resourcePath = pending.getAsString(ResourceTableManager.RESOURCE_NAME);
-		
+
 		DMQueryBuilder builder = processor.getNewQueryBuilder().setAction(QUERY_ACTION.UPDATE);
 
 		BasicHeader eTagHeader = null;
@@ -196,7 +221,7 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 					contentExtension = ".vcf";
 				else
 					contentExtension = ".txt";
-				
+
 				try {
 					resourcePath = pending.getAsString(ResourceTableManager.UID) + contentExtension;
 				}
@@ -214,7 +239,7 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 		else {
 			String eTag = pending.getAsString(ResourceTableManager.ETAG);
 			if ( eTag != null ) eTagHeader = new BasicHeader("If-Match", eTag );
-			if ( DEBUG && Constants.LOG_DEBUG ) {	
+			if ( DEBUG && Constants.LOG_DEBUG ) {
 				Log.println(Constants.LOGD, TAG,
 						"Writing existing resource to "+resourcePath+", isNull: "+(resourcePath == null)+", etag: "+eTag+"\n"+
 						"\tResource: "+(oldData == null)+", latestDbData:\n" +
@@ -231,7 +256,7 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 				if ( oldData != null && latestDbData != null && oldData.equals(latestDbData) ) {
 					newData = mergeAsyncChanges( oldData, latestDbData, newData );
 				}
-				if ( DEBUG && Constants.LOG_DEBUG ) {	
+				if ( DEBUG && Constants.LOG_DEBUG ) {
 					Log.println(Constants.LOGD, TAG,
 							"newData:\n" +
 							"=============================\n"+
@@ -244,16 +269,24 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 
 		String path = collectionPath + resourcePath;
 
-		Header[] headers = new Header[] { eTagHeader, contentHeader};
-		
-		if (DEBUG)	
+		Header[] headers;
+		if ( builder.getAction() == QUERY_ACTION.DELETE )
+            headers = new Header[] {
+                                    eTagHeader,
+                                    contentHeader
+                             };
+		else
+            headers = new Header[] {
+                                    eTagHeader,
+                                    contentHeader,
+                                    new BasicHeader("Prefer","return=representation")
+                             };
+
+		if (DEBUG)
 			Log.println(Constants.LOGD,TAG,	"Making "+builder.getAction().toString()+" request to "+path);
 
-		// If we made it this far we should do a sync on this collection ASAP after we're done
-		collectionsToSync.add(collectionId);
-		
 		InputStream in = null;
-		String method = (builder.getAction() == QUERY_ACTION.DELETE ? "DELETE" : "PUT"); 
+		String method = (builder.getAction() == QUERY_ACTION.DELETE ? "DELETE" : "PUT");
 		try {
 			in = requestor.doRequest( method, path, headers, newData);
 		}
@@ -265,8 +298,19 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 			Log.w(TAG,"HTTP Request failed: "+e.getMessage());
 			return;
 		}
-			
+
+        // If we made it this far we should do a sync on this collection ASAP after we're done
+        collectionsToSync.add(collectionId);
+
 		int status = requestor.getStatusCode();
+        String responseData = null;
+        boolean useResponseData = false;
+        if ( builder.getAction() != QUERY_ACTION.DELETE ) try {
+            responseData = AcalRequestor.convertStreamToString(in);
+            useResponseData = contentHeader.getValue().equals(getContentType(responseData));
+        }
+        catch ( IOException e ) { }
+
 		if (DEBUG) Log.println(Constants.LOGD,TAG, "Response "+status+" for "+method+" "+path);
 		switch (status) {
 			case 201: // Status Created (normal for INSERT).
@@ -279,21 +323,25 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 				resourceData.put(ResourceTableManager.RESOURCE_DATA, newData);
 				resourceData.put(ResourceTableManager.NEEDS_SYNC, 1);
 				resourceData.put(ResourceTableManager.ETAG, "unknown etag after PUT before sync");
-				for (Header hdr : requestor.getResponseHeaders()) {
+
+                for (Header hdr : requestor.getResponseHeaders()) {
 					if (hdr.getName().equalsIgnoreCase("ETag")) {
 						resourceData.put(ResourceTableManager.ETAG, hdr.getValue());
 						resourceData.put(ResourceTableManager.NEEDS_SYNC, 0);
 						break;
 					}
 				}
-				
-				if ( DEBUG ) Log.println(Constants.LOGD,TAG, 
+                if ( responseData != null && useResponseData ) {
+                    resourceData.put(ResourceTableManager.RESOURCE_DATA, responseData);
+                }
+
+				if ( DEBUG ) Log.println(Constants.LOGD,TAG,
 						"Applying resource modification to local database");
 				builder.setValues(resourceData);
 				builder.setWhereClause(ResourceTableManager.RESOURCE_ID + " = "+resourceId);
-				
+
 				DMAction action = builder.build();
-				
+
 				try {
 					processor.syncToServer(action, resourceId, pendingId);
 				}
@@ -307,24 +355,17 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 			case 403: // Server won't accept it
 			case 404: // DELETE on something that's not there.
 			case 405: // Server won't accept it - Method not allowed
+            case 409: // conflict with If-Match
 				Log.w(TAG, builder.getAction().toString()+": Status " + status + " for " +method+" "+ path + " - giving up on change.");
+                Log.i(TAG,"Full server response was:\n"+responseData);
 				processor.deletePendingChange(pendingId);
 				break;
 
 			default: // Unknown code
 				Log.w(TAG, builder.getAction().toString()+": Status " + status + " for " +method+" "+ path);
-				if ( in != null ) {
-					// Possibly we got an error message...
-					byte[] buffer = new byte[8192];
-					try {
-						in.read(buffer, 0, 8100);
-						System.setProperty("file.encoding","UTF-8");
-						String response = new String(buffer);
-						Log.i(TAG,"Full server response was:\n"+response);
-					}
-					catch (IOException e) {
-					}
-				}
+				Log.i(TAG,"Full server response was:\n"+responseData);
+				if ( status < 500 )
+	                processor.deletePendingChange(pendingId);
 		}
 	}
 
@@ -334,14 +375,14 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 		 * @todo Around here is where we should handle the case where latestDbData != oldData. We
 		 * need to parse out both objects and work out what the differences are between oldData
 		 * and newData, and see if we can apply them to latestDbData without them overwriting
-		 * differences between oldData and latestDbData... 
+		 * differences between oldData and latestDbData...
 		 */
 		return newData;
 	}
 
 
 	private String getContentType(String fromData) {
-		if ( fromData == null ) return "text/plain";
+		if ( fromData == null || fromData.length() < 15 ) return "text/plain";
 
 		if ( fromData.substring(6, 15).equalsIgnoreCase("vcalendar") ) {
 			return "text/calendar; charset=\"utf-8\"";
@@ -352,20 +393,19 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 		return "text/plain";
 	}
 
-	
+
 	private void invalidPendingChange(long pendingId, String msg) {
 		Log.e(TAG, msg );
 		processor.deletePendingChange(pendingId);
 	}
 
-	
+
 	private boolean updateSyncStatus() {
 		return true;
 	}
 
-	
 
-/*	
+
 	final private static Header[] proppatchHeaders = new Header[] {
 		new BasicHeader("Content-Type","text/xml; charset=utf-8")
 	};
@@ -375,19 +415,20 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 		"    xmlns:ACAL=\""+Constants.NS_ACAL+"\">\n"+
 		"<set>\n"+
 		"  <prop>\n"+
-		"   <ACAL:collection-colour>%s</ACAL:collection-colour>\n"+
+		"%s\n"+
 		"  </prop>\n"+
 		" </set>\n"+
 		"</propertyupdate>\n";
 
-	
+
 	private void updateCollectionProperties( ContentValues collectionData ) {
-		String proppatchRequest = String.format(baseProppatch,
-					collectionData.getAsString(DavCollections.COLOUR)
-				);
+	    StringBuilder settings = new StringBuilder();
+	    settings.append("<displayname><![CDATA["+collectionData.getAsString(DavCollections.DISPLAYNAME)+"]]></displayname>");
+        settings.append("<ACAL:collection-colour>"+collectionData.getAsString(DavCollections.COLOUR)+"</ACAL:collection-colour>");
+		String proppatchRequest = String.format(baseProppatch, settings.toString() );
 
 		try {
-			ContentValues serverData = processor.getServerData(collectionData.getAsInteger(DavCollections.SERVER_ID));
+			ContentValues serverData = processor.getServerRow(collectionData.getAsInteger(DavCollections.SERVER_ID));
 			requestor.applyFromServer(serverData);
 			requestor.doRequest("PROPPATCH", collectionData.getAsString(DavCollections.COLLECTION_PATH),
 						proppatchHeaders, proppatchRequest);
@@ -402,7 +443,6 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 
 	}
 
-*/
 
 	@Override
 	public String getDescription() {
@@ -414,6 +454,6 @@ public class SyncChangesToServer extends ServiceJob implements BlockingResourceR
 	@Override
 	public boolean isProcessed() { return this.processingComplete; }
 	@Override
-	public synchronized void setProcessed() { this.processingComplete = true; }	
+	public synchronized void setProcessed() { this.processingComplete = true; }
 
 }

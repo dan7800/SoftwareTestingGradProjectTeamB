@@ -29,9 +29,9 @@ import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.EditTextPreference;
 import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
-import android.preference.Preference.OnPreferenceChangeListener;
 import android.text.InputType;
 import android.util.Log;
 import android.view.View;
@@ -98,7 +98,8 @@ public class CollectionConfiguration extends PreferenceActivity implements OnPre
 	 * @see android.preference.PreferenceActivity#onCreate(android.os.Bundle)
 	 * @author Morphoss Ltd
 	 */
-	public void onCreate(Bundle bundle) {
+	@SuppressWarnings("deprecation")
+    public void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
 		setContentView(R.layout.collection_config);
 		apply = (Button) findViewById(R.id.CollectionConfigApplyButton);
@@ -133,12 +134,12 @@ public class CollectionConfiguration extends PreferenceActivity implements OnPre
 				collectionData.containsKey(DavCollections.HOLDS_TASKS) &&
 				collectionData.containsKey(DavCollections.COLLECTION_PATH) &&
 				collectionData.containsKey(DavCollections.COLOUR) &&
-//				collectionData.containsKey(DavCollections.DEFAULT_TIMEZONE) &&
+				collectionData.containsKey(DavCollections.DEFAULT_TIMEZONE) &&
 				collectionData.containsKey(DavCollections.MAX_SYNC_AGE_3G) &&
 				collectionData.containsKey(DavCollections.MAX_SYNC_AGE_WIFI) &&
 				collectionData.containsKey(DavCollections.USE_ALARMS)) {
 			//Required fields not supplied
-			Log.e(TAG,"CollectionConfiguration called without incorrect data.");
+			Log.e(TAG,"CollectionConfiguration called with incorrect data.");
 			this.finish();
 		}
 		
@@ -153,7 +154,7 @@ public class CollectionConfiguration extends PreferenceActivity implements OnPre
 		defaultSummaries.put(DavCollections.ACTIVE_JOURNAL, getString(R.string.Active_for_journal));
 		defaultSummaries.put(DavCollections.ACTIVE_TASKS, getString(R.string.Active_for_tasks));
 		defaultSummaries.put(DavCollections.COLOUR, getString(R.string.The_colour_associated_with_this_collection));
-//		defaultSummaries.put(DavCollections.DEFAULT_TIMEZONE, getString(R.string.The_timezone_new_events_default_to));
+		defaultSummaries.put(DavCollections.DEFAULT_TIMEZONE, getString(R.string.The_timezone_new_events_default_to));
 		defaultSummaries.put(DavCollections.MAX_SYNC_AGE_3G, getString(R.string.The_maximum_age_for_data_while_on_3g));
 		defaultSummaries.put(DavCollections.MAX_SYNC_AGE_WIFI, getString(R.string.The_maximum_age_for_data_while_on_wifi));
 		defaultSummaries.put(DavCollections.USE_ALARMS, getString(R.string.Use_alarms_from_this_calendar));

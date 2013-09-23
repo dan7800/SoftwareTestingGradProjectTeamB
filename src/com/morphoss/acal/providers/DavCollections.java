@@ -162,44 +162,31 @@ CREATE TABLE dav_collection (
 		int count=0;
 		String server_id;
 		String path;
-		switch (uriMatcher.match(uri)){
-		case ALL_COLLECTIONS:
-			count = AcalDB.delete(
-					DATABASE_TABLE,
-					selection, 
-					selectionArgs);
-			break;
-		case BY_COLLECTION_ID:
-			String id = uri.getPathSegments().get(0);
-			count = AcalDB.delete(
-					DATABASE_TABLE,                        
-					_ID + " = " + id + 
-					(!TextUtils.isEmpty(selection) ? " AND (" + 
-							selection + ')' : ""), 
-							selectionArgs);
-			break;
-		case BY_SERVER_ID:
-			server_id = uri.getPathSegments().get(1);
-			count = AcalDB.delete(
-					DATABASE_TABLE,                        
-					SERVER_ID + " = " + server_id + 
-					(!TextUtils.isEmpty(selection) ? " AND (" + 
-							selection + ')' : ""), 
-							selectionArgs);
-			break;
-		case BY_PATH_AND_SERVER_ID:
-			server_id = uri.getPathSegments().get(1);
-			path = uri.getPathSegments().get(3);
-			count = AcalDB.delete(
-					DATABASE_TABLE,                        
-					SERVER_ID + " = " + server_id + " AND " + COLLECTION_PATH + " = " + path + 
-					(!TextUtils.isEmpty(selection) ? " AND (" + 
-							selection + ')' : ""), 
-							selectionArgs);
-			break;
-		default: throw new IllegalArgumentException(
-				"Unknown URI " + uri);    
-		}
+        switch ( uriMatcher.match(uri) ) {
+            case ALL_COLLECTIONS:
+                Log.i(TAG,"Deleting "+DATABASE_TABLE+" WHERE "+selection);
+                count = AcalDB.delete(DATABASE_TABLE, selection, selectionArgs);
+                break;
+            case BY_COLLECTION_ID:
+                String id = uri.getPathSegments().get(0);
+                count = AcalDB.delete(DATABASE_TABLE,
+                        _ID + " = " + id + (!TextUtils.isEmpty(selection) ? " AND (" + selection + ')' : ""),
+                        selectionArgs);
+                break;
+            case BY_SERVER_ID:
+                server_id = uri.getPathSegments().get(1);
+                count = AcalDB.delete(DATABASE_TABLE, SERVER_ID + " = " + server_id +
+                                                      (!TextUtils.isEmpty(selection) ? " AND (" + selection + ')' : ""), selectionArgs);
+                break;
+            case BY_PATH_AND_SERVER_ID:
+                server_id = uri.getPathSegments().get(1);
+                path = uri.getPathSegments().get(3);
+                count = AcalDB.delete(DATABASE_TABLE, SERVER_ID + " = " + server_id + " AND " + COLLECTION_PATH + " = " + path +
+                                                      (!TextUtils.isEmpty(selection) ? " AND (" + selection + ')' : ""), selectionArgs);
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown URI " + uri);
+        }
 		
 		/**
 		 * Delete rows related to any collections that don't exist now.

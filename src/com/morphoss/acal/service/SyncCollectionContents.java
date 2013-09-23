@@ -675,19 +675,10 @@ public class SyncCollectionContents extends ServiceJob {
 				status = requestor.getStatusCode();
 				switch (status) {
 					case 200: // Status O.K.
-						StringBuilder resourceData = new StringBuilder();
-						BufferedReader r = new BufferedReader(new InputStreamReader(in),4096);
-						String line;
 						try {
-							while ((line = r.readLine() ) != null) {
-								resourceData.append(line);
-								resourceData.append("\n");
-							}
-						}
-						catch (IOException e) {
-							Log.i(TAG,Log.getStackTraceString(e));
-						}
-						originalValues.put(ResourceTableManager.RESOURCE_DATA, resourceData.toString() );
+                            originalValues.put(ResourceTableManager.RESOURCE_DATA, AcalRequestor.convertStreamToString(in) );
+                        }
+                        catch ( IOException e ) { }
 						for (Header hdr : requestor.getResponseHeaders()) {
 							if (hdr.getName().equalsIgnoreCase("ETag")) {
 								originalValues.put(ResourceTableManager.ETAG, hdr.getValue());
