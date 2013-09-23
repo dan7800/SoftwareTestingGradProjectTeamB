@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-#   <bvp-yar@ya.ru>, 2012.
+# bvp <bvp-yar@ya.ru>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: aCal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-08-19 17:18+1200\n"
-"PO-Revision-Date: 2012-08-30 06:20+0000\n"
-"Last-Translator: bvp <bvp-yar@ya.ru>\n"
+"PO-Revision-Date: 2013-04-29 09:22+0000\n"
+"Last-Translator: Andrew McMillan <andrew@mcmillan.net.nz>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/acal/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

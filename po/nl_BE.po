@@ -3,21 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-#   <zenlord@gmail.com>, 2011.
-# zenlord <zenlord@gmail.com>, 2011.
+# zenlord <zenlord@gmail.com>, 2011
+# zenlord <zenlord@gmail.com>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: aCal\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-08-19 17:18+1200\n"
-"PO-Revision-Date: 2012-08-19 05:21+0000\n"
+"PO-Revision-Date: 2013-04-29 09:22+0000\n"
 "Last-Translator: Andrew McMillan <andrew@mcmillan.net.nz>\n"
 "Language-Team: Dutch (Belgium) (http://www.transifex.com/projects/p/acal/language/nl_BE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: nl_BE\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 # SourceFileStart:../res/values/strings.xml
 # Strings that should not be localised belong in unlocalisable_strings.xml
