@@ -388,4 +388,5 @@
 	<string name="ErrorDeletingJournal">Error deleting note data - please try again.</string>
 	<string name="ErrorDeletingTask">Error deleting task data - please try again.</string>
 	<string name="ErrorCompletingTask">Error setting task as completed - please try again.</string>
+	<string name="Restore">Restore</string>
 </resources>

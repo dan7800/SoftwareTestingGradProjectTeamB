@@ -3,16 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Andrew McMillan <andrew@mcmillan.net.nz>, 2011.
-#   <larjona99@gmail.com>, 2012.
-# Laura Arjona Reina  <larjona99@gmail.com>, 2012.
-# marc0s <marc0s@fsfe.org>, 2011.
+# Andrew McMillan <andrew@mcmillan.net.nz>, 2011
+# larjona <larjona99@gmail.com>, 2012
+# larjona <larjona99@gmail.com>, 2013
+# larjona <larjona99@gmail.com>, 2012
+# marc0s <marc0s@fsfe.org>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: aCal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-19 17:18+1200\n"
-"PO-Revision-Date: 2012-08-26 16:54+0000\n"
+"POT-Creation-Date: 2013-09-24 12:47+0200\n"
+"PO-Revision-Date: 2013-10-01 16:28+0000\n"
 "Last-Translator: larjona <larjona99@gmail.com>\n"
 "Language-Team: Spanish (Spain) (http://www.transifex.com/projects/p/acal/language/es_ES/)\n"
 "MIME-Version: 1.0\n"
@@ -103,6 +104,9 @@ msgstr "Zona horaria predeterminada"
 
 msgid "DefaultAlarmTone"
 msgstr "Tono de alarma predeterminado"
+
+msgid "SystemDefaultAlarmTone"
+msgstr "Tono de alarma predeterminado del sistema"
 
 msgid "Server_Path"
 msgstr "Ruta del servidor"
@@ -1130,6 +1134,9 @@ msgstr "Error borrando los datos de la tarea - por favor inténtalo de nuevo."
 
 msgid "ErrorCompletingTask"
 msgstr "Error estableciendo la tarea como completada - por favor inténtalo de nuevo."
+
+msgid "Restore"
+msgstr "Restaurar"
 
 # SourceFileEnd:../res/values/strings.xml
 # SourceFileStart:../res/values/timezonenames.xml

@@ -24,7 +24,8 @@
 <string name="Collection_Options">Opzioni Gruppi</string>
 <string name="Colour">Colore</string>
 <string name="Default_timezone">Fuso Orario di Default</string>
-<string name="DefaultAlarmTone">Allarme di Default</string>
+<string name="DefaultAlarmTone">Allarme Predefinito</string>
+<string name="SystemDefaultAlarmTone">Allarme di Sistema Predefinito</string>
 <string name="Server_Path">Indirizzo Server</string>
 <string name="Server_Port">Porta Server</string>
 <string name="Summary">Riepologo</string>
@@ -119,7 +120,7 @@
 <string name="prefDefaultTasksCollection_Summary">Collezione di default per le nuove attività</string>
 <string name="prefDefaultNotesCollection_Title">Calendario di default per le Note</string>
 <string name="prefDefaultNotesCollection_Summary">Collezione di default per le nuove note</string>
-<string name="DefaultAlarmTone_PrefTitle">Tono standard per l\'allarme</string>
+<string name="DefaultAlarmTone_PrefTitle">Allarme predefinito</string>
 <string name="DefaultAlarmTone_PrefSummary">Il suono standard per gli allarmi.</string>
 <string name="AlarmVolumeType_PrefTitle">Impostazione Volume Allarme</string>
 <string name="AlarmVolumeType_PrefSummary">L\'impostazione usata per il volume dell\'Allarme</string>
@@ -368,4 +369,5 @@
 <string name="ErrorDeletingJournal">Si è verificato un errore nel cancellare la nota - per favore riprova.</string>
 <string name="ErrorDeletingTask">Si è verificato un errore nel cancellare l\'attività - per favore riprova.</string>
 <string name="ErrorCompletingTask">Si è verificato un errore nell\'impostare l\'attività come completata - per favore riprova.</string>
+<string name="Restore">Ripristina</string>
 </resources>

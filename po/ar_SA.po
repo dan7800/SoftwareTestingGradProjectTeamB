@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aCal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-19 17:18+1200\n"
-"PO-Revision-Date: 2013-07-31 08:00+0000\n"
-"Last-Translator: hosniah <ahmedhosni.contact@gmail.com>\n"
+"POT-Creation-Date: 2013-09-24 12:47+0200\n"
+"PO-Revision-Date: 2013-09-24 10:49+0000\n"
+"Last-Translator: Andrew McMillan <andrew@mcmillan.net.nz>\n"
 "Language-Team: Arabic (Saudi Arabia) (http://www.transifex.com/projects/p/acal/language/ar_SA/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -99,6 +99,9 @@ msgid "Default_timezone"
 msgstr ""
 
 msgid "DefaultAlarmTone"
+msgstr ""
+
+msgid "SystemDefaultAlarmTone"
 msgstr ""
 
 msgid "Server_Path"
@@ -1126,6 +1129,9 @@ msgid "ErrorDeletingTask"
 msgstr ""
 
 msgid "ErrorCompletingTask"
+msgstr ""
+
+msgid "Restore"
 msgstr ""
 
 # SourceFileEnd:../res/values/strings.xml

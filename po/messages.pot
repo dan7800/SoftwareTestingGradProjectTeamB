@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-19 17:18+1200\n"
+"POT-Creation-Date: 2013-10-18 14:09+1300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -106,6 +106,9 @@ msgstr "Default Timezone"
 
 msgid "DefaultAlarmTone"
 msgstr "Default Alarm Tone"
+
+msgid "SystemDefaultAlarmTone"
+msgstr "Default System Alarm Tone"
 
 msgid "Server_Path"
 msgstr "Server Path"
@@ -1037,13 +1040,13 @@ msgid "prefIgnoreValarmDescription_OffSummary"
 msgstr "Use the VALARM description in alarms"
 
 msgid "note_title_hint"
-msgstr "Give your note a title"
+msgstr "Title of note"
 
 msgid "note_text_hint"
 msgstr "Enter note text here"
 
 msgid "event_name_hint"
-msgstr "Enter a name for your event"
+msgstr "Title of event"
 
 msgid "event_location_hint"
 msgstr "The location of the event"
@@ -1052,7 +1055,7 @@ msgid "event_notes_hint"
 msgstr "Detailed event description"
 
 msgid "todo_name_hint"
-msgstr "Enter a name for your task"
+msgstr "Title of task"
 
 msgid "todo_description_hint"
 msgstr "Enter a description for your task"
@@ -1143,6 +1146,9 @@ msgstr "Error deleting task data - please try again."
 
 msgid "ErrorCompletingTask"
 msgstr "Error setting task as completed - please try again."
+
+msgid "Restore"
+msgstr "Restore"
 
 # SourceFileEnd:../res/values/strings.xml
 # SourceFileStart:../res/values/timezonenames.xml
