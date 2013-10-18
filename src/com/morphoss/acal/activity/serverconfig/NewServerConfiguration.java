@@ -20,6 +20,7 @@ package com.morphoss.acal.activity.serverconfig;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.Uri;
@@ -45,16 +46,18 @@ import com.morphoss.acal.service.ServiceRequest;
 /**
  * <p>This activity allows the user to configure a new server.</p>
  */
-public class NewServerConfiguration extends AcalActivity implements OnClickListener, ServerConfigurator  {
-	
+public class NewServerConfiguration extends AcalActivity implements ServerConfigurator  {
+
 	//Tag for log messages
 	public static final String TAG = "NewServerConfiguration";
-	
+
 	//The data associated with the server we are configuring.
 	private ContentValues serverData;
 
 	//The Key to be used in serverData for storing the image resourceId
 	public static final String KEY_IMAGE = "IMAGE_RESOURCE";
+
+	private static final int CONFIGURING_ACTIVITY = 1;
 
 	//The widgets
 	private EditText etConfigName;
@@ -63,15 +66,15 @@ public class NewServerConfiguration extends AcalActivity implements OnClickListe
 	private EditText etServerUrl;
 	private Button btnConfigure;
 	private Button btnSkip;
-	
+
 	private ServiceManager serviceManager;
-	
+
 	/**
 	 * <p>
 	 * Called when activity starts. Ensures ServerData object conforms to requirements, and exits if it
 	 * does not. Calls createPreferenceHierarchy to construct preferences screen.
 	 * </p>
-	 * 
+	 *
 	 * @see android.preference.PreferenceActivity#onCreate(android.os.Bundle)
 	 * @author Morphoss Ltd
 	 */
@@ -113,12 +116,34 @@ public class NewServerConfiguration extends AcalActivity implements OnClickListe
 
 	private void populateLayout() {
 		btnConfigure = (Button) findViewById(R.id.configure_button);
-		btnConfigure.setOnClickListener(this);
 		AcalTheme.setContainerFromTheme(btnConfigure, AcalTheme.BUTTON);
+		btnConfigure.setOnClickListener(new OnClickListener() {
+		    public void onClick(View v) {
+	            if ( validateAndAssign() ) checkServer();
+		    }
+        });
 
 		btnSkip = (Button) findViewById(R.id.skip_button);
-		btnSkip.setOnClickListener(this);
 		AcalTheme.setContainerFromTheme(btnSkip, AcalTheme.BUTTON);
+		btnSkip.setOnClickListener(new OnClickListener() {
+		    public void onClick(View v) {
+	            finish();
+		    }
+        });
+
+		Button btnResume = (Button) findViewById(R.id.restore_button);
+        AcalTheme.setContainerFromTheme(btnResume, AcalTheme.BUTTON);
+		btnResume.setOnClickListener(new OnClickListener() {
+		    @Override
+		    public void onClick(View v) {
+		        Log.d(TAG,"Add Server was clicked!");
+		        Intent serverConfigIntent = new Intent();
+		        serverConfigIntent.setClassName("com.morphoss.acal",
+		                            "com.morphoss.acal.activity.serverconfig.AddServerList");
+		        startActivityForResult(serverConfigIntent, CONFIGURING_ACTIVITY);
+		    }
+
+		});
 
 		etConfigName = (EditText) findViewById(R.id.configName);
 		etUserName = (EditText) findViewById(R.id.userName);
@@ -131,14 +156,20 @@ public class NewServerConfiguration extends AcalActivity implements OnClickListe
 		super.onPause();
 		if (this.serviceManager != null) this.serviceManager.close();
 	}
-	
+
 	@Override
 	public void onResume() {
 		super.onResume();
 		this.serviceManager = new ServiceManager(this);
 	}
-	
-	
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	    super.onActivityResult(requestCode, resultCode, data);
+	    // Perhaps we should check for the CONFIGURING_ACTIVITY requestCode, but nothing else calls this.
+	    finish();
+	}
+
 	private void createDefaultValues() {
 		serverData.put(Servers.FRIENDLY_NAME,"");
 		serverData.put(Servers.SUPPLIED_USER_URL,"");
@@ -146,18 +177,9 @@ public class NewServerConfiguration extends AcalActivity implements OnClickListe
 		serverData.put(Servers.PASSWORD,"");
 		serverData.put(Servers.ACTIVE, 1);
 	}
-	
-	public void onClick(View v) {
-		if (v.getId() == btnConfigure.getId()) {
-			if ( validateAndAssign() ) checkServer();
-		}
-		else if (v.getId() == btnSkip.getId()) {
-			finish();
-		}
-	}
 
 	/**
-	 * Attempts to connect to server and get configuration. 
+	 * Attempts to connect to server and get configuration.
 	 */
 	private void checkServer() {
 		Context cx = this.getBaseContext();
@@ -165,37 +187,36 @@ public class NewServerConfiguration extends AcalActivity implements OnClickListe
 		csd.start();
 	}
 
-	
-	public void saveData() {
-		if (this.serverData.get(Servers.FRIENDLY_NAME).equals(""))
-				this.serverData.put(Servers.FRIENDLY_NAME, serverData.getAsString(Servers.SUPPLIED_USER_URL));
 
-		createRecord();
+    public void saveData() {
+        if ( this.serverData.get(Servers.FRIENDLY_NAME).equals("") ) this.serverData.put(Servers.FRIENDLY_NAME,
+                serverData.getAsString(Servers.SUPPLIED_USER_URL));
 
-		// Start syncing server in background
-		if (Constants.LOG_VERBOSE) Log.v(TAG, "Scheduling HomeSetDiscovery on new server config.");
-		try {
-			int serverId = serverData.getAsInteger(Servers._ID);
-			ServiceRequest sr = serviceManager.getServiceRequest();
-			sr.homeSetDiscovery(serverId);
-		}
-		catch (RemoteException e) {
-			if (Constants.LOG_VERBOSE)
-				Log.v(TAG, "Error starting home set discovery: " + e.getMessage() + " "
-							+ Log.getStackTraceString(e));
-		}
-		catch ( Exception e ) {
-			Log.e(TAG,Log.getStackTraceString(e));
-		}
+        createRecord();
+
+        // Start syncing server in background
+        if ( Constants.LOG_VERBOSE ) Log.v(TAG, "Scheduling HomeSetDiscovery on new server config.");
+        try {
+            int serverId = serverData.getAsInteger(Servers._ID);
+            ServiceRequest sr = serviceManager.getServiceRequest();
+            sr.homeSetDiscovery(serverId);
+        }
+        catch ( RemoteException e ) {
+            if ( Constants.LOG_VERBOSE ) Log.v(TAG,
+                    "Error starting home set discovery: " + e.getMessage() + " " + Log.getStackTraceString(e));
+        }
+        catch ( Exception e ) {
+            Log.e(TAG, Log.getStackTraceString(e));
+        }
     }
 
-	
-	public void finishAndClose() {
+	// I don't believe this is called.  Make it private to see :-)
+	private void finishAndClose() {
 		this.setResult(RESULT_OK);
 		this.finish();
 	}
 
-	
+
 	/**
 	 * <p>Creates a new server record on success.</p>
 	 */
@@ -206,13 +227,13 @@ public class NewServerConfiguration extends AcalActivity implements OnClickListe
 			if (id < 0) throw new Exception("Failed to add server");
 			serverData.put(Servers._ID, id);
 			prefs.edit().putInt(PrefNames.serverIsConfigured, 1).commit();
-			
+
 		} catch (Exception e) {
 			//error updating
 			Toast.makeText(this, getString(R.string.errorSavingServerConfig), Toast.LENGTH_LONG).show();
 		}
 	}
-	
+
 
 	/**
 	 * Validate the fields and assign them to appropriate ServerData fields if they pass.
@@ -250,7 +271,7 @@ public class NewServerConfiguration extends AcalActivity implements OnClickListe
 		else {
 			this.serverData.put(Servers.PASSWORD, etPassword.getText().toString());
 		}
-		
+
 		if ( etServerUrl.getText().toString().equals("") ) {
 			if ( !passed ) errorToast.append("\n");
 			else fieldToFix = etServerUrl;
@@ -263,7 +284,7 @@ public class NewServerConfiguration extends AcalActivity implements OnClickListe
 		if ( !passed ) {
 			fieldToFix.requestFocus();
 		}
-		
+
 		return passed;
 	}
 
