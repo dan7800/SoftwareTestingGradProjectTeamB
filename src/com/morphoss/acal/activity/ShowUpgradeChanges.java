@@ -44,9 +44,9 @@ public class ShowUpgradeChanges extends AcalActivity implements OnClickListener 
 	int thisRevision=0;
 
 	boolean isRedisplay = false;
-	
+
 	private static final Pattern versionLinePattern = Pattern.compile("^v(\\d+)=([0-9.-]+)$");
-	
+
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.changes_on_upgrade);
@@ -60,7 +60,7 @@ public class ShowUpgradeChanges extends AcalActivity implements OnClickListener 
 			if ( x != null ) isRedisplay = true;
 		}
 		catch (Exception e) {}
-		
+
 		thisRevision = 1;
 		try {
 			thisRevision = getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
@@ -70,7 +70,7 @@ public class ShowUpgradeChanges extends AcalActivity implements OnClickListener 
 		}
 		int lastRevision = prefs.getInt(PrefNames.lastRevision, thisRevision - 1);
 		if ( isRedisplay ) lastRevision = thisRevision - 5;
-		
+
 		StringBuilder upNotes = new StringBuilder("<html><head>" +
 					"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">" +
 					"<style type=\"text/css\">");
@@ -134,19 +134,19 @@ public class ShowUpgradeChanges extends AcalActivity implements OnClickListener 
 		upNotes.append("<p>"+getString(R.string.aCal_is_Free_Software).replace("\"", "&quot;")+"</p>");
 
 		upNotes.append("<p><br/></p></body></html>");
-		
-		upgradeNotes.loadData(upNotes.toString(), "text/html", "utf-8");
+
+		upgradeNotes.loadDataWithBaseURL( null, upNotes.toString(), "text/html", "utf-8", null);
 		upgradeNotes.setBackgroundColor(0); // transparent
-		
+
 		seenEm.setOnClickListener(this);
 	}
 
-	
+
     private ArrayList<String> readLines() {
-        
+
         ArrayList<String> res = new ArrayList<String>(200);
         StringBuilder line = new StringBuilder();
-        
+
         final int buffsize = 8192;
         char[] buf = new char[buffsize];
         int numRead;
@@ -179,7 +179,7 @@ public class ShowUpgradeChanges extends AcalActivity implements OnClickListener 
 		catch (IOException e) {
 			Log.e(aCal.TAG, Log.getStackTraceString(e));
 		}
- 
+
         return res;
     }
 
@@ -189,11 +189,11 @@ public class ShowUpgradeChanges extends AcalActivity implements OnClickListener 
 		if ( !isRedisplay ) {
 			// Save the new version preference
 			prefs.edit().putInt(PrefNames.lastRevision, thisRevision).commit();
-			
+
 			aCal.startPreferredView(prefs,this,true);
 		}
 
 		this.finish();
-		
+
 	}
 }
