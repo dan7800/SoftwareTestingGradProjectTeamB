@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# mor <martin.ortuta@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: aCal\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-24 12:47+0200\n"
-"PO-Revision-Date: 2013-10-17 23:12+0000\n"
-"Last-Translator: Andrew McMillan <andrew@mcmillan.net.nz>\n"
+"POT-Creation-Date: 2013-10-18 14:09+1300\n"
+"PO-Revision-Date: 2013-10-19 15:50+0000\n"
+"Last-Translator: mor <martin.ortuta@gmail.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/projects/p/acal/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,1339 +21,1339 @@ msgstr ""
 # SourceFileStart:../res/values/strings.xml
 # Strings that should not be localised belong in unlocalisable_strings.xml
 msgid "theDayEachWeekStartsWith"
-msgstr ""
+msgstr "Týmto dňom začína týždeň"
 
 msgid "firstDayOfWeek"
-msgstr ""
+msgstr "Prvý deň v týždňi"
 
 msgid "ok"
-msgstr ""
+msgstr "OK"
 
 msgid "cancel"
-msgstr ""
+msgstr "Zrušiť"
 
 msgid "setButtonLabel"
-msgstr ""
+msgstr "Nastaviť"
 
 msgid "appDescription"
-msgstr ""
+msgstr "Kalendár pre Android, ktorý ukladá vaše udalosti, úlohy, poznámky a kontakty na vzdialený CalDAV server, ako je DAViCal (pozri: www.davical.org)"
 
 msgid "appDescriptionTasks"
-msgstr ""
+msgstr "Zoznam úloh pre Android, ktorý ukladá vaše úlohy na vzdialený CalDAV server, ako napr. DAViCal (pozri: www.davical.org)"
 
 msgid "appDescriptionNotes"
-msgstr ""
+msgstr "Zoznam úloh pre Android, ktorý ukladá vaše úlohy na vzdialený CalDAV server, ako napr. DAViCal (pozri: www.davical.org)"
 
 msgid "Active"
-msgstr ""
+msgstr "Aktívny"
 
 msgid "Add_Server"
-msgstr ""
+msgstr "Pridať server"
 
 msgid "A_name_for_this_server_configuration"
-msgstr ""
+msgstr "Názov tejto konfigurácie servera"
 
 msgid "Authentication_Type"
-msgstr ""
+msgstr "Typ autentifikácie"
 
 msgid "Simple_Path"
-msgstr ""
+msgstr "Zjednodušená cesta"
 
 msgid "Simple_User_URL"
-msgstr ""
+msgstr "Adresa:"
 
 msgid "Server_URL"
-msgstr ""
+msgstr "Adresa servera:"
 
 msgid "Enter_a_brief_summary_of_the_event"
-msgstr ""
+msgstr "Zadajte stručný súhrn udalosti"
 
 msgid "Name"
-msgstr ""
+msgstr "Názov"
 
 msgid "Force_full_resync"
-msgstr ""
+msgstr "Vynútiť kompletné obnovenie"
 
 msgid "Password"
-msgstr ""
+msgstr "Heslo"
 
 msgid "Save"
-msgstr ""
+msgstr "Uložiť"
 
 msgid "Settings"
-msgstr ""
+msgstr "Nastavenia"
 
 msgid "Server_Name"
-msgstr ""
+msgstr "Názov servera"
 
 msgid "Server_Options"
-msgstr ""
+msgstr "Možnosti servera"
 
 msgid "Collection_Options"
-msgstr ""
+msgstr "Možnosti kalendára"
 
 msgid "Colour"
-msgstr ""
+msgstr "Farba"
 
 msgid "Default_timezone"
-msgstr ""
+msgstr "Predvolené časové pásmo"
 
 msgid "DefaultAlarmTone"
-msgstr ""
+msgstr "Predvolený tón upozornenia"
 
 msgid "SystemDefaultAlarmTone"
-msgstr ""
+msgstr "Predvolený tón upozornenia systému"
 
 msgid "Server_Path"
-msgstr ""
+msgstr "Cesta servera"
 
 msgid "Server_Port"
-msgstr ""
+msgstr "Port servera"
 
 msgid "Summary"
-msgstr ""
+msgstr "Súhrn"
 
 msgid "Sync_collection_now"
-msgstr ""
+msgstr "Synchronizovať teraz"
 
 msgid "Disable_collection"
-msgstr ""
+msgstr "Zakázať kalendár"
 
 msgid "The_authentication_type_used"
-msgstr ""
+msgstr "Typ autentifikácie používaný serverom"
 
 msgid "The_password_to_use"
-msgstr ""
+msgstr "Heslo používané na autentifikáciu serverom"
 
 msgid "The_path_on_the_server"
-msgstr ""
+msgstr "Cesta na serveri, ako &quot;/caldav.php/user/&quot;"
 
 msgid "A_URL_or_domain_name"
-msgstr ""
+msgstr "Adresa alebo doména vášho servera s kalendármi"
 
 msgid "The_servers_hostname"
-msgstr ""
+msgstr "Úplná adresa servera, ako &quot;calendar.davical.com&quot;"
 
 msgid "The_username_to_use"
-msgstr ""
+msgstr "Používateľské meno pre autentifikáciu so serverom"
 
 msgid "Username"
-msgstr ""
+msgstr "Používateľské meno"
 
 msgid "Use_SSL"
-msgstr ""
+msgstr "Použiť SSL"
 
 msgid "Whether_this_server_is_active"
-msgstr ""
+msgstr "Má sa server aktívne používať?"
 
 msgid "Whether_to_use_encryption"
-msgstr ""
+msgstr "Má sa pre spojenie so serverom použiť šifrovanie?"
 
 msgid "appActivityEventCreate"
-msgstr ""
+msgstr "Nová udalosť"
 
 msgid "appActivityServerConfigList"
-msgstr ""
+msgstr "Server"
 
 msgid "appActivityServerConfiguration"
-msgstr ""
+msgstr "Konfigurácia servera"
 
 msgid "appActivityAddServerList"
-msgstr ""
+msgstr "Šablóny pre servery"
 
 msgid "appActivityCollectionConfigList"
-msgstr ""
+msgstr "Kalendáre a adresáre"
 
 msgid "appActivityDebugSettings"
-msgstr ""
+msgstr "Nastavenia pre vývoj"
 
 msgid "appActivitySettings"
-msgstr ""
+msgstr "Nastavenia"
 
 msgid "appActivityPreference"
-msgstr ""
+msgstr "Predvoľby"
 
 msgid "The_port_to_connect_to"
-msgstr ""
+msgstr "Port servera, na ktorý sa pripojiť"
 
 msgid "A_name_for_this_collection"
-msgstr ""
+msgstr "Názov tohto kalendára"
 
 msgid "pActive_addressbook"
-msgstr ""
+msgstr "Aktívny adresár"
 
 msgid "pActive_for_events"
-msgstr ""
+msgstr "Aktívny pre udalosti"
 
 msgid "pActive_for_journal"
-msgstr ""
+msgstr "Aktívny pre poznámky"
 
 msgid "pActive_for_tasks"
-msgstr ""
+msgstr "Aktívny pre úlohy"
 
 msgid "pUse_Alarms"
-msgstr ""
+msgstr "Použiť upozornenia v tomto kalendári?"
 
 msgid "Use_Alarms"
-msgstr ""
+msgstr "Upozornenia povolené"
 
 msgid "Active_addressbook"
-msgstr ""
+msgstr "Používať tento kalendár na ukladanie kontaktov?"
 
 msgid "Active_for_events"
-msgstr ""
+msgstr "Používať tento kalendár na ukladanie udalostí?"
 
 msgid "Active_for_journal"
-msgstr ""
+msgstr "Používať tento kalendár na ukladanie poznámok?"
 
 msgid "Active_for_tasks"
-msgstr ""
+msgstr "Používať tento kalendár na ukladanie úloh?"
 
 msgid "The_colour_associated_with_this_collection"
-msgstr ""
+msgstr "Farba priradená dátam z tohto kalendára"
 
 msgid "The_timezone_new_events_default_to"
-msgstr ""
+msgstr "Časové pásmo pre nové udalosti v tomto kalendári"
 
 msgid "pMax_age_on_3g"
-msgstr ""
+msgstr "Synchronizácia cez 3g"
 
 msgid "The_maximum_age_for_data_while_on_3g"
-msgstr ""
+msgstr "Maximálny čas (v minútach) pred obnovením , ak je pripojenie 3g"
 
 msgid "pMax_age_on_wifi"
-msgstr ""
+msgstr "Synchronizácia cez wifi"
 
 msgid "The_maximum_age_for_data_while_on_wifi"
-msgstr ""
+msgstr "Maximálny čas (v minútach) pred obnovením, ak je pripojenie wifi"
 
 msgid "Use_alarms_from_this_calendar"
-msgstr ""
+msgstr "Majú sa zobrazovať upozornenia z tohto kalendára?"
 
 msgid "Monday"
-msgstr ""
+msgstr "Pondelok"
 
 msgid "Tuesday"
-msgstr ""
+msgstr "Utorok"
 
 msgid "Wednesday"
-msgstr ""
+msgstr "Streda"
 
 msgid "Thursday"
-msgstr ""
+msgstr "Štvrtok"
 
 msgid "Friday"
-msgstr ""
+msgstr "Piatok"
 
 msgid "Saturday"
-msgstr ""
+msgstr "Sobota"
 
 msgid "Sunday"
-msgstr ""
+msgstr "Nedeľa"
 
 msgid "Mon"
-msgstr ""
+msgstr "Pon"
 
 msgid "Tue"
-msgstr ""
+msgstr "Uto"
 
 msgid "Wed"
-msgstr ""
+msgstr "Str"
 
 msgid "Thu"
-msgstr ""
+msgstr "Štv"
 
 msgid "Fri"
-msgstr ""
+msgstr "Pia"
 
 msgid "Sat"
-msgstr ""
+msgstr "Sob"
 
 msgid "Sun"
-msgstr ""
+msgstr "Ned"
 
 msgid "chMon"
-msgstr ""
+msgstr "P"
 
 msgid "chTue"
-msgstr ""
+msgstr "U"
 
 msgid "chWed"
-msgstr ""
+msgstr "S"
 
 msgid "chThu"
-msgstr ""
+msgstr "Š"
 
 msgid "chFri"
-msgstr ""
+msgstr "P"
 
 msgid "chSat"
-msgstr ""
+msgstr "S"
 
 msgid "chSun"
-msgstr ""
+msgstr "N"
 
 msgid "January"
-msgstr ""
+msgstr "Január"
 
 msgid "February"
-msgstr ""
+msgstr "Február"
 
 msgid "March"
-msgstr ""
+msgstr "Marec"
 
 msgid "April"
-msgstr ""
+msgstr "Apríl"
 
 msgid "May"
-msgstr ""
+msgstr "Máj"
 
 msgid "June"
-msgstr ""
+msgstr "Jún"
 
 msgid "July"
-msgstr ""
+msgstr "Júl"
 
 msgid "August"
-msgstr ""
+msgstr "August"
 
 msgid "September"
-msgstr ""
+msgstr "September"
 
 msgid "October"
-msgstr ""
+msgstr "Október"
 
 msgid "November"
-msgstr ""
+msgstr "November"
 
 msgid "December"
-msgstr ""
+msgstr "December"
 
 msgid "thJan"
-msgstr ""
+msgstr "Jan"
 
 msgid "thFeb"
-msgstr ""
+msgstr "Feb"
 
 msgid "thMar"
-msgstr ""
+msgstr "Mar"
 
 msgid "thApr"
-msgstr ""
+msgstr "Apr"
 
 msgid "thMay"
-msgstr ""
+msgstr "Máj"
 
 msgid "thJun"
-msgstr ""
+msgstr "Jún"
 
 msgid "thJul"
-msgstr ""
+msgstr "Júl"
 
 msgid "thAug"
-msgstr ""
+msgstr "Aug"
 
 msgid "thSep"
-msgstr ""
+msgstr "Sep"
 
 msgid "thOct"
-msgstr ""
+msgstr "Okt"
 
 msgid "thNov"
-msgstr ""
+msgstr "Nov"
 
 msgid "thDec"
-msgstr ""
+msgstr "Dec"
 
 # If the user is displaying AM/PM we need a single character to display e.g.
 # 9a for 9:00am in the morning
 msgid "oneCharMorning"
-msgstr ""
+msgstr "d"
 
 # If the user is displaying AM/PM we need a single character to display e.g.
 # 1p for 1:00pm in the afternoon
 msgid "oneCharAfternoon"
-msgstr ""
+msgstr "p"
 
 msgid "abbrevMorning"
-msgstr ""
+msgstr "Dopoludnia"
 
 msgid "abbrevAfternoon"
-msgstr ""
+msgstr "Popoludní"
 
 msgid "YearViewSize_PrefTitle"
-msgstr ""
+msgstr "Počet mesiacov v zobrazení roku"
 
 msgid "YearViewSize_PrefSummary"
-msgstr ""
+msgstr "Počet mesiacov, ktoré sú viditeľné v zobrazení roku"
 
 msgid "Snooze_PrefTitle"
-msgstr ""
+msgstr "Čas odloženia"
 
 msgid "Snooze_PrefSummary"
-msgstr ""
+msgstr "O koľko minút odložiť upozornenie, ak je stlačené tlačidlo odloženia"
 
 msgid "prefDefaultEventsCollection_Title"
-msgstr ""
+msgstr "Predvolený kalendár udalostí"
 
 msgid "prefDefaultEventsCollection_Summary"
-msgstr ""
+msgstr "Predvolený kalendár pre nové udalosti"
 
 msgid "prefDefaultTasksCollection_Title"
-msgstr ""
+msgstr "Predvolený kalendár úloh"
 
 msgid "prefDefaultTasksCollection_Summary"
-msgstr ""
+msgstr "Predvolený kalendár pre nové úlohy"
 
 msgid "prefDefaultNotesCollection_Title"
-msgstr ""
+msgstr "Predvolený kalendár poznámok"
 
 msgid "prefDefaultNotesCollection_Summary"
-msgstr ""
+msgstr "Predvolený kalendár pre nové poznámky denníka"
 
 msgid "DefaultAlarmTone_PrefTitle"
-msgstr ""
+msgstr "Predvolený tón upozornenia"
 
 msgid "DefaultAlarmTone_PrefSummary"
-msgstr ""
+msgstr "Predvolený zvuk upozornenia."
 
 msgid "AlarmVolumeType_PrefTitle"
-msgstr ""
+msgstr "Nastavenie hlasitosti upozornenia"
 
 msgid "AlarmVolumeType_PrefSummary"
-msgstr ""
+msgstr "Nastavenie použité pre hlasitosť tónu upozornenia"
 
 msgid "AlarmBellVolume"
-msgstr ""
+msgstr "Systémová hlasitosť upozornení"
 
 msgid "MediaPlayerVolume"
-msgstr ""
+msgstr "Systémová hlasitosť médií"
 
 msgid "prefWorkdayStart_Title"
-msgstr ""
+msgstr "Začiatok pracovného dňa"
 
 msgid "prefWorkdayStart_Summary"
-msgstr ""
+msgstr "Pracovný deň začína o takomto čase."
 
 msgid "prefWorkdayFinish_Title"
-msgstr ""
+msgstr "Koniec pracovného dňa"
 
 msgid "prefWorkdayFinish_Summary"
-msgstr ""
+msgstr "Pracovný deň končí o takomto čase."
 
 msgid "prefWeekViewLinesPerHour_Title"
-msgstr ""
+msgstr "Výška riadkov"
 
 msgid "prefWeekViewLinesPerHour_Summary"
-msgstr ""
+msgstr "Výška pre každú hodinu dňa v zobrazení týždňa."
 
 msgid "prefWeekViewDayWidth_Title"
-msgstr ""
+msgstr "Šírka stĺpcov"
 
 msgid "prefWeekViewDayWidth_Summary"
-msgstr ""
+msgstr "Šírka pre každý stĺpec dňa v zobrazení týždňa."
 
 msgid "Today"
-msgstr ""
+msgstr "Dnes"
 
 msgid "Year"
-msgstr ""
+msgstr "Rok"
 
 msgid "Month"
-msgstr ""
+msgstr "Mesiac"
 
 msgid "Week"
-msgstr ""
+msgstr "Týžd."
 
 msgid "Edit"
-msgstr ""
+msgstr "Upraviť"
 
 msgid "Apply"
-msgstr ""
+msgstr "Použiť"
 
 msgid "Advanced"
-msgstr ""
+msgstr "Rozšírené"
 
 msgid "Simple"
-msgstr ""
+msgstr "Zjednodušené"
 
 msgid "Add"
-msgstr ""
+msgstr "Pridať"
 
 msgid "UnNamedServer"
-msgstr ""
+msgstr "Nepomenovaný server"
 
 msgid "LocationPrompt"
-msgstr ""
+msgstr "Kde:"
 
 msgid "NotesPrompt"
-msgstr ""
+msgstr "Pozn.:"
 
 msgid "AlarmsPrompt"
-msgstr ""
+msgstr "Upozornenia:"
 
 msgid "RepeatsPrompt"
-msgstr ""
+msgstr "Opakovania:"
 
 msgid "AllDayPrompt"
-msgstr ""
+msgstr "Celý deň:"
 
 msgid "FromPrompt"
-msgstr ""
+msgstr "Od:"
 
 msgid "TodoFromPrompt"
-msgstr ""
+msgstr "Začína v:"
 
 msgid "UntilPrompt"
-msgstr ""
+msgstr "Do:"
 
 msgid "DuePrompt"
-msgstr ""
+msgstr "Do:"
 
 msgid "CompletedPrompt"
-msgstr ""
+msgstr "Ukončené:"
 
 msgid "DaysPrompt"
-msgstr ""
+msgstr "Dni:"
 
 msgid "StartPrompt"
-msgstr ""
+msgstr "Začiatok:"
 
 msgid "CompletePrompt"
-msgstr ""
+msgstr "Splnené:"
 
 msgid "CollectionPrompt"
-msgstr ""
+msgstr "Kalendár:"
 
 msgid "defaultCalendar"
-msgstr ""
+msgstr "Predvolený kalendár"
 
 msgid "theCalendarForNewEvents"
-msgstr ""
+msgstr "Kalendár, ktorý bude použitý ako predvolený pre nové udalosti."
 
 msgid "TwelveTwentyfour_PrefTitle"
-msgstr ""
+msgstr "Použiť 24h formát"
 
 msgid "TwelveTwentyfour_OnSummary"
-msgstr ""
+msgstr "14:00"
 
 msgid "TwelveTwentyfour_OffSummary"
-msgstr ""
+msgstr "2:00 pm"
 
 msgid "OnlyOnce"
-msgstr ""
+msgstr "Vyskytuje sa raz"
 
 msgid "EveryWeekday"
-msgstr ""
+msgstr "Každý pracovný deň"
 
 msgid "EveryWeekend"
-msgstr ""
+msgstr "Každý víkend"
 
 msgid "EveryDay"
-msgstr ""
+msgstr "Denne"
 
 msgid "EveryWeek"
-msgstr ""
+msgstr "Týždenne"
 
 msgid "EveryMonth"
-msgstr ""
+msgstr "Mesačne"
 
 msgid "EveryYear"
-msgstr ""
+msgstr "Ročne"
 
 msgid "EveryNDays"
-msgstr ""
+msgstr "Každých %s dní"
 
 msgid "EveryNWeeks"
-msgstr ""
+msgstr "Každých %s týždňov"
 
 msgid "EveryNMonths"
-msgstr ""
+msgstr "Každých %s mesiacov"
 
 msgid "EveryNYears"
-msgstr ""
+msgstr "Každých %s rokov"
 
 msgid "EveryMonday"
-msgstr ""
+msgstr "Každý pondelok"
 
 msgid "EveryTuesday"
-msgstr ""
+msgstr "Každý utorok"
 
 msgid "EveryWednesday"
-msgstr ""
+msgstr "Každú stredu"
 
 msgid "EveryThursday"
-msgstr ""
+msgstr "Každý štvrtok"
 
 msgid "EveryFriday"
-msgstr ""
+msgstr "Každý piatok"
 
 msgid "EverySaturday"
-msgstr ""
+msgstr "Každú sobotu"
 
 msgid "EverySunday"
-msgstr ""
+msgstr "Každú nedeľu"
 
 msgid "EveryNthOfTheMonth"
-msgstr ""
+msgstr "Každý %s deň v mesiaci"
 
 msgid "EveryMonthOnTheNthSomeday"
-msgstr ""
+msgstr "Na %s každý mesiac"
 
 msgid "CustomRepeatRule"
-msgstr ""
+msgstr "Vlastné opakovanie"
 
 msgid "EventSaved"
-msgstr ""
+msgstr "Udalosť uložená."
 
 msgid "ModifiedAllInstances"
-msgstr ""
+msgstr "Všetky zmenené udalosti uložené."
 
 msgid "ModifiedOneInstance"
-msgstr ""
+msgstr "Upravená jedna položka tejto udalosti."
 
 msgid "ModifiedThisAndFuture"
-msgstr ""
+msgstr "Upravená táto a všetky budúce položky tejto udalosti."
 
 msgid "ErrorSavingEvent"
-msgstr ""
+msgstr "Chyba pri ukladaní udalosti - skúste neskôr prosím."
 
 msgid "NewEventTitle"
-msgstr ""
+msgstr "Nová udalosť"
 
 msgid "ChooseACollection"
-msgstr ""
+msgstr "Vyberte kalendár"
 
 msgid "ChooseAlarmTime"
-msgstr ""
+msgstr "Vyberte čas upozornenia"
 
 msgid "ChooseInstancesToChange"
-msgstr ""
+msgstr "Ktoré položky chcete zmeniť?"
 
 msgid "ChooseRepeatFrequency"
-msgstr ""
+msgstr "Vyberte frekvenciu opakovania"
 
 msgid "Add_Alarm"
-msgstr ""
+msgstr "Pridať upozornenie"
 
 msgid "errorMustHaveActiveCalendar"
-msgstr ""
+msgstr "Udalosť sa nedá upraviť bez aktívneho kalendára."
 
 msgid "errorSavingServerConfig"
-msgstr ""
+msgstr "Chyba pri ukladaní konfigurácie servera"
 
 msgid "errorSavingFile"
-msgstr ""
+msgstr "Chyba pri ukladaní do súboru"
 
 msgid "ServerDataSaved"
-msgstr ""
+msgstr "Dáta serveru uložené. Súbor:"
 
 msgid "NewManualServerConfiguration"
-msgstr ""
+msgstr "Manuálna konfigurácia"
 
 msgid "ManualServerConfigurationBlurb"
-msgstr ""
+msgstr "Manuálne zadanie informácií servera"
 
 msgid "SavedServerConfigurationBlurb"
-msgstr ""
+msgstr "Uložená konfigurácia servera"
 
 msgid "AllDaysInPeriod"
-msgstr ""
+msgstr "Celý deň, od %1$s do %2$s"
 
 msgid "ForTheWholeDay"
-msgstr ""
+msgstr "Celý deň"
 
 msgid "alarmAtEventTime"
-msgstr ""
+msgstr "V čase udalosti"
 
 msgid "alarm10MinutesPrior"
-msgstr ""
+msgstr "10 minút pred"
 
 msgid "alarm15MinutesPrior"
-msgstr ""
+msgstr "15 minút pred"
 
 msgid "alarm30MinutesPrior"
-msgstr ""
+msgstr "30 minút pred"
 
 msgid "alarm1HourPrior"
-msgstr ""
+msgstr "jednu hodinu pred"
 
 msgid "alarm2HoursPrior"
-msgstr ""
+msgstr "Dve hodiny pred"
 
 msgid "alarmCustom"
-msgstr ""
+msgstr "Vlastné upozornenie"
 
 msgid "alarmsDisabledNote"
-msgstr ""
+msgstr "(všetky upozornenia pre tento kalendár sú zakázané)"
 
 msgid "changeThisInstance"
-msgstr ""
+msgstr "Len tento výskyt"
 
 msgid "changeAllInstances"
-msgstr ""
+msgstr "Všetky výskyty"
 
 msgid "changeThisAndFuture"
-msgstr ""
+msgstr "Tento a všetky budúce výskyty"
 
 msgid "internetNotAvailable"
-msgstr ""
+msgstr "Internet je momentálne nedostupný"
 
 msgid "couldNotDiscoverPort"
-msgstr ""
+msgstr "Nenašiel sa HTTP port CalDAV servera"
 
 msgid "couldNotDiscoverPrincipal"
-msgstr ""
+msgstr "Nenašla sa hlavná cesta - použijem náhradné hodnoty."
 
 msgid "foundPrincipalPath"
-msgstr ""
+msgstr "Nájdená hlavná cesta na &quot;%s&quot;"
 
 msgid "serverSupportsCalDAV"
-msgstr ""
+msgstr "Server podporuje CalDAV."
 
 msgid "serverHasDAVNoCalDAV"
-msgstr ""
+msgstr "Server podporuje DAV a vaše používateľské meno/heslo je správne, ale nebola zistená podpora CalDAV."
 
 msgid "serverLacksCalDAV"
-msgstr ""
+msgstr "Server nepodporuje CalDAV."
 
 msgid "serverFailedValidation"
-msgstr ""
+msgstr "Pri overovaní servera nastala chyba:"
 
 msgid "saveSettingsAnyway"
-msgstr ""
+msgstr "Chcete aj tak uložiť tieto nastavenia?"
 
 msgid "serverValidationSuccess"
-msgstr ""
+msgstr "Overenie servera bolo úspešné."
 
 msgid "authenticationFailed"
-msgstr ""
+msgstr "Autentifikácia zlyhala: skontrolujte vaše užívateľské meno/heslo."
 
 msgid "WeekViewPreferences"
-msgstr ""
+msgstr "Možnosti zobrazenia týždňa"
 
 msgid "AlarmPreferences"
-msgstr ""
+msgstr "Nastavenie upozornení"
 
 msgid "GeneralPreferences"
-msgstr ""
+msgstr "Hlavné nastavenia"
 
 msgid "checkServer"
-msgstr ""
+msgstr "Overovanie servera"
 
 msgid "checkServer_Connecting"
-msgstr ""
+msgstr "Pripájanie k serveru. Čakajte prosím ..."
 
 msgid "checkServer_Internet"
-msgstr ""
+msgstr "Skúška internetového pripojenia"
 
 msgid "checkServer_SearchingForServer"
-msgstr ""
+msgstr "Prebieha hľadanie CalDAV servera na &quot;%s&quot;"
 
 msgid "checkServer_DiscoveryCancelled"
-msgstr ""
+msgstr "Hľadanie servera bolo zrušené"
 
 msgid "serverRecordAlreadyExists"
-msgstr ""
+msgstr "Pre tento protokol, port, host, cestu &amp; používateľské meno už existuje server"
 
 msgid "newEventFromThis"
-msgstr ""
+msgstr "Kopírovať do novej udalosti"
 
 msgid "Delete"
-msgstr ""
+msgstr "Vymazať"
 
 msgid "deleteAllInstances"
-msgstr ""
+msgstr "Vymazať všetky výskyty"
 
 msgid "deleteThisInstance"
-msgstr ""
+msgstr "Vymazať tento výskyt"
 
 msgid "deleteThisAndFuture"
-msgstr ""
+msgstr "Vymazať tento a budúce"
 
 msgid "newAllDayEventOn"
-msgstr ""
+msgstr "Nová udalosť na %s"
 
 msgid "newHourEventAt"
-msgstr ""
+msgstr "Nová udalosť o %s"
 
 msgid "editSomeEvent"
-msgstr ""
+msgstr "Upraviť: %s"
 
 msgid "copySomeEvent"
-msgstr ""
+msgstr "Kopírovať: %s"
 
 msgid "deleteSomeEvent"
-msgstr ""
+msgstr "Vymazať: %s"
 
 msgid "noCollectionsFound"
-msgstr ""
+msgstr "Neboli nájdené žiadne kalendáre"
 
 msgid "aCalVersionChanges"
-msgstr ""
+msgstr "Vitajte v novej verzii aCal!"
 
 msgid "newWithVersion"
-msgstr ""
+msgstr "Zmeny vo verzii %s"
 
 msgid "newVersionSeen"
-msgstr ""
+msgstr "OK"
 
 msgid "Due"
-msgstr ""
+msgstr "Do"
 
 msgid "All"
-msgstr ""
+msgstr "Všetko"
 
 msgid "Todo"
-msgstr ""
+msgstr "Úloha"
 
 msgid "Events"
-msgstr ""
+msgstr "Udalosti"
 
 msgid "Tasks"
-msgstr ""
+msgstr "Úlohy"
 
 msgid "Journals"
-msgstr ""
+msgstr "Poznámky"
 
 msgid "Unscheduled"
-msgstr ""
+msgstr "Bez termínu"
 
 msgid "ChooseAction"
-msgstr ""
+msgstr "Vyberte akciu"
 
 msgid "SetCompleted"
-msgstr ""
+msgstr "Označiť za splnenú"
 
 msgid "newTaskFromThis"
-msgstr ""
+msgstr "Kopírovať do novej úlohy"
 
 msgid "dueTasksTitle"
-msgstr ""
+msgstr "Úlohy na jeden týždeň"
 
 msgid "incompleteTasksTitle"
-msgstr ""
+msgstr "Nesplnené úlohy"
 
 msgid "incompleteTasksDue"
-msgstr ""
+msgstr "Nesplnené úlohy na týždeň."
 
 msgid "allTasksTitle"
-msgstr ""
+msgstr "Všetky úlohy"
 
 msgid "NewTaskTitle"
-msgstr ""
+msgstr "Nová úloha"
 
 msgid "TaskSaved"
-msgstr ""
+msgstr "Úloha uložená."
 
 msgid "TaskModifiedAll"
-msgstr ""
+msgstr "Upravené všetky výskyty tejto úlohy."
 
 msgid "TaskModifiedOne"
-msgstr ""
+msgstr "Upravený jeden výskyt tejto úlohy."
 
 msgid "TaskModifiedThisAndFuture"
-msgstr ""
+msgstr "Upravený tento a všetky budúce výskyty tejto úlohy."
 
 msgid "TaskErrorSaving"
-msgstr ""
+msgstr "Chyba pri ukladaní úlohy - skúste neskôr prosím."
 
 msgid "username"
-msgstr ""
+msgstr "Používateľské meno:"
 
 msgid "password"
-msgstr ""
+msgstr "Heslo:"
 
 msgid "setRepeatRule"
-msgstr ""
+msgstr "Nastaviť pravidlo opakovania"
 
 msgid "eventName"
-msgstr ""
+msgstr "Názov udalosti"
 
 msgid "plus"
-msgstr ""
+msgstr "+"
 
 msgid "url"
-msgstr ""
+msgstr "Adresa:"
 
 msgid "todoName"
-msgstr ""
+msgstr "Názov úlohy"
 
 msgid "IsADate"
-msgstr ""
+msgstr "Celý deň"
 
 msgid "NotSet"
-msgstr ""
+msgstr "Nenastavené"
 
 msgid "Exactly"
-msgstr ""
+msgstr "Presne"
 
 msgid "Start"
-msgstr ""
+msgstr "Začiatok"
 
 msgid "Finish"
-msgstr ""
+msgstr "Koniec"
 
 msgid "Before"
-msgstr ""
+msgstr "Predtým"
 
 msgid "After"
-msgstr ""
+msgstr "Potom"
 
 msgid "Custom"
-msgstr ""
+msgstr "Vlastné"
 
 msgid "floatingTime"
-msgstr ""
+msgstr "Premenlivý čas"
 
 msgid "SetCustomAlarm"
-msgstr ""
+msgstr "Nastaviť vlastné upozornenie"
 
 msgid "showUpdateInformation"
-msgstr ""
+msgstr "Informácie o aktualizácii"
 
 msgid "General_aCal_Information"
-msgstr ""
+msgstr "Hlavné informácie o aCal"
 
 msgid "aCal_Website"
-msgstr ""
+msgstr "<b>aCal</b> webstránka je %s"
 
 msgid "aCal_IRC_Channel"
-msgstr ""
+msgstr "Ak sa chcete spojit s autormi aplikácie aCal, môžte tak urobiť cez IRC na &lt;a href=&quot;irc://irc.oftc.net/#acal&quot;>&quot;#acal on irc.oftc.net&lt;/a>"
 
 msgid "aCal_Mailing_Lists"
-msgstr ""
+msgstr "Môžte sa prihlásiť na odber verejných mailing listov &lt;em>aCal&lt;/em> na &lt;a href=&quot;http://lists.acal.me/&quot;>lists.acal.me&lt;/a> , kde nájdete aj ich archívy."
 
 msgid "aCal_is_Free_Software"
-msgstr ""
+msgstr "aCal je &quot;slobodný softvér&quot; ktorý je pod licenciou General Public License v3 (alebo novšou).  Môžte si stiahnuť &lt;a href=&quot;http://gitorious.org/acal&quot;>zdrojový kód aCal z Gitorious&lt;/a>"
 
 msgid "TaskMarkedComplete"
-msgstr ""
+msgstr "Úloha označená za splnenú."
 
 msgid "TaskDeleted"
-msgstr ""
+msgstr "Úloha bola vymazaná."
 
 msgid "endsAt"
-msgstr ""
+msgstr "Končí %s"
 
 msgid "Finished"
-msgstr ""
+msgstr "Ukončené"
 
 msgid "days"
-msgstr ""
+msgstr "Dni"
 
 msgid "noScheduledEvents"
-msgstr ""
+msgstr "Žiadne naplánované udalosti"
 
 msgid "Event"
-msgstr ""
+msgstr "Udalosť"
 
 msgid "Task"
-msgstr ""
+msgstr "Úloha"
 
 msgid "weekends"
-msgstr ""
+msgstr "víkendy"
 
 msgid "weekdays"
-msgstr ""
+msgstr "Pracovné dni"
 
 msgid "JournalDatePrompt"
-msgstr ""
+msgstr "Dátum:"
 
 msgid "AppearancePreferences"
-msgstr ""
+msgstr "Nastavenia vzhľadu"
 
 msgid "prefThemeButtonColour_Summary"
-msgstr ""
+msgstr "Farba všetkých tlačidiel aplikácie."
 
 msgid "prefThemeButtonColour_Title"
-msgstr ""
+msgstr "Farba tlačidiel"
 
 msgid "Saving"
-msgstr ""
+msgstr "Ukladám ..."
 
 msgid "Loading"
-msgstr ""
+msgstr "Otváram ..."
 
 msgid "Deleting"
-msgstr ""
+msgstr "Vymazávam ..."
 
 msgid "ConfigureServer"
-msgstr ""
+msgstr "Konfigurovať server"
 
 msgid "errorConfigMustHaveName"
-msgstr ""
+msgstr "Konfigurácia musí mať názov."
 
 msgid "errorConfigMustHaveUserName"
-msgstr ""
+msgstr "Konfigurácia musí obsahovať používateľské meno."
 
 msgid "errorConfigMustHavePassword"
-msgstr ""
+msgstr "Konfigurácia musí obsahovať heslo."
 
 msgid "errorConfigMustHaveURL"
-msgstr ""
+msgstr "Konfigurácia musí obsahovať názov domény, alebo adresu servera."
 
 msgid "Skip"
-msgstr ""
+msgstr "Preskočiť"
 
 msgid "Configure"
-msgstr ""
+msgstr "Konfigurovať"
 
 msgid "prefAllowSelfSignedCerts_PrefTitle"
-msgstr ""
+msgstr "Povoliť vlastné certifikáty"
 
 msgid "prefAllowSelfSignedCerts_OnSummary"
-msgstr ""
+msgstr "Povolené"
 
 msgid "prefAllowSelfSignedCerts_OffSummary"
-msgstr ""
+msgstr "Odmietnuté"
 
 msgid "SslCertificateError"
-msgstr ""
+msgstr "Nastal problém pri overovaní SSL certifikátu."
 
 msgid "prefTzServerBaseUrl_Title"
-msgstr ""
+msgstr "Server pre časové pásmo"
 
 msgid "prefIgnoreValarmDescription_PrefTitle"
-msgstr ""
+msgstr "Ignorovať VALARM "
 
 msgid "prefIgnoreValarmDescription_OnSummary"
-msgstr ""
+msgstr "Použiť súhrn VEVENT/VTODO v upozorneniach"
 
 msgid "prefIgnoreValarmDescription_OffSummary"
-msgstr ""
+msgstr "Použiť VALARM v upozorneniach"
 
 msgid "note_title_hint"
-msgstr ""
+msgstr "Názov poznámky"
 
 msgid "note_text_hint"
-msgstr ""
+msgstr "Zadajte text poznámky"
 
 msgid "event_name_hint"
-msgstr ""
+msgstr "Názov udalosti"
 
 msgid "event_location_hint"
-msgstr ""
+msgstr "Miesto udalosti"
 
 msgid "event_notes_hint"
-msgstr ""
+msgstr "Detailný popis udalosti"
 
 msgid "todo_name_hint"
-msgstr ""
+msgstr "Názov úlohy"
 
 msgid "todo_description_hint"
-msgstr ""
+msgstr "Zadajte popis úlohy"
 
 msgid "todo_location_hint"
-msgstr ""
+msgstr "Zadajte miesto úlohy"
 
 msgid "first_name_hint"
-msgstr ""
+msgstr "Meno"
 
 msgid "surname_hint"
-msgstr ""
+msgstr "Priezvisko"
 
 msgid "phone_prompt"
-msgstr ""
+msgstr "Telefón"
 
 msgid "phone_hint"
-msgstr ""
+msgstr "Telefón"
 
 msgid "email_prompt"
-msgstr ""
+msgstr "Email"
 
 msgid "email_hint"
-msgstr ""
+msgstr "Email"
 
 msgid "postal_address_prompt"
-msgstr ""
+msgstr "Poštová adresa"
 
 msgid "street_hint"
-msgstr ""
+msgstr "Ulica"
 
 msgid "city_hint"
-msgstr ""
+msgstr "Mesto"
 
 msgid "country_hint"
-msgstr ""
+msgstr "Krajina"
 
 msgid "postcode_hint"
-msgstr ""
+msgstr "PSČ"
 
 msgid "organisation_prompt"
-msgstr ""
+msgstr "Organizácia"
 
 msgid "company_hint"
-msgstr ""
+msgstr "Spoločnosť"
 
 msgid "job_title_hint"
-msgstr ""
+msgstr "Titul"
 
 msgid "contact_picture_description"
-msgstr ""
+msgstr "Obrázok kontaktu"
 
 msgid "icon_add_description"
-msgstr ""
+msgstr "Pridať"
 
 msgid "icon_delete_description"
-msgstr ""
+msgstr "Vymazať"
 
 msgid "Home"
-msgstr ""
+msgstr "Domov"
 
 msgid "Work"
-msgstr ""
+msgstr "Práca"
 
 msgid "Mobile"
-msgstr ""
+msgstr "Mobil"
 
 msgid "Other"
-msgstr ""
+msgstr "Iné"
 
 msgid "WorkFax"
-msgstr ""
+msgstr "Fax do práce"
 
 msgid "HomeFax"
-msgstr ""
+msgstr "Fax domov"
 
 msgid "Pager"
-msgstr ""
+msgstr "Pager"
 
 msgid "newJournalFromThis"
-msgstr ""
+msgstr "Kopírovať do novej poznámky"
 
 msgid "ErrorDeletingJournal"
-msgstr ""
+msgstr "Chyba pri mazaní poznámky - skúste neskôr prosím."
 
 msgid "ErrorDeletingTask"
-msgstr ""
+msgstr "Chyba pri mazaní úlohy - skúste neskôr prosím."
 
 msgid "ErrorCompletingTask"
-msgstr ""
+msgstr "Chyba pri označení úlohy ako dokončenej - skúste neskôr prosím."
 
 msgid "Restore"
-msgstr ""
+msgstr "Obnoviť"
 
 # SourceFileEnd:../res/values/strings.xml
 # SourceFileStart:../res/values/timezonenames.xml
 msgid "tzNameAfricaCairo"
-msgstr ""
+msgstr "Afrika/Káhira"
 
 msgid "tzNameAfricaCasablanca"
-msgstr ""
+msgstr "Afrika/Casablanca"
 
 msgid "tzNameAfricaHarare"
-msgstr ""
+msgstr "Arika/Harare"
 
 msgid "tzNameAfricaNairobi"
-msgstr ""
+msgstr "Afrika/Nairobi"
 
 msgid "tzNameAfricaNdjamena"
-msgstr ""
+msgstr "Afrika/Ndjamena"
 
 msgid "tzNameAmericaAnchorage"
-msgstr ""
+msgstr "Amerika/Anchorage"
 
 msgid "tzNameAmericaArgentinaBuenos_Aires"
-msgstr ""
+msgstr "Amerika/Argentína/Buenos_Aires"
 
 msgid "tzNameAmericaBogota"
-msgstr ""
+msgstr "Amerika/Bogota"
 
 msgid "tzNameAmericaChicago"
-msgstr ""
+msgstr "Amerika/Chicago"
 
 msgid "tzNameAmericaDenver"
-msgstr ""
+msgstr "Amerika/Denver"
 
 msgid "tzNameAmericaGodthab"
-msgstr ""
+msgstr "Amerika/Godthab"
 
 msgid "tzNameAmericaHalifax"
-msgstr ""
+msgstr "Amerika/Halifax"
 
 msgid "tzNameAmericaIndianaIndianapolis"
-msgstr ""
+msgstr "Amerika/Indiana/Indianapolis"
 
 msgid "tzNameAmericaLa_Paz"
-msgstr ""
+msgstr "Amerika/La_Paz"
 
 msgid "tzNameAmericaLos_Angeles"
-msgstr ""
+msgstr "Amerika/Los_Angeles"
 
 msgid "tzNameAmericaNew_York"
-msgstr ""
+msgstr "Amerika/New_York"
 
 msgid "tzNameAmericaNoronha"
-msgstr ""
+msgstr "Amerika/Noronha"
 
 msgid "tzNameAmericaPanama"
-msgstr ""
+msgstr "Amerika/Panama"
 
 msgid "tzNameAmericaPhoenix"
-msgstr ""
+msgstr "Amerika/Phoenix"
 
 msgid "tzNameAmericaRegina"
-msgstr ""
+msgstr "Amerika/Regina"
 
 msgid "tzNameAmericaSantiago"
-msgstr ""
+msgstr "Amerika/Santiago"
 
 msgid "tzNameAmericaSao_Paulo"
-msgstr ""
+msgstr "Amerika/Sao_Paulo"
 
 msgid "tzNameAmericaSt_Johns"
-msgstr ""
+msgstr "Amerika/St_Johns"
 
 msgid "tzNameAmericaTegucigalpa"
-msgstr ""
+msgstr "Amerika/Tegucigalpa"
 
 msgid "tzNameAsiaBaghdad"
-msgstr ""
+msgstr "Ázia/Bagdad"
 
 msgid "tzNameAsiaBangkok"
-msgstr ""
+msgstr "Ázia/Bangkok"
 
 msgid "tzNameAsiaColombo"
-msgstr ""
+msgstr "Ázia/Kolombo"
 
 msgid "tzNameAsiaDhaka"
-msgstr ""
+msgstr "Ázia/Dháka"
 
 msgid "tzNameAsiaIrkutsk"
-msgstr ""
+msgstr "Ázia/Irkutsk"
 
 msgid "tzNameAsiaJerusalem"
-msgstr ""
+msgstr "Ázia/Jeruzalém"
 
 msgid "tzNameAsiaKabul"
-msgstr ""
+msgstr "Ázia/Kábul"
 
 msgid "tzNameAsiaKarachi"
-msgstr ""
+msgstr "Ázia/Karáčí"
 
 msgid "tzNameAsiaKathmandu"
-msgstr ""
+msgstr "Ázia/Kátmandú"
 
 msgid "tzNameAsiaKolkata"
-msgstr ""
+msgstr "Ázia/Kalkata"
 
 msgid "tzNameAsiaKrasnoyarsk"
-msgstr ""
+msgstr "Ázia/Krasnojarsk"
 
 msgid "tzNameAsiaMagadan"
-msgstr ""
+msgstr "Ázia/Magadan"
 
 msgid "tzNameAsiaMuscat"
-msgstr ""
+msgstr "Ázia/Maskat"
 
 msgid "tzNameAsiaNovosibirsk"
-msgstr ""
+msgstr "Ázia/Novosibirsk"
 
 msgid "tzNameAsiaRangoon"
-msgstr ""
+msgstr "Ázia/Rangún"
 
 msgid "tzNameAsiaRiyadh"
-msgstr ""
+msgstr "Ázia/Riád"
 
 msgid "tzNameAsiaSeoul"
-msgstr ""
+msgstr "Ázia/Soul"
 
 msgid "tzNameAsiaShanghai"
-msgstr ""
+msgstr "Ázia/Šanghaj"
 
 msgid "tzNameAsiaSingapore"
-msgstr ""
+msgstr "Ázia/Singapúr"
 
 msgid "tzNameAsiaTaipei"
-msgstr ""
+msgstr "Ázia/Tajpej"
 
 msgid "tzNameAsiaTehran"
-msgstr ""
+msgstr "Ázia/Teherán"
 
 msgid "tzNameAsiaTokyo"
-msgstr ""
+msgstr "Ázia/Tokio"
 
 msgid "tzNameAsiaVladivostok"
-msgstr ""
+msgstr "Ázia/Vladivostok"
 
 msgid "tzNameAsiaYakutsk"
-msgstr ""
+msgstr "Ázia/Jakutsk"
 
 msgid "tzNameAsiaYekaterinburg"
-msgstr ""
+msgstr "Ázia/Jekaterinburg"
 
 msgid "tzNameAsiaYerevan"
-msgstr ""
+msgstr "Ázia/Jerevan"
 
 msgid "tzNameAtlanticAzores"
-msgstr ""
+msgstr "Atlantik/Azory"
 
 msgid "tzNameAtlanticCape_Verde"
-msgstr ""
+msgstr "Atlantik/Kapverdy"
 
 msgid "tzNameAustraliaAdelaide"
-msgstr ""
+msgstr "Austrália/Adelaide"
 
 msgid "tzNameAustraliaBrisbane"
-msgstr ""
+msgstr "Austrália/Brisbane"
 
 msgid "tzNameAustraliaDarwin"
-msgstr ""
+msgstr "Austrália/Darwin"
 
 msgid "tzNameAustraliaHobart"
-msgstr ""
+msgstr "Austrália/Hobart"
 
 msgid "tzNameAustraliaPerth"
-msgstr ""
+msgstr "Austrália/Perth"
 
 msgid "tzNameAustraliaSydney"
-msgstr ""
+msgstr "Austrália/Sydney"
 
 msgid "tzNameEuropeAthens"
-msgstr ""
+msgstr "Európa/Atény"
 
 msgid "tzNameEuropeBerlin"
-msgstr ""
+msgstr "Európa/Berlín"
 
 msgid "tzNameEuropeBucharest"
-msgstr ""
+msgstr "Európa/Bukurešť"
 
 msgid "tzNameEuropeHelsinki"
-msgstr ""
+msgstr "Európa/Helsinki"
 
 msgid "tzNameEuropeLisbon"
-msgstr ""
+msgstr "Európa/Lisabon"
 
 msgid "tzNameEuropeLondon"
-msgstr ""
+msgstr "Európa/Londýn"
 
 msgid "tzNameEuropeMoscow"
-msgstr ""
+msgstr "Európa/Moskva"
 
 msgid "tzNameEuropeParis"
-msgstr ""
+msgstr "Európa/Paríž"
 
 msgid "tzNameEuropePrague"
-msgstr ""
+msgstr "Európa/Praha"
 
 msgid "tzNamePacificApia"
-msgstr ""
+msgstr "Pacifik/Apia"
 
 msgid "tzNamePacificAuckland"
-msgstr ""
+msgstr "Pacifik/Auckland"
 
 msgid "tzNamePacificFiji"
-msgstr ""
+msgstr "Pacifik/Fidži"
 
 msgid "tzNamePacificGuam"
-msgstr ""
+msgstr "Pacifik/Guam"
 
 msgid "tzNamePacificHonolulu"
-msgstr ""
+msgstr "Pacifik/Honolulu"
 
 msgid "tzNamePacificKwajalein"
-msgstr ""
+msgstr "Pacifik/Kwajalein"
 
 msgid "tzNamePacificTongatapu"
-msgstr ""
+msgstr "Pacifik/Tongatapu"

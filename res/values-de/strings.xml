@@ -311,6 +311,7 @@
 <string name="event_notes_hint">Detaillierte Beschreibung des Ereignisses</string>
 <string name="todo_name_hint">Geben Sie einen Namen für die Aufgabe ein</string>
 <string name="todo_description_hint">Geben Sie eine Beschreibung für die Aufgabe ein</string>
+<string name="todo_location_hint">Geben Sie einen Ort für die Aufgabe ein</string>
 <string name="first_name_hint">Vorname</string>
 <string name="surname_hint">Name</string>
 <string name="phone_prompt">Telefon</string>
