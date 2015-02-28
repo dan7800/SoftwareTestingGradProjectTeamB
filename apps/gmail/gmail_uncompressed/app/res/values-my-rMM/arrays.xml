@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>ဖြေကြားရန်</item>
+        <item>အားလုံးကို ဖြေ</item>
+        <item>တစ်ဆင့်ပို့</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>အောင်မြင်</item>
+        <item>ချိတ်ဆက်မှု မရှိ</item>
+        <item>လက်မှတ်ထိုး မ၀င်နိုင်ခဲ့ပါ</item>
+        <item>လုံခြုံရေး အမှား</item>
+        <item>စင့်က် မလုပ်နိုင်ခဲ့ပါ</item>
+        <item>အင်တာနက် အမှား</item>
+        <item>ဆာဗား အမှား</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>ပိုသစ်သော</item>
+        <item>ပိုဟောင်း</item>
+        <item>စကားဝိုင်း စာရင်း</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>သင် သိုလှောင်ပြီး သို့မဟုတ် ဖျက်ပြီးနောက် ပိုသစ်သော စာတွဲကို ပြပါ</item>
+        <item>သင် သိုလှောင်ပြီး သို့မဟုတ် ဖျက်ပြီးနောက် ပိုဟောင်းသော စာတွဲကို ပြပါ</item>
+        <item>သင် သိုလှောင်ပြီး သို့မဟုတ် ဖျက်ပြီးနောက် စာတွဲစာရင်းကို ပြပါ။</item>
+    </string-array>
+    <string-array name="prefEntries_removal_action">
+        <item>မော်ကွန်းတင်ရန်</item>
+        <item>ဖျက်ပစ်ရန်</item>
+    </string-array>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>မော်ကွန်းတင်ရန်</item>
+        <item>ဖျက်ပစ်ရန်</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>စာနှင့်ပတ်သတ်သည့် လုပ်ဆောင်ချက်များကို မျက်နှာပြင်ထိပ်တွင် အမြဲပြရန်</item>
+        <item>"ဒေါင်လိုက်အနေအထားသို့ လှည့်ပြီးသွားလျှင် စာနှင့်ပတ်သတ်သည့် လုပ်ဆောင်ချက်များကို  မျက်နှာပြင် ထိပ်နားတွင်သာ ပြပါ"</item>
+        <item>စာနှင့်ပတ်သတ်သည့် လုပ်ဆောင်ချက်များကို စာခေါင်းစီးပြင်ပတွင် မပြပါနှင့်</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>အမြဲ ပြရန်</item>
+        <item>ဒေါင်လိုက်ဖြင့်သာ ပြရန်</item>
+        <item>မပြပါနှင့်</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>အလွန်သေးငယ်သော</item>
+        <item>သေးငယ်သော</item>
+        <item>ပုံမှန်</item>
+        <item>ကြီးသော</item>
+        <item>အလွန်ကြီးသော</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>စာပါအကြောင်းအရာများကို အလွန်သေးငယ်သော စာသားဖြင့် ဖေါ်ပြပါ</item>
+        <item>စာပါအကြောင်းအရာများကို သေးငယ်သော စာသားဖြင့် ဖေါ်ပြပါ</item>
+        <item>စာပါအကြောင်းအရာများကို ပုံမှန် စာသားဖြင့် ဖေါ်ပြပါ</item>
+        <item>စာပါအကြောင်းအရာများကို ကြီးသော စာသားဖြင့် ဖေါ်ပြပါ</item>
+        <item>စာပါအကြောင်းအရာများကို အလွန်ကြီးသော စာသားဖြင့် ဖေါ်ပြပါ</item>
+    </string-array>
+</resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">Drög</item>
+        <item quantity="one">Drög</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Eyða þessum %1$d samtölum?</item>
+        <item quantity="one">Eyða þessu samtali?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Setja þessi %1$d samtöl í geymslu?</item>
+        <item quantity="one">Setja þetta samtal í geymslu?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Fleygja drögum úr þessum %1$d samtölum?</item>
+        <item quantity="one">Fleygja drögum úr þessu samtali?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">Fjarlægir stjörnu af %1$d samtölum</item>
+        <item quantity="one">Fjarlægir stjörnu af %1$d samtali</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> þögguð</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> þaggað</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> tilkynnt sem ruslpóstur</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> tilkynnt sem ruslpóstur</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> merkt sem ekki ruslpóstur</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> merkt sem ekki ruslpóstur</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> merkt sem léttvæg</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> merkt sem léttvægt</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> tilkynnt sem vefveiðar</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> tilkynnt sem vefveiðar</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> í geymslu</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> í geymslu</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> eytt</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> eytt</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Flokkum breytt.</item>
+        <item quantity="one">Flokki breytt.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d ný skeyti</item>
+        <item quantity="one">%1$d nýtt skeyti</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Stækka %1$d eldri skeyti</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">%1$d eldri skeyti stækkuð</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d ólesin</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d ný skeyti</item>
+        <item quantity="one">%1$d nýtt skeyti</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d samtölum verður eytt fyrir fullt og allt.</item>
+        <item quantity="one">%1$d samtali verður eytt fyrir fullt og allt.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d skeyti</item>
+        <item quantity="one">%1$d skeyti</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d viðhengi</item>
+        <item quantity="one">%1$d viðhengi</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Samstilla: Undanfarna %1$d daga</item>
+        <item quantity="one">Samstilla: Undanfarinn %1$d dag</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d dagar</item>
+        <item quantity="one">Einn dagur</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">Dagar</item>
+        <item quantity="one">Dagur</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">Ekki var hægt að senda viðhengi%s</item>
+        <item quantity="one">Ekki var hægt að senda viðhengi</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">Ekki var hægt að vista viðhengi%s</item>
+        <item quantity="one">Ekki var hægt að vista viðhengi</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Undanfarnir %1$d dagar af skeytum verða sóttir þegar tenging er fyrir hendi</item>
+        <item quantity="one">Undanfarinn dagur af skeytum verður sóttur þegar tenging er fyrir hendi</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Athugaðu: Hugsanlega hafa einhverjir viðtakendur enn ekki aðgang að þessum skrám. Þú gætir þurft að deila skránum úr Google Drive.</item>
+        <item quantity="one">Athugaðu: Hugsanlega hafa einhverjir viðtakendur enn ekki aðgang að þessari skrá. Þú gætir þurft að deila skránni úr Google Drive.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Þú ert að deila með viðtakendum:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>sem ekki eru innan Google Apps notendaskipanarinnar sem þessar skrár tilheyra."</item>
+        <item quantity="one">Þú ert að deila með viðtakendum:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>sem ekki eru innan Google Apps notendaskipanarinnar sem þessi skrá tilheyrir.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Ekki er víst að viðtakendurnir hafi aðgang að skránum sem þú settir inn af Drive. Þú gætir þurft að deila skránum úr Google Drive.</item>
+        <item quantity="one">Ekki er víst að viðtakendurnir hafi aðgang að skránni sem þú settir inn af Drive. Þú gætir þurft að deila skránni úr Google Drive.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Núverandi netföngin þín:</item>
+        <item quantity="one">Núverandi netfangið þitt:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">+%1$d í viðbót</item>
+    </plurals>
+</resources>

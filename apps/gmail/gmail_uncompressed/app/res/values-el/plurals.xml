@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">Πρόχειρα</item>
+        <item quantity="one">Πρόχειρο</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Να διαγραφούν αυτές οι %1$d συνομιλίες;</item>
+        <item quantity="one">Να διαγραφεί αυτή η συνομιλία;</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Να αρχειοθετηθούν αυτές οι %1$d συνομιλίες;</item>
+        <item quantity="one">Να αρχειοθετηθεί αυτή η συνομιλία;</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Απόρριψη πρόχειρων από αυτές τις %1$d συνομιλίες;</item>
+        <item quantity="one">Απόρριψη πρόχειρων από αυτή τη συνομιλία;</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">Κατάργηση αστεριού για %1$d συνομιλίες</item>
+        <item quantity="one">Κατάργηση αστεριού για %1$d συνομιλία</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> συνομιλίες σε σίγαση</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> συνομιλία σε σίγαση</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> συνομιλίες αναφέρθηκαν ως ανεπιθύμητες</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> συνομιλία αναφέρθηκε ως ανεπιθύμητη</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> συνομιλίες αναφέρθηκαν ως μη ανεπιθύμητες</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> συνομιλία αναφέρθηκε ως μη ανεπιθύμητη</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> συνομιλίες επισημάνθηκαν ως μη σημαντικές</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> συνομιλία επισημάνθηκε ως μη σημαντική</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> συνομιλίες αναφέρθηκαν ως απόπειρες ηλεκτρονικού ψαρέματος (phishing)</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> συνομιλία αναφέρθηκε ως απόπειρα ηλεκτρονικού ψαρέματος (phishing)</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> συνομιλίες αρχειοθετήθηκαν</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> συνομιλία αρχειοθετήθηκε</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> συνομιλίες διαγράφτηκαν</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> συνομιλία διαγράφτηκε</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Αλλαγμένες ετικέτες.</item>
+        <item quantity="one">Άλλαξε η ετικέτα.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d νέα μηνύματα</item>
+        <item quantity="one">%1$d νέο μήνυμα</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Ανάπτυξη %1$d παλαιότερων μηνυμάτων</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">Έγινε ανάπτυξη %1$d παλαιότερων μηνυμάτων</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d μη αναγνωσμένα</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d νέα μηνύματα</item>
+        <item quantity="one">%1$d νέο μήνυμα</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d συνομιλίες θα διαγραφούν οριστικά.</item>
+        <item quantity="one">%1$d συνομιλία θα διαγραφεί οριστικά.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d μηνύματα</item>
+        <item quantity="one">%1$d μήνυμα</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d συνημμένα</item>
+        <item quantity="one">%1$d συνημμένο</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Συγχρονισμός: Τελευταίων %1$d ημερών</item>
+        <item quantity="one">Συγχρονισμός: Τελευταίας %1$d ημέρας</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d ημέρες</item>
+        <item quantity="one">Μία ημέρα</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">Ημέρες</item>
+        <item quantity="one">Ημέρα</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">Δεν ήταν δυνατή η αποστολή της επισύναψης%s</item>
+        <item quantity="one">Δεν ήταν δυνατή η αποστολή της επισύναψης</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">Δεν ήταν δυνατή η αποθήκευση της επισύναψης%s</item>
+        <item quantity="one">Δεν ήταν δυνατή η αποθήκευση της επισύναψης</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Θα γίνει λήψη των μηνυμάτων των τελευταίων %1$d ημερών κατά τη σύνδεση</item>
+        <item quantity="one">Θα γίνει λήψη των μηνυμάτων της τελευταίας 1 ημέρας κατά τη σύνδεση.</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Σημείωση: Ορισμένοι παραλήπτες ενδέχεται να μην έχουν ακόμη πρόσβαση στα αρχεία. Μπορείτε να μοιραστείτε αυτά τα αρχεία από το Google Drive.</item>
+        <item quantity="one">Σημείωση: Ορισμένοι παραλήπτες ενδέχεται να μην έχουν ακόμη πρόσβαση σε αυτό το αρχείο. Μπορείτε να μοιραστείτε αυτό το αρχείο από το Google Drive.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Μοιράζεστε με τους παραλήπτες:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>που δεν ανήκουν στον οργανισμό Google Apps στον οποίο ανήκουν αυτά τα αρχεία."</item>
+        <item quantity="one">Μοιράζεστε με τους παραλήπτες:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>που δεν ανήκουν στον οργανισμό Google Apps στον οποίο ανήκει αυτό το αρχείο.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Οι παραλήπτες σας ενδέχεται να μην έχουν πρόσβαση στα αρχεία που εισάγονται από το Drive. Ενδέχεται να χρειαστεί να μοιραστείτε τα αρχεία μέσα από το Google Drive.</item>
+        <item quantity="one">Οι παραλήπτες σας ενδέχεται να μην έχουν πρόσβαση στο αρχείο που προσθέσατε από το Drive. Ενδέχεται να χρειαστεί να μοιραστείτε το αρχείο μέσα από το Google Drive.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Οι τρέχουσες διευθύνσεις σας ηλεκτρονικού ταχυδρομείου:</item>
+        <item quantity="one">Η τρέχουσα διεύθυνσή σας ηλεκτρονικού ταχυδρομείου:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">+%1$d περισσότερες</item>
+    </plurals>
+</resources>

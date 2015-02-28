@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">ಡ್ರಾಫ್ಟ್‌‌ಗಳು</item>
+        <item quantity="one">ಡ್ರಾಫ್ಟ್‌</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">ಈ %1$d ಸಂವಾದಗಳನ್ನು ಅಳಿಸುವುದೇ?</item>
+        <item quantity="one">ಈ ಸಂವಾದವನ್ನು ಅಳಿಸುವುದೇ?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">ಈ %1$d ಸಂವಾದಗಳನ್ನು ಆರ್ಕೈವ್ ಮಾಡುವುದೇ?</item>
+        <item quantity="one">ಈ ಸಂವಾದವನ್ನು ಆರ್ಕೈವ್ ಮಾಡುವುದೇ?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">ಈ %1$d ಸಂವಾದಗಳಲ್ಲಿನ ಡ್ರಾಫ್ಟ್‌ಗಳನ್ನು ತಿರಸ್ಕರಿಸುವುದೇ?</item>
+        <item quantity="one">ಈ ಸಂವಾದದಲ್ಲಿನ ಡ್ರಾಫ್ಟ್‌ಗಳನ್ನು ತಿರಸ್ಕರಿಸುವುದೇ?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">%1$d ಸಂವಾದಗಳಲ್ಲಿ ನಕ್ಷತ್ರವನ್ನು ತೆಗೆದುಹಾಕಲಾಗುತ್ತಿದೆ</item>
+        <item quantity="one">%1$d ಸಂವಾದದಲ್ಲಿ ನಕ್ಷತ್ರವನ್ನು ತೆಗೆದುಹಾಕಲಾಗುತ್ತಿದೆ</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ಅನ್ನು ಮ್ಯೂಟ್ ಮಾಡಲಾಗಿದೆ</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ಅನ್ನು ಮ್ಯೂಟ್ ಮಾಡಲಾಗಿದೆ</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ಅನ್ನು ಸ್ಪ್ಯಾಮ್ ಎಂದು ವರದಿ ಮಾಡಲಾಗಿದೆ</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ಅನ್ನು ಸ್ಪ್ಯಾಮ್ ಎಂದು ವರದಿ ಮಾಡಲಾಗಿದೆ</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ಅನ್ನು ಸ್ಪ್ಯಾಮ್ ಅಲ್ಲ ಎಂದು ವರದಿ ಮಾಡಲಾಗಿದೆ</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ಅನ್ನು ಸ್ಪ್ಯಾಮ್ ಅಲ್ಲ ಎಂದು ವರದಿ ಮಾಡಲಾಗಿದೆ</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ಅನ್ನು ಮುಖ್ಯವಾದುದಲ್ಲ ಎಂದು ಗುರುತಿಸಲಾಗಿದೆ</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ಅನ್ನು ಮುಖ್ಯವಾದುದಲ್ಲ ಎಂದು ಗುರುತಿಸಲಾಗಿದೆ</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ಅನ್ನು ಫಿಶಿಂಗ್ ಎಂದು ವರದಿ ಮಾಡಲಾಗಿದೆ</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ಅನ್ನು ಫಿಶಿಂಗ್ ಎಂದು ವರದಿ ಮಾಡಲಾಗಿದೆ</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ಅನ್ನು ಆರ್ಕೈವ್ ಮಾಡಲಾಗಿದೆ</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ಅನ್ನು ಆರ್ಕೈವ್ ಮಾಡಲಾಗಿದೆ</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ಅನ್ನು ಅಳಿಸಲಾಗಿದೆ</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ಅನ್ನು ಅಳಿಸಲಾಗಿದೆ</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">ಬದಲಾಯಿಸಲಾದ ಲೇಬಲ್‌‌ಗಳು.</item>
+        <item quantity="one">ಬದಲಾಯಿಸಲಾದ ಲೇಬಲ್‌.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d ಹೊಸ ಸಂದೇಶಗಳು</item>
+        <item quantity="one">%1$d ಹೊಸ ಸಂದೇಶ</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">%1$d ಹಳೆಯ ಸಂದೇಶಗಳನ್ನು ವಿಸ್ತರಿಸಿ</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">%1$d ಹಳೆಯ ಸಂದೇಶಗಳನ್ನು ವಿಸ್ತರಿಸಲಾಗಿದೆ</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d ಓದದಿರುವುದು</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d ಹೊಸ ಸಂದೇಶಗಳು</item>
+        <item quantity="one">%1$d ಹೊಸ ಸಂದೇಶ</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d ಸಂವಾದಗಳನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ.</item>
+        <item quantity="one">%1$d ಸಂವಾದವನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d ಸಂದೇಶಗಳು</item>
+        <item quantity="one">%1$d ಸಂದೇಶ</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d ಲಗತ್ತುಗಳು</item>
+        <item quantity="one">%1$d ಲಗತ್ತು</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">ಸಿಂಕ್: ಕೊನೆಯ %1$d ದಿನಗಳು</item>
+        <item quantity="one">ಸಿಂಕ್: ಕೊನೆಯ %1$d ದಿನ</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d ದಿನಗಳು</item>
+        <item quantity="one">ಒಂದು ದಿನ</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">ದಿನಗಳು</item>
+        <item quantity="one">ದಿನ</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">%s ಲಗತ್ತು ಕಳುಹಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</item>
+        <item quantity="one">ಲಗತ್ತು ಕಳುಹಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">%s ಲಗತ್ತು ಉಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</item>
+        <item quantity="one">ಲಗತ್ತು ಉಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">ಸಂಪರ್ಕಗೊಂಡಾಗ ಹಿಂದಿನ %1$d ದಿನಗಳ ಸಂದೇಶಗಳನ್ನು ಡೌನ್‌ಲೋಡ್‌ ಮಾಡಲಾಗುತ್ತದೆ</item>
+        <item quantity="one">ಸಂಪರ್ಕಗೊಂಡಾಗ ಹಿಂದಿನ 1 ದಿನದ ಸಂದೇಶಗಳನ್ನು ಡೌನ್‌ಲೋಡ್‌ ಮಾಡಲಾಗುತ್ತದೆ</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">ಗಮನಿಸಿ: ಕೆಲವು ಸ್ವೀಕೃತದಾರರು ಇನ್ನೂ ಈ ಫೈಲ್‌ಗಳಿಗೆ ಪ್ರವೇಶವನ್ನು ಹೊಂದದಿರಬಹುದು. Google ಡ್ರೈವ್‌ನಿಂದಲೇ ನೀವು ಫೈಲ್‌ಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳುವ ಅಗತ್ಯವಿರಬಹುದು.</item>
+        <item quantity="one">ಗಮನಿಸಿ: ಕೆಲವು ಸ್ವೀಕೃತದಾರರು ಇನ್ನೂ ಈ ಫೈಲ್‌ಗೆ ಪ್ರವೇಶವನ್ನು ಹೊಂದದಿರಬಹುದು. Google ಡ್ರೈವ್‌ನಿಂದಲೇ ನೀವು ಫೈಲ್‌ ಅನ್ನು ಹಂಚಿಕೊಳ್ಳುವ ಅಗತ್ಯವಿರಬಹುದು.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"ನೀವು ಈ ಸ್ವೀಕೃತಿದಾರರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳುತ್ತಿರುವಿರಿ: ಈ ಫೈಲ್‌ಗಳು Google Apps ಸಂಸ್ಥೆಯಲ್ಲಿಲ್ಲದ &amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br> ಅವರಿಗೆ ಸಂಬಂಧಿಸಿವೆ."</item>
+        <item quantity="one">ನೀವು ಈ ಸ್ವೀಕೃತಿದಾರರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳುತ್ತಿರುವಿರಿ: ಈ ಫೈಲ್‌ Google Apps ಸಂಸ್ಥೆಯಲ್ಲಿಲ್ಲದ &amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br> ಅವರಿಗೆ ಸಂಬಂಧಿಸಿದೆ.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">ಡ್ರೈವ್‌ನಿಂದ ಸೇರಿಸಲಾದ ನಿಮ್ಮ ಫೈಲ್‌ಗಳಿಗೆ ನಿಮ್ಮ ಸ್ವೀಕೃತದಾರರು ಪ್ರವೇಶವನ್ನು ಹೊಂದದಿರಬಹುದು. Google ಡ್ರೈವ್‌ನಿಂದಲೇ ನೀವು ಫೈಲ್‌ಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳುವ ಅಗತ್ಯವಿರಬಹುದು.</item>
+        <item quantity="one">ಡ್ರೈವ್‌ನಿಂದ ಸೇರಿಸಲಾದ ನಿಮ್ಮ ಫೈಲ್‌ಗೆ ನಿಮ್ಮ ಸ್ವೀಕೃತದಾರರು ಪ್ರವೇಶವನ್ನು ಹೊಂದದಿರಬಹುದು. Google ಡ್ರೈವ್‌ನಿಂದಲೇ ನೀವು ಫೈಲ್‌ ಅನ್ನು ಹಂಚಿಕೊಳ್ಳುವ ಅಗತ್ಯವಿರಬಹುದು.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಇಮೇಲ್‌ ವಿಳಾಸಗಳು:</item>
+        <item quantity="one">ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಇಮೇಲ್‌ ವಿಳಾಸ:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">+%1$d ಇನ್ನಷ್ಟು</item>
+    </plurals>
+</resources>

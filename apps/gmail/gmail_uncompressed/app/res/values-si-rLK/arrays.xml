@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>පිළිතුරු දෙන්න</item>
+        <item>සියල්ලන්ටම පිළිතුරු යවන්න</item>
+        <item>ඉදිරියට</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>සාර්ථකයි</item>
+        <item>සම්බන්ධතාවය නැත</item>
+        <item>පුරනය වීමට නොහැකි විය</item>
+        <item>ආරක්‍ෂිත දෝෂය</item>
+        <item>සමමුහුර්ත කළ නොහැක</item>
+        <item>අභ්‍යන්තර දෝෂය</item>
+        <item>සේවාදායකයේ දෝෂයකි</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>අලුත්</item>
+        <item>පරණ</item>
+        <item>සංවාද ලැයිස්තුව</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>ඔබ සංරක්ෂණය කළ හෝ මකා දැමූ විට වඩා අලුත් සංවාදය පෙන්වන්න</item>
+        <item>ඔබ සංරක්ෂණය කළ හෝ මකා දැමූ විට වඩා පැරණි සංවාදය පෙන්වන්න</item>
+        <item>ඔබ සංරක්ෂණය හෝ මැකූ පසුව සංවාද ලැයිස්තුව පෙන්වන්න</item>
+    </string-array>
+    <string-array name="prefEntries_removal_action">
+        <item>සංරක්ෂිත කරන්න</item>
+        <item>මකාදමන්න</item>
+    </string-array>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>සංරක්ෂිත කරන්න</item>
+        <item>මකාදමන්න</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>පණිවිඩ ක්‍රියාකාරකම් සැමවිට ම තිරයේ ඉහළින් ම පෙන්වන්න</item>
+        <item>ප්‍රතිමූර්ති ආකාරය වෙත කරකවා ඇතිවිට පමණක් පණිවිඩ ක්‍රියාකාරකම් තිරයේ ඉහළින් ම පෙන්වන්න</item>
+        <item>පණිවිඩ ක්‍රියාකාරකම් පණිවිඩයේ ශීර්ෂකයට පිටතින් පෙන්වන්න එපා</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>සැමවිටම පෙන්වන්න</item>
+        <item>ප්‍රතිමූර්ති ආකාරයෙන් පමණක් පෙන්වන්න</item>
+        <item>පෙන්වන්න එපා</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>ඉතා කුඩා</item>
+        <item>කුඩා</item>
+        <item>සාමාන්‍ය</item>
+        <item>විශාල</item>
+        <item>දැවැන්ත</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>පණිවිඩවල අන්තර්ගතය ඉතා කුඩා පෙළ මගින් පෙන්වන්න</item>
+        <item>පණිවිඩවල අන්තර්ගතය කුඩා පෙළ මගින් පෙන්වන්න</item>
+        <item>පණිවිඩවල අන්තර්ගතය සාමාන්‍ය ප්‍රමාණයේ පෙළ මගින් පෙන්වන්න</item>
+        <item>පණිවිඩවල අන්තර්ගතය විශාල පෙළ මගින් පෙන්වන්න</item>
+        <item>පණිවිඩවල අන්තර්ගතය ඉතා විශාල පෙළ මගින් පෙන්වන්න</item>
+    </string-array>
+</resources>

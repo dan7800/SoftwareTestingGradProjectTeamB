@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">मसुदे</item>
+        <item quantity="one">मसुदा</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">ही %1$d संभाषणे हटवायची?</item>
+        <item quantity="one">हे संभाषण हटवायचे?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">ही %1$d संभाषणे संग्रहित करायची?</item>
+        <item quantity="one">हे संभाषण संग्रहित करायचे?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">या %1$d संभाषणांमधून मसुदे टाकून द्यायचे?</item>
+        <item quantity="one">या संभाषणामधून मसुदे टाकून द्यायचे?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">%1$d संभाषणांचे तारांकन रद्द करत आहे</item>
+        <item quantity="one">%1$d संभाषणाचे तारांकन रद्द करत आहे</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> निःशब्द केले</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> निःशब्द केले</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> स्पॅम म्हणून अहवाल दिला</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> स्पॅम म्हणून अहवाल दिला</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> स्पॅम नाही म्हणून अहवाल दिला</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> स्पॅम नाही म्हणून अहवाल दिला</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> महत्त्वाचे नाही म्हणून चिन्हांकित केले</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> महत्त्वाचे नाही म्हणून चिन्हांकित केले</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> फिशिंग म्हणून अहवाल दिला</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> फिशिंग म्हणून अहवाल दिला</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> संग्रहित</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> संग्रहित</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> हटविले</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> हटविले</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">लेबले बदलली.</item>
+        <item quantity="one">लेबल बदलले.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d नवीन संदेश</item>
+        <item quantity="one">%1$d नवीन संदेश</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">%1$d जुने संदेश विस्तृत करा</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">%1$d जुने संदेश विस्तृत केले</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d न वाचलेले</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d नवीन संदेश</item>
+        <item quantity="one">%1$d नवीन संदेश</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d संभाषणे कायमची हटविली जातील.</item>
+        <item quantity="one">%1$d संभाषण कायमचे हटविले जाईल.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d संदेश</item>
+        <item quantity="one">%1$d संदेश</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d संलग्नके</item>
+        <item quantity="one">%1$d संलग्नक</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">संकालन: अंतिम %1$d दिवस</item>
+        <item quantity="one">संकालन: अंतिम %1$d दिवस</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d दिवस</item>
+        <item quantity="one">एक दिवस</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">दिवस</item>
+        <item quantity="one">दिवस</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">संलग्नक पाठवू शकलो नाही%s</item>
+        <item quantity="one">संलग्नक पाठवू शकलो नाही</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">संलग्नक जतन करू शकलो नाही%s</item>
+        <item quantity="one">संलग्नक जतन करू शकलो नाही</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">कनेक्ट केलेले असताना संदेशांचे अंतिम %1$d दिवस डाउनलोड करेल</item>
+        <item quantity="one">कनेक्ट केलेले असताना संदेशांचा अंतिम 1 दिवस डाउनलोड करेल</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">टीप: काही प्राप्तकर्त्यांकडे अद्याप या फायलींवर प्रवेश नसू शकतो. आपल्याला Google ड्राइव्ह मधून या फायली सामायिक करण्याची आवश्यकता असू शकते.</item>
+        <item quantity="one">टीप: काही प्राप्तकर्त्यांकडे अद्याप या फायलीवर प्रवेश नसू शकतो. आपल्याला Google ड्राइव्ह मधून ही फाईल सामायिक करण्याची आवश्यकता असू शकते.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"आपण या फायली ज्यांच्या मालकीच्या आहेत त्या Google Apps संस्थेमध्ये नसलेल्या प्राप्तकर्त्यांसह:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>सामायिक करत आहात."</item>
+        <item quantity="one">आपण ही फाईल ज्यांच्या मालकीची आहे त्या Google Apps संस्थेमध्ये नसलेल्या प्राप्तकर्त्यांसह:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>सामायिक करत आहात.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">आपल्या प्राप्तकर्त्यांकडे आपण ड्राइव्हमधून घातलेल्या फायलींवर प्रवेश असू शकत नाही. आपल्याला Google ड्राइव्ह मधून फायली सामायिक करण्याची आवश्यकता असू शकते.</item>
+        <item quantity="one">आपल्या प्राप्तकर्त्यांकडे आपण ड्राइव्हमधून घातलेल्या फायलीवर प्रवेश असू शकत नाही. आपल्याला Google ड्राइव्ह मधून फाईल सामायिक करण्याची आवश्यकता असू शकते.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">आपले वर्तमान ईमेल पत्ते:</item>
+        <item quantity="one">आपला वर्तमान ईमेल पत्ता:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">+%1$d अधिक</item>
+    </plurals>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/attachment_bg_holo" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/thumbnail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_attach_file_18dp" style="@style/AttachmentThumbnail" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/AttachmentTextContainer">
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/attachment_name_color" android:id="@id/attachment_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/text_color_hint_grey" android:id="@id/attachment_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+    <ImageButton android:gravity="center" android:id="@id/remove_attachment" android:background="?android:selectableItemBackground" android:clickable="true" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_cancel_holo_light" />
+</LinearLayout>

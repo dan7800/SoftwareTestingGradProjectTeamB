@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">မူကြမ်းများ</item>
+        <item quantity="one">မူကြမ်း</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">ဤ%1$d စကားဝိုင်းများကို ဖျက်မလား?</item>
+        <item quantity="one">ဒီစကားဝိုင်းကို ဖျက်မလား?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">ဒီစကားဝိုင်း %1$d ကို မော်ကွန်းတင်မလား?</item>
+        <item quantity="one">ဤစကားဝိုင်း မော်ကွန်းတင်မလား?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">ဤစာတွဲ %1$d ခုမှ စာကြမ်းများကို စွန့်ပစ်မလား။</item>
+        <item quantity="one">ဤစာတွဲမှ စာကြမ်းများကို ဖျက်သိမ်းမှာလား။</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">စကားဝိုင်း %1$d ခု စတားဖြုတ်နေ</item>
+        <item quantity="one">စကားဝိုင်း %1$d ခု စတားဖြုတ်နေ</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> အသံတိတ်ခဲ့</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> အသံတိတ်ခဲ့</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> စပမ် အဖြစ် သတင်းပို့ခဲ့</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> စပမ် အဖြစ် သတင်းပို့ခဲ့</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> စပမ် မဟုတ် ဆိုပြီး သတင်းပို့ခဲ့</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> စပမ် မဟုတ် ဆိုပြီး သတင်းပို့ခဲ့</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ကို အရေးမကြီးကြောင်း မှတ်သားခဲ့</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ကို အရေးမကြီးကြောင်း မှတ်သားခဲ့</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> မျှားယူမှု အဖြစ် သတင်းပို့ခဲ့</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> မျှားယူမှု အဖြစ် သတင်းပို့ခဲ့</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> မော်ကွန်းတင်ပြီး။</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> မော်ကွန်းတင်ပြီး။</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ကို ဖျက်ပြီး။</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ကို ဖျက်ပြီး။</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">ပြောင်းထားသည့် ခေါင်းစဉ်ခွဲများ။</item>
+        <item quantity="one">ပြောင်းထားသည့် ခေါင်းစဉ်ခွဲ။</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">စာ အသစ် %1$d ခု</item>
+        <item quantity="one">စာ အသစ် %1$d ခု</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">ပိုဟောင်းသည့် စာ %1$dခုကို ချဲ့ရန်</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">ပိုဟောင်းသည့် စာ %1$dခုကို ချဲ့ထား</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">မဖတ်ရသေး %1$d</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">စာ အသစ် %1$d ခု</item>
+        <item quantity="one">စာ အသစ် %1$d ခု</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">စာတွဲ %1$dခု အပြီးအပိုင် ဖျက်သိမ်းပါမည်။</item>
+        <item quantity="one">စာတွဲ %1$d ခု အပြီးအပိုင် ဖျက်သိမ်းပါမည်။</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">စာ %1$d</item>
+        <item quantity="one">စာ %1$d စောင်</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">ပူးတွဲမှုများ %1$d</item>
+        <item quantity="one">ပူးတွဲမှု %1$d</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">"အချိန်ကိုက်မှု။  ။ နောက်ဆုံး %1$d ရက်"</item>
+        <item quantity="one">"အချိန်ကိုက်မှု။  ။ နောက်ဆုံး %1$d ရက်"</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d ရက်</item>
+        <item quantity="one">တစ်ရက်</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">ရက်</item>
+        <item quantity="one">ရက်</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">ပူးတွဲပါဖိုင် %s ကို မပို့နိုင်ခဲ့ပါ</item>
+        <item quantity="one">ပူးတွဲပါဖိုင်ကို မပို့နိုင်ခဲ့ပါ</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">ပူးတွဲပါဖိုင် %sခုကို မသိမ်းဆည်းနိုင်ခဲ့ပါ</item>
+        <item quantity="one">ပူးတွဲပါဖိုင်ကို မသိမ်းဆည်းနိုင်ခဲ့ပါ</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">ချိတ်ဆက်လိုက်သည့်အခါ နောက်ဆုံး %1$dရက်စာ စာများကို ကူးယူပါမည်</item>
+        <item quantity="one">"ချိတ်ဆက်လိုက်သည့် အခါ  နောက်ဆုံး၁ ရက်စာ စာများကို ကူးယူပါမည်"</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">"မှတ်ချက်။  ။ အချို့စာလက်ခံသူများမှ ဤဖိုင်ကို ဝင်ရောက်သုံးစွဲခွင့် မရရှိသေးပါ။ သင် ဂူဂယ်ဒရိုက်ဗ်တွင် ဖိုင်ကို မျှဝေပေးရန် လိုအပ်ပါမည်။"</item>
+        <item quantity="one">"မှတ်ချက်။  ။ အချို့စာလက်ခံသူများမှ ဤဖိုင်ကို ဝင်ရောက်သုံးစွဲခွင့် မရရှိသေးပါ။ သင် ဂူဂယ်ဒရိုက်ဗ်တွင် ဖိုင်ကို မျှဝေပေးရန် လိုအပ်ပါမည်။"</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"ဤဖိုင်များကို ပိုင်ဆိုင်သည့် ဂူဂယ်အပ်စ် အဖွဲ့အစည်းမှ မဟုတ်သော စာလက်ခံသူများ &amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br> နှင့် သင် မျှဝေနေပါသည်။"</item>
+        <item quantity="one">ဤဖိုင်ကို ပိုင်ဆိုင်သည့် ဂူဂယ်အပ်စ် အဖွဲ့အစည်းမှ မဟုတ်သော စာလက်ခံသူများ&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br> နှင့် သင် မျှဝေနေပါသည်</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">ဒရိုက်ဗ်မှ သင်ထည့်သွင်းထားသော ဖိုင်ကို သင့်စာလက်ခံသူများမှ ဝင်ရောက်သုံးစွဲခွင့် မရှိပါ။ သင် ဂူဂယ်ဒရိုက်ဗ်တွင် ဖိုင်ကို မျှဝေပေးရန် လိုအပ်ပါမည်။</item>
+        <item quantity="one">ဒရိုက်ဗ်မှ သင်ထည့်သွင်းထားသော ဖိုင်ကို သင့်စာလက်ခံသူများမှ ဝင်ရောက်သုံးစွဲခွင့် မရှိပါ။ သင် ဂူဂယ်ဒရိုက်ဗ်တွင် ဖိုင်ကို မျှဝေပေးရန် လိုအပ်ပါမည်။</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">"သင်၏ လက်ရှိ အီးမေးလ် လိပ်စာ။  ။"</item>
+        <item quantity="one">"သင်၏ လက်ရှိ အီးမေးလ် လိပ်စာ။  ။"</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">နောက်ထပ် +%1$dခု</item>
+    </plurals>
+</resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">Osnutki</item>
+        <item quantity="one">Osnutek</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Želite izbrisati toliko pogovorov: %1$d?</item>
+        <item quantity="one">Želite izbrisati ta pogovor?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Želite arhivirati toliko pogovorov: %1$d?</item>
+        <item quantity="one">Želite arhivirati ta pogovor?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Želite zavreči osnutke iz teh %1$d pogovorov?</item>
+        <item quantity="one">Želite zavreči osnutke iz tega pogovora?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">Št. pogovorov z odstranjeno zvezdico: %1$d</item>
+        <item quantity="one">%1$d pogovor z odstranjeno zvezdico</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">Št. prezrtih pogovorov: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> prezrt pogovor</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">Št. pogovorov, prijavljenih kot neželenih: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> pogovor, prijavljen kot neželen</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">Št. pogovorov, prijavljenih kot nevsiljenih: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> pogovor, prijavljen kot nevsiljen</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">Št. pogovorov, označenih kot pomembnih: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> pogovor, označen kot pomemben</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">Št. pogovorov, prijavljenih kot lažno predstavljanje: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> pogovor, prijavljen kot lažno predstavljanje</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">Št. arhiviranih pogovorov: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> arhiviran pogovor</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">Št. izbrisanih pogovorov: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> izbrisan pogovor</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Spremenjene oznake.</item>
+        <item quantity="one">Spremenjena oznaka.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">Št. novih sporočil: %1$d</item>
+        <item quantity="one">%1$d novo sporočilo</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Razširi starejša sporočila (%1$d)</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">Starejša sporočila %1$d so razširjena</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">Št. neprebranih: %1$d</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">Št. novih sporočil: %1$d</item>
+        <item quantity="one">%1$d novo sporočilo</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">Število pogovorov, ki bodo trajno izbrisani: %1$d.</item>
+        <item quantity="one">Število pogovorov, ki bodo trajno izbrisani: %1$d</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">Št. sporočil: %1$d</item>
+        <item quantity="one">%1$d sporočilo</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">Št. prilog: %1$d</item>
+        <item quantity="one">%1$d priloga</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Sinhronizacija – zadnjih toliko dni: %1$d</item>
+        <item quantity="one">Sinhronizacija – zadnji %1$d dan</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d dni</item>
+        <item quantity="one">En dan</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">dni</item>
+        <item quantity="one">Dan</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">Priloge ni bilo mogoče poslati (%s)</item>
+        <item quantity="one">Priloge ni bilo mogoče poslati</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">Priloge ni bilo mogoče shraniti (%s)</item>
+        <item quantity="one">Priloge ni bilo mogoče shraniti</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Ko vzpostavite povezavo, bodo prenesena sporočila za toliko dni: %1$d</item>
+        <item quantity="one">Ko vzpostavite povezavo, bodo prenesena sporočila zadnjega dne</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Opomba: nekateri prejemniki morda še vedno nimajo dostopa do teh datotek. Morda jih boste morali dati v skupno rabo v storitvi Google Drive.</item>
+        <item quantity="one">Opomba: nekateri prejemniki morda še vedno nimajo dostopa do te datoteke. Morda jo boste morali dati v skupno rabo v storitvi Google Drive.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Datoteko ste dali v skupno rabo s prejemniki&amp;lt;br>&amp;lt;b>%1$s,
+&amp;lt;/b>&amp;lt;br>ki niso v organizaciji Google Aplikacij, v kateri je ta datoteka."</item>
+        <item quantity="one">Datoteko ste dali v skupno rabo s prejemniki&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>, ki niso v organizaciji Google Aplikacij, v kateri je ta datoteka.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Prejemniki morda nimajo dostopa do datotek, ki ste jih vstavili iz storitve Drive. Morda jih boste morali dati v skupno rabo v storitvi Google Drive.</item>
+        <item quantity="one">Prejemniki morda nimajo dostopa do datoteke, ki ste jo vstavili iz storitve Drive. Morda jo boste morali dati v skupno rabo v storitvi Google Drive.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Vaši trenutni e-poštni naslovi:</item>
+        <item quantity="one">Vaš trenutni e-poštni naslov:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">Še %1$d</item>
+    </plurals>
+</resources>

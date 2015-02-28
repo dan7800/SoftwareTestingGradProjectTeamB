@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RecipientEditTextView" parent="@style/RecipientEditTextViewBase">
+        <item name="android:imeOptions">actionNext</item>
+    </style>
+    <style name="ComposeAreaWrapper">
+        <item name="android:background">@color/holo_light_background_color</item>
+    </style>
+    <style name="VacationResponderTheme" parent="@style/UnifiedEmailTheme.Appcompat">
+        <item name="android:windowBackground">@color/vacation_responder_window_background</item>
+    </style>
+    <style name="WelcomeTour" />
+    <style name="WelcomeTour.Container" parent="@style/WelcomeTour">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">@dimen/welcome_tour_container_width</item>
+        <item name="android:layout_height">@dimen/welcome_tour_container_height</item>
+    </style>
+    <style name="WelcomeTour.ImageArea" parent="@style/WelcomeTour">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">0.0dip</item>
+        <item name="android:layout_marginTop">@dimen/welcome_tour_image_margin_top</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="WelcomeTour.ContentArea" parent="@style/WelcomeTour">
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">@dimen/welcome_tour_content_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/welcome_tour_content_padding_horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+</resources>

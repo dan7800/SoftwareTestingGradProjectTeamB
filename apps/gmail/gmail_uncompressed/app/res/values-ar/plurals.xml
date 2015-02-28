@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">مسودات</item>
+        <item quantity="one">مسودة</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">هل تريد حذف هذه المحادثات البالغ عددها %1$d؟</item>
+        <item quantity="one">هل تريد حذف هذه المحادثة؟</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">هل تريد وضع هذه المحادثات البالغ عددها %1$d في الأرشيف؟</item>
+        <item quantity="one">هل تريد وضع هذه المحادثة في الأرشيف؟</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">هل تريد تجاهل هذه المسودات البالغ عددها %1$d؟</item>
+        <item quantity="one">هل تريد إلغاء المسودات من هذه المحادثة؟</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">إزالة التمييز بنجمة عن %1$d من المحادثات</item>
+        <item quantity="one">إزالة التمييز بنجمة عن %1$d محادثة</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">‏تم تجاهل &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">‏تم تجاهل &amp;lt;b>%1$d&amp;lt;/b></item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">‏تم الإبلاغ عن &amp;lt;b>%1$d&amp;lt;/b> كمحتوى غير مرغوب فيه</item>
+        <item quantity="one">‏تم الإبلاغ عن &amp;lt;b>%1$d&amp;lt;/b> كمحتوى غير مرغوب فيه</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">‏تم الإبلاغ عن &amp;lt;b>%1$d&amp;lt;/b> كمحتوى مرغوب فيه</item>
+        <item quantity="one">‏تم الإبلاغ عن &amp;lt;b>%1$d&amp;lt;/b> كمحتوى مرغوب فيه</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">‏تم وضع علامة على &amp;lt;b>%1$d&amp;lt;/b> تشير إلى عدم الأهمية</item>
+        <item quantity="one">‏تم وضع علامة على &amp;lt;b>%1$d&amp;lt;/b> تشير إلى عدم الأهمية</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">‏تم الإبلاغ عن &amp;lt;b>%1$d&amp;lt;/b> كتصيد احتيالي</item>
+        <item quantity="one">‏تم الإبلاغ عن &amp;lt;b>%1$d&amp;lt;/b> كتصيد احتيالي</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">‏تم وضع &amp;lt;b>%1$d&amp;lt;/b> في الأرشيف</item>
+        <item quantity="one">‏تم وضع &amp;lt;b>%1$d&amp;lt;/b> في الأرشيف</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">‏تم حذف &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">‏تم حذف &amp;lt;b>%1$d&amp;lt;/b></item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">التصنيفات التي تم تغييرها.</item>
+        <item quantity="one">التصنيف الذي تم تغييره.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d من الرسائل الجديدة</item>
+        <item quantity="one">%1$d رسالة جديدة</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">توسيع %1$d من الرسائل الأقدم</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">تمت توسعة %1$d من الرسائل الأقدم</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d غير مقروءة</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">عدد الرسائل الجديدة: %1$d</item>
+        <item quantity="one">رسالة جديدة (%1$d)</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">يتم حذف هذه المحادثات البالغ عددها %1$d نهائيًا.</item>
+        <item quantity="one">سيتمّ حذف %1$d محادثة نهائيًا.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">عدد الرسائل: %1$d</item>
+        <item quantity="one">عدد الرسائل: %1$d</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">عدد المرفقات: %1$d</item>
+        <item quantity="one">عدد المرفقات: %1$d</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">المزامنة: آخر %1$d يوم</item>
+        <item quantity="one">المزامنة: آخر %1$d يوم</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d يوم</item>
+        <item quantity="one">يوم واحد</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">أيام</item>
+        <item quantity="one">يوم</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">تعذر إرسال المرفق%s</item>
+        <item quantity="one">تعذر إرسال المرفق</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">تعذّر حفظ المرفق%s</item>
+        <item quantity="one">تعذر حفظ المرفق</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">تنزيل رسائل آخر %1$d أيام عند الاتصال</item>
+        <item quantity="one">تنزيل رسائل اليوم الأخير عند الاتصال</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">‏ملحوظة: قد لا يتمكن بعض المستلمين من الوصول إلى هذه الملفات. قد تحتاج إلى مشاركة هذه الملفات من داخل Google Drive.</item>
+        <item quantity="one">‏ملاحظة: قد لا يزال بعض المستلمين غير قادرين على الوصول إلى هذا الملف. قد تحتاج إلى مشاركة هذا الملف عبر Google Drive.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"‏أنت تشارك مع المستلمين:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>الذين لا يندرجون ضمن منظمة Google Apps التي ينتمي إليها هذا الملف."</item>
+        <item quantity="one">‏أنت تشارك مع المستلمين:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>الذين لا يندرجون ضمن منظمة Google Apps التي ينتمي إليها هذا الملف.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">‏قد لا يكون لدى مستلمي بريدك حق الوصول إلى الملفات التي أدخلتها من Drive. قد تحتاج إلى مشاركة الملفات من داخل Google Drive.</item>
+        <item quantity="one">‏قد لا يكون لدى مستلمي بريدك حق الوصول إلى الملف الذي أدخلته من Drive. قد تحتاج إلى مشاركة الملف من داخل Google Drive.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">عناوين بريدك الإلكتروني الحالية:</item>
+        <item quantity="one">عنوان بريدك الالكتروني الحالي:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">+%1$d آخرون</item>
+    </plurals>
+</resources>

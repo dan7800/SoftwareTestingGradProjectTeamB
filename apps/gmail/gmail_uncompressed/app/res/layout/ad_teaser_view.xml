@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gm.ads.AdTeaserView android:background="@color/list_ad_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/swipeable_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/ad_teaser_leave_behind" layout="@layout/swipe_leavebehind_body" />
+    </LinearLayout>
+</com.google.android.gm.ads.AdTeaserView>

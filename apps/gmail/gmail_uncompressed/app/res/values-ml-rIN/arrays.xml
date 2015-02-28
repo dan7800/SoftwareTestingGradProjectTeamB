@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>മറുപടി നൽകുക</item>
+        <item>എല്ലാവർക്കും മറുപടി നൽകുക</item>
+        <item>കൈമാറുക</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>വിജയകരം</item>
+        <item>കണക്ഷനൊന്നുമില്ല</item>
+        <item>സൈൻ ഇൻ ചെയ്യാനായില്ല</item>
+        <item>സുരക്ഷാ പിശക്</item>
+        <item>സമന്വയിപ്പിക്കാനായില്ല</item>
+        <item>ആന്തരിക പിശക്</item>
+        <item>സെര്‍വര്‍ പിശക്</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>പുതിയത്</item>
+        <item>പഴയത്</item>
+        <item>സംഭാഷണ ലിസ്റ്റ്</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>നിങ്ങൾ ആർക്കൈവുചെയ്യുകയോ ഇല്ലാതാക്കുകയോ ചെയ്‌തതിനുശേഷം ഏറ്റവും പുതിയ സംഭാഷണം കാണിക്കുക</item>
+        <item>നിങ്ങൾ ആർക്കൈവുചെയ്യുകയോ ഇല്ലാതാക്കുകയോ ചെയ്‌തതിനുശേഷം ഏറ്റവും പഴയ സംഭാഷണം കാണിക്കുക</item>
+        <item>നിങ്ങൾ ആർക്കൈവുചെയ്യുകയോ ഇല്ലാതാക്കുകയോ ചെയ്‌തതിനുശേഷം സംഭാഷണ ലിസ്റ്റ് കാണിക്കുക</item>
+    </string-array>
+    <string-array name="prefEntries_removal_action">
+        <item>ആര്‍ക്കൈവുചെയ്യുക</item>
+        <item>ഇല്ലാതാക്കുക</item>
+    </string-array>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>ആര്‍ക്കൈവുചെയ്യുക</item>
+        <item>ഇല്ലാതാക്കുക</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>സന്ദേശ പ്രവർത്തനങ്ങൾ എപ്പോഴും സ്ക്രീനിന് മുകളിൽ കാണിക്കുക</item>
+        <item>പോർട്രെയ്‌റ്റിലേക്ക് തിരിക്കുമ്പോൾ സന്ദേശ പ്രവർത്തനങ്ങൾ എപ്പോഴും സ്ക്രീനിന് മുകളിൽ മാത്രം കാണിക്കുക</item>
+        <item>സന്ദേശ ശീർഷകത്തിന് പുറത്ത് സന്ദേശ പ്രവർത്തനങ്ങൾ കാണിക്കരുത്</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>എപ്പോഴും കാണിക്കുക</item>
+        <item>പോർട്രെയ്‌റ്റിൽ മാത്രം കാണിക്കുക</item>
+        <item>കാണിക്കരുത്</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>തീരെ ചെറുത്</item>
+        <item>ചെറുത്</item>
+        <item>സാധാരണം</item>
+        <item>വലുത്</item>
+        <item>വളരെ വലുത്</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>തീരെ ചെറിയ ടെക്‌സ്റ്റിൽ സന്ദേശങ്ങളുടെ ഉള്ളടക്കം ദൃശ്യമാക്കുക</item>
+        <item>ചെറിയ ടെക്‌സ്റ്റിൽ സന്ദേശങ്ങളുടെ ഉള്ളടക്കം ദൃശ്യമാക്കുക</item>
+        <item>സാധാരണ വലുപ്പത്തിലുള്ള ടെക്‌സ്റ്റിൽ സന്ദേശങ്ങളുടെ ഉള്ളടക്കം ദൃശ്യമാക്കുക</item>
+        <item>വലിയ ടെക്‌സ്റ്റിൽ സന്ദേശങ്ങളുടെ ഉള്ളടക്കം ദൃശ്യമാക്കുക</item>
+        <item>വളരെ വലിയ ടെക്‌സ്റ്റിൽ സന്ദേശങ്ങളുടെ ഉള്ളടക്കം ദൃശ്യമാക്കുക</item>
+    </string-array>
+</resources>

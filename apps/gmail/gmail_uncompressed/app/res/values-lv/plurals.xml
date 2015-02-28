@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">Melnraksti</item>
+        <item quantity="one">Melnraksts</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Vai dzēst šīs sarunas (%1$d)?</item>
+        <item quantity="one">Vai dzēst šo sarunu?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Vai arhivēt šīs sarunas (%1$d)?</item>
+        <item quantity="one">Vai arhivēt šo sarunu?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Vai atmest melnrakstus no šīm %1$d sarunām?</item>
+        <item quantity="one">Vai atmest melnrakstus no šīs sarunas?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">Tiek noņemtas zvaigznītes %1$d sarunām</item>
+        <item quantity="one">Tiek noņemta zvaigznīte %1$d sarunai</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">Izslēgta skaņa &amp;lt;b>%1$d&amp;lt;/b> sarunām</item>
+        <item quantity="one">Izslēgta skaņa &amp;lt;b>%1$d&amp;lt;/b> sarunai</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> sarunas atzīmētas kā mēstules</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> saruna atzīmēta kā mēstule</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> sarunas atzīmētas kā mēstules</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> saruna atzīmēta kā mēstule</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> sarunas atzīmētas kā nesvarīgas</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> saruna atzīmēta kā nesvarīga</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">Par &amp;lt;b>%1$d&amp;lt;/b> sarunām ziņots kā par pikšķerēšanu</item>
+        <item quantity="one">Par &amp;lt;b>%1$d&amp;lt;/b> sarunu ziņots kā par pikšķerēšanu</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">Arhivētas &amp;lt;b>%1$d&amp;lt;/b> sarunas</item>
+        <item quantity="one">Arhivēta &amp;lt;b>%1$d&amp;lt;/b> saruna</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">Dzēstas &amp;lt;b>%1$d&amp;lt;/b> sarunas</item>
+        <item quantity="one">Dzēsta &amp;lt;b>%1$d&amp;lt;/b> saruna</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Iezīmes ir mainītas.</item>
+        <item quantity="one">Iezīme ir mainīta.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d jauni ziņojumi</item>
+        <item quantity="one">%1$d jauns ziņojums</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Izvērst %1$d vecākus ziņojumus</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">Tika izvērsti %1$d vecāki ziņojumi</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d nelasīti</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d jauni ziņojumi</item>
+        <item quantity="one">%1$d jauns ziņojums</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d sarunas tiks neatgriezeniski dzēstas.</item>
+        <item quantity="one">%1$d saruna tiks neatgriezeniski dzēsta.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d ziņojumi</item>
+        <item quantity="one">%1$d ziņojums</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d pielikumi</item>
+        <item quantity="one">%1$d pielikums</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Sinhronizēt: pēdējās %1$d dienas</item>
+        <item quantity="one">Sinhronizēt: pēdējo %1$d dienu</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d diena(-as)</item>
+        <item quantity="one">Viena diena</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">Dienas</item>
+        <item quantity="one">Diena</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">Nevarēja nosūtīt pielikumu no konta %s</item>
+        <item quantity="one">Nevarēja nosūtīt pielikumu</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">Nevarēja saglabāt pielikumu no konta %s</item>
+        <item quantity="one">Nevarēja saglabāt pielikumu</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Pēdējo %1$d dienu ziņojumi tiks lejupielādēti, kad būs izveidots savienojums.</item>
+        <item quantity="one">Pēdējās 1 dienas ziņojumi tiks lejupielādēti, kad būs izveidots savienojums.</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Piezīme. Iespējams, daži adresāti joprojām nevar piekļūt šiem failiem. Tādā gadījumā jums šie faili būs jākopīgo no Google diska.</item>
+        <item quantity="one">Piezīme. Iespējams, daži adresāti joprojām nevar piekļūt šim failam. Tādā gadījumā jums šis fails būs jākopīgo no Google diska.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Jūs kopīgojat failus ar šādiem adresātiem:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>Tie ir ārpus Google Apps organizācijas, kurai pieder šie faili."</item>
+        <item quantity="one">Jūs kopīgojat failu ar šādiem adresātiem:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>Tie ir ārpus Google Apps organizācijas, kurai pieder šis fails.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Jūsu norādītajiem adresātiem var nebūt piekļuves failiem, ko ievietojāt no Diska. Tādā gadījumā jums šie faili būs jākopīgo no Google diska.</item>
+        <item quantity="one">Jūsu norādītajiem adresātiem var nebūt piekļuves failam, ko ievietojāt no Diska. Tādā gadījumā jums šis fails būs jākopīgo no Google diska.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Pašreizējās e-pasta adreses:</item>
+        <item quantity="one">Pašreizējā e-pasta adrese:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">un vēl %1$d</item>
+    </plurals>
+</resources>

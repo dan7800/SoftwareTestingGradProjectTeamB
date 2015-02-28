@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">טיוטות</item>
+        <item quantity="one">טיוטה</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">האם למחוק את %1$d השיחות האלה?</item>
+        <item quantity="one">האם למחוק שיחה זו?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">האם להעביר את %1$d השיחות האלה לארכיון?</item>
+        <item quantity="one">האם להעביר שיחה זו לארכיון?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">למחוק טיוטות מ-%1$d שיחות אלה?</item>
+        <item quantity="one">למחוק טיוטות משיחה זו?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">מסיר כוכב מ-%1$d שיחות</item>
+        <item quantity="one">מסיר כוכב משיחה %1$d</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">‏&amp;lt;b>%1$d&amp;lt;/b> הושתקו</item>
+        <item quantity="one">‏&amp;lt;b>%1$d&amp;lt;/b> הושתקה</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">‏&amp;lt;b>%1$d&amp;lt;/b> דווחו כספאם</item>
+        <item quantity="one">‏&amp;lt;b>%1$d&amp;lt;/b> דווחה כספאם</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">‏&amp;lt;b>%1$d&amp;lt;/b> דווחו כשיחות שאינן ספאם</item>
+        <item quantity="one">‏&amp;lt;b>%1$d&amp;lt;/b> דווחה כשיחה שאינה ספאם</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">‏&amp;lt;b>%1$d&amp;lt;/b> סומנו כלא חשובות</item>
+        <item quantity="one">‏&amp;lt;b>%1$d&amp;lt;/b> סומנה כלא חשובה</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">‏&amp;lt;b>%1$d&amp;lt;/b> דווחו כדיוג</item>
+        <item quantity="one">‏&amp;lt;b>%1$d&amp;lt;/b> דווחה כדיוג</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">‏&amp;lt;b>%1$d&amp;lt;/b> הועברו לארכיון</item>
+        <item quantity="one">‏&amp;lt;b>%1$d&amp;lt;/b> הועברה לארכיון</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">‏&amp;lt;b>%1$d&amp;lt;/b> נמחקו</item>
+        <item quantity="one">‏&amp;lt;b>%1$d&amp;lt;/b> נמחקה</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">תוויות שונו.</item>
+        <item quantity="one">תווית שונתה.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d הודעות חדשות</item>
+        <item quantity="one">הודעה חדשה %1$d</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">הרחב %1$d הודעות ישנות יותר</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">%1$d הודעות ישנות יותר הורחבו</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d לא נקראו</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d הודעות חדשות</item>
+        <item quantity="one">הודעה חדשה %1$d</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d שיחות יימחקו לצמיתות.</item>
+        <item quantity="one">שיחה %1$d תימחק לצמיתות.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d הודעות</item>
+        <item quantity="one">הודעה %1$d</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d קבצים מצורפים</item>
+        <item quantity="one">קובץ מצורף %1$d</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">סנכרון: ב-%1$d הימים האחרונים</item>
+        <item quantity="one">סנכרון: ביום האחרון %1$d</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d ימים</item>
+        <item quantity="one">יום אחד</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">ימים</item>
+        <item quantity="one">יום</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">לא הייתה אפשרות לשלוח את הקובץ המצורף%s</item>
+        <item quantity="one">לא הייתה אפשרות לשלוח את הקובץ המצורף</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">לא הייתה אפשרות לשמור את הקובץ המצורף%s</item>
+        <item quantity="one">לא הייתה אפשרות לשמור את הקובץ המצורף</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">תתבצע הורדה של ההודעות מ-%1$d הימים האחרונים בעת ההתחברות</item>
+        <item quantity="one">תתבצע הורדה של ההודעות מהיום האחרון בעת ההתחברות</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">‏הערה: ייתכן כי לנמענים מסוימים עדיין אין גישה לקבצים האלה. ייתכן שעליך לשתף את הקבצים האלה מתוך Google Drive.</item>
+        <item quantity="one">‏הערה: ייתכן כי לנמענים מסוימים עדיין אין גישה לקובץ הזה. ייתכן שעליך לשתף את הקובץ מתוך Google Drive.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"‏אתה משתף עם נמענים:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>שאינם בארגון Google Apps שאליו הקבצים האלה שייכים."</item>
+        <item quantity="one">‏אתה משתף עם נמענים:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>שאינם בארגון Google Apps שאליו הקובץ הזה שייך.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">‏ייתכן שלנמענים שלך אין גישה לקבצים שהוספת מ-Drive. ייתכן שיהיה עליך לשתף את הקבצים מתוך Google Drive.</item>
+        <item quantity="one">‏ייתכן שלנמענים שלך אין גישה לקובץ שהוספת מ-Drive. ייתכן שיהיה עליך לשתף את הקובץ מתוך Google Drive.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">כתובות האימייל הנוכחיות שלך:</item>
+        <item quantity="one">כתובת האימייל הנוכחית שלך:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">+%1$d נוספות</item>
+    </plurals>
+</resources>

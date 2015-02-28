@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">Entwürfe</item>
+        <item quantity="one">Entwurf</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Diese %1$d Konversationen löschen?</item>
+        <item quantity="one">Diese Konversation löschen?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Diese %1$d Konversationen archivieren?</item>
+        <item quantity="one">Diese Konversation archivieren?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Entwürfe aus diesen %1$d Konversationen löschen?</item>
+        <item quantity="one">Entwürfe aus dieser Konversation löschen?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">Markierung von %1$d Konversationen wird aufgehoben</item>
+        <item quantity="one">Markierung von %1$d Konversation wird aufgehoben</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> stumm geschaltet</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> stumm geschaltet</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> als Spam gemeldet</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> als Spam gemeldet</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> als Nicht-Spam gemeldet</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> als Nicht-Spam gemeldet</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> als nicht wichtig markiert</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> als nicht wichtig markiert</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> als Phishing gemeldet</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> als Phishing gemeldet</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> archiviert</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> archiviert</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> gelöscht</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> gelöscht</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Labels geändert</item>
+        <item quantity="one">Label geändert</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d neue Nachrichten</item>
+        <item quantity="one">%1$d neue Nachricht</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">%1$d ältere Nachrichten maximieren</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">%1$d ältere Nachrichten wurden maximiert.</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d ungelesene</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d neue Nachrichten</item>
+        <item quantity="one">%1$d neue Nachricht</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d Konversationen werden endgültig gelöscht.</item>
+        <item quantity="one">%1$d Konversation wird endgültig gelöscht.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d Nachrichten</item>
+        <item quantity="one">%1$d Nachricht</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d Anhänge</item>
+        <item quantity="one">%1$d Anhang</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Synchronisieren: letzte %1$d Tage</item>
+        <item quantity="one">Synchronisieren: letzter %1$d Tag</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d Tage</item>
+        <item quantity="one">1 Tag</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">Tage</item>
+        <item quantity="one">Tag</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">Anhang konnte nicht gesendet werden (%s).</item>
+        <item quantity="one">Anhang konnte nicht gesendet werden.</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">Anhang konnte nicht gespeichert werden (%s).</item>
+        <item quantity="one">Anhang konnte nicht gespeichert werden.</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Bei aktiver Verbindung werden die E-Mails der letzten %1$d Tage heruntergeladen.</item>
+        <item quantity="one">Bei aktiver Verbindung werden die E-Mails des letzten Tages heruntergeladen.</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Hinweis: Einige Empfänger haben womöglich immer noch keinen Zugriff auf diese Dateien. Eventuell müssen Sie sie von Google Drive aus freigeben.</item>
+        <item quantity="one">Hinweis: Einige Empfänger haben womöglich immer noch keinen Zugriff auf diese Datei. Eventuell müssen Sie sie von Google Drive aus freigeben.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Sie geben gerade Dateien für folgende Empfänger frei, obwohl diese nicht zur selben Google Apps-Organisation gehören:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>."</item>
+        <item quantity="one">Sie geben gerade eine Datei für folgende Empfänger frei, obwohl diese nicht zur selben Google Apps-Organisation gehören:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Die Empfänger haben möglicherweise keinen Zugriff auf die Dateien, die Sie aus Drive eingefügt haben. Die Dateien müssen möglicherweise in Google Drive freigegeben werden.</item>
+        <item quantity="one">Die Empfänger haben möglicherweise keinen Zugriff auf die Datei, die Sie aus Drive eingefügt haben. Diese Datei muss möglicherweise in Google Drive freigegeben werden.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Ihre aktuellen E-Mail-Adressen:</item>
+        <item quantity="one">Ihre aktuelle E-Mail-Adresse:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">und %1$d andere Empfänger</item>
+    </plurals>
+</resources>

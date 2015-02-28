@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">下書き</item>
+        <item quantity="one">下書き</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">%1$d件のスレッドを削除しますか？</item>
+        <item quantity="one">このスレッドを削除しますか？</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">%1$d件のスレッドをアーカイブしますか？</item>
+        <item quantity="one">このスレッドをアーカイブしますか？</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">%1$d件のスレッドから下書きを破棄してもよろしいですか？</item>
+        <item quantity="one">このスレッドから下書きを破棄してもよろしいですか？</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">%1$d件のスレッドからスターを外しています</item>
+        <item quantity="one">%1$d件のスレッドからスターを外しています</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b>件をミュートしました</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b>件をミュートしました</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b>件を迷惑メールとして報告しました</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b>件を迷惑メールとして報告しました</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b>件を迷惑メールではないメールとして報告しました</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b>件を迷惑メールではないメールとして報告しました</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b>件の重要マークを外しました</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b>件の重要マークを外しました</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b>件をフィッシングとして報告しました</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b>件をフィッシングとして報告しました</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b>件をアーカイブしました</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b>件をアーカイブしました</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b>件を削除しました</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b>件を削除しました</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">ラベルを変更しました。</item>
+        <item quantity="one">ラベルを変更しました。</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d件の新着メッセージ</item>
+        <item quantity="one">%1$d件の新着メッセージ</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">以前のメール%1$d件を展開</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">以前のメール%1$d件を展開済み</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d件の未読</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d件の新着メッセージ</item>
+        <item quantity="one">%1$d件の新着メッセージ</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d件のスレッドが完全に削除されます。</item>
+        <item quantity="one">%1$d件のスレッドが完全に削除されます。</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d件のメッセージ</item>
+        <item quantity="one">%1$d件のメッセージ</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d個の添付ファイル</item>
+        <item quantity="one">%1$d個の添付ファイル</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">同期: 過去%1$d日分</item>
+        <item quantity="one">同期: 過去%1$d日分</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d日間</item>
+        <item quantity="one">1日分</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">日</item>
+        <item quantity="one">日</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">添付ファイルを送信できませんでした（%s）</item>
+        <item quantity="one">添付ファイルを送信できませんでした</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">添付ファイルを保存できませんでした（%s）</item>
+        <item quantity="one">添付ファイルを保存できませんでした</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">接続時に過去%1$d日分のメールがダウンロードされます</item>
+        <item quantity="one">接続時に過去1日分のメールがダウンロードされます</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">注: 一部の受信者にはこれらのファイルへのアクセス権がない可能性があります。ファイルを Google ドライブ内から共有してください。</item>
+        <item quantity="one">注: 一部の受信者にはこのファイルへのアクセス権がない可能性があります。ファイルを Google ドライブ内から共有してください。</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"これらのファイルが含まれる Google Apps 組織外の受信者（&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>）と共有します。"</item>
+        <item quantity="one">このファイルが含まれる Google Apps 組織外の受信者（&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>）と共有します。</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">受信者が Google ドライブから挿入したファイルにアクセスできない可能性があります。Google ドライブ内からファイルを共有してください。</item>
+        <item quantity="one">受信者が Google ドライブから挿入したファイルにアクセスできない可能性があります。Google ドライブ内からファイルを共有してください。</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">現在のメールアドレス:</item>
+        <item quantity="one">現在のメールアドレス:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">他%1$d件</item>
+    </plurals>
+</resources>

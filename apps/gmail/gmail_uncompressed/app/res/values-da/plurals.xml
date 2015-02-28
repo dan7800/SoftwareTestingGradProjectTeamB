@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">Kladder</item>
+        <item quantity="one">Kladde</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Vil du slette disse %1$d samtaler?</item>
+        <item quantity="one">Vil du slette denne samtale?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Vil du arkivere disse %1$d samtaler?</item>
+        <item quantity="one">Vil du arkivere denne samtale?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Vil du kassere kladderne fra disse %1$d samtaler?</item>
+        <item quantity="one">Vil du kassere kladderne fra denne samtale?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">Stjernemarkering fjernes fra %1$d samtaler</item>
+        <item quantity="one">Stjernemarkering fjernes fra %1$d samtale</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> bliver ignoreret</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> bliver ignoreret</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> bliver rapporteret som spam</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> bliver rapporteret som spam</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> bliver rapporteret som ikke spam</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> bliver rapporteret som ikke spam</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> bliver markeret som ikke vigtig</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> bliver markeret som ikke vigtig</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> bliver rapporteret som phishing</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> bliver rapporteret som phishing</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> arkiveret</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> arkiveret</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> slettes</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> slettes</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Etiketterne blev ændret.</item>
+        <item quantity="one">Etiketten blev ændret.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d nye meddelelser</item>
+        <item quantity="one">%1$d ny meddelelse</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Udvid %1$d ældre meddelelser</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">Udvidede %1$d ældre meddelelser</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d ulæste</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d nye meddelelser</item>
+        <item quantity="one">%1$d ny meddelelse</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d samtaler vil blive slettet permanent.</item>
+        <item quantity="one">%1$d samtale vil blive slettet permanent.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d meddelelser</item>
+        <item quantity="one">%1$d meddelelse</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d vedhæftede filer</item>
+        <item quantity="one">%1$d vedhæftet fil</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Synkronisering: Seneste %1$d dage</item>
+        <item quantity="one">Synkronisering: Seneste %1$d dag</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d dage</item>
+        <item quantity="one">En dag</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">dage</item>
+        <item quantity="one">Dag</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">Den vedhæftede fil kunne ikke sendes %s</item>
+        <item quantity="one">Den vedhæftede fil kunne ikke sendes</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">Den vedhæftede fil kunne ikke gemmes%s</item>
+        <item quantity="one">Den vedhæftede fil kunne ikke gemmes.</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">De sidste %1$d dages meddelelser downloades, når der er oprettet forbindelse</item>
+        <item quantity="one">Den seneste dags meddelelser hentes, når der er oprettet forbindelse</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Bemærk! Nogle modtagere har muligvis stadig ikke adgang til disse filer. Det kan være nødvendigt for dig at dele disse filer fra Google Drev.</item>
+        <item quantity="one">Bemærk! Nogle modtagere har muligvis stadig ikke adgang til denne fil. Det kan være nødvendigt for dig at dele denne fil fra Google Drev.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Du deler med følgende modtagere, som ikke er en del af den Google Apps-organisation, som disse filer tilhører:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>."</item>
+        <item quantity="one">Du deler med følgende modtagere, der ikke er en del af den Google Apps-organisation, som denne fil tilhører:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Dine modtagere har måske ikke adgang til de filer, du har indsat fra Drev. Du bliver muligvis nødt til at dele filerne fra Google Drev.</item>
+        <item quantity="one">Dine modtagere har måske ikke adgang til den fil, du har indsat fra Drev. Du bliver muligvis nødt til at dele filen fra Google Drev.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Dine nuværende e-mailadresser:</item>
+        <item quantity="one">Din nuværende e-mailadresse:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">+%1$d mere</item>
+    </plurals>
+</resources>

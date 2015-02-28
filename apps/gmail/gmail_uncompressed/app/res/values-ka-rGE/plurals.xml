@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">მონახაზები</item>
+        <item quantity="one">მონახაზი</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">წავშალო ეს %1$d მიმოწერა?</item>
+        <item quantity="one">წავშალო ეს მიმოწერა?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">დაარქივდეს ეს %1$d მიმოწერა?</item>
+        <item quantity="one">დავაარქივო ეს მიმოწერა?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">გაუქმდეს ამ %1$d მიმოწერის მონახაზები?</item>
+        <item quantity="one">გაუქმდეს ამ მიმოწერის მონახაზები?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">ვარსკვლავით მონიშვნა მოეხსნა %1$d მიმოწერას</item>
+        <item quantity="one">ვარსკვლავით მონიშვნა მოეხსნა %1$d მიმოწერას</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> დადუმებულია</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> დადუმებულია</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> მოინიშნა სპამად</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> მოინიშნა სპამად</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b>-ს მოეხსნა სპამად მონიშვნა</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b>-ს მოეხსნა სპამად მონიშვნა</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> მოინიშნა უმნიშვნელოდ</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> მოინიშნა უმნიშვნელოდ</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> მოინიშნა ფიშინგად</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> მოინიშნა ფიშინგად</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> დაარქივდა</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> დაარქივდა</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> წაიშალა</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> წაიშალა</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">შეიცვალა ლეიბლები.</item>
+        <item quantity="one">შეიცვალა ლეიბლი</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d ახალი შეტყობინება</item>
+        <item quantity="one">%1$d ახალი შეტყობინება</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">%1$d ძველი წერილის გაშლა</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">გაიშალა %1$d ძველი წერილი</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d წაუკითხავი</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d ახალი შეტყობინება</item>
+        <item quantity="one">%1$d ახალი შეტყობინება</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d მიმოწერა სამუდამოდ წაიშლება.</item>
+        <item quantity="one">%1$d მიმოწერა სამუდამოდ წაიშლება.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d შეტყობინება</item>
+        <item quantity="one">%1$d შეტყობინება</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d დანართი</item>
+        <item quantity="one">%1$d დანართი</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">სინქრონიზაცია: ბოლო %1$d დღე</item>
+        <item quantity="one">სინქრონიზაცია: ბოლო %1$d დღე</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d დღე</item>
+        <item quantity="one">ერთი დღე</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">დღეები</item>
+        <item quantity="one">დღე</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">დანართის გაგზავნა ვერ მოხერხდა%s</item>
+        <item quantity="one">დანართის გაგზავნა ვერ მოხერხდა</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">დანართის შენახვა ვერ მოხერხდა%s</item>
+        <item quantity="one">დანართის შენახვა ვერ მოხერხდა</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">შეტყობინებების ბოლო %1$d დღე ჩამოიტვირთება დაკავშირებისას.</item>
+        <item quantity="one">შეტყობინებების ბოლო 1 დღე ჩამოიტვირთება დაკავშირებისას</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">შენიშვნა: ზოგიერთ მიმღებს შესაძლოა კვლავ არ ჰქონდეს წვდომა ამ ფაილებთან. თქვენ შესაძლოა ამ ფაილების Google Drive-ით გაზიარება დაგჭირდეთ.</item>
+        <item quantity="one">შენიშვნა: ზოგიერთ მიმღებს შესაძლოა კვლავ არ ჰქონდეს წვდომა ამ ფაილთან. თქვენ შესაძლოა ამ ფაილის Google Drive-ით გაზიარება დაგჭირდეთ.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"თქვენ აზიარებთ მიმღებებთან:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>რომლებიც არ არიან Google Apps-ის იმ ორგანიზაციაში, რომელსაც ეს ფაილები ეკუთვნის."</item>
+        <item quantity="one">თქვენ აზიარებთ მიმღებებთან:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>რომლებიც არ არიან Google Apps-ის იმ ორგანიზაციაში, რომელსაც ეს ფაილი ეკუთვნის.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">შეიძლება მიმღებებს Drive-იდან ჩასმულ ფაილებთან წვდომა არ ჰქონდეთ. შესაძლოა თქვენ ამ ფაილის Google Drive-იდან გაზიარება დაგჭირდეთ.</item>
+        <item quantity="one">შეიძლება მიმღებებს Drive-იდან ჩასმულ ფაილთან წვდომა არ ჰქონდეთ.შესაძლოა თქვენ ამ ფაილის Google Drive-იდან გაზიარება დაგჭირდეთ.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">თქვენი მიმდინარე ელფოსტის მისამართები:</item>
+        <item quantity="one">თქვენი მიმდინარე ელფოსტის მისამართი:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">+%1$d სხვა</item>
+    </plurals>
+</resources>

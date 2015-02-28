@@ -1,0 +1,135 @@
+.class Lcom/google/common/collect/AbstractBiMap$Inverse;
+.super Lcom/google/common/collect/AbstractBiMap;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        "V:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lcom/google/common/collect/AbstractBiMap",
+        "<TK;TV;>;"
+    }
+.end annotation
+
+
+# static fields
+.field private static final serialVersionUID:J
+
+
+# direct methods
+.method private constructor <init>(Ljava/util/Map;Lcom/google/common/collect/AbstractBiMap;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map",
+            "<TK;TV;>;",
+            "Lcom/google/common/collect/AbstractBiMap",
+            "<TV;TK;>;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 374
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, v0}, Lcom/google/common/collect/AbstractBiMap;-><init>(Ljava/util/Map;Lcom/google/common/collect/AbstractBiMap;B)V
+
+    .line 375
+    return-void
+.end method
+
+.method synthetic constructor <init>(Ljava/util/Map;Lcom/google/common/collect/AbstractBiMap;B)V
+    .locals 0
+
+    .prologue
+    .line 372
+    invoke-direct {p0, p1, p2}, Lcom/google/common/collect/AbstractBiMap$Inverse;-><init>(Ljava/util/Map;Lcom/google/common/collect/AbstractBiMap;)V
+
+    return-void
+.end method
+
+.method private readObject(Ljava/io/ObjectInputStream;)V
+    .locals 1
+
+    .prologue
+    .line 399
+    invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
+
+    .line 400
+    invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/common/collect/AbstractBiMap;
+
+    invoke-virtual {p0, v0}, Lcom/google/common/collect/AbstractBiMap$Inverse;->a(Lcom/google/common/collect/AbstractBiMap;)V
+
+    .line 401
+    return-void
+.end method
+
+.method private writeObject(Ljava/io/ObjectOutputStream;)V
+    .locals 1
+
+    .prologue
+    .line 391
+    invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
+
+    .line 392
+    invoke-virtual {p0}, Lcom/google/common/collect/AbstractBiMap$Inverse;->YQ()Lcom/google/common/collect/k;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
+
+    .line 393
+    return-void
+.end method
+
+
+# virtual methods
+.method protected final synthetic YS()Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 372
+    invoke-super {p0}, Lcom/google/common/collect/AbstractBiMap;->YP()Ljava/util/Map;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method readResolve()Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 405
+    invoke-virtual {p0}, Lcom/google/common/collect/AbstractBiMap$Inverse;->YQ()Lcom/google/common/collect/k;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/google/common/collect/k;->YQ()Lcom/google/common/collect/k;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public synthetic values()Ljava/util/Collection;
+    .locals 1
+
+    .prologue
+    .line 372
+    invoke-super {p0}, Lcom/google/common/collect/AbstractBiMap;->YR()Ljava/util/Set;
+
+    move-result-object v0
+
+    return-object v0
+.end method

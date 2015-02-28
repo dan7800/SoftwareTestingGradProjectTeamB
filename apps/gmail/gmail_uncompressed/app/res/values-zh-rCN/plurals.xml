@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">草稿</item>
+        <item quantity="one">草稿</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">要删除这 %1$d 个会话吗？</item>
+        <item quantity="one">要删除此会话吗？</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">要将这 %1$d 个会话归档吗？</item>
+        <item quantity="one">要将此会话归档吗？</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">要舍弃这%1$d个会话中的草稿吗？</item>
+        <item quantity="one">要舍弃此会话中的草稿吗？</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">正在取消%1$d个会话的星标</item>
+        <item quantity="one">正在取消%1$d个会话的星标</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">已忽略&amp;lt;b>%1$d&amp;lt;/b>个会话</item>
+        <item quantity="one">已忽略&amp;lt;b>%1$d&amp;lt;/b>个会话</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">已将&amp;lt;b>%1$d&amp;lt;/b>个会话列为垃圾邮件</item>
+        <item quantity="one">已将&amp;lt;b>%1$d&amp;lt;/b>个会话列为垃圾邮件</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">已将&amp;lt;b>%1$d&amp;lt;/b>个会话列为非垃圾邮件</item>
+        <item quantity="one">已将&amp;lt;b>%1$d&amp;lt;/b>个会话列为非垃圾邮件</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">已将&amp;lt;b>%1$d&amp;lt;/b>个会话标记为不重要</item>
+        <item quantity="one">已将&amp;lt;b>%1$d&amp;lt;/b>个会话标记为不重要</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">已将&amp;lt;b>%1$d&amp;lt;/b>个会话举报为网上诱骗</item>
+        <item quantity="one">已将&amp;lt;b>%1$d&amp;lt;/b>个会话举报为网上诱骗</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">已归档&amp;lt;b>%1$d&amp;lt;/b>个会话</item>
+        <item quantity="one">已归档&amp;lt;b>%1$d&amp;lt;/b>个会话</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">已删除&amp;lt;b>%1$d&amp;lt;/b>个会话</item>
+        <item quantity="one">已删除&amp;lt;b>%1$d&amp;lt;/b>个会话</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">标签已更改。</item>
+        <item quantity="one">标签已更改。</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d封新邮件</item>
+        <item quantity="one">%1$d封新邮件</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">展开%1$d封旧邮件</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">已展开%1$d封旧邮件</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d封未读邮件</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">有%1$d封新邮件</item>
+        <item quantity="one">有%1$d封新邮件</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d个会话将会永久删除。</item>
+        <item quantity="one">%1$d个会话将会永久删除。</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d封邮件</item>
+        <item quantity="one">%1$d封邮件</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d个附件</item>
+        <item quantity="one">%1$d个附件</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">同步：过去%1$d天的邮件</item>
+        <item quantity="one">同步：过去%1$d天的邮件</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d天</item>
+        <item quantity="one">一天</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">天</item>
+        <item quantity="one">天</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">无法发送附件(%s)</item>
+        <item quantity="one">无法发送附件</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">无法保存附件(%s)</item>
+        <item quantity="one">无法保存附件</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">连接到网络后下载过去%1$d天的邮件</item>
+        <item quantity="one">连接到网络后下载过去1天的邮件</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">请注意：某些收件人可能仍无法访问这些文件。您需要在Google云端硬盘中共享这些文件。</item>
+        <item quantity="one">请注意：某些收件人可能仍无法访问该文件。您需要在Google云端硬盘中共享该文件。</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"以下收件人不是这些文件所属Google Apps单位的用户：&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>您将与这些收件人共享这些文件。"</item>
+        <item quantity="one">以下收件人不是这个文件所属Google Apps单位的用户：&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>您将与这些收件人共享此文件。</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">收件人可能无法访问您插入的云端硬盘文件。您需要在Google云端硬盘中共享这些文件。</item>
+        <item quantity="one">收件人可能无法访问您插入的云端硬盘文件。您需要在Google云端硬盘中共享此文件。</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">您目前的电子邮件地址：</item>
+        <item quantity="one">您目前的电子邮件地址：</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">还有另外%1$d个地址</item>
+    </plurals>
+</resources>

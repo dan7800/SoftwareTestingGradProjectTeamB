@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Պատասխանել</item>
+        <item>Պատասխանել բոլորին</item>
+        <item>Փոխանցել</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Հաջողվել է</item>
+        <item>Կապ չկա</item>
+        <item>Հնարավոր չէ մուտք գործել</item>
+        <item>Անվտանգության սխալ</item>
+        <item>Չհաջողվեց համաժամեցնել</item>
+        <item>Ներքին սխալ</item>
+        <item>Սերվերի սխալ</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Ավելի նոր</item>
+        <item>Ավելի հին</item>
+        <item>Խոսակցությունների ցանկ</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Ցուցադրել ավելի նոր զրույցներն արխիվացնելուց կամ ջնջելուց հետո</item>
+        <item>Ցուցադրել ավելի հին զրույցներն արխիվացնելուց կամ ջնջելուց հետո</item>
+        <item>Ցուցադրել խոսակցությունների ցանկը ջնջելուց կամ արխիվացնելուց հետո</item>
+    </string-array>
+    <string-array name="prefEntries_removal_action">
+        <item>Արխիվ</item>
+        <item>Ջնջել</item>
+    </string-array>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Արխիվ</item>
+        <item>Ջնջել</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Հաղորդագրության գործողությունները միշտ ցուցադրել էկրանի վերևի մասում</item>
+        <item>Հաղորդագրության գործողությունները ցուցադրել միայն էկրանի վերևի մասում, երբ շրջված է դեպի դիմանկարը</item>
+        <item>Ցույց չտալ հաղորդագրությունների գործողությունները հաղորդագրության գլխագրից դուրս</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Միշտ ցույց տալ</item>
+        <item>Ցուցադրել դիմանկարային ռեժիմում</item>
+        <item>Ցույց չտալ</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Փոքրիկ</item>
+        <item>Փոքր</item>
+        <item>Սովորական</item>
+        <item>Մեծ</item>
+        <item>Խոշոր</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Ցուցադրել հաղորդագրությունների բովանդակությունը փոքրիկ չափի տեքստով</item>
+        <item>Ցուցադրել հաղորդագրությունների բովանդակությունը փոքր չափի տեքստով</item>
+        <item>Ցուցադրել հաղորդագրությունների բովանդակությունը սովորական չափի տեքստով</item>
+        <item>Ցուցադրել հաղորդագրությունների բովանդակությունը խոշոր չափի տեքստով</item>
+        <item>Ցուցադրել հաղորդագրությունների բովանդակությունը խոշոր չափի տեքստով</item>
+    </string-array>
+</resources>

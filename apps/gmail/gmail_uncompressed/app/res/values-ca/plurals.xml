@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">Esborranys</item>
+        <item quantity="one">Esborrany</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Vols suprimir aquestes %1$d converses?</item>
+        <item quantity="one">Vols suprimir aquesta conversa?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Vols arxivar aquestes %1$d converses?</item>
+        <item quantity="one">Vols arxivar aquesta conversa?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Voleu descartar els esborranys de les %1$d converses?</item>
+        <item quantity="one">"Voleu descartar els esborranys d'aquesta conversa?"</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">"S'estan anul·lant %1$d converses destacades"</item>
+        <item quantity="one">"S'està anul·lant %1$d conversa destacada"</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> silenciades</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> silenciada</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> notificades com a activitat brossa</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> notificada com a activitat brossa</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> notificades com a no activitat brossa</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> notificada com a no activitat brossa</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> marcades com a no importants</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> marcada com a no important</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">"&amp;lt;b>%1$d&amp;lt;/b> notificades com a suplantació d'identitat"</item>
+        <item quantity="one">"&amp;lt;b>%1$d&amp;lt;/b> notificada com a suplantació d'identitat"</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> arxivades</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> arxivada</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> eliminades</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> eliminada</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">"S'han canviat les etiquetes."</item>
+        <item quantity="one">"S'ha canviat l'etiqueta."</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d missatges nous</item>
+        <item quantity="one">%1$d missatge nou</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Mostra %1$d missatges antics</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">"S'han mostrat %1$d missatges antics"</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d no llegits</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d missatges nous</item>
+        <item quantity="one">%1$d missatge nou</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">Se suprimiran %1$d converses de manera permanent.</item>
+        <item quantity="one">Se suprimirà %1$d conversa de manera permanent.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d missatges</item>
+        <item quantity="one">%1$d missatge</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d fitxers adjunts</item>
+        <item quantity="one">%1$d fitxer adjunt</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Sincronitza els darrers %1$d dies</item>
+        <item quantity="one">Sincronitza el darrer dia %1$d</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d dies</item>
+        <item quantity="one">Un dia</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">Dies</item>
+        <item quantity="one">Dia</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">"No s'ha pogut enviar el fitxer adjunt (%s)"</item>
+        <item quantity="one">"No s'ha pogut enviar el fitxer adjunt"</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">"No s'ha pogut desar el fitxer adjunt (%s)"</item>
+        <item quantity="one">"No s'ha pogut desar el fitxer adjunt"</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Els missatges dels darrers %1$d dies es baixaran en connectar-se</item>
+        <item quantity="one">"L'últim dia de missatges es baixarà quan estiguis connectat"</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Nota: és possible que alguns destinataris encara no puguin accedir a aquests fitxers i que hàgiu de compartir-los a Google Drive.</item>
+        <item quantity="one">Nota: és possible que alguns destinataris encara no puguin accedir a aquest fitxer i que hàgiu de compartir-lo a Google Drive.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Compartiu els fitxers amb persones (&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>) que no formen part de l'organització de Google Apps a la qual pertanyen."</item>
+        <item quantity="one">"Compartiu el fitxer amb persones (&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>) que no formen part de l'organització de Google Apps a la qual pertany."</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">És possible que els destinataris no tinguin accés al fitxer que heu inserit de Drive. És possible que hàgiu de compartir els fitxers des de Google Drive.</item>
+        <item quantity="one">És possible que els destinataris no tinguin accés al fitxer que heu inserit de Drive. Potser caldrà compartir-lo des de Google Drive.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Les vostres adreces electròniques actuals:</item>
+        <item quantity="one">La vostra adreça electrònica actual:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">i %1$d més</item>
+    </plurals>
+</resources>

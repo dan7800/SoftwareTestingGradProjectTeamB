@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">Недовршене поруке</item>
+        <item quantity="one">Недовршена порука</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Желите ли да избришете ове преписке (%1$d)?</item>
+        <item quantity="one">Желите ли да избришете ову преписку?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Желите ли да архивирате ове преписке (%1$d)?</item>
+        <item quantity="one">Желите ли да архивирате ову преписку?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Одбацујете недовршене поруке из преписки (%1$d)?</item>
+        <item quantity="one">Одбацујете недовршене поруке из преписке?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">Уклања се звездица са преписки (%1$d)</item>
+        <item quantity="one">Уклања се звездица са %1$d преписке</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">Игнорисаних: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">Игнорисаних: &amp;lt;b>%1$d&amp;lt;/b></item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">Пријављених као непожељне: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">Пријављених као непожељне: &amp;lt;b>%1$d&amp;lt;/b></item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">Пријављених да нису непожељне: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">Пријављених да нису непожељне: &amp;lt;b>%1$d&amp;lt;/b></item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">Означених као неважне: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">Означених као неважне: &amp;lt;b>%1$d&amp;lt;/b></item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">Пријављених као „пецање“: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">Пријављених као „пецање“: &amp;lt;b>%1$d&amp;lt;/b></item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">Архивираних: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">Архивираних: &amp;lt;b>%1$d&amp;lt;/b></item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">Избрисаних: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">Избрисаних: &amp;lt;b>%1$d&amp;lt;/b></item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Ознаке су промењене.</item>
+        <item quantity="one">Ознака је промењена.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">Нових порука: %1$d</item>
+        <item quantity="one">Нових порука: %1$d</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Прошири старије поруке (%1$d)</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">Проширене су старије поруке (%1$d)</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">Непрочитаних: %1$d</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">Нових порука: %1$d</item>
+        <item quantity="one">%1$d нова порука</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">Преписке (%1$d) ће бити трајно избрисане.</item>
+        <item quantity="one">%1$d преписка ће бити трајно избрисана.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d поруке(а)</item>
+        <item quantity="one">%1$d порука</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d прилога</item>
+        <item quantity="one">%1$d прилог</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Синхронизуј: последња(их) %1$d дана</item>
+        <item quantity="one">Синхронизуј: последњи %1$d дан</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d дана</item>
+        <item quantity="one">Један дан</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">Дана</item>
+        <item quantity="one">Дан</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">Није могуће послати прилог %s</item>
+        <item quantity="one">Није могуће послати прилог</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">Није могуће сачувати прилог%s</item>
+        <item quantity="one">Није могуће сачувати прилог</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Поруке примљене у последња(их) %1$d дана биће преузете након повезивања</item>
+        <item quantity="one">Поруке примљене претходног дана биће преузете након повезивања</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Напомена: Неки примаоци можда још увек немају приступ овим датотекама. Можда ћете морати да их делите из Google диска.</item>
+        <item quantity="one">Напомена: Неки примаоци можда још увек немају приступ овој датотеци. Можда ћете морати да је делите из Google диска.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Делите са примаоцима:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>који нису у Google Apps организацији којој припадају ове датотеке."</item>
+        <item quantity="one">Делите са примаоцима:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>који нису у Google Apps организацији којој припада ова датотека.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Примаоци можда немају приступ датотекама које сте уметнули са Диска. Можда ћете морати да их делите из Google диска.</item>
+        <item quantity="one">Примаоци можда немају приступ датотеци коју сте уметнули са Диска. Можда ћете морати да је делите из Google диска.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Ваше актуелне имејл адресе:</item>
+        <item quantity="one">Ваша актуелна имејл адреса:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">и још %1$d</item>
+    </plurals>
+</resources>

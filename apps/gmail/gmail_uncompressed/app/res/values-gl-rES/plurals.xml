@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">Borradores</item>
+        <item quantity="one">Borrador</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Eliminar estas %1$d conversas?</item>
+        <item quantity="one">Eliminar esta conversa?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Arquivar estas %1$d conversas?</item>
+        <item quantity="one">Arquivar esta conversa?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Descartar borradores destas %1$d conversas?</item>
+        <item quantity="one">Descartar os borradores desta conversa?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">Eliminando a estrela de %1$d conversas</item>
+        <item quantity="one">Eliminando a estrela de %1$d conversa</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> silenciadas</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> silenciada</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">Informouse que &amp;lt;b>%1$d&amp;lt;/b> son spam</item>
+        <item quantity="one">Informouse que &amp;lt;b>%1$d&amp;lt;/b> é spam</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">Informouse de que &amp;lt;b>%1$d&amp;lt;/b> non son spam</item>
+        <item quantity="one">Informouse de que &amp;lt;b>%1$d&amp;lt;/b> non é spam</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> marcadas como non importantes</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> marcada como non importante</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">Informouse de que &amp;lt;b>%1$d&amp;lt;/b> son phishing</item>
+        <item quantity="one">Informouse de que &amp;lt;b>%1$d&amp;lt;/b> é phising</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> arquivadas</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> arquivada</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> eliminadas</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> eliminada</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Cambiáronse as etiquetas.</item>
+        <item quantity="one">Cambiouse a etiqueta.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d mensaxes novas</item>
+        <item quantity="one">%1$d mensaxe nova</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Ampliar %1$d mensaxes anteriores</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">Ampliáronse %1$d mensaxes anteriores</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d non lidas</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d mensaxes novas</item>
+        <item quantity="one">%1$d mensaxe nova</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">Eliminaranse %1$d conversas permanentemente.</item>
+        <item quantity="one">Eliminarase %1$d conversa permanentemente.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d mensaxes</item>
+        <item quantity="one">%1$d mensaxe</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d anexos</item>
+        <item quantity="one">%1$d anexo</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Sincronización: últimos %1$d días</item>
+        <item quantity="one">Sincronización: último día (%1$d)</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d días</item>
+        <item quantity="one">Un día</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">Días</item>
+        <item quantity="one">Día</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">Non se puido enviar o anexo (%s)</item>
+        <item quantity="one">Non se puido enviar o anexo</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">Non se puido gardar o anexo (%s)</item>
+        <item quantity="one">Non se puido gardar o anexo</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Cando te conectes descargaranse as mensaxes correspondentes aos últimos %1$d días</item>
+        <item quantity="one">Cando te conectes descargaranse as mensaxes correspondentes ao último día</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Nota: É posible que algúns destinatarios aínda non teñan acceso a estes ficheiros. Talvez teñas que compartilos desde Google Drive.</item>
+        <item quantity="one">Nota: É posible que algúns destinatarios aínda non teñan acceso a este ficheiro. Talvez teñas que compartir este ficheiro desde Google Drive.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Estás compartindo contido con destinatarios:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>que non están na organización de Google Apps á que pertencen estes ficheiros."</item>
+        <item quantity="one">Estás compartindo contido con destinatarios:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>que non están na organización de Google Apps á que pertence este ficheiro.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">É posible que os destinatarios non teñan acceso aos ficheiros que inseriches desde Drive. Talvez teñas que compartir os ficheiros desde Google Drive.</item>
+        <item quantity="one">É posible que os destinatarios non teñan acceso ao ficheiro que inseriches desde Drive. Talvez teñas que compartir o ficheiro desde Google Drive.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Os teus enderezos de correo electrónico actuais:</item>
+        <item quantity="one">O teu enderezo de correo electrónico actual:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">+%1$d máis</item>
+    </plurals>
+</resources>

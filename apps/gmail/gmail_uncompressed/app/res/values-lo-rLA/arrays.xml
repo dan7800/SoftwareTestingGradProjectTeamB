@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>ຕອບກັບ</item>
+        <item>ຕອບກັບທັງຫມົດ</item>
+        <item>ສົ່ງຕໍ່</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>ຮຽບຮ້ອຍ</item>
+        <item>ບໍ່ມີ​ການ​ເຊື່ອມຕໍ່</item>
+        <item>ບໍ່​ສາມາດ​ເຂົ້າສູ່​ລະບົບ​ໄດ້</item>
+        <item>ມີຂໍ້​ຜິດພາດ​ດ້ານ​ຄວາມປອດໄພ</item>
+        <item>​ບໍ່​ສາ​ມາດ​ຊິ້ງ​ຂໍ້​ມູນ​ໄດ້</item>
+        <item>ພົບຂໍ້ຜິດພາດພາຍໃນ</item>
+        <item>ເຊີບເວີຜິດພາດ</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>ໃໝ່ກວ່າ</item>
+        <item>ເກົ່າກວ່າ</item>
+        <item>ລາຍການການສົນທະນາ</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>ສະແດງໃຫ້ເຫັນການສົນທະນາທີ່ໃຫມ່ກວ່າ ຫຼັງຈາກທ່ານຈັດເກັບ ຫຼື ລຶບ</item>
+        <item>ສະແດງໃຫ້ເຫັນການສົນທະນາທີ່ເກົ່າກວ່າ ຫຼັງຈາກທ່ານຈັດເກັບ ຫຼື ລຶບ</item>
+        <item>ສະແດງລາຍການການສົນທະນາ ຫຼັງຈາກທີ່ທ່ານບັນຖຶກ ຫຼືລຶບແລ້ວ</item>
+    </string-array>
+    <string-array name="prefEntries_removal_action">
+        <item>ຈັດ​ເກັບ</item>
+        <item>ລຶບ</item>
+    </string-array>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>ຈັດ​ເກັບ</item>
+        <item>ລຶບ</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>ສະແດງການຈັດການອີເມວຢູ່ທາງເທິງໜ້າຈໍສະເໝີ</item>
+        <item>ສະແດງການຈັດການອີເມວຢູ່ທາງເທິງໜ້າຈໍ ສະເພາະເວລາໝຸນໄປເປັນລວງຕັ້ງ</item>
+        <item>ບໍ່ສະແດງແອັກຊັນອີເມວຢູ່ນອກສ່ວນຫົວຂອງອີເມວ</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>ສະແດງທຸກຄັ້ງ</item>
+        <item>ສະແດງສະເພາະເປັນຮູບນ້ອຍ</item>
+        <item>ບໍ່ສະແດງ</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>ນ້ອຍຫຼາຍ</item>
+        <item>ຂະໜາດນ້ອຍ</item>
+        <item>ປົກກະຕິ</item>
+        <item>ຂະໜາດໃຫຍ່</item>
+        <item>ຂະໜາດໃຫຍ່ໂຕ</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>ສະແດງເນື້ອໃນຂອງອີເມວໃນຫນັງສືຂະໜາດນ້ອຍຫຼາຍ</item>
+        <item>ສະແດງເນື້ອໃນຂອງອີເມວໃນແບບໜັງສືຂະໜາດນ້ອຍ</item>
+        <item>ສະແດງເນື້ອໃນຂອງອີເມວໃນຫນັງສືຂະໜາດປົກກະຕິ</item>
+        <item>ສະແດງເນື້ອໃນຂອງອີເມວໃນແບບໜັງສືຂະໜາດໃຫຍ່</item>
+        <item>ສະແດງເນື້ອໃນຂອງອີເມວໃນແບບໜັງສືຂະໜາດໃຫຍ່ຫຼາຍ</item>
+    </string-array>
+</resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">Bản nháp</item>
+        <item quantity="one">Bản nháp</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Xóa %1$d cuộc hội thoại này?</item>
+        <item quantity="one">Xóa cuộc hội thoại này?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Lưu trữ %1$d cuộc hội thoại này?</item>
+        <item quantity="one">Lưu trữ cuộc hội thoại này?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Hủy thư nháp khỏi %1$d cuộc hội thoại này?</item>
+        <item quantity="one">Hủy thư nháp khỏi cuộc hội thoại này?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">Đang bỏ dấu sao %1$d cuộc hội thoại</item>
+        <item quantity="one">Đang bỏ dấu sao %1$d cuộc hội thoại</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">Đã bỏ qua &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">Đã bỏ qua &amp;lt;b>%1$d&amp;lt;/b></item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">Đã báo cáo &amp;lt;b>%1$d&amp;lt;/b> là spam</item>
+        <item quantity="one">Đã báo cáo &amp;lt;b>%1$d&amp;lt;/b> là spam</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">Đã báo cáo &amp;lt;b>%1$d&amp;lt;/b> không phải là spam</item>
+        <item quantity="one">Đã báo cáo &amp;lt;b>%1$d&amp;lt;/b> không phải là spam</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">Đã đánh dấu &amp;lt;b>%1$d&amp;lt;/b> là không quan trọng</item>
+        <item quantity="one">Đã đánh dấu &amp;lt;b>%1$d&amp;lt;/b> là không quan trọng</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">Đã báo cáo &amp;lt;b>%1$d&amp;lt;/b> là lừa đảo</item>
+        <item quantity="one">Đã báo cáo &amp;lt;b>%1$d&amp;lt;/b> là lừa đảo</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">Đã lưu trữ &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">Đã lưu trữ &amp;lt;b>%1$d&amp;lt;/b></item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">Đã xóa &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">Đã xóa &amp;lt;b>%1$d&amp;lt;/b></item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Đã thay đổi nhãn.</item>
+        <item quantity="one">Đã thay đổi nhãn.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d thư mới</item>
+        <item quantity="one">%1$d thư mới</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Mở rộng %1$d thư cũ hơn</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">Đã mở rộng %1$d thư cũ hơn</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d chưa đọc</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d tin nhắn mới</item>
+        <item quantity="one">%1$d tin nhắn mới</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d cuộc hội thoại này sẽ bị xóa vĩnh viễn.</item>
+        <item quantity="one">%1$d cuộc hội thoại này sẽ bị xóa vĩnh viễn.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d thư</item>
+        <item quantity="one">%1$d thư</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d tệp đính kèm</item>
+        <item quantity="one">%1$d tệp đính kèm</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Đồng bộ hóa: %1$d ngày qua</item>
+        <item quantity="one">Đồng bộ hóa: %1$d ngày qua</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d ngày</item>
+        <item quantity="one">Một ngày</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">Ngày</item>
+        <item quantity="one">Ngày</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">Không thể gửi tệp đính kèm%s</item>
+        <item quantity="one">Không thể gửi tệp đính kèm</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">Không thể lưu tệp đính kèm%s</item>
+        <item quantity="one">Không thể lưu tệp đính kèm</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Thư trong %1$d ngày vừa qua sẽ tải xuống khi được kết nối</item>
+        <item quantity="one">Thư trong 1 ngày vừa qua sẽ tải xuống khi được kết nối</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Lưu ý: Một số người nhận có thể vẫn chưa có quyền truy cập vào các tệp này. Bạn cần chia sẻ các tệp này từ trong Google Drive.</item>
+        <item quantity="one">Lưu ý: Một số người nhận có thể vẫn chưa có quyền truy cập vào tệp này. Bạn cần chia sẻ tệp này từ trong Google Drive.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Bạn đang chia sẻ với những người nhận:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>không thuộc tổ chức Google Apps sở hữu những tệp này."</item>
+        <item quantity="one">Bạn đang chia sẻ với những người nhận:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>không thuộc tổ chức Google Apps sở hữu tệp này.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Người nhận của bạn có thể không có quyền truy cập vào các tệp bạn đã chèn từ Drive. Có thể bạn cần chia sẻ các tệp này từ trong Google Drive.</item>
+        <item quantity="one">Người nhận của bạn có thể không có quyền truy cập vào tệp bạn đã chèn từ Drive. Có thể bạn cần chia sẻ tệp này từ trong Google Drive.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Địa chỉ email hiện tại của bạn:</item>
+        <item quantity="one">Địa chỉ email hiện tại của bạn:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">+%1$d địa chỉ khác</item>
+    </plurals>
+</resources>

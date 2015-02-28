@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">Mga Draft</item>
+        <item quantity="one">Draft</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Tanggalin ang %1$d (na) pag-uusap na ito?</item>
+        <item quantity="one">Tanggalin ang pag-uusap na ito?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">I-archive ang %1$d (na) pag-uusap na ito?</item>
+        <item quantity="one">I-archive ang pag-uusap na ito?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">I-discard ang mga draft mula sa %1$d (na) pag-uusap na ito?</item>
+        <item quantity="one">I-discard ang mga draft mula sa pag-uusap na ito?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">Inaalis ang star sa %1$d (na) pag-uusap</item>
+        <item quantity="one">Inaalis ang star sa %1$d pag-uusap</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ang naka-mute</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ang naka-mute</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ang inulat na spam</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ang inulat na spam</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ang inulat na hindi spam</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ang inulat na hindi spam</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ang minarkahang hindi mahalaga</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ang minarkahang hindi mahalaga</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ang inulat na phishing</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ang inulat na phishing</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ang na-archive</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ang na-archive</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ang na-delete</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ang na-delete</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Binago ang mga label.</item>
+        <item quantity="one">Binago ang label.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d (na) bagong mensahe</item>
+        <item quantity="one">%1$d bagong mensahe</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">I-expand ang %1$d (na) mas lumang mensahe</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">Na-expand ang %1$d (na) mas lumang mensahe</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d ang hindi pa nababasa</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d (na) bagong mensahe</item>
+        <item quantity="one">%1$d bagong mensahe</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">Permanenteng tatanggalin ang %1$d (na) pag-uusap.</item>
+        <item quantity="one">Permanenteng tatanggalin ang %1$d (na) pag-uusap.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d (na) mensahe</item>
+        <item quantity="one">%1$d (na) mensahe</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d (na) attachment</item>
+        <item quantity="one">%1$d attachment</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">I-sync: Huling %1$d (na) araw</item>
+        <item quantity="one">I-sync: Huling %1$d (na) araw</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d (na) araw</item>
+        <item quantity="one">Isang araw</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">Mga Araw</item>
+        <item quantity="one">Araw</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">Hindi maipadala ang attachment%s</item>
+        <item quantity="one">Hindi maipadala ang attachment</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">Hindi ma-save ang attachment%s</item>
+        <item quantity="one">Hindi ma-save ang attachment</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Mada-download ang huling %1$d (na) araw ng mga mensahe kapag nakakonekta</item>
+        <item quantity="one">Mada-download ang huling 1 araw ng mga mensahe kapag nakakonekta</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Tandaan: Maaaring wala pa ring access ang ilang tatanggap sa mga file na ito. Kakailanganin mong ibahagi ang mga file na ito mula sa Google Drive.</item>
+        <item quantity="one">Tandaan: Maaaring wala pa ring access ang ilang tatanggap sa file na ito. Kakailanganin mong ibahagi ang file na ito mula sa Google Drive.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Nagbabahagi ka sa mga tatanggap:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>na wala sa organisasyon ng Google Apps kung saan kabilang ang mga file na ito."</item>
+        <item quantity="one">Nagbabahagi ka sa mga tatanggap:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>na wala sa organisasyon ng Google Apps kung saan kabilang ang file na ito.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Ang iyong mga tatanggap ay maaaring walang access sa mga file na isiningit mo mula sa Drive. Maaaring kailanganin mong ibahagi ang mga file mula sa Google Drive.</item>
+        <item quantity="one">Ang iyong mga tatanggap ay maaaring walang access sa file na isiningit mo mula sa Drive. Maaaring kailanganin mong ibahagi ang file mula sa Google Drive.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Ang iyong mga kasalukuyang email address:</item>
+        <item quantity="one">Ang iyong kasalukuyang email address:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">+%1$d pa</item>
+    </plurals>
+</resources>

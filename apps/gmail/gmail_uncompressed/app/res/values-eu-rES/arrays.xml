@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Erantzun</item>
+        <item>Erantzun guztiei</item>
+        <item>Birbidali</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Behar bezala burutu da</item>
+        <item>Ez dago konektatuta</item>
+        <item>Ezin izan da saioa hasi</item>
+        <item>Segurtasun-errorea</item>
+        <item>Ezin izan da sinkronizatu</item>
+        <item>Barneko errorea</item>
+        <item>Zerbitzariaren errorea</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Berriagoa</item>
+        <item>Zaharragoa</item>
+        <item>Elkarrizketa-zerrenda</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Mezu bat artxibatu edo ezabatu ondoren, erakutsi hurrengo elkarrizketa</item>
+        <item>Mezu bat artxibatu edo ezabatu ondoren, erakutsi aurreko elkarrizketa</item>
+        <item>Mezu bat artxibatu edo ezabatu ondoren, erakutsi elkarrizketa-zerrenda</item>
+    </string-array>
+    <string-array name="prefEntries_removal_action">
+        <item>Artxibatu</item>
+        <item>Ezabatu</item>
+    </string-array>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Artxibatu</item>
+        <item>Ezabatu</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Erakutsi beti mezuen ekintzak pantailaren goialdean</item>
+        <item>Erakutsi mezuen ekintzak pantailaren goialdean gailua orientazio bertikalean dagoenean bakarrik</item>
+        <item>Ez erakutsi mezuen ekintzarik mezuen goiburutik kanpo</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Erakutsi beti</item>
+        <item>Erakutsi orientazio bertikalean bakarrik</item>
+        <item>Ez erakutsi</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Oso txikia</item>
+        <item>Txikia</item>
+        <item>Normala</item>
+        <item>Handia</item>
+        <item>Erraldoia</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Bistaratu mezuen edukia testu oso txikiarekin</item>
+        <item>Bistaratu mezuen edukia testu txikiarekin</item>
+        <item>Bistaratu mezuen edukia testu ertainarekin</item>
+        <item>Bistaratu mezuen edukia testu handiarekin</item>
+        <item>Bistaratu mezuen edukia testu erraldoiarekin</item>
+    </string-array>
+</resources>

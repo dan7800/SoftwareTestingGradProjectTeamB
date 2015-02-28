@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">Koncepty</item>
+        <item quantity="one">Koncept</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Smazat tyto konverzace (%1$d)?</item>
+        <item quantity="one">Smazat tuto konverzaci?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Archivovat tyto konverzace (%1$d)?</item>
+        <item quantity="one">Archivovat tuto konverzaci?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Zahodit koncepty z těchto %1$d konverzací?</item>
+        <item quantity="one">Zahodit koncepty z této konverzace?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">Ruší se označení %1$d konverzací hvězdičkou.</item>
+        <item quantity="one">Ruší se označení %1$d konverzace hvězdičkou.</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">Konverzace (&amp;lt;b>%1$d&amp;lt;/b>) ignorovány</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> konverzace ignorována</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">Konverzace (&amp;lt;b>%1$d&amp;lt;/b>) nahlášeny jako spam</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> konverzace nahlášena jako spam</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">Konverzace (&amp;lt;b>%1$d&amp;lt;/b>) označeny jako spam</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> konverzace označena jako spam</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">Konverzace (&amp;lt;b>%1$d&amp;lt;/b>) označeny jako nedůležité</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> konverzace označena jako nedůležitá</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">Konverzace (&amp;lt;b>%1$d&amp;lt;/b>) nahlášeny jako phishing</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> konverzace nahlášena jako phishing</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">Konverzace (&amp;lt;b>%1$d&amp;lt;/b>) archivovány</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> konverzace archivována</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">Konverzace (&amp;lt;b>%1$d&amp;lt;/b>) smazány</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> konverzace smazána</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Štítky byly změněny.</item>
+        <item quantity="one">Štítek byl změněn.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">Nové zprávy: %1$d</item>
+        <item quantity="one">%1$d nová zpráva</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Rozbalit starší zprávy (celkem %1$d)</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">Starší zprávy (%1$d) byly rozbaleny</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">Nepřečteno: %1$d</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">Nové zprávy: %1$d</item>
+        <item quantity="one">%1$d nová zpráva</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">Tyto konverzace (celkem %1$d) budou trvale smazány.</item>
+        <item quantity="one">Tato %1$d konverzace bude trvale smazána.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">Počet zpráv: %1$d</item>
+        <item quantity="one">%1$d zpráva</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">Počet příloh: %1$d</item>
+        <item quantity="one">%1$d příloha</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Synchronizovat: %1$d dní</item>
+        <item quantity="one">Synchronizovat: %1$d den</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">dny: %d</item>
+        <item quantity="one">Jeden den</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">dní</item>
+        <item quantity="one">den</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">Přílohu se nepodařilo odeslat (účet %s)</item>
+        <item quantity="one">Přílohu se nepodařilo odeslat</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">Přílohu se nepodařilo uložit (účet %s)</item>
+        <item quantity="one">Přílohu se nepodařilo uložit</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Po připojení se automaticky stáhnou zprávy za posledních %1$d dní.</item>
+        <item quantity="one">Po připojení se automaticky stáhnou zprávy za poslední den.</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Poznámka: Může se stát, že někteří příjemci stále nebudou mít k těmto souborům přístup. Je možné, že tyto soubory budete muset sdílet na Disku Google.</item>
+        <item quantity="one">Poznámka: Může se stát, že někteří příjemci stále nebudou mít k tomuto souboru přístup. Je možné, že tento soubor budete muset sdílet na Disku Google.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Chystáte se sdílet soubor s uživateli, kteří nejsou v rámci Google Apps členy organizace, jež tento soubor vlastní:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>."</item>
+        <item quantity="one">Chystáte se sdílet soubor s uživateli, kteří nejsou v rámci Google Apps členy organizace, jež tento soubor vlastní:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">K souborům, které jste vložili z Disku, možná příjemci nebudou mít přístup. Je možné, že s nimi soubory budete muset sdílet přímo z Disku Google.</item>
+        <item quantity="one">K souboru, který jste vložili z Disku, možná příjemci nebudou mít přístup. Je možné, že s nimi soubor budete muset sdílet přímo z Disku Google.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Vaše současné e-mailové adresy:</item>
+        <item quantity="one">Vaše současná e-mailová adresa:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">a další: %1$d</item>
+    </plurals>
+</resources>

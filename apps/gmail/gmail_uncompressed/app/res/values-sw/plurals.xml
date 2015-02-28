@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">Rasimu</item>
+        <item quantity="one">Rasimu</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Mazungumzo haya %1$d yafutwe?</item>
+        <item quantity="one">Mazungumzo haya yafutwe?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Mazungumzo haya %1$d yajalidiwe?</item>
+        <item quantity="one">Mazungumzo haya yajalidiwe?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Ungependa kutupa rasimu kutoka kwenye mazungumzo haya %1$d?</item>
+        <item quantity="one">Ungependa kutupa rasimu kutoka kwenye mazungumzo haya?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">Inaondoa nyota kwenye mazungumzo %1$d</item>
+        <item quantity="one">Inaondoa nyota kwenye mazungumzo %1$d</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> yamekomeshwa</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> yamekomeshwa</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> yameripotiwa kama barua taka</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> yameripotiwa kama barua taka</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> yameripotiwa kuwa si barua taka</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> yameripotiwa kuwa si barua taka</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> yametiwa alama kuwa siyo muhimu</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> yametiwa alama kuwa siyo muhimu</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> yameripotiwa kama hadaa</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> yameripotiwa kama hadaa</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> yamewekwa kwenye kumbukumbu</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> yamewekwa kwenye kumbukumbu</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d:&amp;lt;/b> yamefutwa</item>
+        <item quantity="one">&amp;lt;b>%1$d:&amp;lt;/b> yamefutwa</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Lebo zilizobadilishwa.</item>
+        <item quantity="one">Lebo iiliyobadilishwa.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">Ujumbe %1$d mpya</item>
+        <item quantity="one">Ujumbe %1$d mpya</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Panua barua pepe %1$d za awali</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">Imepanua barua pepe %1$d za awali</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">Hujasoma barua pepe %1$d</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">Ujumbe %1$d mpya</item>
+        <item quantity="one">Ujumbe %1$d mpya</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">Mazungumzo %1$d yatafutwa kabisa.</item>
+        <item quantity="one">Mazungumzo %1$d yatafutwa kabisa.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">Ujumbe %1$d</item>
+        <item quantity="one">Ujumbe %1$d</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">Viambatisho %1$d</item>
+        <item quantity="one">Kiambatisho %1$d</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Sawazisha: Siku %1$d za mwisho</item>
+        <item quantity="one">Sawazisha: Siku%1$d ya mwisho</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">Siku %d</item>
+        <item quantity="one">Siku moja</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">Siku</item>
+        <item quantity="one">Siku</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">Haikuweza kutuma viambatisho%s</item>
+        <item quantity="one">Haikuweza kutuma kiambatisho</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">Haikuweza kuhifadhi viambatisho %s</item>
+        <item quantity="one">Haikuweza kuhifadhi kiambatisho</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Barua pepe zilizotumwa katika siku %1$d zilizopita zitapakuliwa utakaporudi mtandaoni</item>
+        <item quantity="one">Barua pepe zilizoingia katika siku 1 iliyopita zitapakuliwa muunganisho wa intaneti utakaporejea</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Kumbuka: Baadhi ya wapokeaji bado hawana uwezo wa kufikia faili hizi. Huenda utahitajika kushiriki faili hizi kutoka ndani ya Hifadhi ya Google.</item>
+        <item quantity="one">Kumbuka: Baadhi ya wapokeaji bado hawana uwezo wa kufikia faili hii. Huenda utahitaji kushiriki faili hii kutoka ndani ya Hifadhi ya Google.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Unashiriki na wapokeaji: &amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b> &amp;lt;br> ambao hawako katika shirika la Programu za Google ambako faili hizi ziko."</item>
+        <item quantity="one">Unashiriki na wapokeaji: &amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br> ambao hawako katika shirika la Programu za Google ambako faili hii iko.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Huenda wapokeaji wako hawana uwezo wa kufikia faili ulizoingiza kutoka kwenye Hifadhi, Utahitaji kushiriki faili hizo kutoka ndani ya Hifadhi ya Google.</item>
+        <item quantity="one">Huenda wapokeaji wako hawana uwezo wa kufikia faili uliyoingiza kutoka kwenye Hifadhi. Utahitaji kushiriki faili hiyo kutoka ndani ya Hifadhi ya Google.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Anwani zako za sasa za barua pepe:</item>
+        <item quantity="one">Anwani yako ya sasa ya barua pepe:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">%1$d+ zaidi</item>
+    </plurals>
+</resources>

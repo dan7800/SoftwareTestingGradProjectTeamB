@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">කටු සටහන්</item>
+        <item quantity="one">කටු සටහන</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">මෙම සංවාද %1$d මකන්නද?</item>
+        <item quantity="one">මෙම සංවාදය මකන්න?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">මෙම සංවාද %1$d සංරක්ෂණය කරන්නද?</item>
+        <item quantity="one">මෙම සංවාදය සංරක්ෂණය කරන්නද?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">මෙම සංවාදවලින් කටු සටහන් %1$d ඉවත ලන්නද?</item>
+        <item quantity="one">මෙම සංවාදයෙන් කටු සටහන් ඉවත ලන්නද?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">සංවාද %1$d කින් තරු ඉවත් කරමින්</item>
+        <item quantity="one">සංවාද %1$d කින් තරු ඉවත් කරමින්</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ක් නිහඬ කරන ලදි</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ක් නිහඬ කරන ලදි</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ආයාචිත ලෙස සලකුණු කරන ලදි</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ආයාචිත ලෙස සලකුණු කරන ලදි</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ක් ආයාචිත නොවන බව වාර්තා කරන ලදි</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ක් ආයාචිත නොවන බව වාර්තා කරන ලදි</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ක් වැදගත් නොවන බව සලකුණු කරන ලදි</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ක් වැදගත් නොවන බව සලකුණු කරන ලදි</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ක් තතුබෑම ලෙස වාර්තා කරන ලදි</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ක් තතුබෑම ලෙස වාර්තා කරන ලදි</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ක් සංරක්ෂිත කරන ලදි</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ක් සංරක්ෂිත කරන ලදි</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ක් මකා දමන ලදි</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ක් මකා දමන ලදි</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">ලේබල වෙනස් කරන ලදි.</item>
+        <item quantity="one">ලේබලය වෙනස් කරන්න.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">අලුත් පණිවිඩ %1$d</item>
+        <item quantity="one">අලුත් පණිවිඩ %1$d</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">පැරණි පණිවිඩ %1$d විදහන්න</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">විහිදන ලද පැරණි පණිවිඩ %1$d</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">නොකියවූ %1$d</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">අලුත් පණිවිඩ %1$d</item>
+        <item quantity="one">අලුත් පණිවිඩ %1$d</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">සංවාද %1$d ක් ස්ථිර ලෙසම මකා දැමෙනු ඇත.</item>
+        <item quantity="one">සංවාද %1$d ක් ස්ථිර ලෙසම මකා දැමෙනු ඇත.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">පණිවිඩ %1$d</item>
+        <item quantity="one">%1$d පණිවිඩයි</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">ඇමුණුම් %1$d</item>
+        <item quantity="one">ඇමුණුම් %1$d</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">සමමුහුර්ත කිරීම: අවසාන දින %1$d</item>
+        <item quantity="one">සමමුහුර්ත කිරීම: අවසාන දින %1$d</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">දවස් %d</item>
+        <item quantity="one">දින එකක්</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">දින</item>
+        <item quantity="one">දිනය</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">ඇමිණුම යැවීමට නොහැකි විය%s</item>
+        <item quantity="one">ඇමිණුම යැවීමට නොහැකි විය</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">ඇමිණුම සුරැකීමට නොහැකි විය%s</item>
+        <item quantity="one">ඇමිණුම සුරැකීමට නොහැකි විය</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">අවසාන දින %1$d ක පණිවිඩ, සම්බන්ධ වූ විට බාගනු ඇත</item>
+        <item quantity="one">අවසාන දින 1 ක පණිවිඩ, සම්බන්ධ වූ විට බාගනු ඇත</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">සටහන: සමහර ලැබෙන්නන්ට තවමත් මෙම ගොනු වලට ප්‍රවේශය තිබිය නොහැක. ඔබට මෙම ගොනු Google Drive තුළින් බෙදාගැනීමට අවශ්‍ය වනු ඇත.</item>
+        <item quantity="one">සටහන: සමහර ලැබෙන්නන්ට තවමත් මෙම ගොනුවට ප්‍රවේශය තිබිය නොහැක. ඔබට මෙම ගොනුව Google Drive තුළින් බෙදාගැනීමට අවශ්‍ය වනු ඇත.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"ඔබ මෙම ගොනු හිමි වන Google යෙදුම් සංවිධානයේ නොසිටින:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>සමඟ බෙදාගනියි."</item>
+        <item quantity="one">ඔබ මෙම ගොනුව හිමි වන Google යෙදුම් සංවිධානයේ නොසිටින:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>සමඟ බෙදාගනියි.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">ඔබගේ ලැබෙන්නන්ට තවමත් මෙම Drive වෙතින් ඇතුල් කළ ගොනු වලට ප්‍රවේශය තිබිය නොහැක. ඔබට මෙම ගොනු Google Drive තුළින් බෙදාගැනීමට සමහර විට අවශ්‍ය වනු ඇත.</item>
+        <item quantity="one">ඔබගේ ලැබෙන්නන්ට තවමත් මෙම Drive වෙතින් ඇතුල් කළ ගොනුවට ප්‍රවේශය තිබිය නොහැක. ඔබට මෙම ගොනුව Google Drive තුළින් බෙදාගැනීමට සමහර විට අවශ්‍ය වනු ඇත.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">ඔබගේ වර්තමාන ඊ-තැපැල් ලිපින:</item>
+        <item quantity="one">ඔබගේ වර්තමාන ඊ-තැපැල් ලිපිනය:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">තවත් +%1$d</item>
+    </plurals>
+</resources>

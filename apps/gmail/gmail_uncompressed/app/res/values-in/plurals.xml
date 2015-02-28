@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">Draf</item>
+        <item quantity="one">Draf</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Hapus %1$d percakapan ini?</item>
+        <item quantity="one">Hapus percakapan ini?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Arsipkan %1$d percakapan ini?</item>
+        <item quantity="one">Arsipkan percakapan ini?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Buang draf dari %1$d percakapan ini?</item>
+        <item quantity="one">Buang draf dari percakapan ini?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">Hapus bintang %1$d percakapan</item>
+        <item quantity="one">Hapus bintang %1$d percapakan</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> tidak ditampilkan</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> tidak ditampilkan</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> dilaporkan sebagai spam</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> dilaporkan sebagai spam</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> dilaporkan sebagai bukan spam</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> dilaporkan sebagai bukan spam</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ditandai tidak penting</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ditandai tidak penting</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> dilaporkan sebagai phishing</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> dilaporkan sebagai phishing</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> diarsipkan</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> diarsipkan</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> dihapus</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> dihapus</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Label yang diubah.</item>
+        <item quantity="one">Label yang diubah.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d pesan baru</item>
+        <item quantity="one">%1$d pesan baru</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Luaskan %1$d pesan lama</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">Luaskan %1$d pesan lama</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d belum dibaca</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d pesan baru</item>
+        <item quantity="one">%1$d pesan baru</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d percakapan akan dihapus selamanya.</item>
+        <item quantity="one">%1$d percakapan akan dihapus selamanya.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d pesan</item>
+        <item quantity="one">%1$d pesan</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d lampiran</item>
+        <item quantity="one">%1$d lampiran</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Sinkronkan: %1$d hari terakhir</item>
+        <item quantity="one">Sinkronkan: %1$d hari terakhir</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d hari</item>
+        <item quantity="one">Satu hari</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">Hari</item>
+        <item quantity="one">Hari</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">Tidak dapat mengirim lampiran%s</item>
+        <item quantity="one">Tidak dapat mengirim lampiran</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">Tidak dapat menyimpan lampiran%s</item>
+        <item quantity="one">Tidak dapat menyimpan lampiran</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Pesan dalam %1$d hari terakhir akan diunduh saat tersambung</item>
+        <item quantity="one">Pesan dalam 1 hari terakhir akan diunduh saat tersambung</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Catatan: Beberapa penerima mungkin masih tidak memiliki akses ke file tersebut. Anda harus berbagi file tersebut dari dalam Google Drive.</item>
+        <item quantity="one">Catatan: Beberapa penerima mungkin masih tidak memiliki akses ke file ini. Anda harus berbagi file ini dari dalam Google Drive.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Anda berbagi dengan penerima:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>yang tidak berada dalam organisasi Google Apps tempat file tersebut berada."</item>
+        <item quantity="one">Anda berbagi dengan penerima:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>yang tidak berada dalam organisasi Google Apps tempat file ini berada.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Penerima mungkin tidak memiliki akses ke file yang Anda sisipkan dari Drive. Anda mungkin harus berbagi file dari dalam Google Drive.</item>
+        <item quantity="one">Penerima mungkin tidak memiliki akses ke file yang Anda sisipkan dari Drive. Anda mungkin harus berbagi file dari dalam Google Drive.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Alamat email Anda saat ini:</item>
+        <item quantity="one">Alamat email Anda saat ini:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">+%1$d lainnya</item>
+    </plurals>
+</resources>

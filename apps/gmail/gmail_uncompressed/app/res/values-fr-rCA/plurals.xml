@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">Brouillons</item>
+        <item quantity="one">Version préliminaire</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Supprimer ces %1$d conversations?</item>
+        <item quantity="one">Supprimer cette conversation?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Archiver ces %1$d conversations?</item>
+        <item quantity="one">Archiver cette conversation ?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Supprimer les brouillons de ces %1$d conversations?</item>
+        <item quantity="one">Supprimer les brouillons de cette conversation?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">"Suppression de l'étoile de %1$d conversations en cours…"</item>
+        <item quantity="one">"Suppression de l'étoile de %1$d conversation en cours…"</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> conversations ignorées</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> conversation ignorée</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> conversations marquées comme pourriel.</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> conversation marquée comme pourriel.</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">"&amp;lt;b>%1$d&amp;lt;/b> conversations marquées comme n'étant pas du pourriel"</item>
+        <item quantity="one">"&amp;lt;b>%1$d&amp;lt;/b> conversation marquée comme n'étant pas du pourriel"</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">"&amp;lt;b>%1$d&amp;lt;/b> conversations marquées comme n'étant pas importantes."</item>
+        <item quantity="one">"&amp;lt;b>%1$d&amp;lt;/b> conversation marquée comme n'étant pas importantes."</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">"&amp;lt;b>%1$d&amp;lt;/b> conversations signalées comme étant de l'hameçonnage"</item>
+        <item quantity="one">"&amp;lt;b>%1$d&amp;lt;/b> conversation signalée comme étant de l'hameçonnage"</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">%1$d conversations archivées.</item>
+        <item quantity="one">%1$d conversation archivée.</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">%1$d conversations supprimées.</item>
+        <item quantity="one">%1$d conversation supprimée.</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Étiquettes modifiées.</item>
+        <item quantity="one">Étiquette modifiée.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d nouveaux messages</item>
+        <item quantity="one">%1$d nouveau message</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Développer %1$d messages plus anciens</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">%1$d messages plus anciens développés</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d non lus</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d nouveaux messages</item>
+        <item quantity="one">%1$d nouveau message</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d conversations seront supprimées de manière définitive.</item>
+        <item quantity="one">%1$d conversation sera supprimée de manière définitive.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d messages</item>
+        <item quantity="one">%1$d message</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d pièces jointes</item>
+        <item quantity="one">%1$d pièce jointe</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Synchroniser les %1$d derniers jours</item>
+        <item quantity="one">Synchroniser les dernières 24 heures (%1$d jour)</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d jours</item>
+        <item quantity="one">Un jour</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">Jours</item>
+        <item quantity="one">Journée</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">"Impossible d'envoyer la pièce jointe (%s)"</item>
+        <item quantity="one">"Impossible d'envoyer la pièce jointe"</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">"Impossible d'enregistrer la pièce jointe (%s)"</item>
+        <item quantity="one">"Impossible d'enregistrer la pièce jointe"</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Les messages des %1$d derniers jours sont téléchargés lorsque vous vous connectez.</item>
+        <item quantity="one">Les messages des dernières 24 heures sont téléchargés lorsque vous vous connectez.</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">"Remarque : il est possible que certains destinataires n'aient pas accès à ces fichiers. Vous devrez alors les partager à partir de Google Drive."</item>
+        <item quantity="one">"Remarque : il est possible que certains destinataires n'aient pas accès à ce fichier. Vous devrez alors le partager à partir de Google Drive."</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Ces adresses :&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>sont extérieures à l'organisation Google Apps à laquelle appartiennent les fichiers partagés."</item>
+        <item quantity="one">"Ces adresses :&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>sont extérieures à l'organisation Google Apps à laquelle appartient le fichier partagé."</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">"Il est possible que les destinataires n'aient pas accès aux fichiers que vous avez ajoutés à partir de Disque. Vous devrez peut-être les partager directement depuis Google Disque."</item>
+        <item quantity="one">"Il est possible que les destinataires n'aient pas accès au fichier que vous avez ajouté à partir de Disque. Vous devrez peut-être le partager directement depuis Google Disque."</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Vos adresses de courriel actuelles :</item>
+        <item quantity="one">Votre adresse de courriel actuelle :</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">et %1$d autre(s)</item>
+    </plurals>
+</resources>

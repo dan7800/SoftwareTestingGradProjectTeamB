@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="draft">
+        <item quantity="other">مسودے</item>
+        <item quantity="one">مسودہ</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">ان %1$d گفتگوؤں کو حذف کریں؟</item>
+        <item quantity="one">اس گفتگو کو حذف کریں؟</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">ان %1$d گفتگوؤں کو آرکائیو کریں؟</item>
+        <item quantity="one">اس گفتگو کو آرکائیو کریں؟</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">مسودوں کو ان %1$d گفتگوؤں سے ضائع کریں؟</item>
+        <item quantity="one">مسودوں کو اس گفتگو سے ضائع کریں؟</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">%1$d گفتگوؤں سے ستارے کا نشان ہٹایا جا رہا ہے</item>
+        <item quantity="one">%1$d گفتگو سے ستارے کا نشان ہٹایا جا رہا ہے</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">‏‎&amp;lt;b>%1$d&amp;lt;/b>‎ کو خاموش کر دیا گیا</item>
+        <item quantity="one">‏‎&amp;lt;b>%1$d&amp;lt;/b>‎ کو خاموش کر دیا گیا</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">‏‎&amp;lt;b>%1$d&amp;lt;/b>‎ کی سپام کے بطور اطلاع دی گئی</item>
+        <item quantity="one">‏‎&amp;lt;b>%1$d&amp;lt;/b>‎ کی سپام کے بطور اطلاع دی گئی</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">‏‎&amp;lt;b>%1$d&amp;lt;/b>‎ کی سپام نہیں کے بطور اطلاع دی گئی</item>
+        <item quantity="one">‏‎&amp;lt;b>%1$d&amp;lt;/b>‎ کی سپام نہیں کے بطور اطلاع دی گئی</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">‏‎&amp;lt;b>%1$d&amp;lt;/b>‎ کو غیر اہم کے بطور نشان زد کر دیا گیا</item>
+        <item quantity="one">‏‎&amp;lt;b>%1$d&amp;lt;/b>‎ کو غیر اہم کے بطور نشان زد کر دیا گیا</item>
+    </plurals>
+    <plurals name="conversation_phished">
+        <item quantity="other">‏‎&amp;lt;b>%1$d&amp;lt;/b>‎ کی فریب دہی کے بطور اطلاع دی گئی</item>
+        <item quantity="one">‏‎&amp;lt;b>%1$d&amp;lt;/b>‎ کی فریب دہی کے بطور اطلاع دی گئی</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">‏‎&amp;lt;b>%1$d&amp;lt;/b>‎ کو آرکائیو کر دیا گیا</item>
+        <item quantity="one">‏‎&amp;lt;b>%1$d&amp;lt;/b>‎ کو آرکائیو کر دیا گیا</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">‏‎&amp;lt;b>%1$d&amp;lt;/b>‎ کو حذف کر دیا گیا</item>
+        <item quantity="one">‏‎&amp;lt;b>%1$d&amp;lt;/b>‎ کو حذف کر دیا گیا</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">لیبلز تبدیل کر دیا گئے۔</item>
+        <item quantity="one">لیبل تبدیل کر دیا گیا۔</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d نئے پیغامات</item>
+        <item quantity="one">%1$d نیا پیغام</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">%1$d پرانے پیغامات کو پھیلائیں</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">%1$d پرانے پیغامات کو پھیلایا گیا</item>
+    </plurals>
+    <plurals name="actionbar_unread_messages">
+        <item quantity="other">%1$d بغیر پڑھے ہوئے</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d نئے پیغامات</item>
+        <item quantity="one">%1$d نیا پیغام</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d گفتگوئیں مستقل طور پر حذف ہو جائیں گی۔</item>
+        <item quantity="one">%1$d گفتگو مستقل طور پر حذف ہو جائے گی۔</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d پیغامات</item>
+        <item quantity="one">%1$d پیغام</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d منسلکات</item>
+        <item quantity="one">%1$d منسلکہ</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">مطابقت پذیر بنائیں: آخری %1$d دن</item>
+        <item quantity="one">مطابقت پذیر بنائیں: آخری %1$d دن</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d دن</item>
+        <item quantity="one">ایک دن</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">دن</item>
+        <item quantity="one">دن</item>
+    </plurals>
+    <plurals name="notify_attachment_send_error">
+        <item quantity="other">منسلکہ نہیں بھیج سکا%s</item>
+        <item quantity="one">منسلکہ نہیں بھیج جا سکا</item>
+    </plurals>
+    <plurals name="notify_attachment_save_error">
+        <item quantity="other">منسلکہ محفوظ نہیں ہو سکا%s</item>
+        <item quantity="one">منسلکہ محفوظ نہیں ہو سکا</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">منسلک ہونے پر آخری %1$d دن کے پیغامات ڈاؤن لوڈ ہوں گے</item>
+        <item quantity="one">منسلک ہونے پر آخری ایک دن کے پیغامات ڈاؤن لوڈ ہوں گے</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">‏نوٹ: ممکن ہے کچھ وصول کنندگان کے پاس ابھی بھی ان فائلوں تک رسائی حاصل نہ ہو۔ آپ کو Google Drive سے فائلوں کا اشتراک کرنا پڑ سکتا ہے۔</item>
+        <item quantity="one">‏نوٹ: ممکن ہے کچھ وصول کنندگان کے پاس ابھی بھی اس فائل تک رسائی حاصل نہ ہو۔ آپ کو Google Drive سے فائل کا اشتراک کرنا پڑ سکتا ہے۔</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"‏آپ ان وصول کنندگان:‎&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>کے ساتھ اشتراک کر رہے ہیں جو اس Google Apps تنظیم میں نہیں ہیں جس سے اس فائل کا تعلق ہے۔"</item>
+        <item quantity="one">‏آپ ان وصول کنندگان:‎&amp;amp;It;br>&amp;amp;It;b>%1$s&amp;amp;It;/b>&amp;amp;It;br>‎کے ساتھ اشتراک کر رہے ہیں جو اس Google Apps تنظیم میں نہیں ہیں جس سے اس فائل کا تعلق ہے۔</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">‏آپ نے Drive سے جو فائلیں داخل کی ہیں، ممکن ہے آپ کے وصول کنندگان کے پاس ان تک رسائی حاصل نہ ہو۔ آپ کو Google Drive سے فائلوں کا اشتراک کرنا پڑ سکتا ہے۔</item>
+        <item quantity="one">‏آپ نے Drive سے جو فائل داخل کی ہے، ممکن ہے آپ کے وصول کنندگان کے پاس اس تک رسائی حاصل نہ ہو۔ آپ کو Google Drive سے فائل کا اشتراک کرنا پڑ سکتا ہے۔</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">آپ کے موجودہ ای میل پتے یہ ہیں:</item>
+        <item quantity="one">آپ کا موجودہ ای میل پتہ یہ ہے:</item>
+    </plurals>
+    <plurals name="welcome_tour_show_more_addresses">
+        <item quantity="other">+%1$d مزید</item>
+    </plurals>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:clipChildren="false" android:clipToPadding="false" style="@style/MiniDrawerAccountStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/avatar" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:id="@id/avatar_recents_unread_count" layout="@layout/avatar_unread_count" />
+</FrameLayout>
