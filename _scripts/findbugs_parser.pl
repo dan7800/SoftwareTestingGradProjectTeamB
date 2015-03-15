@@ -2,7 +2,7 @@
 
 use strict;
 use Switch;
-use XML::Simple;
+use XML::Simple; # try using XML::Parser for stream-based parsing - hopefully solve undef $source_line = undef issue
 use Data::Dumper;
 
 print "Scanning XML\n";
