@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/collections_list_item.xml</file>
+    <line>23</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/collections_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>[I18N] Hardcoded string &quot;This is the Title&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/collections_list_item.xml</file>
+    <line>30</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/collections_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>[I18N] Hardcoded string &quot;This is a summary value&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_dialog.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>[I18N] Hardcoded string &quot;3 days 12 hours and 30 minutes before start&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_dialog.xml</file>
+    <line>141</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>[I18N] Hardcoded string &quot;                                                                                   &quot;, should use &lt;code&gt;@string&lt;/code&gt; resource</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_view.xml</file>
+    <line>169</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>[I18N] Hardcoded string &quot;My Little Collection&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_edit.xml</file>
+    <line>166</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded text</problem_class>
+    <hints />
+    <description>[I18N] Hardcoded string &quot;70%&quot;, should use &lt;code&gt;@string&lt;/code&gt; resource</description>
+  </problem>
+</problems>
+

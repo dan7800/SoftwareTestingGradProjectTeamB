@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_view.xml</file>
+    <line>72</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Overlapping items in RelativeLayout</problem_class>
+    <hints />
+    <description>&lt;code&gt;@id/TodoFindOnMapButton&lt;/code&gt; can overlap &lt;code&gt;@id/TodoLocationLabel&lt;/code&gt; if @id/TodoFindOnMapButton grows due to localized text expansion</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_view.xml</file>
+    <line>65</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Overlapping items in RelativeLayout</problem_class>
+    <hints />
+    <description>&lt;code&gt;@id/EventFindOnMapButton&lt;/code&gt; can overlap &lt;code&gt;@id/EventLocationLabel&lt;/code&gt; if @id/EventFindOnMapButton grows due to localized text expansion</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/datetime_dialog.xml</file>
+    <line>35</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/datetime_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Overlapping items in RelativeLayout</problem_class>
+    <hints />
+    <description>&lt;code&gt;@id/DateTimeIsDate&lt;/code&gt; can overlap &lt;code&gt;@id/timePicker&lt;/code&gt; if @string/IsADate grows due to localized text expansion</description>
+  </problem>
+</problems>
+

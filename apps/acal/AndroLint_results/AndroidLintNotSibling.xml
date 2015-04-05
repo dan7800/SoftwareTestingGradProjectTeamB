@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_view.xml</file>
+    <line>101</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_view.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">RelativeLayout Invalid Constraints</problem_class>
+    <hints />
+    <description>&lt;code&gt;@+id/TodoLocationLayout&lt;/code&gt; is not a sibling in the same &lt;code&gt;RelativeLayout&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_view.xml</file>
+    <line>122</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_view.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">RelativeLayout Invalid Constraints</problem_class>
+    <hints />
+    <description>&lt;code&gt;@+id/TodoNotesLayout&lt;/code&gt; is not a sibling in the same &lt;code&gt;RelativeLayout&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_view.xml</file>
+    <line>151</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_view.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">RelativeLayout Invalid Constraints</problem_class>
+    <hints />
+    <description>&lt;code&gt;@+id/TodoAlarmsLayout&lt;/code&gt; is not a sibling in the same &lt;code&gt;RelativeLayout&lt;/code&gt;</description>
+  </problem>
+</problems>
+

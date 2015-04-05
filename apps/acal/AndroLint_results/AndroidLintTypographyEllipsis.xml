@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-ca/strings.xml</file>
+    <line>204</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-ca/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-de/strings.xml</file>
+    <line>220</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-de/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-de/strings.xml</file>
+    <line>293</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-de/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-de/strings.xml</file>
+    <line>294</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-de/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-de/strings.xml</file>
+    <line>295</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-de/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-fr/strings.xml</file>
+    <line>234</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-fr/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-fr/strings.xml</file>
+    <line>308</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-fr/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-fr/strings.xml</file>
+    <line>309</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-fr/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-fr/strings.xml</file>
+    <line>310</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-fr/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-it/strings.xml</file>
+    <line>231</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-it/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-it/strings.xml</file>
+    <line>304</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-it/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-it/strings.xml</file>
+    <line>305</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-it/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-it/strings.xml</file>
+    <line>306</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-it/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-pl/strings.xml</file>
+    <line>221</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-pl/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-ru/strings.xml</file>
+    <line>90</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-ru/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-ru/strings.xml</file>
+    <line>91</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-ru/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-ru/strings.xml</file>
+    <line>92</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-ru/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-sk/strings.xml</file>
+    <line>229</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-sk/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-sk/strings.xml</file>
+    <line>304</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-sk/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-sk/strings.xml</file>
+    <line>305</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-sk/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-sk/strings.xml</file>
+    <line>306</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-sk/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-es-rES/strings.xml</file>
+    <line>229</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-es-rES/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-es-rES/strings.xml</file>
+    <line>303</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-es-rES/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-es-rES/strings.xml</file>
+    <line>304</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-es-rES/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-es-rES/strings.xml</file>
+    <line>305</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-es-rES/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-nl-rBE/strings.xml</file>
+    <line>216</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-nl-rBE/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-pt-rBR/strings.xml</file>
+    <line>230</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-pt-rBR/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-pt-rBR/strings.xml</file>
+    <line>304</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-pt-rBR/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-pt-rBR/strings.xml</file>
+    <line>305</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-pt-rBR/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-pt-rBR/strings.xml</file>
+    <line>306</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-pt-rBR/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-tr-rTR/strings.xml</file>
+    <line>145</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-tr-rTR/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-tr-rTR/strings.xml</file>
+    <line>146</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-tr-rTR/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-tr-rTR/strings.xml</file>
+    <line>147</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-tr-rTR/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ellipsis string can be replaced with ellipsis character</problem_class>
+    <hints />
+    <description>Replace &quot;...&quot; with ellipsis character (&amp;#8230;, &amp;amp;#8230;) ?</description>
+  </problem>
+</problems>
+

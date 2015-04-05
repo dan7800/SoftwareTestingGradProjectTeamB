@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>8</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Target SDK attribute is not targeting latest version</problem_class>
+    <hints />
+    <description>Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the &lt;code&gt;android.os.Build.VERSION_CODES&lt;/code&gt; javadoc for details.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/build.gradle</file>
+    <line>20</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/build.gradle" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Target SDK attribute is not targeting latest version</problem_class>
+    <hints />
+    <description>Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details.</description>
+  </problem>
+</problems>
+

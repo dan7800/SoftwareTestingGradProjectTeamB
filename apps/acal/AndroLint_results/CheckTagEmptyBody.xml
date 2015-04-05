@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/menu/tasks_options_menu.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/menu/tasks_options_menu.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>Xml Tag Has Empty Body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/menu/tasks_options_menu.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/menu/tasks_options_menu.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>Xml Tag Has Empty Body</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/unlocalisable_strings.xml</file>
+    <line>36</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/unlocalisable_strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">XML tag empty body</problem_class>
+    <description>Xml Tag Has Empty Body</description>
+  </problem>
+</problems>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/colourpicker_dialog.xml</file>
+    <line>22</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/colourpicker_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using deprecated resources</problem_class>
+    <hints />
+    <description>&lt;code&gt;AbsoluteLayout&lt;/code&gt; is deprecated</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/colourpicker_widget.xml</file>
+    <line>2</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/colourpicker_widget.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Using deprecated resources</problem_class>
+    <hints />
+    <description>&lt;code&gt;AbsoluteLayout&lt;/code&gt; is deprecated</description>
+  </problem>
+</problems>
+

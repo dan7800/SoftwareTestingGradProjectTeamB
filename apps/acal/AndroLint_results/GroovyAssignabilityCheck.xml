@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/build.gradle</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/build.gradle" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incompatible type assignments</problem_class>
+    <description>'dependencies' cannot be applied to '(groovy.lang.Closure)'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/build.gradle</file>
+    <line>11</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/build.gradle" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incompatible type assignments</problem_class>
+    <description>'dependencies' cannot be applied to '(groovy.lang.Closure)'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/build.gradle</file>
+    <line>23</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/build.gradle" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incompatible type assignments</problem_class>
+    <description>'main' in 'build' cannot be applied to '(groovy.lang.Closure)'</description>
+  </problem>
+</problems>
+

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_list_view.xml</file>
+    <line>31</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_list_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing baselineAligned attribute</problem_class>
+    <hints />
+    <description>Set &lt;code&gt;android:baselineAligned=&quot;false&quot;&lt;/code&gt; on this element for better performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_list_item.xml</file>
+    <line>2</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing baselineAligned attribute</problem_class>
+    <hints />
+    <description>Set &lt;code&gt;android:baselineAligned=&quot;false&quot;&lt;/code&gt; on this element for better performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/collections_list_item.xml</file>
+    <line>2</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/collections_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing baselineAligned attribute</problem_class>
+    <hints />
+    <description>Set &lt;code&gt;android:baselineAligned=&quot;false&quot;&lt;/code&gt; on this element for better performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_view.xml</file>
+    <line>8</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing baselineAligned attribute</problem_class>
+    <hints />
+    <description>Set &lt;code&gt;android:baselineAligned=&quot;false&quot;&lt;/code&gt; on this element for better performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_view.xml</file>
+    <line>164</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing baselineAligned attribute</problem_class>
+    <hints />
+    <description>Set &lt;code&gt;android:baselineAligned=&quot;false&quot;&lt;/code&gt; on this element for better performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/year_view.xml</file>
+    <line>16</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/year_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing baselineAligned attribute</problem_class>
+    <hints />
+    <description>Set &lt;code&gt;android:baselineAligned=&quot;false&quot;&lt;/code&gt; on this element for better performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/week_view.xml</file>
+    <line>48</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing baselineAligned attribute</problem_class>
+    <hints />
+    <description>Set &lt;code&gt;android:baselineAligned=&quot;false&quot;&lt;/code&gt; on this element for better performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_list_view.xml</file>
+    <line>27</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_list_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing baselineAligned attribute</problem_class>
+    <hints />
+    <description>Set &lt;code&gt;android:baselineAligned=&quot;false&quot;&lt;/code&gt; on this element for better performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/collection_config.xml</file>
+    <line>16</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/collection_config.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing baselineAligned attribute</problem_class>
+    <hints />
+    <description>Set &lt;code&gt;android:baselineAligned=&quot;false&quot;&lt;/code&gt; on this element for better performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/number_picker_dialog.xml</file>
+    <line>13</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/number_picker_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing baselineAligned attribute</problem_class>
+    <hints />
+    <description>Set &lt;code&gt;android:baselineAligned=&quot;false&quot;&lt;/code&gt; on this element for better performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_activity.xml</file>
+    <line>61</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_activity.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing baselineAligned attribute</problem_class>
+    <hints />
+    <description>Set &lt;code&gt;android:baselineAligned=&quot;false&quot;&lt;/code&gt; on this element for better performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_activity.xml</file>
+    <line>117</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_activity.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing baselineAligned attribute</problem_class>
+    <hints />
+    <description>Set &lt;code&gt;android:baselineAligned=&quot;false&quot;&lt;/code&gt; on this element for better performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_list_item.xml</file>
+    <line>2</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing baselineAligned attribute</problem_class>
+    <hints />
+    <description>Set &lt;code&gt;android:baselineAligned=&quot;false&quot;&lt;/code&gt; on this element for better performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_list_item.xml</file>
+    <line>2</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing baselineAligned attribute</problem_class>
+    <hints />
+    <description>Set &lt;code&gt;android:baselineAligned=&quot;false&quot;&lt;/code&gt; on this element for better performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_edit.xml</file>
+    <line>8</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing baselineAligned attribute</problem_class>
+    <hints />
+    <description>Set &lt;code&gt;android:baselineAligned=&quot;false&quot;&lt;/code&gt; on this element for better performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/month_view.xml</file>
+    <line>35</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/month_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing baselineAligned attribute</problem_class>
+    <hints />
+    <description>Set &lt;code&gt;android:baselineAligned=&quot;false&quot;&lt;/code&gt; on this element for better performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/week_view.xml</file>
+    <line>47</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing baselineAligned attribute</problem_class>
+    <hints />
+    <description>Set &lt;code&gt;android:baselineAligned=&quot;false&quot;&lt;/code&gt; on this element for better performance</description>
+  </problem>
+</problems>
+

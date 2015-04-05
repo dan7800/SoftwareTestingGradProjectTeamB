@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-de/strings.xml</file>
+    <line>8</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-de/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hyphen can be replaced with dash</problem_class>
+    <hints />
+    <description>Replace &quot;--&quot; with an &quot;em dash&quot; character (&amp;#8212;, &amp;amp;#8212;) ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-de/strings.xml</file>
+    <line>257</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-de/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hyphen can be replaced with dash</problem_class>
+    <hints />
+    <description>Replace &quot;--&quot; with an &quot;em dash&quot; character (&amp;#8212;, &amp;amp;#8212;) ?</description>
+  </problem>
+</problems>
+

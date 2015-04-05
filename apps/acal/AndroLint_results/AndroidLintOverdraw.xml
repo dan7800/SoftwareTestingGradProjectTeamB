@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_view.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Overdraw: Painting regions more than once</problem_class>
+    <hints />
+    <description>Possible overdraw: Root element paints background &lt;code&gt;@drawable/morphossbg&lt;/code&gt; with a theme that also paints a background (inferred theme is &lt;code&gt;@android:style/Theme.NoTitleBar&lt;/code&gt;)</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/year_view.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/year_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Overdraw: Painting regions more than once</problem_class>
+    <hints />
+    <description>Possible overdraw: Root element paints background &lt;code&gt;@drawable/morphossbg&lt;/code&gt; with a theme that also paints a background (inferred theme is &lt;code&gt;@android:style/Theme.NoTitleBar&lt;/code&gt;)</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/new_server_config.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/new_server_config.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Overdraw: Painting regions more than once</problem_class>
+    <hints />
+    <description>Possible overdraw: Root element paints background &lt;code&gt;@drawable/morphossbg&lt;/code&gt; with a theme that also paints a background (inferred theme is &lt;code&gt;@android:style/Theme.NoTitleBar&lt;/code&gt;)</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/week_view.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Overdraw: Painting regions more than once</problem_class>
+    <hints />
+    <description>Possible overdraw: Root element paints background &lt;code&gt;@drawable/morphossbg&lt;/code&gt; with a theme that also paints a background (inferred theme is &lt;code&gt;@android:style/Theme.NoTitleBar&lt;/code&gt;)</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_edit.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Overdraw: Painting regions more than once</problem_class>
+    <hints />
+    <description>Possible overdraw: Root element paints background &lt;code&gt;@drawable/morphossbg&lt;/code&gt; with a theme that also paints a background (inferred theme is &lt;code&gt;@android:style/Theme.NoTitleBar&lt;/code&gt;)</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/month_view.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/month_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Overdraw: Painting regions more than once</problem_class>
+    <hints />
+    <description>Possible overdraw: Root element paints background &lt;code&gt;@drawable/morphossbg&lt;/code&gt; with a theme that also paints a background (inferred theme is &lt;code&gt;@android:style/Theme.NoTitleBar&lt;/code&gt;)</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/changes_on_upgrade.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/changes_on_upgrade.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Overdraw: Painting regions more than once</problem_class>
+    <hints />
+    <description>Possible overdraw: Root element paints background &lt;code&gt;@drawable/morphossbg&lt;/code&gt; with a theme that also paints a background (inferred theme is &lt;code&gt;@android:style/Theme.NoTitleBar&lt;/code&gt;)</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_edit.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Overdraw: Painting regions more than once</problem_class>
+    <hints />
+    <description>Possible overdraw: Root element paints background &lt;code&gt;@drawable/morphossbg&lt;/code&gt; with a theme that also paints a background (inferred theme is &lt;code&gt;@android:style/Theme.NoTitleBar&lt;/code&gt;)</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_dialog.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Overdraw: Painting regions more than once</problem_class>
+    <hints />
+    <description>Possible overdraw: Root element paints background &lt;code&gt;#fff0f0f0&lt;/code&gt; with a theme that also paints a background (inferred theme is &lt;code&gt;@android:style/Theme.NoTitleBar&lt;/code&gt;)</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_view.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Overdraw: Painting regions more than once</problem_class>
+    <hints />
+    <description>Possible overdraw: Root element paints background &lt;code&gt;@drawable/morphossbg&lt;/code&gt; with a theme that also paints a background (inferred theme is &lt;code&gt;@android:style/Theme.NoTitleBar&lt;/code&gt;)</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_edit.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Overdraw: Painting regions more than once</problem_class>
+    <hints />
+    <description>Possible overdraw: Root element paints background &lt;code&gt;@drawable/morphossbg&lt;/code&gt; with a theme that also paints a background (inferred theme is &lt;code&gt;@android:style/Theme.NoTitleBar&lt;/code&gt;)</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_view.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Overdraw: Painting regions more than once</problem_class>
+    <hints />
+    <description>Possible overdraw: Root element paints background &lt;code&gt;@drawable/morphossbg&lt;/code&gt; with a theme that also paints a background (inferred theme is &lt;code&gt;@android:style/Theme.NoTitleBar&lt;/code&gt;)</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/contact_edit.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/contact_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Overdraw: Painting regions more than once</problem_class>
+    <hints />
+    <description>Possible overdraw: Root element paints background &lt;code&gt;@drawable/morphossbg&lt;/code&gt; with a theme that also paints a background (inferred theme is &lt;code&gt;@android:style/Theme.NoTitleBar&lt;/code&gt;)</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/month_view.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/month_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Overdraw: Painting regions more than once</problem_class>
+    <hints />
+    <description>Possible overdraw: Root element paints background &lt;code&gt;@drawable/morphossbg&lt;/code&gt; with a theme that also paints a background (inferred theme is &lt;code&gt;@android:style/Theme.NoTitleBar&lt;/code&gt;)</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/week_view.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Overdraw: Painting regions more than once</problem_class>
+    <hints />
+    <description>Possible overdraw: Root element paints background &lt;code&gt;@drawable/morphossbg&lt;/code&gt; with a theme that also paints a background (inferred theme is &lt;code&gt;@android:style/Theme.NoTitleBar&lt;/code&gt;)</description>
+  </problem>
+</problems>
+

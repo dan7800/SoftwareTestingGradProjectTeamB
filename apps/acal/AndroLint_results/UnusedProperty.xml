@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/project.properties</file>
+    <line>11</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/project.properties" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused Property</problem_class>
+    <description>Unused property</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/ant.properties</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/ant.properties" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused Property</problem_class>
+    <description>Unused property</description>
+  </problem>
+</problems>
+

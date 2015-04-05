@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/colourpicker_dialog.xml</file>
+    <line>34</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/colourpicker_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image without contentDescription</problem_class>
+    <hints />
+    <description>[Accessibility] Missing &lt;code&gt;contentDescription&lt;/code&gt; attribute on image</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_list_item.xml</file>
+    <line>39</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image without contentDescription</problem_class>
+    <hints />
+    <description>[Accessibility] Missing &lt;code&gt;contentDescription&lt;/code&gt; attribute on image</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_list_item.xml</file>
+    <line>47</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image without contentDescription</problem_class>
+    <hints />
+    <description>[Accessibility] Missing &lt;code&gt;contentDescription&lt;/code&gt; attribute on image</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/show_upcoming_widget_base_row.xml</file>
+    <line>8</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/show_upcoming_widget_base_row.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image without contentDescription</problem_class>
+    <hints />
+    <description>[Accessibility] Missing &lt;code&gt;contentDescription&lt;/code&gt; attribute on image</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_activity.xml</file>
+    <line>90</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_activity.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image without contentDescription</problem_class>
+    <hints />
+    <description>[Accessibility] Missing &lt;code&gt;contentDescription&lt;/code&gt; attribute on image</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_activity.xml</file>
+    <line>133</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_activity.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image without contentDescription</problem_class>
+    <hints />
+    <description>[Accessibility] Missing &lt;code&gt;contentDescription&lt;/code&gt; attribute on image</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_activity.xml</file>
+    <line>147</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_activity.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image without contentDescription</problem_class>
+    <hints />
+    <description>[Accessibility] Missing &lt;code&gt;contentDescription&lt;/code&gt; attribute on image</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_list_item.xml</file>
+    <line>34</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image without contentDescription</problem_class>
+    <hints />
+    <description>[Accessibility] Missing &lt;code&gt;contentDescription&lt;/code&gt; attribute on image</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_list_item.xml</file>
+    <line>41</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image without contentDescription</problem_class>
+    <hints />
+    <description>[Accessibility] Missing &lt;code&gt;contentDescription&lt;/code&gt; attribute on image</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_list_item.xml</file>
+    <line>49</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image without contentDescription</problem_class>
+    <hints />
+    <description>[Accessibility] Missing &lt;code&gt;contentDescription&lt;/code&gt; attribute on image</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_list_item.xml</file>
+    <line>34</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image without contentDescription</problem_class>
+    <hints />
+    <description>[Accessibility] Missing &lt;code&gt;contentDescription&lt;/code&gt; attribute on image</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_list_item.xml</file>
+    <line>40</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image without contentDescription</problem_class>
+    <hints />
+    <description>[Accessibility] Missing &lt;code&gt;contentDescription&lt;/code&gt; attribute on image</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/colourpicker_widget.xml</file>
+    <line>11</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/colourpicker_widget.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image without contentDescription</problem_class>
+    <hints />
+    <description>[Accessibility] Missing &lt;code&gt;contentDescription&lt;/code&gt; attribute on image</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/colourpicker_widget.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/colourpicker_widget.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image without contentDescription</problem_class>
+    <hints />
+    <description>[Accessibility] Missing &lt;code&gt;contentDescription&lt;/code&gt; attribute on image</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/colourpicker_widget.xml</file>
+    <line>27</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/colourpicker_widget.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image without contentDescription</problem_class>
+    <hints />
+    <description>[Accessibility] Missing &lt;code&gt;contentDescription&lt;/code&gt; attribute on image</description>
+  </problem>
+</problems>
+

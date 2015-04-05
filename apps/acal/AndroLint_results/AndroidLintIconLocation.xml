@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/ambilwarna_panah.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/ambilwarna_panah.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/ambilwarna_panah.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_disabled.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_disabled.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/timepicker_up_disabled.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/expander_ic_maximized.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/expander_ic_maximized.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/expander_ic_maximized.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/alarm_dismiss_button.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/alarm_dismiss_button.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/alarm_dismiss_button.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/repeating.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/repeating.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/repeating.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/colourpicker_hue.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/colourpicker_hue.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/colourpicker_hue.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/themed_button_fg.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/themed_button_fg.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/themed_button_fg.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/no_border.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/no_border.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/no_border.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/completed.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/completed.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/completed.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/morphossbg.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/morphossbg.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/morphossbg.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_pressed.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_pressed.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/timepicker_down_pressed.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_input_selected.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_input_selected.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/timepicker_input_selected.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/icon_notes.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/icon_notes.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/icon_notes.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/colourpicker_pointer.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/colourpicker_pointer.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/colourpicker_pointer.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_selected.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_selected.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/timepicker_up_selected.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/expander_ic_minimized.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/expander_ic_minimized.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/expander_ic_minimized.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/one_border.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/one_border.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/one_border.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/monthdayheadingsbg.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/monthdayheadingsbg.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/monthdayheadingsbg.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/icon.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/icon.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/icon.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/transparent.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/transparent.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/transparent.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/twentypc.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/twentypc.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/twentypc.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/alarmbg.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/alarmbg.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/alarmbg.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_pressed.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_pressed.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/timepicker_up_pressed.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_disabled.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_disabled.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/timepicker_down_disabled.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_normal.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_normal.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/timepicker_down_normal.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/map_icon.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/map_icon.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/map_icon.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_input_pressed.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_input_pressed.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/timepicker_input_pressed.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_disabled_focused.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_disabled_focused.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/timepicker_up_disabled_focused.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/red_x.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/red_x.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/red_x.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_normal.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_normal.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/timepicker_up_normal.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_selected.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_selected.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/timepicker_down_selected.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/footer.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/footer.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/footer.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/dayheadings_fg.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/dayheadings_fg.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/dayheadings_fg.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/titlebg.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/titlebg.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/titlebg.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/tenpc.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/tenpc.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/tenpc.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_disabled_focused.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_disabled_focused.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/timepicker_down_disabled_focused.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/bottom_button_normal.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/bottom_button_normal.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/bottom_button_normal.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/thin_button_normal.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/thin_button_normal.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/thin_button_normal.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/ambilwarna_menjadi.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/ambilwarna_menjadi.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/ambilwarna_menjadi.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/icon_tasks.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/icon_tasks.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/icon_tasks.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/ic_menu_refresh.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/ic_menu_refresh.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/ic_menu_refresh.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_input_disabled.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_input_disabled.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/timepicker_input_disabled.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/alarm_snooze_button.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/alarm_snooze_button.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/alarm_snooze_button.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/alarmbell.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/alarmbell.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/alarmbell.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_input_normal.9.png</file>
+    <line>0</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_input_normal.9.png" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Image defined in density-independent drawable folder</problem_class>
+    <hints />
+    <description>Found bitmap drawable &lt;code&gt;res/drawable/timepicker_input_normal.9.png&lt;/code&gt; in densityless folder</description>
+  </problem>
+</problems>
+

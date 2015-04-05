@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/build.gradle</file>
+    <line>9</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/build.gradle" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Deprecated Gradle Construct</problem_class>
+    <hints />
+    <description>'android' is deprecated; use 'com.android.application' instead</description>
+  </problem>
+</problems>
+

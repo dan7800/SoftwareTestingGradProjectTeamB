@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/lint.xml</file>
+    <line>2</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/lint.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/lint.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/lint.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/build.xml</file>
+    <line>2</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/build.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/build.xml</file>
+    <line>92</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/build.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound XML namespace prefix</problem_class>
+    <description>Namespace is not bound</description>
+  </problem>
+</problems>
+

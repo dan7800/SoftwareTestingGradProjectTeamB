@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/number_picker.xml</file>
+    <line>27</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/number_picker.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing inputType or hint</problem_class>
+    <hints />
+    <description>This text field does not specify an &lt;code&gt;inputType&lt;/code&gt; or a &lt;code&gt;hint&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/dialog_simple_edit_box.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/dialog_simple_edit_box.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing inputType or hint</problem_class>
+    <hints />
+    <description>This text field does not specify an &lt;code&gt;inputType&lt;/code&gt; or a &lt;code&gt;hint&lt;/code&gt;</description>
+  </problem>
+</problems>
+
