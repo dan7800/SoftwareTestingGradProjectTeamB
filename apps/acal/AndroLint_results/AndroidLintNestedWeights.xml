@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_view.xml</file>
+    <line>26</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Nested layout weights</problem_class>
+    <hints />
+    <description>Nested weights are bad for performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/week_view.xml</file>
+    <line>42</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Nested layout weights</problem_class>
+    <hints />
+    <description>Nested weights are bad for performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/collection_config.xml</file>
+    <line>25</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/collection_config.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Nested layout weights</problem_class>
+    <hints />
+    <description>Nested weights are bad for performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/number_picker_dialog.xml</file>
+    <line>22</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/number_picker_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Nested layout weights</problem_class>
+    <hints />
+    <description>Nested weights are bad for performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_activity.xml</file>
+    <line>73</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_activity.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Nested layout weights</problem_class>
+    <hints />
+    <description>Nested weights are bad for performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_view.xml</file>
+    <line>25</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Nested layout weights</problem_class>
+    <hints />
+    <description>Nested weights are bad for performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_edit.xml</file>
+    <line>24</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Nested layout weights</problem_class>
+    <hints />
+    <description>Nested weights are bad for performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/month_view.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/month_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Nested layout weights</problem_class>
+    <hints />
+    <description>Nested weights are bad for performance</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/week_view.xml</file>
+    <line>40</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Nested layout weights</problem_class>
+    <hints />
+    <description>Nested weights are bad for performance</description>
+  </problem>
+</problems>
+

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Strings that should not be localised belong in unlocalisable_strings.xml -->
+<resources>
+<string name="theDayEachWeekStartsWith">Her hafta günü ile başlar</string>
+<string name="firstDayOfWeek">Haftanın İlk Günü</string>
+<string name="ok">Tamam</string>
+<string name="cancel">İptal</string>
+<string name="Active">Etkin</string>
+<string name="Add_Server">Sunucu Ekle</string>
+<string name="Authentication_Type">Kimlik Doğrulama Türü</string>
+<string name="Simple_Path">Yalın Dosya Yolu</string>
+<string name="Server_URL">Sunucu URL:</string>
+<string name="Name">Ad</string>
+<string name="Force_full_resync">Yeniden eşitlemeye zorla</string>
+<string name="Password">Parola</string>
+<string name="Save">Kaydet</string>
+<string name="Settings">Ayarlar</string>
+<string name="Server_Name">Sunucu Adı</string>
+<string name="Server_Options">Sunucu Seçenekleri</string>
+<string name="Collection_Options">Koleksiyon Seçenekleri</string>
+<string name="Colour">Renk</string>
+<string name="Default_timezone">Varsayılan Zaman Dilimi</string>
+<string name="DefaultAlarmTone">Varsayılan Alarm Sesi</string>
+<string name="Server_Path">Sunucu Yolu</string>
+<string name="Server_Port">Sunucu Portu</string>
+<string name="Summary">Özet</string>
+<string name="Sync_collection_now">Şimdi Eşitle</string>
+<string name="Disable_collection">Koleksiyonu Devre Dışı Bırak</string>
+<string name="The_authentication_type_used">Sunucu tarafından kullanılan kimlik doğrulama türü</string>
+<string name="The_password_to_use">Sunucu ile kimlik doğrulaması için parola kullan</string>
+<string name="The_path_on_the_server">Sunucu yolu, gibi &quot;/caldav.php/user/&quot;</string>
+<string name="The_servers_hostname">Sunucunun tam adı hostname, gibi &quot;calendar.davical.com&quot;</string>
+<string name="The_username_to_use">Sunucu ile kimlik doğrulaması için kullanıcı adı kullan</string>
+<string name="Username">Kullanıcı adı</string>
+<string name="Use_SSL">SSL kullan</string>
+<string name="appActivityServerConfigList">Sunucular</string>
+<string name="appActivityDebugSettings">Hata Ayıklama Ayarları</string>
+<string name="appActivitySettings">Ayarlar</string>
+<string name="appActivityPreference">Tercihler</string>
+<string name="A_name_for_this_collection">Bu koleksiyon için bir ad</string>
+<string name="pUse_Alarms">Bu koleksiyonda alarmlar kullansılsın mı?</string>
+<string name="Use_Alarms">Alarmlar Etkin</string>
+<string name="Monday">Pazartesi</string>
+<string name="Tuesday">Salı</string>
+<string name="Wednesday">Çarşamba</string>
+<string name="Thursday">Perşembe</string>
+<string name="Friday">Cuma</string>
+<string name="Saturday">Cumartesi</string>
+<string name="Sunday">Pazar</string>
+<string name="Mon">Pzt</string>
+<string name="Tue">Sal</string>
+<string name="Wed">Çar</string>
+<string name="Thu">Per</string>
+<string name="Fri">Cum</string>
+<string name="Sat">Cmt</string>
+<string name="Sun">Paz</string>
+<string name="chMon">P</string>
+<string name="chTue">S</string>
+<string name="chWed">Ç</string>
+<string name="chThu">P</string>
+<string name="chFri">C</string>
+<string name="chSat">C</string>
+<string name="chSun">P</string>
+<string name="January">Ocak</string>
+<string name="February">Şuba</string>
+<string name="March">Mart</string>
+<string name="April">Nisan</string>
+<string name="May">Mayıs</string>
+<string name="June">Haziran</string>
+<string name="July">Temmuz</string>
+<string name="August">Ağustos</string>
+<string name="September">Eylül</string>
+<string name="October">Ekim</string>
+<string name="November">Kası</string>
+<string name="December">Aralık</string>
+<string name="thJan">Oca</string>
+<string name="thFeb">Şub</string>
+<string name="thApr">Nis</string>
+<string name="thJun">Haz</string>
+<string name="thJul">Tem</string>
+<string name="thAug">Ağu</string>
+<string name="thSep">Eyl</string>
+<string name="thOct">Eki</string>
+<string name="thNov">Kas</string>
+<string name="thDec">Ara</string>
+	<!-- If the user is displaying AM/PM we need a single character to display e.g. 9a for 9:00am in the morning -->
+	<!-- If the user is displaying AM/PM we need a single character to display e.g. 1p for 1:00pm in the afternoon -->
+<string name="abbrevMorning">öö</string>
+<string name="abbrevAfternoon">ös</string>
+<string name="DefaultAlarmTone_PrefTitle">Varsayılan Alarm Sesi</string>
+<string name="DefaultAlarmTone_PrefSummary">Alarmlar için kullanılacak varsayılan müzik</string>
+<string name="AlarmVolumeType_PrefTitle">Alarm Ses Seviyesi Ayarları</string>
+<string name="prefWeekViewDayWidth_Title">Sütun Genişliği</string>
+<string name="Today">Bugü</string>
+<string name="Year">Yıl</string>
+<string name="Month">Ay</string>
+<string name="Week">Hafta</string>
+<string name="Edit">Düzenle</string>
+<string name="Apply">Uygula</string>
+<string name="Advanced">Gelişmiş</string>
+<string name="Simple">Basit</string>
+<string name="Add">Ekle</string>
+<string name="UnNamedServer">Adsız Sunucu</string>
+<string name="AllDayPrompt">Tüm Gün:</string>
+<string name="FromPrompt">Kimden:</string>
+<string name="TwelveTwentyfour_PrefTitle">24-saat biçimin kullan</string>
+<string name="TwelveTwentyfour_OffSummary">2:00ös</string>
+<string name="EveryWeekday">Hafta içi her gün</string>
+<string name="EveryWeekend">Hafta sonu her gün</string>
+<string name="EveryDay">Günlük</string>
+<string name="EveryWeek">Haftalık</string>
+<string name="EveryMonth">Aylık</string>
+<string name="EveryYear">Yıllık</string>
+<string name="EveryMonday">Her Pazartesi</string>
+<string name="EveryTuesday">Her Salı</string>
+<string name="EveryWednesday">Her Çarşamba</string>
+<string name="EveryThursday">Her Perşembe</string>
+<string name="EveryFriday">Her Cuma</string>
+<string name="EverySaturday">Her Cumartesi</string>
+<string name="EverySunday">Her Pazar</string>
+<string name="EveryNthOfTheMonth">Ayın her %s \'de</string>
+<string name="EveryMonthOnTheNthSomeday">Her ayın %s \'de</string>
+<string name="ChooseACollection">Bir Koleksiyon Seç</string>
+<string name="ChooseAlarmTime">Bir Alarm Zamanı Seç</string>
+<string name="ChooseRepeatFrequency">Bir Tekrarlama Sıklığı Seç</string>
+<string name="Add_Alarm">Alarm Ekle</string>
+<string name="ForTheWholeDay">Tüm gün</string>
+<string name="alarm10MinutesPrior">10 dakika önce</string>
+<string name="alarm15MinutesPrior">15 dakika önce</string>
+<string name="alarm30MinutesPrior">30 dakika önce</string>
+<string name="alarm1HourPrior">Bir saat önce</string>
+<string name="alarm2HoursPrior">İki saat önce</string>
+<string name="AlarmPreferences">Alarm ayarları</string>
+<string name="GeneralPreferences">Genel ayarlar</string>
+<string name="Delete">Sil</string>
+<string name="editSomeEvent">Düzenle: %s</string>
+<string name="copySomeEvent">Kopyala: %s</string>
+<string name="deleteSomeEvent">Sil: %s</string>
+<string name="aCalVersionChanges">aCal \'ın yeni sürümüne hoşgeldiniz!</string>
+<string name="All">Tümü</string>
+<string name="username">Kullanıcı adı:</string>
+<string name="password">Parola:</string>
+<string name="Before">Önce</string>
+<string name="After">Sonra</string>
+<string name="Saving">Kaydediliyor...</string>
+<string name="Loading">Yükleniyor...</string>
+<string name="Deleting">Siliniyor...</string>
+<string name="Skip">Atla</string>
+<string name="prefTzServerBaseUrl_Title">Zaman Dilimi Sunucu Bağlantı Adresi</string>
+<string name="first_name_hint">Ad</string>
+<string name="surname_hint">Soyad</string>
+<string name="phone_prompt">Telefo</string>
+<string name="phone_hint">Telefo</string>
+<string name="email_prompt">E-posta</string>
+<string name="email_hint">E-posta</string>
+<string name="postal_address_prompt">Posta adresi</string>
+<string name="street_hint">Cadde</string>
+<string name="city_hint">Şehir</string>
+<string name="country_hint">Ülke</string>
+<string name="postcode_hint">Posta kodu</string>
+<string name="company_hint">Şirket</string>
+<string name="job_title_hint">Başlı</string>
+<string name="icon_add_description">Ekle</string>
+<string name="icon_delete_description">Sil</string>
+	<string-array name="phone_types">
+		<item>@string/Home</item>
+		<item>@string/Mobile</item>
+		<item>@string/Work</item>
+		<item>@string/WorkFax</item>
+		<item>@string/HomeFax</item>
+		<item>@string/Pager</item>
+		<item>@string/Other</item>
+		<item>@string/Custom</item>
+	</string-array>
+	<string-array name="email_types">
+		<item>@string/Home</item>
+		<item>@string/Work</item>
+		<item>@string/Other</item>
+		<item>@string/Custom</item>
+	</string-array>
+</resources>

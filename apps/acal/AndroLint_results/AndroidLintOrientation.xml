@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/month_view_assets.xml</file>
+    <line>2</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/month_view_assets.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Missing explicit orientation</problem_class>
+    <hints />
+    <description>Wrong orientation? No orientation specified, and the default is horizontal, yet this layout has multiple children where at least one has &lt;code&gt;layout_width=&quot;match_parent&quot;&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_list_item.xml</file>
+    <line>8</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_list_item.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Missing explicit orientation</problem_class>
+    <hints />
+    <description>No orientation specified, and the default is horizontal. This is a common source of bugs when children are added dynamically.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/collections_list_item.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/collections_list_item.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Missing explicit orientation</problem_class>
+    <hints />
+    <description>No orientation specified, and the default is horizontal. This is a common source of bugs when children are added dynamically.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_view.xml</file>
+    <line>16</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_view.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Missing explicit orientation</problem_class>
+    <hints />
+    <description>No orientation specified, and the default is horizontal. This is a common source of bugs when children are added dynamically.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_view.xml</file>
+    <line>172</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_view.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Missing explicit orientation</problem_class>
+    <hints />
+    <description>No orientation specified, and the default is horizontal. This is a common source of bugs when children are added dynamically.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_edit.xml</file>
+    <line>20</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_edit.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Missing explicit orientation</problem_class>
+    <hints />
+    <description>No orientation specified, and the default is horizontal. This is a common source of bugs when children are added dynamically.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_activity.xml</file>
+    <line>28</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_activity.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Missing explicit orientation</problem_class>
+    <hints />
+    <description>No orientation specified, and the default is horizontal. This is a common source of bugs when children are added dynamically.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/week_view_assets.xml</file>
+    <line>2</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/week_view_assets.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Missing explicit orientation</problem_class>
+    <hints />
+    <description>Wrong orientation? No orientation specified, and the default is horizontal, yet this layout has multiple children where at least one has &lt;code&gt;layout_width=&quot;match_parent&quot;&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_edit.xml</file>
+    <line>16</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_edit.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Missing explicit orientation</problem_class>
+    <hints />
+    <description>No orientation specified, and the default is horizontal. This is a common source of bugs when children are added dynamically.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_edit.xml</file>
+    <line>237</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_edit.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Missing explicit orientation</problem_class>
+    <hints />
+    <description>No orientation specified, and the default is horizontal. This is a common source of bugs when children are added dynamically.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_list_item.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_list_item.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Missing explicit orientation</problem_class>
+    <hints />
+    <description>No orientation specified, and the default is horizontal. This is a common source of bugs when children are added dynamically.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/add_server_list_item.xml</file>
+    <line>10</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/add_server_list_item.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Missing explicit orientation</problem_class>
+    <hints />
+    <description>No orientation specified, and the default is horizontal. This is a common source of bugs when children are added dynamically.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_list_item.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_list_item.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Missing explicit orientation</problem_class>
+    <hints />
+    <description>No orientation specified, and the default is horizontal. This is a common source of bugs when children are added dynamically.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_edit.xml</file>
+    <line>15</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_edit.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Missing explicit orientation</problem_class>
+    <hints />
+    <description>No orientation specified, and the default is horizontal. This is a common source of bugs when children are added dynamically.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_edit.xml</file>
+    <line>282</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_edit.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Missing explicit orientation</problem_class>
+    <hints />
+    <description>No orientation specified, and the default is horizontal. This is a common source of bugs when children are added dynamically.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_view.xml</file>
+    <line>16</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_view.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Missing explicit orientation</problem_class>
+    <hints />
+    <description>No orientation specified, and the default is horizontal. This is a common source of bugs when children are added dynamically.</description>
+  </problem>
+</problems>
+

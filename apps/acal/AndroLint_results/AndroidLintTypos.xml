@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-es-rES/strings.xml</file>
+    <line>133</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-es-rES/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Spelling error</problem_class>
+    <hints />
+    <description>&quot;dia&quot; is a common misspelling; did you mean &quot;día&quot; ?</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values-es-rES/strings.xml</file>
+    <line>135</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values-es-rES/strings.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Spelling error</problem_class>
+    <hints />
+    <description>&quot;dia&quot; is a common misspelling; did you mean &quot;día&quot; ?</description>
+  </problem>
+</problems>
+

@@ -1,0 +1,2284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>44</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'com'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>44</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'morphoss'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>44</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'acal'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>44</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'AcalApplication'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>51</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'aCal'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>59</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'aCalTasks'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>69</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'aCalNotes'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>79</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>79</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'MonthView'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>88</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>88</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'YearView'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>98</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'weekview'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>98</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'WeekViewActivity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>108</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>108</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'serverconfig'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>108</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'ServerConfigList'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>118</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>118</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'serverconfig'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>118</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'AddServerList'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>128</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>128</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'CollectionConfigList'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>138</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>138</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'Settings'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>148</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>148</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'DebugSettings'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>158</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>158</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'serverconfig'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>158</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'ServerConfiguration'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>167</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>167</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'serverconfig'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>167</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'NewServerConfiguration'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>176</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>176</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'CollectionConfiguration'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>185</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>185</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'EventView'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>194</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>194</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'EventEdit'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>204</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>204</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'TodoListView'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>213</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>213</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'JournalListView'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>222</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>222</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'TodoView'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>231</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>231</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'JournalView'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>240</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>240</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'TodoEdit'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>249</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>249</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'JournalEdit'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>258</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>258</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'ShowUpgradeChanges'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>267</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>267</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'AlarmActivity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>276</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'activity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>276</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'AcalPreferences'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>286</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'widget'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>286</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'Picker'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>295</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'service'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>295</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'ContactsSyncAdapterService'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>307</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'com'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>307</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'morphoss'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>307</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'acal'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>307</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'providers'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>307</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'Servers'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>311</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'com'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>311</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'morphoss'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>311</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'acal'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>311</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'providers'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>311</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'PathSets'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>315</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'com'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>315</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'morphoss'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>315</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'acal'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>315</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'providers'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>315</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'Timezones'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>319</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'com'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>319</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'morphoss'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>319</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'acal'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>319</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'providers'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>319</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'DavCollections'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>323</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'com'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>323</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'morphoss'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>323</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'acal'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>323</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'providers'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>323</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'CacheDataProvider'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>327</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'com'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>327</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'morphoss'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>327</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'acal'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>327</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'providers'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>327</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'AlarmDataProvider'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>331</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'com'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>331</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'morphoss'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>331</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'acal'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>331</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'service'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>331</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'aCalService'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>338</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'com'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>338</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'morphoss'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>338</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'acal'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>338</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'service'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>338</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'AcalAuthenticator'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>349</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'com'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>349</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'morphoss'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>349</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'acal'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>349</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'receivers'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>349</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'StartUpIntentReceiver'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>356</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'com'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>356</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'morphoss'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>356</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'acal'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>356</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'desktop'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>356</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'ShowUpcomingWidgetProvider'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>366</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'receivers'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>366</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'TimezoneChangedReceiver'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>373</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'receivers'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>373</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'iMIPReceiver'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:gravity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:background'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:tileMode'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>8</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>9</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:padding'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>10</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingLeft'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>11</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textStyle'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>14</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:gravity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>15</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>16</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:tileMode'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>17</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:padding'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingLeft'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>21</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:gravity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>22</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:padding'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>23</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingLeft'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>24</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>25</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:tileMode'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>28</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:gravity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>29</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>30</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:background'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>31</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textStyle'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>32</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:padding'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>35</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:gravity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>36</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>37</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:background'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>38</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:padding'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>39</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textStyle'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>42</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:background'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/week_view_styles.xml</file>
+    <line>43</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/week_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:tileMode'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingLeft'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>12</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>13</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingLeft'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>14</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingTop'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>15</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingRight'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>16</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingBottom'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>17</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:background'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>21</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>22</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:minHeight'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>23</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingLeft'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>24</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingRight'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>27</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>28</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>29</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textStyle'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>30</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:background'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>31</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:height'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>32</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingLeft'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>33</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingTop'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>34</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingRight'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>35</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingBottom'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>38</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>39</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:padding'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>40</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:clipToPadding'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>43</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>44</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingLeft'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>45</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>48</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>49</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textStyle'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>50</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>51</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:padding'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>52</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:gravity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>53</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:background'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/general_styles.xml</file>
+    <line>54</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/general_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:tileMode'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingLeft'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>8</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>12</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>13</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingLeft'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>14</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingLeft'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>20</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingTop'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>21</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingRight'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>22</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingBottom'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>23</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:background'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>24</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:minHeight'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>25</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>29</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>33</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>37</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>38</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingLeft'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>39</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>43</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>44</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingLeft'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/todo_view_styles.xml</file>
+    <line>45</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/todo_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textStyle'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:padding'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>8</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:gravity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>11</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>12</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:height'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>13</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:padding'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>14</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>15</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textStyle'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>16</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:gravity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>20</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>21</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textStyle'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>22</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:background'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>23</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:padding'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>24</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:height'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>25</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:gravity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>28</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>29</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>30</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textStyle'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>31</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:padding'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>32</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:height'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>33</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:gravity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/year_view_styles.xml</file>
+    <line>34</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/year_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:background'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/event_view_styles.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/event_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/event_view_styles.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/event_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingLeft'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/event_view_styles.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/event_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/event_view_styles.xml</file>
+    <line>11</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/event_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/event_view_styles.xml</file>
+    <line>12</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/event_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingLeft'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/event_view_styles.xml</file>
+    <line>13</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/event_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/event_view_styles.xml</file>
+    <line>17</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/event_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/event_view_styles.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/event_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:paddingLeft'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/event_view_styles.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/event_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/event_view_styles.xml</file>
+    <line>23</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/event_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/event_view_styles.xml</file>
+    <line>24</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/event_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/event_view_styles.xml</file>
+    <line>25</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/event_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textStyle'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/event_view_styles.xml</file>
+    <line>26</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/event_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:background'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/event_view_styles.xml</file>
+    <line>27</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/event_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:height'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/event_view_styles.xml</file>
+    <line>28</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/event_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:padding'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textStyle'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:padding'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>8</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:gravity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>9</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:background'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>12</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>13</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textStyle'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>14</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:height'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>15</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:gravity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:height'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>20</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>21</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textStyle'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>22</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:background'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>23</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:padding'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>24</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:gravity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>27</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>28</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:height'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>29</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>30</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textStyle'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>31</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:gravity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>32</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:background'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>35</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>36</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:height'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>37</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>38</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textStyle'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>39</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:gravity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>40</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:background'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>43</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>44</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:height'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>45</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>46</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textStyle'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>47</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:gravity'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/month_view_styles.xml</file>
+    <line>48</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/month_view_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:background'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/bottom_styles.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/bottom_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/bottom_styles.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/bottom_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textColor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/bottom_styles.xml</file>
+    <line>8</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/bottom_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textStyle'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/bottom_styles.xml</file>
+    <line>9</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/bottom_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:background'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/bottom_styles.xml</file>
+    <line>10</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/bottom_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:height'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/bottom_styles.xml</file>
+    <line>11</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/bottom_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:padding'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/bottom_styles.xml</file>
+    <line>14</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/bottom_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:textSize'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/bottom_styles.xml</file>
+    <line>15</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/bottom_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:padding'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/values/bottom_styles.xml</file>
+    <line>16</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/values/bottom_styles.xml" />
+    <problem_class severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Android Resources Validation</problem_class>
+    <description>Cannot resolve symbol 'android:height'</description>
+  </problem>
+</problems>
+

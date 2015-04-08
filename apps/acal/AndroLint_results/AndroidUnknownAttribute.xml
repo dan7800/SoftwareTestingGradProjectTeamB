@@ -1,0 +1,3484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:versionCode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:versionName</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>30</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:required</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>33</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:required</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>36</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:required</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>45</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:allowBackup</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>46</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:description</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>47</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:icon</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>49</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:theme</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>60</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:description</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>70</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:description</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>80</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>89</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>91</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>99</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>101</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>109</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>111</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>119</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>121</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>129</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>131</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>139</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>141</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>149</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>151</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>159</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>160</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>168</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>169</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>177</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>178</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>186</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>187</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>195</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>197</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>205</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>206</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>214</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>215</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>223</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>224</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>232</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>233</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>241</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>242</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>250</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>251</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>259</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>260</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>268</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>269</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>277</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>279</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:launchMode</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>287</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>296</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>297</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:permission</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>298</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:process</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>309</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>313</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>317</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>321</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>325</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>329</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>332</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>339</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>340</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:permission</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>341</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:process</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>357</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:exported</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>367</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:enabled</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/AndroidManifest.xml</file>
+    <line>374</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/AndroidManifest.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:enabled</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/xml/show_upcoming_widget_info.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/xml/show_upcoming_widget_info.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:initialLayout</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/xml/show_upcoming_widget_info.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/xml/show_upcoming_widget_info.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:minHeight</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/xml/show_upcoming_widget_info.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/xml/show_upcoming_widget_info.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:minWidth</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/xml/show_upcoming_widget_info.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/xml/show_upcoming_widget_info.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:updatePeriodMillis</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/xml/authenticator.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/xml/authenticator.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:accountType</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/xml/authenticator.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/xml/authenticator.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:icon</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/xml/authenticator.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/xml/authenticator.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:smallIcon</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/xml/authenticator.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/xml/authenticator.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:label</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/xml/authenticator.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/xml/authenticator.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:accountPreferences</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/slide_right.xml</file>
+    <line>17</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/slide_right.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:interpolator</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/slide_right.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/slide_right.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromXDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/slide_right.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/slide_right.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toXDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/slide_right.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/slide_right.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_left_in.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_left_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromXDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_left_in.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_left_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toXDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_left_in.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_left_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_left_in.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_left_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_left_in.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_left_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_left_in.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_left_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_animation_row_right_slide.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_animation_row_right_slide.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:delay</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_animation_row_right_slide.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_animation_row_right_slide.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:animationOrder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_animation_row_right_slide.xml</file>
+    <line>20</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_animation_row_right_slide.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:animation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_in.xml</file>
+    <line>17</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_in.xml</file>
+    <line>17</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_in.xml</file>
+    <line>17</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_in.xml</file>
+    <line>17</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:startOffset</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/slide_top_to_bottom.xml</file>
+    <line>17</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/slide_top_to_bottom.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:interpolator</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/slide_top_to_bottom.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/slide_top_to_bottom.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromYDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/slide_top_to_bottom.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/slide_top_to_bottom.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toXDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/slide_top_to_bottom.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/slide_top_to_bottom.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/slide_top_to_bottom.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/slide_top_to_bottom.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/slide_top_to_bottom.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/slide_top_to_bottom.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/slide_top_to_bottom.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/slide_top_to_bottom.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/fade.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/fade.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:interpolator</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/fade.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/fade.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/fade.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/fade.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/fade.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/fade.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_animation_table.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_animation_table.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:delay</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_animation_table.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_animation_table.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:animation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_up_in.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_up_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromYDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_up_in.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_up_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toYDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_up_in.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_up_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_up_in.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_up_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_up_in.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_up_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_up_in.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_up_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>17</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:interpolator</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>20</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>21</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>23</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromXScale</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>23</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toXScale</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>24</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromYScale</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>24</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toYScale</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>25</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:pivotX</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>25</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:pivotY</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>26</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>28</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromXScale</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>28</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toXScale</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>29</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromYScale</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>29</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toYScale</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>30</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:pivotX</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>30</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:pivotY</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>31</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:startOffset</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/wave_scale.xml</file>
+    <line>32</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_up_out.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_up_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromYDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_up_out.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_up_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toYDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_up_out.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_up_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_up_out.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_up_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_up_out.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_up_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_up_out.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_up_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_animation_row_left_slide.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_animation_row_left_slide.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:delay</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_animation_row_left_slide.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_animation_row_left_slide.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:animation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_right_in.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_right_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromXDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_right_in.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_right_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toXDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_right_in.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_right_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_right_in.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_right_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_right_in.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_right_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_right_in.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_right_in.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_wave_scale.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:rowDelay</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_wave_scale.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:columnDelay</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_wave_scale.xml</file>
+    <line>20</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:directionPriority</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_wave_scale.xml</file>
+    <line>21</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_wave_scale.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:animation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/slide_left.xml</file>
+    <line>17</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/slide_left.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:interpolator</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/slide_left.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/slide_left.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromXDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/slide_left.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/slide_left.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toXDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/slide_left.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/slide_left.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_random_fade.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_random_fade.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:delay</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_random_fade.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_random_fade.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:animationOrder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_random_fade.xml</file>
+    <line>20</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_random_fade.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:animation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>17</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:shareInterpolator</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>20</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:interpolator</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>21</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromXScale</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>22</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toXScale</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>23</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromYScale</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>24</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toYScale</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>25</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:pivotX</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>26</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:pivotY</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>27</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fillAfter</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>28</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>32</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:interpolator</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>33</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:startOffset</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>36</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromXScale</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>37</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toXScale</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>38</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromYScale</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>39</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toYScale</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>40</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:pivotX</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>41</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:pivotY</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>42</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>45</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromDegrees</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>46</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toDegrees</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>47</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toYScale</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>48</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:pivotX</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>49</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:pivotY</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/hyperspace_out.xml</file>
+    <line>50</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/hyperspace_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_bottom_to_top_slide.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_bottom_to_top_slide.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:delay</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_bottom_to_top_slide.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_bottom_to_top_slide.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:animationOrder</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_bottom_to_top_slide.xml</file>
+    <line>20</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_bottom_to_top_slide.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:animation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_left_out.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_left_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromXDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_left_out.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_left_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toXDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_left_out.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_left_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_left_out.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_left_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_left_out.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_left_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_left_out.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_left_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_grid_fade.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_grid_fade.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:rowDelay</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_grid_fade.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_grid_fade.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:directionPriority</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_grid_fade.xml</file>
+    <line>20</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_grid_fade.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:animation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_right_out.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_right_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromXDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_right_out.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_right_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toXDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_right_out.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_right_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_right_out.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_right_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_right_out.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_right_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toAlpha</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/push_right_out.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/push_right_out.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_grid_inverse_fade.xml</file>
+    <line>18</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_grid_inverse_fade.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:columnDelay</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_grid_inverse_fade.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_grid_inverse_fade.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:directionPriority</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_grid_inverse_fade.xml</file>
+    <line>20</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_grid_inverse_fade.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:direction</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/layout_grid_inverse_fade.xml</file>
+    <line>21</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/layout_grid_inverse_fade.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:animation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/cycle_7.xml</file>
+    <line>17</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/cycle_7.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:cycles</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/shake.xml</file>
+    <line>17</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/shake.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:fromXDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/shake.xml</file>
+    <line>17</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/shake.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:toXDelta</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/shake.xml</file>
+    <line>17</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/shake.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:duration</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/anim/shake.xml</file>
+    <line>17</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/anim/shake.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:interpolator</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/colourpicker_dialog.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/colourpicker_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/colourpicker_dialog.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/colourpicker_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/colourpicker_dialog.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/colourpicker_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/colourpicker_dialog.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/colourpicker_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:gravity</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/colourpicker_dialog.xml</file>
+    <line>10</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/colourpicker_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/colourpicker_dialog.xml</file>
+    <line>11</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/colourpicker_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/month_view_assets.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/month_view_assets.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/month_view_assets.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/month_view_assets.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/month_view_assets.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/month_view_assets.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:padding</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_list_view.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_list_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_list_view.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_list_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_list_view.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_list_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_list_view.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_list_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_list_item.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_list_item.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_list_item.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_list_item.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/collections_list_item.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/collections_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/collections_list_item.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/collections_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/collections_list_item.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/collections_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/collections_list_item.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/collections_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_view.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_view.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_view.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_view.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_view.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/year_view.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/year_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/year_view.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/year_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/year_view.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/year_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/year_view.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/year_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/new_server_config.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/new_server_config.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/new_server_config.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/new_server_config.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/new_server_config.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/new_server_config.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/new_server_config.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/new_server_config.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/new_server_config.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/new_server_config.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:baselineAligned</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/new_server_config.xml</file>
+    <line>8</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/new_server_config.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/week_view.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/week_view.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/week_view.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/week_view.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/week_view.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/show_upcoming_widget_custom_row.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/show_upcoming_widget_custom_row.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/show_upcoming_widget_custom_row.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/show_upcoming_widget_custom_row.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/show_upcoming_widget_custom_row.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/show_upcoming_widget_custom_row.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/show_upcoming_widget_custom_row.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/show_upcoming_widget_custom_row.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:paddingLeft</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/show_upcoming_widget_custom_row.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/show_upcoming_widget_custom_row.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:paddingRight</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/year_view_assets.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/year_view_assets.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/year_view_assets.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/year_view_assets.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/year_view_assets.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/year_view_assets.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:padding</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/show_upcoming_widget_layout.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/show_upcoming_widget_layout.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/show_upcoming_widget_layout.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/show_upcoming_widget_layout.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/show_upcoming_widget_layout.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/show_upcoming_widget_layout.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/show_upcoming_widget_layout.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/show_upcoming_widget_layout.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_list_view.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_list_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_list_view.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_list_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_list_view.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_list_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_list_view.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_list_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/collection_config.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/collection_config.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/collection_config.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/collection_config.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/collection_config.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/collection_config.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/show_upcoming_widget_base_row.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/show_upcoming_widget_base_row.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/show_upcoming_widget_base_row.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/show_upcoming_widget_base_row.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/show_upcoming_widget_base_row.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/show_upcoming_widget_base_row.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/show_upcoming_widget_base_row.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/show_upcoming_widget_base_row.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_marginLeft</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/show_upcoming_widget_base_row.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/show_upcoming_widget_base_row.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/number_picker_dialog.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/number_picker_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/number_picker_dialog.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/number_picker_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/number_picker_dialog.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/number_picker_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_edit.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_edit.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_edit.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_edit.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_edit.xml</file>
+    <line>8</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:baselineAligned</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_edit.xml</file>
+    <line>9</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/month_grid_view.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/month_grid_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/month_grid_view.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/month_grid_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/month_grid_view.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/month_grid_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_alignParentBottom</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/month_grid_view.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/month_grid_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_alignParentTop</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_activity.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_activity.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_activity.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_activity.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_activity.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_activity.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/week_view_assets.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/week_view_assets.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/week_view_assets.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/week_view_assets.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/month_view.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/month_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/month_view.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/month_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/month_view.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/month_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/month_view.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/month_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:baselineAligned</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/month_view.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/month_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/month_view.xml</file>
+    <line>8</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/month_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:weightSum</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/changes_on_upgrade.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/changes_on_upgrade.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/changes_on_upgrade.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/changes_on_upgrade.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/changes_on_upgrade.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/changes_on_upgrade.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/number_picker_pref.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/number_picker_pref.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/number_picker_pref.xml</file>
+    <line>20</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/number_picker_pref.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/number_picker_pref.xml</file>
+    <line>21</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/number_picker_pref.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/number_picker_pref.xml</file>
+    <line>22</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/number_picker_pref.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:padding</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_edit.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_edit.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_edit.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_edit.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_edit.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:baselineAligned</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_edit.xml</file>
+    <line>8</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_list_item.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_list_item.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_list_item.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_list_item.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_dialog.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_dialog.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_dialog.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_dialog.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/dialog_simple_edit_box.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/dialog_simple_edit_box.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/dialog_simple_edit_box.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/dialog_simple_edit_box.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/settings_list.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/settings_list.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/settings_list.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/settings_list.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/settings_list.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/settings_list.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:padding</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/settings_list.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/settings_list.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:textSize</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/progress_bar.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/progress_bar.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/progress_bar.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/progress_bar.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/progress_bar.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/progress_bar.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/add_server_list_item.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/add_server_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/add_server_list_item.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/add_server_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/add_server_list_item.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/add_server_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/add_server_list_item.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/add_server_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/add_server_list_item.xml</file>
+    <line>8</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/add_server_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/servers_list.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/servers_list.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/servers_list.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/servers_list.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/servers_list.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/servers_list.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/collections_list.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/collections_list.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/collections_list.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/collections_list.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/collections_list.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/collections_list.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_list_item.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_list_item.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_list_item.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_list_item.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/month_list_view.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/month_list_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/month_list_view.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/month_list_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/month_list_view.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/month_list_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/colourpicker_widget.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/colourpicker_widget.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/colourpicker_widget.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/colourpicker_widget.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_list_item.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_list_item.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_list_item.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_list_item.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_list_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_view.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_view.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_view.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_view.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_view.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_edit.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_edit.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_edit.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_edit.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_edit.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_view.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_view.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_view.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_view.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_view.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/contact_edit.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/contact_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/contact_edit.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/contact_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/contact_edit.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/contact_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/contact_edit.xml</file>
+    <line>7</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/contact_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/contact_edit.xml</file>
+    <line>8</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/contact_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:baselineAligned</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/contact_edit.xml</file>
+    <line>9</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/contact_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/server_config.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/server_config.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:id</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/server_config.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/server_config.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/server_config.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/server_config.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/datetime_dialog.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/datetime_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/datetime_dialog.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/datetime_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/datetime_dialog.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/datetime_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_pressed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_enabled</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml</file>
+    <line>20</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_focused</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml</file>
+    <line>21</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_pressed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml</file>
+    <line>21</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_enabled</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml</file>
+    <line>23</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_pressed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml</file>
+    <line>23</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_enabled</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml</file>
+    <line>24</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_focused</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml</file>
+    <line>25</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_pressed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml</file>
+    <line>25</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_enabled</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml</file>
+    <line>26</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_focused</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml</file>
+    <line>27</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_pressed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml</file>
+    <line>27</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_enabled</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml</file>
+    <line>28</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_up_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_focused</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_pressed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_enabled</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml</file>
+    <line>20</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_focused</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml</file>
+    <line>21</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_pressed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml</file>
+    <line>21</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_enabled</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml</file>
+    <line>23</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_pressed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml</file>
+    <line>23</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_enabled</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml</file>
+    <line>24</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_focused</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml</file>
+    <line>25</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_pressed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml</file>
+    <line>25</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_enabled</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml</file>
+    <line>26</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_focused</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml</file>
+    <line>27</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_pressed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml</file>
+    <line>27</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_enabled</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml</file>
+    <line>28</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_down_btn.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_focused</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_input.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_input.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_pressed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_input.xml</file>
+    <line>19</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_input.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_enabled</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_input.xml</file>
+    <line>20</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_input.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_focused</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_input.xml</file>
+    <line>21</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_input.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_pressed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_input.xml</file>
+    <line>21</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_input.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_enabled</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_input.xml</file>
+    <line>23</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_input.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_pressed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_input.xml</file>
+    <line>23</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_input.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_enabled</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_input.xml</file>
+    <line>24</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_input.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_focused</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_input.xml</file>
+    <line>25</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_input.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_pressed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_input.xml</file>
+    <line>25</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_input.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_enabled</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_input.xml</file>
+    <line>26</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_input.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_focused</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_input.xml</file>
+    <line>27</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_input.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_pressed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_input.xml</file>
+    <line>27</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_input.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_enabled</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/drawable/timepicker_input.xml</file>
+    <line>28</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/drawable/timepicker_input.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:state_focused</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/month_view.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/month_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/month_view.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/month_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/month_view.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/month_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/month_view.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/month_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/week_view.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/week_view.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/week_view.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:background</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/week_view.xml</file>
+    <line>6</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/datetime_dialog.xml</file>
+    <line>3</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/datetime_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_width</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/datetime_dialog.xml</file>
+    <line>4</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/datetime_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:layout_height</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/datetime_dialog.xml</file>
+    <line>5</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/datetime_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown Android XML attribute</problem_class>
+    <description>Unknown attribute android:orientation</description>
+  </problem>
+</problems>
+

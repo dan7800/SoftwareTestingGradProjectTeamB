@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/colourpicker_dialog.xml</file>
+    <line>22</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/colourpicker_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;AbsoluteLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_list_view.xml</file>
+    <line>46</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_list_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_view.xml</file>
+    <line>28</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;ScrollView&lt;/code&gt; layout or its &lt;code&gt;RelativeLayout&lt;/code&gt; parent is useless</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_view.xml</file>
+    <line>184</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_view.xml</file>
+    <line>205</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/year_view.xml</file>
+    <line>29</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/year_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/year_view.xml</file>
+    <line>49</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/year_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/year_view.xml</file>
+    <line>69</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/year_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/week_view.xml</file>
+    <line>61</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/week_view.xml</file>
+    <line>81</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/week_view.xml</file>
+    <line>101</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_list_view.xml</file>
+    <line>40</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_list_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_list_view.xml</file>
+    <line>61</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_list_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_list_view.xml</file>
+    <line>84</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_list_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_edit.xml</file>
+    <line>192</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;RelativeLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_edit.xml</file>
+    <line>248</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_edit.xml</file>
+    <line>269</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_dialog.xml</file>
+    <line>44</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/alarm_dialog.xml</file>
+    <line>88</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/alarm_dialog.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_view.xml</file>
+    <line>204</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_view.xml</file>
+    <line>229</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/event_view.xml</file>
+    <line>254</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/event_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_edit.xml</file>
+    <line>220</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_edit.xml</file>
+    <line>293</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/todo_edit.xml</file>
+    <line>316</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/todo_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_view.xml</file>
+    <line>8</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is possibly useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/journal_view.xml</file>
+    <line>72</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/journal_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/contact_edit.xml</file>
+    <line>186</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/contact_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout/contact_edit.xml</file>
+    <line>221</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout/contact_edit.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/month_view.xml</file>
+    <line>48</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/month_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/month_view.xml</file>
+    <line>68</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/month_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/month_view.xml</file>
+    <line>90</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/month_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/month_view.xml</file>
+    <line>110</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/month_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/week_view.xml</file>
+    <line>60</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/week_view.xml</file>
+    <line>80</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/week_view.xml</file>
+    <line>100</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/res/layout-land/week_view.xml</file>
+    <line>120</line>
+    <module>acal-acal</module>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/res/layout-land/week_view.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Useless parent layout</problem_class>
+    <hints />
+    <description>This &lt;code&gt;LinearLayout&lt;/code&gt; layout or its &lt;code&gt;LinearLayout&lt;/code&gt; parent is useless; transfer the &lt;code&gt;background&lt;/code&gt; attribute to the other view</description>
+  </problem>
+</problems>
+
